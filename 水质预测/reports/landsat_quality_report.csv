@@ -1,0 +1,11 @@
+﻿feature,missing_before_pct,missing_after_interpolation_pct,missing_after_fill_pct
+blue,27.0,0.2,0.0
+green,27.0,0.2,0.0
+red,27.0,0.2,0.0
+nir,27.0,0.2,0.0
+swir1,27.0,0.2,0.0
+swir2,27.0,0.2,0.0
+ndvi,27.0,0.2,0.0
+ndwi,27.0,0.2,0.0
+mndwi,27.0,0.2,0.0
+ndti,27.0,0.2,0.0

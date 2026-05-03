@@ -1,0 +1,13 @@
+﻿target,model,feature_count,train_rows,test_rows,log_target,rmse,mae,r2,nse,params
+Chl_a,F1_process,46,846,192,True,4.632455995938637,2.7805036260435982,0.17894135623819962,0.17894135623819962,"{'max_depth': 3, 'learning_rate': 0.03, 'min_child_weight': 1, 'reg_lambda': 3.0, 'n_estimators': 350}"
+Chl_a,F2_remote_sensing,41,846,192,True,5.0531741902950325,2.966196569676201,0.02303251306906251,0.02303251306906251,"{'max_depth': 3, 'learning_rate': 0.03, 'min_child_weight': 6, 'reg_lambda': 1.0, 'n_estimators': 350}"
+Chl_a,F3_fusion,77,846,192,True,4.758544943003382,2.803675907477736,0.13363694672062443,0.13363694672062443,"{'max_depth': 3, 'learning_rate': 0.05, 'min_child_weight': 6, 'reg_lambda': 3.0, 'n_estimators': 350}"
+SD,F1_process,46,846,192,False,1.1151700038628787,0.6799291787048181,0.4161622709835867,0.4161622709835867,"{'max_depth': 2, 'learning_rate': 0.03, 'min_child_weight': 3, 'reg_lambda': 1.0, 'n_estimators': 350}"
+SD,F2_remote_sensing,41,846,192,False,1.1102902856170285,0.6743169952183962,0.421260561676552,0.421260561676552,"{'max_depth': 3, 'learning_rate': 0.03, 'min_child_weight': 6, 'reg_lambda': 3.0, 'n_estimators': 350}"
+SD,F3_fusion,77,846,192,False,1.0839407660392288,0.6674251951277256,0.44840401227982707,0.44840401227982707,"{'max_depth': 4, 'learning_rate': 0.03, 'min_child_weight': 1, 'reg_lambda': 3.0, 'n_estimators': 350}"
+TN,F1_process,46,798,192,True,0.4196469105392121,0.28008206252008677,0.4751826882174681,0.4751826882174681,"{'max_depth': 4, 'learning_rate': 0.03, 'min_child_weight': 3, 'reg_lambda': 1.0, 'n_estimators': 350}"
+TN,F2_remote_sensing,41,798,192,True,0.3900851652145591,0.2753159769251943,0.5465191403963967,0.5465191403963967,"{'max_depth': 3, 'learning_rate': 0.03, 'min_child_weight': 1, 'reg_lambda': 3.0, 'n_estimators': 350}"
+TN,F3_fusion,77,798,192,True,0.3898324692602045,0.2672871755932768,0.5471064770725487,0.5471064770725487,"{'max_depth': 4, 'learning_rate': 0.03, 'min_child_weight': 1, 'reg_lambda': 1.0, 'n_estimators': 350}"
+TP,F1_process,46,798,192,True,0.054028042572576304,0.03668075529625639,0.3524412784226252,0.3524412784226252,"{'max_depth': 3, 'learning_rate': 0.03, 'min_child_weight': 3, 'reg_lambda': 1.0, 'n_estimators': 350}"
+TP,F2_remote_sensing,41,798,192,True,0.05335503337340071,0.03564406113776689,0.36847364117320514,0.36847364117320514,"{'max_depth': 2, 'learning_rate': 0.03, 'min_child_weight': 6, 'reg_lambda': 1.0, 'n_estimators': 350}"
+TP,F3_fusion,77,798,192,True,0.05240365807077922,0.035478912289254365,0.3907943833956843,0.3907943833956843,"{'max_depth': 3, 'learning_rate': 0.03, 'min_child_weight': 3, 'reg_lambda': 3.0, 'n_estimators': 350}"

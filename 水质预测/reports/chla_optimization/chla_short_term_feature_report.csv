@@ -1,0 +1,7 @@
+﻿item,value
+short_term_feature_count,27
+era5_source_variables,"t2m,u10,v10,tcc hourly point time-series"
+solar_radiation_status,not downloaded; solar_proxy_mean uses 1 - total_cloud_cover
+water_temperature_status,not downloaded; t2m short windows are air-temperature proxy
+landsat_qc_added,"landsat_strict_valid, landsat_moderate_valid, landsat_low_quality, landsat_valid_count_log1p"
+sentinel2_status,no exported Sentinel-2 table found locally; GEE script should be rerun with stricter QC

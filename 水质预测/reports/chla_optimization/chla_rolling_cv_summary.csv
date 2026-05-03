@@ -1,0 +1,2 @@
+﻿target,model,test_rows,rmse,mae,r2,nse
+Chl_a,Chl_a_rolling_cv_selected,192,4.677401581371462,2.9468457570843984,0.16293171311108734,0.16293171311108734
