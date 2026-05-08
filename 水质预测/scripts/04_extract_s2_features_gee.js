@@ -37,7 +37,8 @@ function maskS2Clouds(image) {
 
   var scaled = image
     .select(['B2', 'B3', 'B4', 'B5', 'B6', 'B8', 'B8A', 'B11', 'B12'])
-    .multiply(0.0001);
+    .multiply(0.0001)
+    .toFloat();
 
   var validReflectance = scaled.select(['B2', 'B3', 'B4', 'B8'])
     .reduce(ee.Reducer.min()).gt(0)
@@ -81,6 +82,18 @@ var s2 = ee.ImageCollection(s2Joined)
 
 var bandNames = ['B2', 'B3', 'B4', 'B5', 'B6', 'B8', 'B8A', 'B11', 'B12', 'NDWI', 'MNDWI', 'NDCI', 'NDTI'];
 
+function emptyBandImage(names) {
+  return ee.Image.constant(ee.List.repeat(0, names.length))
+    .rename(names)
+    .toFloat()
+    .updateMask(ee.Image.constant(0));
+}
+
+function getNumberFromDictOrZero(dict, key) {
+  dict = ee.Dictionary(dict);
+  return ee.Number(ee.Algorithms.If(dict.contains(key), dict.get(key), 0));
+}
+
 function extractForSample(feature) {
   var date = ee.Date(feature.get('date'));
   var geom = feature.geometry().buffer(BUFFER_METERS);
@@ -88,7 +101,10 @@ function extractForSample(feature) {
     .filterBounds(geom)
     .filterDate(date.advance(-LOOKBACK_DAYS, 'day'), date.advance(1, 'day'));
 
-  var image = collection.median();
+  var imageCount = collection.size();
+  var hasImages = imageCount.gt(0);
+  var safeCollection = ee.ImageCollection([emptyBandImage(bandNames)]).merge(collection);
+  var image = safeCollection.median();
   var stats = image.select(bandNames).reduceRegion({
     reducer: ee.Reducer.mean()
       .combine({reducer2: ee.Reducer.stdDev(), sharedInputs: true}),
@@ -98,20 +114,24 @@ function extractForSample(feature) {
     tileScale: 4
   });
 
-  var validPixelCount = image.select('B3').reduceRegion({
-    reducer: ee.Reducer.count(),
-    geometry: geom,
-    scale: 20,
-    maxPixels: 1e8,
-    tileScale: 4
-  }).get('B3');
+  var validPixelCount = getNumberFromDictOrZero(
+    image.select('B3').reduceRegion({
+      reducer: ee.Reducer.count(),
+      geometry: geom,
+      scale: 20,
+      maxPixels: 1e8,
+      tileScale: 4
+    }),
+    'B3'
+  );
 
-  var strictValid = ee.Number(validPixelCount).gte(MIN_VALID_PIXEL_COUNT)
-    .and(collection.size().gte(1));
+  var strictValid = validPixelCount.gte(MIN_VALID_PIXEL_COUNT)
+    .and(hasImages);
 
   return feature
     .set(stats)
-    .set('s2_image_count', collection.size())
+    .set('s2_image_count', imageCount)
+    .set('s2_has_images', hasImages)
     .set('s2_valid_pixel_count', validPixelCount)
     .set('s2_strict_valid', strictValid)
     .set('s2_cloud_prob_threshold', CLOUD_PROB_THRESHOLD)
