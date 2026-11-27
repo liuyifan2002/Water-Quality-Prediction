@@ -1,0 +1,17 @@
+{
+  "task": "secchi",
+  "cohort": "complete_SMB",
+  "feature_set": "M0",
+  "model": "TabICLv2",
+  "model_seed": 2026,
+  "n_features": 77,
+  "n_train": 7594,
+  "n_test": 1861,
+  "n_stations": 84,
+  "n_test_stations": 81,
+  "R2": 0.6663679491205594,
+  "RMSE": 0.6479140631214859,
+  "MAE": 0.4355631232846468,
+  "log_target": true,
+  "runtime_s": 21.824978828430176
+}

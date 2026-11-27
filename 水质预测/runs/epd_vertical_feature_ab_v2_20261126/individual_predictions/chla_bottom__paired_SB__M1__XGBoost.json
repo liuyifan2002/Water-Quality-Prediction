@@ -1,0 +1,15 @@
+{
+  "task": "chla_bottom",
+  "cohort": "paired_SB",
+  "feature_set": "M1",
+  "model": "XGBoost",
+  "n_features": 81,
+  "n_train": 8317,
+  "n_test": 2080,
+  "n_stations": 91,
+  "n_test_stations": 91,
+  "R2": 0.3910410387239398,
+  "RMSE": 3.114389539326616,
+  "MAE": 1.505792098069488,
+  "runtime_s": 1.0218005180358887
+}

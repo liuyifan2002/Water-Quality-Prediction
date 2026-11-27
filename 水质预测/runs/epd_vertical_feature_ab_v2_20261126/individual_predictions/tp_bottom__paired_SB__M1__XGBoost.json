@@ -1,0 +1,15 @@
+{
+  "task": "tp_bottom",
+  "cohort": "paired_SB",
+  "feature_set": "M1",
+  "model": "XGBoost",
+  "n_features": 81,
+  "n_train": 7911,
+  "n_test": 1978,
+  "n_stations": 91,
+  "n_test_stations": 91,
+  "R2": 0.5158516584843422,
+  "RMSE": 0.030982914001337902,
+  "MAE": 0.014433490201597534,
+  "runtime_s": 0.9499855041503906
+}

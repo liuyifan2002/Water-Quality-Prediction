@@ -1,0 +1,15 @@
+{
+  "task": "secchi",
+  "cohort": "complete_SMB",
+  "feature_set": "M2",
+  "model": "XGBoost",
+  "n_features": 89,
+  "n_train": 7594,
+  "n_test": 1861,
+  "n_stations": 84,
+  "n_test_stations": 81,
+  "R2": 0.6120595727356938,
+  "RMSE": 0.6986602642891566,
+  "MAE": 0.4692651380256967,
+  "runtime_s": 1.2174129486083984
+}

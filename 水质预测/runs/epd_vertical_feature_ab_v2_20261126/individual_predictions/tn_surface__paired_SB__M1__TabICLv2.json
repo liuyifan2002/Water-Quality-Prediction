@@ -1,0 +1,15 @@
+{
+  "task": "tn_surface",
+  "cohort": "paired_SB",
+  "feature_set": "M1",
+  "model": "TabICLv2",
+  "n_features": 81,
+  "n_train": 7919,
+  "n_test": 1970,
+  "n_stations": 91,
+  "n_test_stations": 90,
+  "R2": 0.7023880767847588,
+  "RMSE": 0.2183057264326658,
+  "MAE": 0.11256467426583497,
+  "runtime_s": 8.823263168334961
+}

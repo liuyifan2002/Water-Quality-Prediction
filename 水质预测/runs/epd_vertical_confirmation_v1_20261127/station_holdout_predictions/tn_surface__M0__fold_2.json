@@ -1,0 +1,18 @@
+{
+  "task": "tn_surface",
+  "cohort": "complete_SMB",
+  "feature_set": "M0",
+  "model": "TabICLv2",
+  "model_seed": 42,
+  "fold": "fold_2",
+  "n_features": 77,
+  "n_train": 7117,
+  "n_test": 1883,
+  "n_train_stations": 67,
+  "n_test_stations": 17,
+  "R2": 0.6466860828394374,
+  "RMSE": 0.1918129765484638,
+  "MAE": 0.13166075091186863,
+  "log_target": true,
+  "runtime_s": 7.8688063621521
+}

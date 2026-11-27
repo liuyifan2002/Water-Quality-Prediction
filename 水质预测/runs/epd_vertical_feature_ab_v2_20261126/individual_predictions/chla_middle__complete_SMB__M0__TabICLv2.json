@@ -1,0 +1,15 @@
+{
+  "task": "chla_middle",
+  "cohort": "complete_SMB",
+  "feature_set": "M0",
+  "model": "TabICLv2",
+  "n_features": 77,
+  "n_train": 7563,
+  "n_test": 1892,
+  "n_stations": 84,
+  "n_test_stations": 79,
+  "R2": 0.5025412462510059,
+  "RMSE": 3.2676050632828595,
+  "MAE": 1.447780488044148,
+  "runtime_s": 8.489664316177368
+}
