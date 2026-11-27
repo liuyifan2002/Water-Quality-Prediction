@@ -1,0 +1,86 @@
+{
+  "label": "Chl-a 新增数据源下载总控",
+  "date_tag": "20260516",
+  "dry_run": true,
+  "start_date": "2014-01-01",
+  "end_date": "2024-12-31",
+  "steps": [
+    {
+      "step": "epd_long_history",
+      "script": "22_download_epd_long_history.py",
+      "status": "success",
+      "returncode": 0,
+      "stdout": "Dry-run only. Planned EPD long-history preparation for 1986-2024.",
+      "stderr": ""
+    },
+    {
+      "step": "lagged_cross_wq",
+      "script": "23_prepare_lagged_cross_wq_features.py",
+      "status": "success",
+      "returncode": 0,
+      "stdout": "Dry-run only. Planned lagged cross-water-quality feature preparation.",
+      "stderr": ""
+    },
+    {
+      "step": "gee_ocean_color",
+      "script": "24_extract_gee_ocean_color_features.py",
+      "status": "success",
+      "returncode": 0,
+      "stdout": "Dry-run only. Generated GEE JS scaffold and export instructions.",
+      "stderr": ""
+    },
+    {
+      "step": "cmems_physics",
+      "script": "25_download_cmems_physics_features.py",
+      "status": "success",
+      "returncode": 0,
+      "stdout": "Dry-run only. Planned Copernicus Marine physics download/extraction.",
+      "stderr": ""
+    },
+    {
+      "step": "cmems_bgc",
+      "script": "26_download_cmems_bgc_features.py",
+      "status": "success",
+      "returncode": 0,
+      "stdout": "Dry-run only. Planned Copernicus Marine BGC download/extraction.",
+      "stderr": ""
+    },
+    {
+      "step": "cmems_ocean_colour_discovery",
+      "script": "29_discover_cmems_ocean_colour_products.py",
+      "status": "success",
+      "returncode": 0,
+      "stdout": "Dry-run only. Wrote Ocean Colour candidate tables to C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\cmems_ocean_colour_discovery_20260516",
+      "stderr": ""
+    },
+    {
+      "step": "cmems_ocean_colour_features",
+      "script": "30_download_cmems_ocean_colour_features.py",
+      "status": "success",
+      "returncode": 0,
+      "stdout": "Dry-run only. Planned CMEMS Ocean Colour download/extraction.",
+      "stderr": ""
+    },
+    {
+      "step": "validate_new_sources",
+      "script": "21_validate_new_chla_data_sources.py",
+      "status": "success",
+      "returncode": 0,
+      "stdout": "Saved validation outputs to C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\chla_new_data_source_validation_20260516\nready_for_ab_experiment: lagged_cross_water_quality",
+      "stderr": ""
+    }
+  ],
+  "readiness_summary": {
+    "ready_sources": [
+      "lagged_cross_water_quality"
+    ],
+    "template_only_sources": [
+      "copernicus_bgc",
+      "copernicus_physics",
+      "long_history_chla",
+      "ocean_color_kd490_tss",
+      "sentinel3_olci"
+    ],
+    "missing_real_input_sources": []
+  }
+}

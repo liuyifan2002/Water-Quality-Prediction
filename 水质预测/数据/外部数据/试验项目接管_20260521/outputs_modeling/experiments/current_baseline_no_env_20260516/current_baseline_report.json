@@ -1,0 +1,7 @@
+{
+  "label": "当前主链无环境基线，不是正式结果",
+  "formal_results_overwritten": false,
+  "model_table": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\data\\model_input\\model_table_3depth_2014_2024.csv",
+  "output_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\current_baseline_no_env_20260516",
+  "note": "This baseline uses the current-chain model_table and current modeling scripts without environment feature files."
+}

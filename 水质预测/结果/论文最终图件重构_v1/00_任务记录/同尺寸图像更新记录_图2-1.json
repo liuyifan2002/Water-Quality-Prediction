@@ -1,0 +1,10 @@
+{
+  "图号": "图2-1",
+  "唯一替换DOCX媒体": "word/media/image2.png",
+  "其他全部ZIP成员逐字节一致": true,
+  "PDF文字与分页逐页一致": true,
+  "图像框未变": true,
+  "图片SHA256": "6830fe3d342f92ceaba42245aa969772b513140f78b729d482f76c1e86a76b48",
+  "新DOCX_SHA256": "0a9e2afbf9a74f23dc79565216b894cfc986245c130eb1682a6bb3d3bcffd5c4",
+  "新PDF_SHA256": "22858a49ade0e455abd8946fa0ec99c623538aaa2103c4301af99dbce311c387"
+}

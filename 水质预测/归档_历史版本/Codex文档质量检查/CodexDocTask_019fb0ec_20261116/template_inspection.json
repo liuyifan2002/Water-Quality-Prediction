@@ -1,0 +1,1253 @@
+{
+  "path": "C:\\CodexDocTask_019fb0ec\\journal_template.docx",
+  "paragraph_count_nonempty": 120,
+  "table_count": 2,
+  "section_count": 2,
+  "style_counts": [
+    [
+      "Normal",
+      112
+    ],
+    [
+      "List Paragraph",
+      8
+    ]
+  ],
+  "sections": [
+    {
+      "page_width": 7560310,
+      "page_height": 10692130,
+      "top_margin": 720090,
+      "bottom_margin": 720090,
+      "left_margin": 540385,
+      "right_margin": 540385,
+      "header_distance": 0,
+      "footer_distance": 0
+    },
+    {
+      "page_width": 7560310,
+      "page_height": 10692130,
+      "top_margin": 914400,
+      "bottom_margin": 914400,
+      "left_margin": 1028700,
+      "right_margin": 930910,
+      "header_distance": 0,
+      "footer_distance": 0
+    }
+  ],
+  "first_paragraphs": [
+    {
+      "text": "《福州大学学报（自然科学版）》",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "《福州大学学报（自然科学版）》",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "文稿模板及写作基本要求",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "文稿模板及写作基本要求",
+          "bold": true,
+          "italic": null,
+          "font_name": "微软雅黑",
+          "font_size_pt": 16.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体;SimSun",
+          "font_size_pt": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "题名(居中,一般不超过20字,宋体4号)",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "题名",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 14.0,
+          "superscript": null
+        },
+        {
+          "text": "(",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 14.0,
+          "superscript": null
+        },
+        {
+          "text": "居中",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体;SimSun",
+          "font_size_pt": 14.0,
+          "superscript": null
+        },
+        {
+          "text": ",",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体;SimSun",
+          "font_size_pt": 14.0,
+          "superscript": null
+        },
+        {
+          "text": "一般不超过",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体;SimSun",
+          "font_size_pt": 14.0,
+          "superscript": null
+        },
+        {
+          "text": "20",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 14.0,
+          "superscript": null
+        },
+        {
+          "text": "字",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体;SimSun",
+          "font_size_pt": 14.0,
+          "superscript": null
+        },
+        {
+          "text": ",",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 14.0,
+          "superscript": null
+        },
+        {
+          "text": "宋体",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 14.0,
+          "superscript": null
+        },
+        {
+          "text": "4",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 14.0,
+          "superscript": null
+        },
+        {
+          "text": "号",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 14.0,
+          "superscript": null
+        },
+        {
+          "text": ")",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 14.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "（以最恰当、最简明的词语反映论文中最重要的特定内容的逻辑组合。一般不宜超出20个汉字）",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "（以最恰当、最简明的词语反映论文中最重要的特定内容的逻辑组合。一般不宜超出",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "20",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "个汉字）",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "作者署名（宋体小4号）",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "作者署名（宋体小",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "4",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "号）",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "（参加全部或部分主要工作并作出贡献，按贡献大小排列名次。不同单位或部门的作者应使用上标1、2等标示，",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "（参加全部或部分主要工作并作出贡献，按贡献大小排列名次。不同单位或部门的作者应使用上标",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "1",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "、",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "2",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "等标示，",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "在首页地脚处注明“通信作者”，含出生年，职称，主要研究方向和联系邮箱)",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "在",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "首页",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "地脚处注明",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "“",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "通信作者",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "”，含出生年，职称，主要研究方向和联系邮箱",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": ")",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "作者单位（宋体小5号）",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "作者单位（宋体小",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "5",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "号）",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "（标注到所在院校系所一级，省份名 城市名，邮编）",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "（标注到所在院校系所一级，省份名 城市名，邮编）",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "摘要：摘要是论文内容不加注释和评论的简短陈述，应具有独立性和自含性，有数据、有结论，不阅读全文就能够获得必要的信息。中文摘要一般不少于180字，英文摘要在内容和所表达意义上应与中文摘要同（小5号）。",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "摘要：",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "摘要是论文内容不加注释和评论的简短陈述，应具有独立性和自含性，有数据、有结论，不阅读全文就能够获得必要的信息。中文摘要一般不少于",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "180",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "字，英文摘要在内容和所表达意义上应与中文摘要同（小",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "5",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "号）。",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "关键词：从论文中选取出来用以表示全文主题内容信息的单词或术语。每篇论文关键词在3~8个为宜（小5号）。",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "关键词：",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "从论文中选取出来用以表示全文主题内容信息的单词或术语。每篇论文关键词在",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "3~8",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "个为宜（小",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "5",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "号）。",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "中图分类号：从《中国图书馆分类法》中找寻与本文专业最贴近的分类号，交叉学科、跨学科文章可多选（小5号）。",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "中图分类号：",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "从《中国图书馆分类法》中找寻与本文专业最贴近的分类号，交叉学科、跨学科文章可多选（小",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "5",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "号）。",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "英文题名（第１个词的首字母大写,其余小写,首字母本应大写者例外，Times New Roman 4号加黑）",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "英文题名（",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "第１个词的首字母大写",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": ",",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "其余小写",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": ",",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "首字母本应大写者例外",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "，",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "Times New Roman 4",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "号加黑）",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "作者姓名的汉语拼音（姓在前，字母全大写，名字在后，名的首字母大写,双名间不加-，如YUAN Yaofeng）",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "作者姓名的汉语拼音（姓在前，字母全大写，名字在后，",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "名的首字母大写",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": ",",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "双名间不加",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "-",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "，如",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "YUAN Yaofeng",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "）",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "英文作者单位（与中文单位一致，Times New Roman 小5号）",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "英文作者单位（与中文单位一致，",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "Times New Roman ",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "小",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "5",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "号）",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 9.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "Abstract：内容与中文摘要一致（Times New Roman 5号）",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "Abstract",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "：",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "内容与中文摘要一致",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "（",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "Times New Roman 5",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "号）",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "Keywords：内容与中文关键词一一对应（Times New Roman 5号）",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "Keywords",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "：",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "内容与中文关键词一一对应",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "（",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "Times New Roman 5",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "号）",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "（以下是正文部分。正文一般从引言开始，以讨论或结论结束，正文内容用5号宋体）",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "（以下是正文部分。正文一般从引言开始，以讨论或结论结束，正文内容用",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "5",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "号宋体）",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "引言（以0开始编号，小4号加黑）",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "引言（以",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "0",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "开始编号，小",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "4",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "号加黑）",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "简要说明研究工作的目的、范围、前人或同行的研究现状，相关的理论基础等。避免与摘要雷同，也不要成为摘要的注释。一般教科书中已有的知识不必在引言中赘述。也可以只用小段文字起引言的作用。",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "简要说明研究工作的目的、范围、前人或同行的研究现状，相关的理论基础等。避免与摘要雷同，也不要成为摘要的注释。一般教科书中已有的知识不必在引言中赘述。也可以只用小段文字起引言的作用。",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "层次标题（即正文章节题名，小4号加黑）",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "层次标题（即正文章节题名，小",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "4",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "号加黑）",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "层次标题可以使整篇论文层次分明，并对每一章节中心内容作概括。同一层次的标题表达相互并列关系，上下标题应体现直接关联的关系。层次标题使用阿拉伯数字编号，如1，2，2.1，2.2，2.2.1，…",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "层次标题可以使整篇论文层次分明，并对每一章节中心内容作概括。同一层次的标题表达相互并列关系，上下标题应体现直接关联的关系。层次标题使用阿拉伯数字编号，如",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "1",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "，",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "2",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "，",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "2.1",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "，",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "2.2",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "，",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "2.2.1",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "，",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "…",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "计量单位（论文中所有的法定计量单位必须遵照《中华人民共和国法定计量单位使用方法》执行。计量单位名称和符号的书写一律采用国际通用符号。量的符号应使用斜体，单位的符号应使用正体）",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "计量单位",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "（论文中所有的法定计量单位必须遵照《中华人民共和国法定计量单位使用方法》执行。计量单位名称和符号的书写一律采用国际通用符号。量的符号应使用斜体，单位的符号应使用正体）",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "图（图应具有自明性，即只看图、图题、图例，不阅读正文就可理解图意。所有插图都按出现顺序编序号，不分章节，应有简短确切的中、英文题名，一起置于图的下方。曲线图的纵横坐标应将量、单位、数值这三项标注齐全，仅在不必要标明时才可省略）",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "图",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "（图应具有自明性，即只看图、图题、图例，不阅读正文就可理解图意。所有插图都按出现顺序编序号，不分章节，应有简短确切的中、英文题名，一起置于图的下方。曲线图的纵横坐标应将量、单位、数值这三项标注齐全，仅在不必要标明时才可省略）",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "例图：",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "例图：",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "表（表也应具有自明性，即只看表、表题、表注，不阅读正文就可理解表意。所有表格都按出现顺序编序号，不分章节，应有简短确切的中、英文题名，一起置于表的上方）",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "表",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "（表也应具有自明性，即只看表、表题、表注，不阅读正文就可理解表意。所有表格都按出现顺序编序号，不分章节，应有简短确切的中、英文题名，一起置于表的上方）",
+          "bold": null,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "例表：",
+      "style": "Normal",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "例表：",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "表1 淤泥层和粘土层的土体参数取值",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "表",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "1 ",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "淤泥层和粘土层的土体参数取值",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "Tab.1 ※※※※※※※※※※※※※（对应的英文题名）",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "Tab.1 ",
+          "bold": true,
+          "italic": null,
+          "font_name": null,
+          "font_size_pt": null,
+          "superscript": null
+        },
+        {
+          "text": "※※※※※※※※※※※※※",
+          "bold": true,
+          "italic": null,
+          "font_name": "宋体;SimSun",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "（对应的英文题名）",
+          "bold": true,
+          "italic": null,
+          "font_name": "宋体;SimSun",
+          "font_size_pt": 9.0,
+          "superscript": null
+        }
+      ]
+    }
+  ],
+  "media_count": 3,
+  "field_markers": 0,
+  "zotero_markers": 0
+}

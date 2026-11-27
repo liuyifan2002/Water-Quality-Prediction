@@ -1,0 +1,12 @@
+{
+  "task": "tn_bottom",
+  "model": "catboost",
+  "n_train": 7911,
+  "n_test": 1978,
+  "R2": 0.5839283758564233,
+  "RMSE": 0.21806919164848165,
+  "MAE": 0.13670519831042058,
+  "runtime_seconds": 4.694431300013093,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

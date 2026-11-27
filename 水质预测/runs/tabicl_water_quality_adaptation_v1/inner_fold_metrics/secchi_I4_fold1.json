@@ -1,0 +1,18 @@
+{
+  "task": "secchi",
+  "config_id": "I4",
+  "fold": 1,
+  "n_train": 6953,
+  "n_val": 1739,
+  "n_features": 81,
+  "feature_sha256": "d3be703d2b61471b2ed7d98c6063fd39dc312908c7a159fdfb66804fe11a4e16",
+  "target_transform": "log1p",
+  "output_type": "mean",
+  "nonnegative_clip": true,
+  "fit_seconds": 1.3331507999973837,
+  "predict_seconds": 6.116315299994312,
+  "gpu_peak_allocated_mb": 4977.19580078125,
+  "R2": 0.5550731026229843,
+  "RMSE": 0.804244794787774,
+  "MAE": 0.44394814826895135
+}

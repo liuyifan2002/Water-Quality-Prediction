@@ -1,0 +1,18 @@
+{
+  "label": "GEE 海洋水色提取准备",
+  "dry_run": true,
+  "sample_rows": 10866,
+  "start_date": "2014-01-01",
+  "end_date": "2024-12-31",
+  "station_asset_id": "",
+  "earthengine_project_present": false,
+  "dataset_id_olci": "",
+  "dataset_id_kd490": "",
+  "script_path": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\scripts\\24_extract_gee_ocean_color_features.js",
+  "output_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\data\\model_input\\new_sources",
+  "standardized_outputs": [
+    "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\data\\model_input\\new_sources\\sentinel3_olci_features_2014_2024.csv",
+    "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\data\\model_input\\new_sources\\ocean_color_kd490_tss_features_2014_2024.csv"
+  ],
+  "status": "dry_run_only"
+}

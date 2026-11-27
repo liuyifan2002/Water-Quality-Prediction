@@ -1,0 +1,24 @@
+{
+  "parent_input_sha256": "d2eec825011e2dd483e775791edd3951fa42ace483a9d3696bf9d9ec44bc844d",
+  "dataset_version": "WQ77_REPAIRED_20261115_V1_HIST_RANDOM_PATCH",
+  "outer_split": "直接采用原测试预测及原训练OOF obs_id和原顺序，不重新调用外层train_test_split",
+  "inner_split": "原KFold(4,shuffle=True,random_state=42)，按原训练ID顺序确定并在新目录另存",
+  "原件哈希": {
+    "E:\\研究生\\codex\\水质预测\\结果\\扩展实验\\质量感知遥感门控融合_20260905\\特征与防泄漏清单.csv": "0bb17fd18f8c5fec18b3399c3efa635e4d17f57ad2b4536ad1aab4f62cfcfafa",
+    "E:\\研究生\\codex\\水质预测\\结果\\扩展实验\\质量感知遥感门控融合_20260905\\质量感知遥感融合_预测.csv": "73b6520a2f61598114f5d79bbea0fa75a159d84cf4736efe18f7150d3cb1c3ec",
+    "E:\\研究生\\codex\\水质预测\\结果\\扩展实验\\质量感知遥感门控融合_20260905\\门控训练期OOF记录.csv": "f803143c3aa2e0c976b0c02220e3fa69d4c1595c36a9047de00610e6fe9a9461",
+    "E:\\研究生\\codex\\水质预测\\数据\\外部数据\\试验项目接管_20260521\\data_processed_current\\landsat_highres_patch_features_2014_2024.csv": "ca5ff75babd6332a27ef4877b439c9bd2f697c7076f701f08889620a5043aa95",
+    "E:\\研究生\\codex\\水质预测\\数据\\外部数据\\试验项目接管_20260521\\data_processed_current\\s2_highres_patch_features_2014_2024.csv": "acdb4800ffda29a30f43c1eea7e1a429f10f38cb76bbcdfef8de5b9c6c7a16bf"
+  },
+  "参数": {
+    "oof_folds": 4,
+    "random_state": 42,
+    "n_estimators": 400,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "n_jobs": 4
+  },
+  "限制": "保留原目标历史变量及双侧影像匹配；只回放历史随机实验，不作为严格留站点/提前预测或独立检验。新月Landsat与本patch不是同一协议，未混入。"
+}

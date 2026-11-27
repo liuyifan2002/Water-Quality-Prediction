@@ -1,0 +1,18 @@
+{
+  "task": "tn_bottom",
+  "fold": 1,
+  "scheme": "C4",
+  "temporal_set": "L0",
+  "config_id": "Z2",
+  "n_train": 6328,
+  "n_query": 1583,
+  "n_query_batches": 30,
+  "query_batch_size": 64,
+  "prep_seconds": 0.25163179996889085,
+  "fit_seconds": 27.89027189987246,
+  "predict_seconds": 24.900434400013182,
+  "gpu_peak_allocated_mb": 982.68017578125,
+  "R2": 0.41497552510692126,
+  "RMSE": 0.233401040057237,
+  "MAE": 0.16109813899272465
+}

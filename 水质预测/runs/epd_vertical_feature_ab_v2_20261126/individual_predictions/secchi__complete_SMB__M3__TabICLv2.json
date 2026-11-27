@@ -1,0 +1,15 @@
+{
+  "task": "secchi",
+  "cohort": "complete_SMB",
+  "feature_set": "M3",
+  "model": "TabICLv2",
+  "n_features": 93,
+  "n_train": 7594,
+  "n_test": 1861,
+  "n_stations": 84,
+  "n_test_stations": 81,
+  "R2": 0.7135014244110085,
+  "RMSE": 0.6004056320925049,
+  "MAE": 0.4024311648075123,
+  "runtime_s": 9.305721521377563
+}

@@ -1,0 +1,94 @@
+﻿feature,source,feature_type,leakage_note,missing_rate,non_null_count
+oc_chl_missing_mask,oc_chl,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_kd490_missing_mask,oc_kd490,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_zsd_missing_mask,oc_zsd,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_rrs_412_missing_mask,oc_rrs_412,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_rrs_443_missing_mask,oc_rrs_443,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_rrs_490_missing_mask,oc_rrs_490,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_rrs_560_missing_mask,oc_rrs_560,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_rrs_665_missing_mask,oc_rrs_665,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_chl_3d_missing_mask,oc_chl_3d,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_chl_7d_missing_mask,oc_chl_7d,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_chl_14d_missing_mask,oc_chl_14d,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_kd490_3d_missing_mask,oc_kd490_3d,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_kd490_7d_missing_mask,oc_kd490_7d,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_kd490_14d_missing_mask,oc_kd490_14d,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_zsd_3d_missing_mask,oc_zsd_3d,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_zsd_7d_missing_mask,oc_zsd_7d,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_zsd_14d_missing_mask,oc_zsd_14d,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+valid_count_7d_missing_mask,valid_count_7d,missing_mask,仅记录该样本 Ocean Colour 字段是否缺失，不使用目标变量。,0.0,30719
+oc_chl_sample_lag1,oc_chl,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.2217520101565806,23907
+oc_chl_sample_lag2,oc_chl,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22403073016699762,23837
+oc_chl_past3_mean,oc_chl,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22116605358247338,23925
+oc_chl_past3_std,oc_chl,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22403073016699762,23837
+oc_chl_past3_min,oc_chl,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22116605358247338,23925
+oc_chl_past3_max,oc_chl,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22116605358247338,23925
+oc_chl_past5_mean,oc_chl,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22097073472443765,23931
+oc_chl_past5_std,oc_chl,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22324945473485466,23861
+oc_chl_past5_min,oc_chl,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22097073472443765,23931
+oc_chl_past5_max,oc_chl,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22097073472443765,23931
+oc_chl_lag1_trend,oc_chl,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22432370845405125,23828
+oc_kd490_sample_lag1,oc_kd490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.2217520101565806,23907
+oc_kd490_sample_lag2,oc_kd490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22403073016699762,23837
+oc_kd490_past3_mean,oc_kd490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22116605358247338,23925
+oc_kd490_past3_std,oc_kd490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22403073016699762,23837
+oc_kd490_past3_min,oc_kd490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22116605358247338,23925
+oc_kd490_past3_max,oc_kd490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22116605358247338,23925
+oc_kd490_past5_mean,oc_kd490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22097073472443765,23931
+oc_kd490_past5_std,oc_kd490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22324945473485466,23861
+oc_kd490_past5_min,oc_kd490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22097073472443765,23931
+oc_kd490_past5_max,oc_kd490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22097073472443765,23931
+oc_kd490_lag1_trend,oc_kd490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22432370845405125,23828
+oc_zsd_sample_lag1,oc_zsd,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.2217520101565806,23907
+oc_zsd_sample_lag2,oc_zsd,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22403073016699762,23837
+oc_zsd_past3_mean,oc_zsd,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22116605358247338,23925
+oc_zsd_past3_std,oc_zsd,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22403073016699762,23837
+oc_zsd_past3_min,oc_zsd,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22116605358247338,23925
+oc_zsd_past3_max,oc_zsd,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22116605358247338,23925
+oc_zsd_past5_mean,oc_zsd,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22097073472443765,23931
+oc_zsd_past5_std,oc_zsd,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22324945473485466,23861
+oc_zsd_past5_min,oc_zsd,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22097073472443765,23931
+oc_zsd_past5_max,oc_zsd,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22097073472443765,23931
+oc_zsd_lag1_trend,oc_zsd,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.22432370845405125,23828
+oc_rrs_490_sample_lag1,oc_rrs_490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.7508056902893975,7655
+oc_rrs_490_sample_lag2,oc_rrs_490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.7524659005827012,7604
+oc_rrs_490_past3_mean,oc_rrs_490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.65295094241349,10661
+oc_rrs_490_past3_std,oc_rrs_490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.7533448354438621,7577
+oc_rrs_490_past3_min,oc_rrs_490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.65295094241349,10661
+oc_rrs_490_past3_max,oc_rrs_490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.65295094241349,10661
+oc_rrs_490_past5_mean,oc_rrs_490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.5721865946157102,13142
+oc_rrs_490_past5_std,oc_rrs_490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.6428269149386373,10972
+oc_rrs_490_past5_min,oc_rrs_490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.5721865946157102,13142
+oc_rrs_490_past5_max,oc_rrs_490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.5721865946157102,13142
+oc_rrs_490_lag1_trend,oc_rrs_490,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.8014583808066669,6099
+oc_rrs_560_sample_lag1,oc_rrs_560,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.7595624857579999,7386
+oc_rrs_560_sample_lag2,oc_rrs_560,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.7612226960513038,7335
+oc_rrs_560_past3_mean,oc_rrs_560,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.6644747550375989,10307
+oc_rrs_560_past3_std,oc_rrs_560,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.7621016309124646,7308
+oc_rrs_560_past3_min,oc_rrs_560,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.6644747550375989,10307
+oc_rrs_560_past3_max,oc_rrs_560,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.6644747550375989,10307
+oc_rrs_560_past5_mean,oc_rrs_560,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.5857938083922003,12724
+oc_rrs_560_past5_std,oc_rrs_560,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.6548390247078355,10603
+oc_rrs_560_past5_min,oc_rrs_560,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.5857938083922003,12724
+oc_rrs_560_past5_max,oc_rrs_560,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.5857938083922003,12724
+oc_rrs_560_lag1_trend,oc_rrs_560,station_past_ocean_colour,按 station 和日期排序后 shift，严格只使用历史站点水色记录。,0.8088153911260132,5873
+oc_chl_x_kd490,"oc_chl, oc_kd490",ocean_colour_interaction,同日外部水色特征组合，不使用水质目标。,0.21947329014616362,23977
+oc_chl_per_kd490,"oc_chl, oc_kd490",ocean_colour_ratio,同日外部水色特征比例，不使用水质目标。,0.21947329014616362,23977
+oc_zsd_per_kd490,"oc_zsd, oc_kd490",ocean_colour_ratio,同日外部水色特征比例，不使用水质目标。,0.21947329014616362,23977
+oc_chl_change_3d_7d,"oc_chl_3d, oc_chl_7d",short_window_change,使用已制备的外部水色窗口特征，不使用目标变量。,0.21869201471402064,24001
+oc_chl_ratio_3d_7d,"oc_chl_3d, oc_chl_7d",short_window_ratio,使用已制备的外部水色窗口特征，不使用目标变量。,0.21869201471402064,24001
+oc_chl_change_7d_14d,"oc_chl_7d, oc_chl_14d",short_window_change,使用已制备的外部水色窗口特征，不使用目标变量。,0.21869201471402064,24001
+oc_chl_ratio_7d_14d,"oc_chl_7d, oc_chl_14d",short_window_ratio,使用已制备的外部水色窗口特征，不使用目标变量。,0.21869201471402064,24001
+oc_kd490_change_3d_7d,"oc_kd490_3d, oc_kd490_7d",short_window_change,使用已制备的外部水色窗口特征，不使用目标变量。,0.21869201471402064,24001
+oc_kd490_ratio_3d_7d,"oc_kd490_3d, oc_kd490_7d",short_window_ratio,使用已制备的外部水色窗口特征，不使用目标变量。,0.21869201471402064,24001
+oc_kd490_change_7d_14d,"oc_kd490_7d, oc_kd490_14d",short_window_change,使用已制备的外部水色窗口特征，不使用目标变量。,0.21869201471402064,24001
+oc_kd490_ratio_7d_14d,"oc_kd490_7d, oc_kd490_14d",short_window_ratio,使用已制备的外部水色窗口特征，不使用目标变量。,0.21869201471402064,24001
+oc_zsd_change_3d_7d,"oc_zsd_3d, oc_zsd_7d",short_window_change,使用已制备的外部水色窗口特征，不使用目标变量。,0.21869201471402064,24001
+oc_zsd_ratio_3d_7d,"oc_zsd_3d, oc_zsd_7d",short_window_ratio,使用已制备的外部水色窗口特征，不使用目标变量。,0.21869201471402064,24001
+oc_zsd_change_7d_14d,"oc_zsd_7d, oc_zsd_14d",short_window_change,使用已制备的外部水色窗口特征，不使用目标变量。,0.21869201471402064,24001
+oc_zsd_ratio_7d_14d,"oc_zsd_7d, oc_zsd_14d",short_window_ratio,使用已制备的外部水色窗口特征，不使用目标变量。,0.21869201471402064,24001
+oc_chl_x_valid_count_7d,"oc_chl, valid_count_7d",quality_weighted_ocean_colour,用有效观测数量表达水色可信度，不使用目标变量。,0.21947329014616362,23977
+chla_history_trend_lag1_lag2,"chla_ug_l_lag1, chla_ug_l_lag2",target_history_trend,仅使用目标变量自身历史值，不使用当前 Chl-a。,0.017383378365181158,30185
+chla_history_lag1_minus_roll3,"chla_ug_l_lag1, chla_ug_l_roll3",target_history_anomaly,仅使用目标变量自身历史值，不使用当前 Chl-a。,0.008756795468602493,30450
+chla_history_lag1_ratio_roll3,"chla_ug_l_lag1, chla_ug_l_roll3",target_history_ratio,仅使用目标变量自身历史值，不使用当前 Chl-a。,0.008756795468602493,30450
+chla_lag1_per_day_gap,"chla_ug_l_lag1, days_since_prev_sample",target_history_rate,仅使用历史 Chl-a 和采样间隔，不使用当前 Chl-a。,0.008756795468602493,30450

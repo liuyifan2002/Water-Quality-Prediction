@@ -1,4 +1,0 @@
-﻿version,target,model,rmse,mae,r2
-original_station_best,Chl_a,F3_fusion_tuned,4.9210186865109415,2.8619148508956034,0.0734654882394341
-rolling_cv,Chl_a,Chl_a_rolling_cv_selected,4.677401581371462,2.9468457570843984,0.1629317131110873
-short_term_ecology,Chl_a,Chl_a_ecology_rolling_cv,4.692037982158595,2.956933067961817,0.157684853069245

@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-05-16T03:03:46",
+  "baseline_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\current_chla_mechanism_baseline_20260516",
+  "source_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\chla_short_mechanism_20260516",
+  "output_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\chla_high_value_diagnostics_20260516",
+  "depth_reports": {
+    "bottom": {
+      "selected_feature_set": "f3_history_remote",
+      "train_quantiles": {
+        "p50": 1.5,
+        "p75": 3.2,
+        "p80": 4.0,
+        "p90": 6.6199999999999815,
+        "p95": 10.0
+      },
+      "high_threshold_train_p90": 6.6199999999999815,
+      "high_rows_test_p90": 212,
+      "high_value_mean_error": -9.061742536320756,
+      "high_value_underestimation_rate": 0.9764150943396226,
+      "high_value_wet_season_rate": 0.6509433962264151,
+      "test_wet_season_rate": 0.5,
+      "high_value_environment_relationships": {
+        "rain_7d": {
+          "rows": 212,
+          "pearson_r_with_observed_chla": -0.01071735684943958
+        },
+        "era5_sst_mean_7d": {
+          "rows": 111,
+          "pearson_r_with_observed_chla": 0.294087733962925
+        },
+        "era5_ssrd_mean_7d": {
+          "rows": 111,
+          "pearson_r_with_observed_chla": 0.37463987072192706
+        },
+        "tide_tidal_range": {
+          "rows": 212,
+          "pearson_r_with_observed_chla": -0.058772251947602445
+        }
+      }
+    },
+    "middle": {
+      "selected_feature_set": "f3_history_remote",
+      "train_quantiles": {
+        "p50": 1.8,
+        "p75": 3.8,
+        "p80": 4.8,
+        "p90": 8.1,
+        "p95": 12.0
+      },
+      "high_threshold_train_p90": 8.1,
+      "high_rows_test_p90": 179,
+      "high_value_mean_error": -9.580513761452513,
+      "high_value_underestimation_rate": 0.9664804469273743,
+      "high_value_wet_season_rate": 0.7988826815642458,
+      "test_wet_season_rate": 0.5,
+      "high_value_environment_relationships": {
+        "rain_7d": {
+          "rows": 179,
+          "pearson_r_with_observed_chla": -0.02447136707582945
+        },
+        "era5_sst_mean_7d": {
+          "rows": 98,
+          "pearson_r_with_observed_chla": 0.21777222959830642
+        },
+        "era5_ssrd_mean_7d": {
+          "rows": 98,
+          "pearson_r_with_observed_chla": 0.26216841236393995
+        },
+        "tide_tidal_range": {
+          "rows": 179,
+          "pearson_r_with_observed_chla": -0.03292466704607178
+        }
+      }
+    },
+    "surface": {
+      "selected_feature_set": "f3_history_remote",
+      "train_quantiles": {
+        "p50": 2.1,
+        "p75": 5.1,
+        "p80": 6.5,
+        "p90": 11.0,
+        "p95": 18.0
+      },
+      "high_threshold_train_p90": 11.0,
+      "high_rows_test_p90": 195,
+      "high_value_mean_error": -12.665297065128204,
+      "high_value_underestimation_rate": 0.9333333333333333,
+      "high_value_wet_season_rate": 0.8512820512820513,
+      "test_wet_season_rate": 0.5,
+      "high_value_environment_relationships": {
+        "rain_7d": {
+          "rows": 195,
+          "pearson_r_with_observed_chla": 0.20809209808061563
+        },
+        "era5_sst_mean_7d": {
+          "rows": 105,
+          "pearson_r_with_observed_chla": 0.1692070779410039
+        },
+        "era5_ssrd_mean_7d": {
+          "rows": 105,
+          "pearson_r_with_observed_chla": 0.07893349619390676
+        },
+        "tide_tidal_range": {
+          "rows": 195,
+          "pearson_r_with_observed_chla": 0.19884022478251398
+        }
+      }
+    }
+  }
+}

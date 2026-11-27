@@ -1,0 +1,35 @@
+{
+  "experiment": "TABICL_ALE_REPEATABILITY_DIAGNOSTIC_V1",
+  "final_conclusion": "INFERENCE_NONDETERMINISM_CONFIRMED",
+  "classification": "B. INFERENCE_NONDETERMINISM",
+  "cause_identified": true,
+  "historical_three_calls_have_per_call_input_hashes": false,
+  "historical_input_same_from_code_path_only_not_hash_verified": true,
+  "probe_count": 3,
+  "probe_predictions_original_scale": [
+    6.855005938161196,
+    6.856504304535695,
+    6.856504304535695
+  ],
+  "probe_input_hashes": [
+    "eb69b6ce8a3c29aecbe65d6842c39e6dd204ff9eff291a751bfdfa4c8dcbc22b",
+    "eb69b6ce8a3c29aecbe65d6842c39e6dd204ff9eff291a751bfdfa4c8dcbc22b",
+    "eb69b6ce8a3c29aecbe65d6842c39e6dd204ff9eff291a751bfdfa4c8dcbc22b"
+  ],
+  "probe_hashes_all_identical": true,
+  "probe_context_hashes_all_identical": true,
+  "probe_checkpoint_hashes_all_identical": true,
+  "probe_model_state_hashes_all_identical": true,
+  "probe_max_prediction_range": 0.0014983663744985165,
+  "acceptance_threshold": 1e-06,
+  "probe_exceeds_threshold": true,
+  "comparison_scale": "original Chl-a target scale after log1p/expm1 inverse and nonnegative clamp; target chla_ug_l",
+  "historical_ale_delta_range": 0.0014983663744985,
+  "historical_repeatability_status": "VARIABILITY_GT_1E6",
+  "historical_actual_model_calls_field_is_hardcoded": true,
+  "minimal_future_logging_fix_applied": "measure live call counter and persist lower/upper query hashes; completed rows untouched",
+  "model_prediction_or_scientific_protocol_changed": false,
+  "shap_or_ale_recomputed": false,
+  "fold1_acceptance_status_unchanged": "FOLD1_NOT_COMPLETE_VALIDATION_FAILURE",
+  "source_probe_script_sha256": "9403f809869001a6beb69d120b5dc8c8687f3d14bfb446e44318db4d41dca5fd"
+}

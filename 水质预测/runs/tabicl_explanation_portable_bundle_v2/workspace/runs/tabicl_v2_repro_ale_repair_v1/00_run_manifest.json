@@ -1,0 +1,85 @@
+{
+  "created_local_date": "2026-10-21",
+  "script_sha256": "4784bccfea4d40b9f72ba1f09e7ab381e8d37e51e3c5fa1aa06811835af6205a",
+  "formal_reproduction_threshold": {
+    "max_abs": 1e-06,
+    "mean_abs": 1e-07
+  },
+  "probe_queries": 32,
+  "repetitions_per_condition": 3,
+  "failed_folds": [
+    [
+      "chla_surface",
+      "fold_1"
+    ],
+    [
+      "chla_surface",
+      "fold_2"
+    ],
+    [
+      "chla_surface",
+      "fold_3"
+    ],
+    [
+      "chla_surface",
+      "fold_5"
+    ],
+    [
+      "secchi",
+      "fold_4"
+    ]
+  ],
+  "feature_count": 77,
+  "seed": 42,
+  "run_environment": {
+    "python": "3.11.9",
+    "python_executable": "E:\\研究生\\codex\\水质预测\\runs\\tabiclv2_pilot\\环境\\.venv\\Scripts\\python.exe",
+    "python_hashseed": "randomized",
+    "torch": "2.6.0+cu124",
+    "tabicl": "2.2.0",
+    "numpy": "2.4.6",
+    "cuda_runtime": "12.4",
+    "gpu": "NVIDIA GeForce RTX 2070 with Max-Q Design",
+    "cuda_available": true,
+    "driver_version": "592.82",
+    "amp_policy": "auto/default unless condition=no_amp/cpu",
+    "tf32_matmul": false,
+    "tf32_cudnn": true,
+    "deterministic_algorithms": false,
+    "cudnn_deterministic": false,
+    "cudnn_benchmark": false,
+    "torch_cpu_rng_hash": "999b832667f700cb36ec126de0db980c78dee8864b3d44d911b4e50aeadaa3e0",
+    "torch_cuda_rng_hash": "ec40b53ea8a59b63bd9f05b777e66eb121e7d9826f3b2a7e3f328a3b239e808f"
+  },
+  "formal_frozen_predictions_modified": false,
+  "pretrained_weights_updated": false,
+  "split_or_feature_changes": false,
+  "script_sha256_current": "de37e8e00a5770dc4e9f397ae8497208f4eca36174f1d6cfca877e187fa8cc04",
+  "manifest_refreshed_local_date": "2026-10-21",
+  "run_environment_current": {
+    "python": "3.11.9",
+    "python_executable": "E:\\研究生\\codex\\水质预测\\runs\\tabiclv2_pilot\\环境\\.venv\\Scripts\\python.exe",
+    "python_hashseed": "42",
+    "torch": "2.6.0+cu124",
+    "tabicl": "2.2.0",
+    "numpy": "2.4.6",
+    "cuda_runtime": "12.4",
+    "gpu": "NVIDIA GeForce RTX 2070 with Max-Q Design",
+    "cuda_available": true,
+    "driver_version": "592.82",
+    "amp_policy": "auto/default unless condition=no_amp/cpu",
+    "tf32_matmul": false,
+    "tf32_cudnn": true,
+    "deterministic_algorithms": false,
+    "cudnn_deterministic": false,
+    "cudnn_benchmark": false,
+    "torch_cpu_rng_hash": "1e5dcb676b25cbdc53494d317ee766991014b81ba3085f654d36fbced60b2076",
+    "torch_cuda_rng_hash": "b1654cbe65ac7b063195e8a79cf2d2e36342d6bc239c3591d92c2b91483924ff"
+  },
+  "fixed_hashseed_candidate": {
+    "python_hash_seed": 1,
+    "probe_runs_completed": 2,
+    "probe_runs_required": 3,
+    "stable_full_validation_started": false
+  }
+}

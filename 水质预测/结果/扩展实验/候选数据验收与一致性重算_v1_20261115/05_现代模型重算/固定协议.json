@@ -1,0 +1,70 @@
+{
+  "seed": 20260921,
+  "tasks": [
+    "chla_surface",
+    "secchi",
+    "tn_surface",
+    "tp_middle"
+  ],
+  "config": {
+    "experiment_name": "表格预训练算法同数据同划分对比",
+    "dataset": "data/model_table.csv",
+    "reference_metrics_file": "reference_metrics.csv",
+    "split": {
+      "mode": "random",
+      "test_size": 0.2,
+      "random_state": 42
+    },
+    "target_transform": "log1p_when_nonnegative",
+    "same_day_water_quality_covariates": "excluded",
+    "task_feature_sets": {
+      "chla_bottom": "f1_history",
+      "chla_middle": "f3_history_remote",
+      "chla_surface": "f3_history_remote",
+      "secchi_bottom": "f3_history_remote",
+      "secchi_middle": "f1_history",
+      "secchi_surface": "f3_history_remote",
+      "tn_bottom": "f3_history_remote",
+      "tn_middle": "baseline",
+      "tn_surface": "f3_history_remote",
+      "tp_bottom": "f3_history_remote",
+      "tp_middle": "baseline",
+      "tp_surface": "baseline"
+    },
+    "model_parameters": {
+      "xgboost": {
+        "n_estimators": 400,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "n_jobs": 4
+      },
+      "catboost": {
+        "iterations": 500,
+        "depth": 6,
+        "learning_rate": 0.05,
+        "l2_leaf_reg": 3.0,
+        "thread_count": 4
+      },
+      "tabpfn": {
+        "n_estimators": 8,
+        "model_path": "models/tabpfn-v2-regressor.ckpt"
+      },
+      "tabm": {
+        "arch_type": "tabm-mini",
+        "k": 16,
+        "batch_size": 256,
+        "learning_rate": 0.002,
+        "weight_decay": 1e-05,
+        "max_epochs": 200,
+        "patience": 25,
+        "validation_fraction": 0.2
+      }
+    }
+  },
+  "protocol": "原modern_baseline_gate_v1；原77项原始缺失输入，按模型原处理器拟合；仅替换候选值和折训练期SST气候态",
+  "code_sha256": "7209f6dd2db6be79a000680b9b7d9c2fa6d73d88fa577e2c9572895aa90ab307",
+  "原始预处理": "TabM内部训练/验证中位数与缩放，轮数选择后全部外层训练集重训；TabPFN原生处理缺失",
+  "数据版本": "WQ77_REPAIRED_20261115_V1"
+}

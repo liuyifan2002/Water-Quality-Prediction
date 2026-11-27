@@ -1,0 +1,88 @@
+{
+  "label": "历史衰减特征实验，对照 current_baseline_with_env_20260516",
+  "generated_at": "2026-05-16T02:49:11",
+  "baseline_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\current_baseline_with_env_20260516",
+  "source_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\env_feature_gain_20260516_real",
+  "output_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\history_decay_features_20260516",
+  "dataset_path": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\history_decay_features_20260516\\history_decay_model_table.csv",
+  "new_feature_family": "history_decay",
+  "new_feature_meanings": {
+    "lag1_decay_7d": "7天时间衰减的一阶历史值，表示极短期记忆。",
+    "lag1_decay_14d": "14天时间衰减的一阶历史值，表示半月尺度记忆。",
+    "lag1_decay_30d": "30天时间衰减的一阶历史值，表示月尺度惯性。",
+    "lag2_decay_30d": "30天时间衰减的二阶历史值，表示更远期记忆仍然残留的影响。",
+    "target_trend_lag12": "前两次历史值差值，表示近期变化方向。",
+    "target_rate_lag1": "单位时间变化速率代理，表示前次状态按采样间隔折算后的强度。",
+    "target_roll3_diff": "前次观测与近三次历史均值的偏离，表示异常程度。",
+    "target_roll3_ratio": "前次观测与近三次历史均值的比值，表示相对放大或减弱程度。"
+  },
+  "formal_results_overwritten": false,
+  "same_scope_check": {
+    "max_train_rows_delta": 0,
+    "max_test_rows_delta": 0
+  },
+  "positive_r2_rows": 31,
+  "negative_r2_rows": 12,
+  "top_added_features": [
+    {
+      "feature": "tp_mg_l_lag1_decay_30d",
+      "used_combo_count": 6,
+      "mean_importance": 0.02258317731320858,
+      "max_importance": 0.04768558591604233
+    },
+    {
+      "feature": "tn_mg_l_lag1_decay_30d",
+      "used_combo_count": 6,
+      "mean_importance": 0.022468930420776207,
+      "max_importance": 0.037874069064855576
+    },
+    {
+      "feature": "tp_mg_l_rate_lag1",
+      "used_combo_count": 6,
+      "mean_importance": 0.01864064810797572,
+      "max_importance": 0.02507437951862812
+    },
+    {
+      "feature": "secchi_depth_m_rate_lag1",
+      "used_combo_count": 6,
+      "mean_importance": 0.015987853053957224,
+      "max_importance": 0.019014041870832443
+    },
+    {
+      "feature": "chla_ug_l_lag1_decay_30d",
+      "used_combo_count": 6,
+      "mean_importance": 0.015124581133325895,
+      "max_importance": 0.024809086695313454
+    },
+    {
+      "feature": "chla_ug_l_rate_lag1",
+      "used_combo_count": 6,
+      "mean_importance": 0.012926103391995033,
+      "max_importance": 0.017892789095640182
+    },
+    {
+      "feature": "tp_mg_l_roll3_ratio",
+      "used_combo_count": 6,
+      "mean_importance": 0.012571959445873896,
+      "max_importance": 0.02439224161207676
+    },
+    {
+      "feature": "tn_mg_l_rate_lag1",
+      "used_combo_count": 6,
+      "mean_importance": 0.012486485065892339,
+      "max_importance": 0.017925698310136795
+    },
+    {
+      "feature": "tp_mg_l_lag2_decay_30d",
+      "used_combo_count": 6,
+      "mean_importance": 0.012340240801374117,
+      "max_importance": 0.01684005744755268
+    },
+    {
+      "feature": "tp_mg_l_lag1_decay_7d",
+      "used_combo_count": 6,
+      "mean_importance": 0.011185695029174289,
+      "max_importance": 0.015710515901446342
+    }
+  ]
+}

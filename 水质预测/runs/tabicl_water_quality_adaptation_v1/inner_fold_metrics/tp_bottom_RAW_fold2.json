@@ -1,0 +1,18 @@
+{
+  "task": "tp_bottom",
+  "config_id": "RAW",
+  "fold": 2,
+  "n_train": 6329,
+  "n_val": 1582,
+  "n_features": 77,
+  "feature_sha256": "da3dc69e30b052cce1fd5cbb30351c1f5abebb82dd8162db616ae8883ada3e99",
+  "target_transform": "raw",
+  "output_type": "mean",
+  "nonnegative_clip": true,
+  "fit_seconds": 1.4778866000124253,
+  "predict_seconds": 5.742584199993871,
+  "gpu_peak_allocated_mb": 4777.46484375,
+  "R2": 0.5516526771666739,
+  "RMSE": 0.028255138168680173,
+  "MAE": 0.012150954634384469
+}

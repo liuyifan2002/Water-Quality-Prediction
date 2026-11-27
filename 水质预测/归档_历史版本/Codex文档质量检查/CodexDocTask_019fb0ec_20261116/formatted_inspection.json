@@ -1,0 +1,1767 @@
+{
+  "path": "C:\\CodexDocTask_019fb0ec\\manuscript_formatted.docx",
+  "paragraph_count_nonempty": 106,
+  "table_count": 1,
+  "section_count": 1,
+  "style_counts": [
+    [
+      "Normal",
+      106
+    ]
+  ],
+  "sections": [
+    {
+      "page_width": 7560310,
+      "page_height": 10692130,
+      "top_margin": 457200,
+      "bottom_margin": 457200,
+      "left_margin": 514985,
+      "right_margin": 471805,
+      "header_distance": 457200,
+      "footer_distance": 457200
+    }
+  ],
+  "first_paragraphs": [
+    {
+      "text": "通讯作者：蔡枫；联系电话：待作者补充；邮寄地址：福建省福州市福州大学土木工程学院，350116；E-mail：待作者补充",
+      "style": "Normal",
+      "alignment": "left",
+      "runs": [
+        {
+          "text": "通讯作者：蔡枫；联系电话：待作者补充；邮寄地址：福建省福州市福州大学土木工程学院，350116；E-mail：待作者补充",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 7.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "水资源调度平台插件式模型开发方法研究",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "水资源调度平台插件式模型开发方法研究",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 14.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "蒋北寒1，刘逸凡1，苏晓林1,2，秦根泉3，蔡枫1，潘龙1",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "蒋北寒",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "1",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": true
+        },
+        {
+          "text": "，刘逸凡",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "1",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": true
+        },
+        {
+          "text": "，苏晓林",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "1,2",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": true
+        },
+        {
+          "text": "，秦根泉",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "3",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": true
+        },
+        {
+          "text": "，蔡枫",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "1",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": true
+        },
+        {
+          "text": "，潘龙",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "1",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": true
+        }
+      ]
+    },
+    {
+      "text": "（1. 福州大学 土木工程学院，福建 福州 350116；",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "（",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "1. ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "福州大学",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "土木工程学院，福建",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "福州",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": " 350116",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "；",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "2. 福建省水利规划院，福建 福州 350100；",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "2.",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "福建省水利规划院",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "，福建",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "福州",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": " 350100",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "；",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "3.）",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "3.",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "）",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "摘要：数字孪生水利建设要求水资源调度平台能够管理多类专业模型，并支持模型持续接入和更新。然而，当前业务系统与专业模型通常同步开发，导致开发周期较长，同类功能重复实现，且模型调整也容易引发平台改动。本文提出一种平台插件式的开发方法，将平台建设内容分为平台系统和专业模型两个部分：平台负责统筹模型、数据、任务和结果管理，专业模型经接口封装后形成可供平台调用的模型插件。各模型依据输入输出关系进行组合，并根据数据和业务条件分阶段建设，调度模型内部则依据工程对象和工作过程划分功能。选取四个代表性案例，从模型管理、动态组合、已有程序拆分及工程应用等方面，验证该方法的可行性和适用性。结果表明，该方法适用于模型类型较多、需要分期建设或需要整合已有模型的水资源调度平台；模型组合方式和功能划分粒度应根据数据条件、业务需求以及模型间的数据交换频率与计算开销确定。本研究为智慧水利建设下水资源调度平台的模块化、可扩展开发提供了可行路径，有助于降低多模型集成的耦合成本，提升平台建设的效率与长期可维护性。",
+      "style": "Normal",
+      "alignment": "left",
+      "runs": [
+        {
+          "text": "摘要：",
+          "bold": true,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "数字孪生水利建设要求水资源调度平台能够管理多类专业模型，并支持模型持续接入和更新。然而，当前业务系统与专业模型通常同步开发，导致开发周期较长，同类功能重复实现，且模型调整也容易引发平台改动。本文提出一种平台插件式的开发方法，将平台建设内容分为平台系统和专业模型两个部分：平台负责统筹模型、数据、任务和结果管理，专业模型经接口封装后形成可供平台调用的模型插件。各模型依据输入输出关系进行组合，并根据数据和业务条件分阶段建设，调度模型内部则依据工程对象和工作过程划分功能。选取四个代表性案例，从模型管理、动态组合、已有程序拆分及工程应用等方面，验证该方法的可行性和适用性。结果表明，该方法适用于模型类型较多、需要分期建设或需要整合已有模型的水资源调度平台；模型组合方式和功能划分粒度应根据数据条件、业务需求以及模型间的数据交换频率与计算开销确定。本研究为智慧水利建设下水资源调度平台的模块化、可扩展开发提供了可行路径，有助于降低多模型集成的耦合成本，提升平台建设的效率与长期可维护性。",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "关键词：水资源调度；模型插件；模型应用平台；分阶段开发；模型组合",
+      "style": "Normal",
+      "alignment": "left",
+      "runs": [
+        {
+          "text": "关键词：",
+          "bold": true,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "水资源调度；模型插件；模型应用平台；分阶段开发；模型组合",
+          "bold": false,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "中图分类号：TV213　　文献标识码：A",
+      "style": "Normal",
+      "alignment": "left",
+      "runs": [
+        {
+          "text": "中图分类号：",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "TV213",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "　　文献标识码：",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "A",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "A Plug-in-Based Model Development Method for Water Resources Scheduling Platforms",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "A Plug-in-Based Model Development Method for Water Resources Scheduling Platforms",
+          "bold": true,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 14.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "JIANG Beihan1, LIU Yifan1, SU Xiaolin1,2, QIN Genquan3, CAI Feng1, PAN Long1",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "JIANG Beihan",
+          "bold": false,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "1",
+          "bold": false,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": true
+        },
+        {
+          "text": ", LIU Yifan",
+          "bold": false,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "1",
+          "bold": false,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": true
+        },
+        {
+          "text": ", SU Xiaolin",
+          "bold": false,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "1,2",
+          "bold": false,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": true
+        },
+        {
+          "text": ", QIN Genquan",
+          "bold": false,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "3",
+          "bold": false,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": true
+        },
+        {
+          "text": ", CAI Feng",
+          "bold": false,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "1",
+          "bold": false,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": true
+        },
+        {
+          "text": ", PAN Long",
+          "bold": false,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "1",
+          "bold": false,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": true
+        }
+      ]
+    },
+    {
+      "text": "(1. College of Civil Engineering, Fuzhou University, Fuzhou 350116, China\n2., Fuzhou 350100, China",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "(1. College of Civil Engineering, Fuzhou University, Fuzhou 350116, China",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "\n",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "2.",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": ", Fuzhou 350100, China",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": ")",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": ")",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "Abstract:    plug-in-based platform development  separates platform construction into a platform system and domain-specific models. The platform  , data, tasks, and omain-specific . Models are   input-output relationships and cheduling functions are partitioned by engineering objects and operational processes. Four representative cases are examined  The results indicate that the method is  platforms involving multiple model types, phased development, or the integration of existing models. odel combinations and functional boundaries should also account for inter-model data-exchange frequency and computational overhead. This study provides a feasible pathway for the modular and extensible development of water resources scheduling platforms in smart water conservancy,  the coupling cost of multi-model integration and  platform development efficiency and long-term maintainability.",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "Abstract: ",
+          "bold": true,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "plug-in-based platform development ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": " separates platform construction into a platform system and domain-specific models",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": ". The platform ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": ", data, tasks, and ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "omain-specific ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": ". Models are ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": " input-output relationships and ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "cheduling functions are partitioned by engineering objects and operational processes. Four representative cases are examined ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": " The results indicate that the method is ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": " platforms involving multiple model types, phased development, or the integration of existing models. ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "odel combinations and functional boundaries should also account for inter-model data-exchange frequency and computational overhead.",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": "This study provides a feasible pathway for the modular and extensible development of water resources scheduling platforms in smart water conservancy, ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": " the coupling cost of multi-model integration and ",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        },
+        {
+          "text": " platform development efficiency and long-term maintainability.",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "Key words: water resources scheduling; model plug-in; model application platform; staged development; model combination",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "Key words: water resources scheduling; model plug-in; model application platform; staged development; model combination",
+          "bold": true,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 9.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "0 引言",
+      "style": "Normal",
+      "alignment": "left",
+      "runs": [
+        {
+          "text": "0 引言",
+          "bold": true,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 14.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "数字孪生水利建设推动水资源调度系统由数据汇集和信息查询，向监测、计算与业务协同转变，相关指导意见和技术导则已将数字孪生平台、专业模型和业务应用列为水利工程数字化建设的重要内容[1-4]，数字孪生流域研究也强调数据、模型与业务之间的统一组织[5]。在实际调度业务中，防洪、供水、灌溉、发电和生态调度涉及不同的计算任务，区域水资源配置还需同时考虑水量、利用效率和环境约束[6]。多样化的业务需求和计算约束，对平台的多模型集成、动态响应和协同管理能力提出了更高要求。然而，随着业务范围的扩大和专业计算的增加，平台建设中逐渐暴露出开发周期较长、相同功能重复实现、接口不一致等问题；更值得注意的是，一旦算法、参数或运行方式发生变化，业务系统往往也要随之修改，增加了后期维护的难度。",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "数字孪生水利建设推动水资源调度系统由数据汇集和信息查询，向监测、计算与业务协同转变",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "，",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "相关指导意见和技术导则已将数字孪生平台、专业模型和业务应用列为水利工程数字化建设的重要内容",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "[1-4]",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": true
+        },
+        {
+          "text": "，数字孪生流域研究也强调数据、模型与业务之间的统一组织",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "[5]",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": true
+        },
+        {
+          "text": "。",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "在实际",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "调度业务中，",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "防洪、供水、灌溉、发电和生态调度涉及不同的计算任务，区域水资源配置还需同时考虑水量、利用效率和环境约束",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "[6]",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": true
+        },
+        {
+          "text": "。",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "多样化的业务需求和计算约束，对平台的多模型集成、动态响应和协同管理能力提出了更高要求",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "。然而，",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "随着业务范围",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "的",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "扩大和专业计算",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "的",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "增",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "加",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "，平台建设中逐渐",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "暴露出",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "开发周期较长、相同功能重复实现、接口不一致等问题；",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "更值得注意的是，一旦",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "算法、参数或运行方式发生变化，业务系统往往也要随之修改，增加了后期维护的难度。",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "国内研究较早从水资源系统模拟和通用调度软件入手，讨论模型体系、业务流程与软件平台之间的关系[7-8]。近年来，智慧输水调度、专业模型平台和灌区调度系统进一步加强了监测数据、专业计算和业务应用之间的联系[9-11]。水文-水动力-水质联合应用以及云模型服务平台，则主要关注不同计算程序之间的数据传递、组合运行和调用管理[12-13]。这些研究为多类专业计算参与同一调度业务奠定了基础。在模型接入和功能拆分方面，张刚等[14]将插件化方法用于洪水预报模型开发，王康等[15]采用服务方式组织水利业务计算；Goodall等[16]从面向服务的角度研究水资源模型的调用，OpenMI相关研究[17]则利用统一接口实现独立程序之间的数据交换。",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "国内研究较早从水资源系统模拟和通用调度软件入手，讨论模型体系、业务流程与软件平台之间的关系",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "[7-8]",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": true
+        },
+        {
+          "text": "。近年来，智慧输水调度、专业模型平台和灌区调度系统进一步加强了监测数据、专业计算和业务应用之间的联系",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "[9-11]",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": true
+        },
+        {
+          "text": "。水文",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "-",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "水动力",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "-",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "水质联合应用以及云模型服务平台，则主要关注不同计算程序之间的数据传递、组合运行和调用管理",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "[12-13]",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": true
+        },
+        {
+          "text": "。这些研究为多类专业计算参与同一调度业务奠定了基础。在模型接入和功能拆分方面，张刚等",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "[14]",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": true
+        },
+        {
+          "text": "将插件化方法用于洪水预报模型开发，王康等",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "[15]",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": true
+        },
+        {
+          "text": "采用服务方式组织水利业务计算；",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "Goodall",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "等",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "[16]",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": true
+        },
+        {
+          "text": "从面向服务的角度研究水资源模型的调用，",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "OpenMI",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "相关研究",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "[17]",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": true
+        },
+        {
+          "text": "则利用统一接口实现独立程序之间的数据交换。",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "已有成果较好地解决了模型封装、接口调用和数据传递等问题，但在实际建设中，业务系统和专业计算往往仍由不同团队分别推进。两者缺少统一安排时，容易出现接口重复设计、相同功能多次开发，以及局部调整牵动整体修改等情况。不同计算内容先建什么、后建什么，调度程序内部又应如何划分，也缺少较完整的开发思路。",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "已有成果较好地解决了模型封装、接口调用和数据传递等问题，但在实际建设中，业务系统和专业计算往往仍由不同团队分别推进。两者缺少统一安排时，容易出现接口重复设计、相同功能多次开发，以及局部调整牵动整体修改等情况。不同计算内容先建什么、后建什么，调度程序内部又应如何划分，也缺少较完整的开发思路。",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "当前水资源调度平台建设通常遵循两种路径。一种从业务需求出发，先确定系统功能和总体结构，再安排相关计算内容，有利于统筹全局，但多线并行推进往往导致周期较长；另一种从具体任务出发，先完成专业程序，再接入业务系统，可快速形成局部能力，却容易出现接口不一致和功能重复建设等问题。由此可见，平台建设既要考虑总体业务，也要为已有程序接入、后续扩展和局部更新预留充足空间。",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "当前",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "水资源调度平台",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "建设",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "通常",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "遵循",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "两种路径。",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "一种",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "从业务需求出发，先确定系统功能和总体结构，再安排相关计算内容",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "，",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "有利于统筹全局，但多线并行推进往往导致周期较长",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "；",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "另一种",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "从具体任务出发，先完成专业程序，再接入业务系统",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "，可快速形成局部能力，却容易出现接口不一致和功能重复建设等问题",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "。",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "由此可见",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "，平台建设既要考虑总体业务，也要为已有程序接入、后续扩展和局部更新",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "预留充足空间。",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "基于上述分析，本文明确了平台与专业模型的职责划分，将不同模型的建设顺序以及调度模型内部的功能纳入同一开发过程，提出面向多模型水资源调度平台的开发方法。最后，结合四个代表性案例，从模型管理、组合调用、功能拆分和工程应用等方面，综合分析该方法的适用性与实施条件。",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "基于上述分析，",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "本文",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "明确了",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "平台与专业模型的职责",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "划分，将",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "不同模型的建设顺序以及调度模型内部的功能纳入同一开发过程，",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "提出",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "面向多模型水资源调度平台的开发方法。",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "最后",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "，",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "结合",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "四",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "个",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "代表性",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "案例，",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "从模型管理、组合调用、功能拆分和工程应用等方面，",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "综合",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "分析",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "该",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "方法的适用性与实施条件。",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "1 平台插件式模型开发思路",
+      "style": "Normal",
+      "alignment": "left",
+      "runs": [
+        {
+          "text": "1 ",
+          "bold": true,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 14.0,
+          "superscript": null
+        },
+        {
+          "text": "平台插件式模型开发思路",
+          "bold": true,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 14.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "1.1 “平台系统＋模型插件”开发方式",
+      "style": "Normal",
+      "alignment": "left",
+      "runs": [
+        {
+          "text": "1.1 “",
+          "bold": true,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "平台系统＋模型插件",
+          "bold": true,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "”",
+          "bold": true,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "开发方式",
+          "bold": true,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "本文将水资源调度平台的建设内容分为平台系统和专业模型两部分。平台系统包括模型管理、任务组织、数据管理和结果展示等功能，负责模型配置与版本管理、任务发起与运行组织、数据准备与存储以及结果查询与展示；水文、需水预测、调度、水动力和水质等专业模型负责具体计算。专业模型经过接口封装后，以模型插件形式接入平台。平台按照约定下发输入数据和计算任务，并接收模型返回的运行状态和计算结果，不直接参与模型内部计算。",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "本文将水资源调度平台的建设内容分为平台系统和专业模型两部分。平台系统包括模型管理、任务组织、数据管理和结果展示等功能，负责模型配置与版本管理、任务发起与运行组织、数据准备与存储以及结果查询与展示；水文、需水预测、调度、水动力和水质等专业模型负责具体计算。专业模型经过接口封装后，以模型插件形式接入平台。平台按照约定下发输入数据和计算任务，并接收模型返回的运行状态和计算结果，不直接参与模型内部计算。",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "这种组织方式把业务管理与专业计算分开，业务流程调整时，主要修改任务组织和展示方式；算法更新时，则在相应模型内部完成。在输入输出约定保持稳定的情况下，局部修改通常不需要同步调整整个系统。已有专业模型平台、云模型服务和插件化研究体现了类似的职责划分[10,13,14-17]。",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "这种组织方式把业务管理与专业计算分开",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "，",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "业务流程调整时，主要修改任务组织和展示方式；算法更新时，则在相应模型内部完成。在输入输出约定保持稳定的情况下，局部修改通常不需要同步调整整个系统。已有专业模型平台、云模型服务和插件化研究体现了类似的职责划分",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "[10,13,14-17]",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": true
+        },
+        {
+          "text": "。",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "本文将经过接口封装、接入平台的完整专业模型称为模型插件，将调度模型内部按照计算任务进一步划分的单元称为功能插件。前者是专业模型接入平台的基本单元，后者用于处理单个调度模型内部的功能拆分。",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "本文将经过接口封装、接入平台的完整专业模型称为模型插件，将调度模型内部按照计算任务进一步划分的单元称为功能插件。前者是专业模型接入平台的基本单元，后者用于处理单个调度模型内部的功能拆分。",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "平台规划和模型开发分别从两个方向展开。平台从业务出发，自上而下分析防洪、供水、灌溉、发电和生态等任务，确定所需数据和计算内容；专业模型从具体问题出发，自下而上完成算法实现、测试和接口封装。两条路径在系统集成环节汇合：平台侧统筹业务需求和建设内容，模型侧完成具体计算并保证结果可用（图1）。",
+      "style": "Normal",
+      "alignment": "both",
+      "runs": [
+        {
+          "text": "平台规划和模型开发分别从两个方向展开。平台从业务出发，自上而下分析防洪、供水、灌溉、发电和生态等任务，确定所需数据和计算内容；专业模型从具体问题出发，自下而上完成算法实现、测试和接口封装。两条路径在系统集成环节汇合：平台侧统筹业务需求和建设内容，模型侧完成具体计算并保证结果可用（图",
+          "bold": null,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "1",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "）。",
+          "bold": null,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "图1 平台系统与模型插件的组织关系",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "图",
+          "bold": true,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "1 ",
+          "bold": true,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        },
+        {
+          "text": "平台系统与模型插件的组织关系",
+          "bold": true,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "Fig. 1 Organizational relationship between platform system and model plug-ins",
+      "style": "Normal",
+      "alignment": "center",
+      "runs": [
+        {
+          "text": "Fig. 1 Organizational relationship between platform system and model plug-ins",
+          "bold": false,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 10.5,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "text": "1.2 开发过程",
+      "style": "Normal",
+      "alignment": "left",
+      "runs": [
+        {
+          "text": "1.2 ",
+          "bold": true,
+          "italic": null,
+          "font_name": "Times New Roman",
+          "font_size_pt": 12.0,
+          "superscript": null
+        },
+        {
+          "text": "开发过程",
+          "bold": true,
+          "italic": null,
+          "font_name": "宋体",
+          "font_size_pt": 12.0,
+          "superscript": null
+        }
+      ]
+    }
+  ],
+  "media_count": 5,
+  "field_markers": 0,
+  "zotero_markers": 0
+}

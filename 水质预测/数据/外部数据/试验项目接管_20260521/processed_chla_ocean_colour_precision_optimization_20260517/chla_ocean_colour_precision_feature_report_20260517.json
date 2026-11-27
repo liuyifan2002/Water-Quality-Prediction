@@ -1,0 +1,14 @@
+{
+  "date_tag": "20260517",
+  "input": "data\\interim\\chla_ocean_colour_ab_20260517\\chla_ocean_colour_ab_dataset_20260517.csv",
+  "output": "data\\processed\\chla_ocean_colour_precision_optimization_20260517\\chla_ocean_colour_precision_optimization_dataset_20260517.csv",
+  "rows": 30719,
+  "columns": 299,
+  "added_feature_count": 93,
+  "added_feature_manifest": "data\\processed\\chla_ocean_colour_precision_optimization_20260517\\chla_ocean_colour_precision_feature_manifest_20260517.csv",
+  "leakage_control": [
+    "Ocean Colour lag/rolling 特征按 station 日期排序后 shift，只使用历史水色记录。",
+    "Chl-a 历史增强特征只使用 lag/rolling 字段，不使用当前目标值。",
+    "缺失 mask 只表达特征可用性，不使用目标变量。"
+  ]
+}

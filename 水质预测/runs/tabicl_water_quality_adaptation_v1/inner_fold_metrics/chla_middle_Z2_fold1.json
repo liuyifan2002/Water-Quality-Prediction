@@ -1,0 +1,17 @@
+{
+  "task": "chla_middle",
+  "config_id": "Z2",
+  "fold": 1,
+  "n_train": 6051,
+  "n_val": 1513,
+  "n_features": 77,
+  "feature_sha256": "da3dc69e30b052cce1fd5cbb30351c1f5abebb82dd8162db616ae8883ada3e99",
+  "target_transform": "log1p",
+  "output_type": "mean",
+  "fit_seconds": 2.1155620999925304,
+  "predict_seconds": 7.022126500000013,
+  "gpu_peak_allocated_mb": 4458.79736328125,
+  "R2": 0.4789770432957582,
+  "RMSE": 3.6072712201355563,
+  "MAE": 1.6805079834101142
+}

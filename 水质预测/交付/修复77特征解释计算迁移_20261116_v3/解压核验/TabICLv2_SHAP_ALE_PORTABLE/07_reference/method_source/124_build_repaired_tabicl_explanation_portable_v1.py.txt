@@ -1,0 +1,321 @@
+"""只读资产整理、静态检查及解压验证；不导入torch/tabicl/shap，不执行预测。"""
+from pathlib import Path
+import ast,csv,hashlib,json,shutil,subprocess,sys,zipfile
+import numpy as np
+import pandas as pd
+
+ROOT=Path(__file__).resolve().parents[2]
+RUN=ROOT/'结果/扩展实验/候选数据验收与一致性重算_v1_20261115'
+OLD=ROOT/'runs/tabicl_v2_slim_explainability_v2_all10'
+DEST=ROOT/'交付/修复77特征解释计算迁移_20261116_v1'
+BUNDLE=DEST/'TabICLv2_SHAP_ALE_PORTABLE'
+VERSION='WQ77_REPAIRED_20261115_V1'
+NAME=f'TabICLv2_SHAP_ALE_PORTABLE_{VERSION}.zip'
+TEMPLATE=Path(__file__).parent/'wq77_portable_templates'
+PY=ROOT/'runs/tabiclv2_pilot/环境/.venv/Scripts/python.exe'
+INVENTORY=[];AUDIT=[]
+def sha(p):
+    h=hashlib.sha256()
+    with Path(p).open('rb') as f:
+        for b in iter(lambda:f.read(1024*1024),b''):h.update(b)
+    return h.hexdigest()
+def write(relative,text):
+    p=BUNDLE/relative;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text,encoding='utf-8');return p
+def js(relative,value):return write(relative,json.dumps(value,ensure_ascii=False,indent=2))
+def save(relative,df):
+    p=BUNDLE/relative;p.parent.mkdir(parents=True,exist_ok=True);pd.DataFrame(df).to_csv(p,index=False,encoding='utf-8-sig',na_rep='NA');return p
+def copy(p,relative,role,version=VERSION):
+    p=Path(p);assert p.is_file(),p;out=BUNDLE/relative;out.parent.mkdir(parents=True,exist_ok=True)
+    shutil.copy2(p,out);h=sha(p);assert h==sha(out)
+    INVENTORY.append({'源路径':str(p),'包内路径':relative,'用途':role,'数据版本':version,'字节':p.stat().st_size,'SHA256':h,'状态':'COPIED_HASH_VERIFIED'})
+    return relative
+def check(name,ok,reason=''):
+    AUDIT.append({'检查项':name,'通过':bool(ok),'说明':str(reason)});assert ok,(name,reason)
+def environment():
+    code="""import importlib.metadata as m,json,sys
+from packaging.requirements import Requirement
+from packaging.markers import default_environment
+all={d.metadata['Name'].lower().replace('_','-'):d for d in m.distributions()}
+roots=['numpy','pandas','scipy','scikit-learn','shap','torch','tabicl','joblib','psutil']
+todo=roots[:];found={};env=default_environment();env['extra']=''
+while todo:
+ n=todo.pop().lower().replace('_','-')
+ if n in found:continue
+ d=all[n];found[n]=d.version
+ for spec in d.requires or []:
+  r=Requirement(spec)
+  if not r.marker or r.marker.evaluate(env):todo.append(r.name)
+print(json.dumps({'python':sys.version,'installed':{k:v.version for k,v in all.items()},'runtime_closure':found,'platform':'Windows source; Linux native wheel resolution is destination-only'},ensure_ascii=False))
+"""
+    p=subprocess.run([str(PY),'-c',code],capture_output=True,text=True,encoding='utf-8',check=True)
+    env=json.loads(p.stdout);js('06_environment/source_environment_inventory.json',env)
+    lock=env['runtime_closure'];lines=['# Python 3.11.9；源Windows环境实际安装版本，不升级核心依赖。','# 先从PyTorch cu124官方索引安装torch，再安装此文件；无需Conda。']+[f'{k}=={v}' for k,v in sorted(lock.items())]
+    write('06_environment/requirements-lock.txt','\n'.join(lines)+'\n')
+    write('06_environment/requirements.txt','\n'.join(f'{k}=={lock[k]}' for k in ['numpy','pandas','scipy','scikit-learn','shap','torch','tabicl','joblib','psutil'])+'\n')
+    return env
+def build():
+    if DEST.exists():raise FileExistsError(f'拒绝覆盖已有交付目录：{DEST}')
+    BUNDLE.mkdir(parents=True)
+    frozen=json.loads((RUN/'02_冻结候选/冻结清单.json').read_text(encoding='utf-8'))
+    check('唯一版本',frozen['dataset_version']==VERSION)
+    check('基础输入SHA256',sha(RUN/'02_冻结候选/基础输入_77特征.csv')==frozen['input_sha256'])
+    reg=pd.read_csv(RUN/'03_正式十任务重算/运行登记.csv');check('100任务模型折完整',len(reg)==100 and reg.status.eq('OK').all())
+    check('仅有新版本登记',reg.dataset_version.eq(VERSION).all())
+    tab=reg[reg.model.eq('tabiclv2')];check('50个TabICLv2折上下文',len(tab)==50 and tab[['task','fold']].drop_duplicates().shape[0]==50)
+    taskorder=['chla_surface','chla_middle','chla_bottom','secchi','tn_surface','tn_middle','tn_bottom','tp_surface','tp_middle','tp_bottom']
+    policy=json.loads((RUN/'02_冻结候选/特征与时间协议.json').read_text(encoding='utf-8'));fs=policy['feature_order'];check('77项特征',len(fs)==77 and len(set(fs))==77 and 'water_zone_code' not in fs)
+    for p in (RUN/'02_冻结候选').iterdir():
+        if p.is_file():copy(p,'02_data/repaired_features/'+('base_77.csv' if p.name=='基础输入_77特征.csv' else p.name),'修复版冻结数据与协议')
+    copy(RUN/'正式77项特征定义与来源总表.csv','02_data/metadata/feature_definitions.csv','77项定义/源/单位/时序')
+    copy(ROOT/'数据/处理后数据/正式主表/water_quality_master_2014_2024.csv','02_data/raw_observations/water_quality_master_2014_2024.csv','原水质观测/原始表示和检出限')
+    copy(ROOT/'数据/处理后数据/正式主表/model_table_3depth_2014_2024.csv','07_reference/original_input_only/model_table_original.csv','旧原始特征只作来源参考，运行入口不读取','LEGACY_SOURCE_ONLY')
+    for n in ['station_meta.csv','era5_monthly_2014_2024.csv']:
+        copy(ROOT/'数据/处理后数据/正式主表'/n,'02_data/metadata/'+n,'站点或月气象真实来源')
+    defs=pd.read_csv(RUN/'正式77项特征定义与来源总表.csv');sourcepaths=set()
+    for v in defs['源文件']:
+        for token in str(v).split(';'):
+            p=Path(token)
+            if p.is_file():sourcepaths.add(p)
+    for p in sorted(sourcepaths):
+        if p.name in ['model_table_3depth_2014_2024.csv','station_meta.csv','era5_monthly_2014_2024.csv','ERA5逐日气候态来源.csv']:continue
+        copy(p,'02_data/raw_feature_sources/'+p.name,'正式77特征直接来源文件')
+    for folder in [ROOT/'数据/原始数据/era5',ROOT/'数据/原始数据/era5_ssrd_sst_offshore_v2']:
+        for p in folder.rglob('*.nc'):copy(p,'02_data/raw_feature_sources/'+p.relative_to(ROOT/'数据/原始数据').as_posix(),'ERA5原始NetCDF；只归档不重新提取')
+    for p in (ROOT/'数据/原始数据').glob('tide_QUB_*.csv'):copy(p,'02_data/raw_feature_sources/QUB/'+p.name,'原QUB极值原件')
+    for p in (RUN/'01_独立补充任务/QUB').glob('*.csv'):copy(p,'02_data/raw_feature_sources/QUB/'+p.name,'修复QUB小时/日界来源')
+    copy(ROOT/'数据/原始数据/daily_HKO_RF_ALL.csv','02_data/raw_feature_sources/daily_HKO_RF_ALL.csv','原HKO降雨记录')
+    base=pd.read_csv(RUN/'02_冻结候选/基础输入_77特征.csv');save('02_data/missing_masks/base_missing.csv.gz',base[['obs_id']].join(base[fs].isna()))
+    contexts=[];manifestmap={}
+    for _,r in reg.iterrows():
+        check(r.task+r.model+r.fold+'预测来源',sha(r.prediction_file)==r.prediction_sha256 and r.base_input_sha256==frozen['input_sha256'])
+        copy(r.prediction_file,'01_model/frozen_predictions/'+Path(r.prediction_file).name,'修复版正式预测血缘（只读）')
+    for _,r in tab.iterrows():
+        stem=f'{r.task}_{r.fold}';ip=RUN/'03_正式十任务重算/inputs'
+        p=ip/f'{stem}.npz';check(stem+'NPZ哈希',sha(p)==r.effective_input_sha256)
+        arrays=np.load(p);check(stem+'77列及样本形状',arrays['x_train'].shape==(int(r.n_train),77) and arrays['x_test'].shape==(int(r.n_test),77))
+        npz=copy(p,f'01_model/contexts/{stem}.npz','正式新训练/测试上下文与目标/顺序')
+        imp=copy(ip/f'{stem}_imputer.joblib',f'01_model/preprocessors/{stem}_imputer.joblib','新版本实际训练中位数处理器')
+        rawpaths={}
+        for label,suffix in [('train','训练未填补有效特征'),('test','测试未填补有效特征')]:
+            source=ip/f'{stem}_{suffix}.csv';rawpaths[label]=copy(source,f'02_data/effective_raw/{stem}_{label}.csv','本折未填补有效输入，SST按本折训练期')
+            raw=pd.read_csv(source);check(stem+label+'原始矩阵列顺序',raw.columns.tolist()==fs+['obs_id'])
+            save(f'02_data/missing_masks/{stem}_{label}.csv.gz',raw[['obs_id']].join(raw[fs].isna()))
+        copy(ip/f'{stem}_气候态.csv',f'01_model/preprocessors/{stem}_climatology.csv','本折训练期SST气候态')
+        mp=Path(r.manifest_path);check(stem+'原划分哈希',sha(mp)==r.manifest_sha256)
+        if str(mp) not in manifestmap:manifestmap[str(mp)]=copy(mp,'03_splits/fold_manifests/'+mp.name,'原正式训练/测试观测ID及站点划分')
+        save(f'03_splits/train_test_indices/{stem}.csv',pd.DataFrame({'obs_id':np.concatenate([arrays['train_ids'],arrays['test_ids']]),'role':['train']*len(arrays['train_ids'])+['test']*len(arrays['test_ids'])}))
+        contexts.append({'task':r.task,'fold':r.fold,'target':r.target,'npz':npz,'imputer':imp,'raw_train':rawpaths['train'],'raw_test':rawpaths['test'],
+                         'prediction':'01_model/frozen_predictions/'+Path(r.prediction_file).name,'manifest':manifestmap[str(mp)],'n_train':int(r.n_train),'n_test':int(r.n_test),'effective_input_sha256':r.effective_input_sha256,'manifest_sha256':r.manifest_sha256})
+    for family in ['chla','tn','tp']:
+        p=ROOT/f'runs/{family}_family_v2/02_{family}_family_v2_station_fold_map.csv';copy(p,'03_splits/fold_manifests/'+p.name,'原站点折分配')
+    modelenv=json.loads((RUN/'08_重算结果核验/核验环境.json').read_text(encoding='utf-8'))
+    checkpoint=next(v for v in modelenv['冻结预训练权重'] if 'tabicl-regressor' in v['文件']);cp=Path(checkpoint['文件']);check('预训练权重来源哈希',sha(cp)==checkpoint['SHA256'])
+    copy(cp,'01_model/models/tabicl-regressor-v2-20260212.ckpt','正式TabICLv2官方预训练权重，配50折上下文')
+    for p in [RUN/'03_正式十任务重算/运行登记.csv',RUN/'03_正式十任务重算/模型固定配置.json',RUN/'08_重算结果核验/核验环境.json']:
+        copy(p,'01_model/model_configs/'+p.name,'新版本原始注册/环境证据；绝对路径只用于溯源')
+    legacy=pd.read_csv(OLD/'01_preregistered_shap_samples.csv');core=legacy[legacy.phase.eq('CORE_3')].copy();check('30核心每任务3样本',len(core)==30 and core.groupby('task').size().eq(3).all())
+    for task,g in core.groupby('task'):
+        r=next(v for v in contexts if v['task']==task and v['fold']=='fold_1');a=np.load(BUNDLE/r['npz']);check(task+'核心仍在原折测试集中',set(g.obs_id)<=set(a['test_ids']))
+    # 原预测值等列仅是历史选样依据，不伪称修复模型预测。
+    core=core.rename(columns={'frozen_prediction':'historical_selection_frozen_prediction','quantile_target_value':'historical_selection_quantile_value'})
+    save('04_explanation_config/shap/core_samples.csv',core)
+    copy(OLD/'01_preregistered_shap_samples.csv','07_reference/historical_registration/original_50_sample_plan.csv','旧样本注册；30核心+20可选，不作为新值','LEGACY_PLAN_ONLY')
+    for name in ['00_实验协议说明.md','00_frozen_protocol_task_registry.csv','02_compute_budget.csv']:
+        copy(OLD/name,'07_reference/historical_registration/'+name,'历史P1/五折/批量边界，不能作新版本资格','LEGACY_PLAN_ONLY')
+    curves=[];drifts=[]
+    for task in taskorder:
+        queryfiles=sorted((OLD/'ale_1d').glob(f'{task}_*_query_manifest.csv'));check(task+'原20曲线清单',len(queryfiles)==2)
+        r=next(v for v in contexts if v['task']==task and v['fold']=='fold_1');newraw=pd.read_csv(BUNDLE/r['raw_test']).set_index('obs_id')
+        for p in queryfiles:
+            q=pd.read_csv(p);feature=q.feature.iloc[0];sp=p.with_name(p.name.replace('_query_manifest','_bin_support'));s=pd.read_csv(sp).sort_values('bin')
+            copy(p,'04_explanation_config/ale/'+p.name,'原登记查询ID/箱号；新值须再次核验','CARRIED_PREREGISTRATION')
+            copy(sp,'04_explanation_config/ale/'+sp.name,'原登记真实边界；原n/s仅历史，不作为新支持','CARRIED_PREREGISTRATION')
+            value=newraw.loc[q.obs_id,feature].to_numpy();edges=np.array(s.lower.tolist()+[float(s.upper.iloc[-1])]);membership=np.clip(np.digitize(value,edges[1:-1],right=True),0,len(s)-1)+1
+            bad=~np.isfinite(value)|(value<edges[0])|(value>edges[-1])|(membership!=q.bin.to_numpy())
+            drifts.append({'task':task,'feature':feature,'bins':len(s),'queries':len(q),'新值与原注册箱归属冲突数':int(bad.sum()),'计划状态':'REQUIRES_REGISTRATION_RECONCILIATION' if bad.any() else 'REGISTRATION_CONTENT_MATCH'})
+            curves.append({'task':task,'feature':feature,'bins':len(s),'queries':len(q),'registration_status':drifts[-1]['计划状态']})
+    save('04_explanation_config/ale/registration_data_consistency.csv',drifts)
+    copy(ROOT/'runs/multisource_ablation_v1/00_feature_source_taxonomy.csv','04_explanation_config/feature_source_taxonomy.csv','77项既定来源分类')
+    for p in TEMPLATE.glob('*.py'):copy(p,'05_scripts/'+p.name,'新迁移端运行入口；本机不执行模型部分')
+    copy(ROOT/'models/tabiclv2_adapter.py','05_scripts/tabiclv2_adapter.py','正式预测实际适配器；仅目的端构造上下文')
+    env=environment();versions={k:env['installed'][k] for k in ['numpy','pandas','scipy','scikit-learn','shap','torch','tabicl','joblib','psutil']}
+    cfg={'dataset_version':VERSION,'base_input_sha256':frozen['input_sha256'],'tasks':taskorder,'features':fs,'feature_dtypes':{'effective_input':'float32','raw_source':'float64/NA','target':'float64'},'contexts':contexts,
+         'checkpoint':'01_model/models/tabicl-regressor-v2-20260212.ckpt','checkpoint_sha256':checkpoint['SHA256'],'runtime_versions':versions,'ale_curves':curves,
+         'explanation_fold':'fold_1','shap_algorithm':'PermutationExplainer','shap_masker':'Independent','shap_seed':42,'shap_background_n':16,'shap_max_evals':155,
+         'background_rule':'原79/99脚本站点-年份+77维max-min，原任务seed映射；在新训练上下文上确定，目的端保存IDs，不复用旧背景值',
+         'core_samples':30,'sensitivity':'seed43仅独立审查探针；显式--sensitivity，不计独立样本','optional_samples':'旧OPTIONAL_2保留历史清单，不进入本轮30核心主统计',
+         'batch_and_p1':'正式预测为完整测试批；解释为逐行P1，分别记录数值资格；沿用V2质量与计算分离',
+         'ale_policy':'冻结原20变量/边界/查询ID；新值归属冲突则阻塞该曲线，绝不删样本、重选、插值或补空bin','two_dimensional_ale':False}
+    js('04_explanation_config/portable_config.json',cfg)
+    reuse_engines()
+    for name in ['00_候选数据验收与一致性重算报告.md','特征构造修复记录.md','02_48项差异核查及验收决定.csv']:
+        copy(RUN/name,'07_reference/new_version_audit/'+name,'新数据验收及解释待重算边界')
+    for name in ['验收状态.json','原件保护核对.csv','本轮脚本及模型适配器SHA256.csv']:
+        copy(RUN/'08_重算结果核验'/name,'07_reference/new_version_audit/'+name,'旧运行已完成的静态来源证据')
+    report=ROOT/'结果/诊断结果/正式77特征新旧性能归因_v1_20261115'
+    for name in ['预测精度下降原因综合报告.md','历史高分与正式结果可比性审计.md']:
+        copy(report/name,'07_reference/new_version_audit/'+name,'解释可靠性及预测版本差异边界')
+    # 历史失败表只作审查；不放任何旧SHAP/ALE响应或旧imputer进执行目录。
+    for p in (OLD/'gates').glob('*.csv'):copy(p,'07_reference/historical_reports/legacy_gates/'+p.name,'历史数值资格，绝不改写','HISTORICAL_QUALITY_ONLY')
+    save('08_reports/01_asset_inventory.csv',INVENTORY);save('08_reports/asset_checks.csv',AUDIT)
+    docs(cfg,drifts)
+    # 所有原始执行脚本绝对路径仅保留在.txt历史证据；活跃路径全部以包根解析。
+    for p in (BUNDLE/'05_scripts').rglob('*.py'):ast.parse(p.read_text(encoding='utf-8'),filename=str(p))
+    for p in BUNDLE.rglob('*.json'):json.loads(p.read_text(encoding='utf-8-sig'))
+    manifest=[]
+    for p in sorted(BUNDLE.rglob('*')):
+        if p.is_file():manifest.append({'relative_path':p.relative_to(BUNDLE).as_posix(),'bytes':p.stat().st_size,'sha256':sha(p)})
+    save('08_reports/MANIFEST.csv',manifest)
+    write('08_reports/SHA256SUMS.txt','\n'.join(f'{r["sha256"]}  {r["relative_path"]}' for r in manifest)+'\n')
+    # 只启动纯静态检查器；不执行任何模型/SHAP/ALE入口。
+    p=subprocess.run([str(PY),'-B',str(BUNDLE/'05_scripts/run_preflight.py'),'--static-only'],cwd=DEST,capture_output=True,text=True,encoding='utf-8',check=True)
+    (DEST/'本机静态预检.json').write_text(p.stdout,encoding='utf-8')
+    archive=DEST/NAME
+    with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
+        for p in sorted(BUNDLE.rglob('*')):
+            if p.is_file():z.write(p,arcname=BUNDLE.name+'/'+p.relative_to(BUNDLE).as_posix())
+    zh=sha(archive);(DEST/(NAME+'.sha256')).write_text(zh+'  '+NAME+'\n',encoding='utf-8')
+    extracted=DEST/'解压核验'
+    with zipfile.ZipFile(archive) as z:
+        check('ZIP CRC',z.testzip() is None);z.extractall(extracted)
+    eb=extracted/BUNDLE.name
+    for r in manifest:check('解压哈希 '+r['relative_path'],sha(eb/r['relative_path'])==r['sha256'])
+    for name in ['MANIFEST.csv','SHA256SUMS.txt']:check('解压完整性文件 '+name,sha(eb/'08_reports'/name)==sha(BUNDLE/'08_reports'/name))
+    p=subprocess.run([str(PY),'-B',str(eb/'05_scripts/run_preflight.py'),'--static-only'],cwd=extracted,capture_output=True,text=True,encoding='utf-8',check=True)
+    (DEST/'解压后静态预检.json').write_text(p.stdout,encoding='utf-8')
+    # 原始来源复制后未改写；核对来源文件一次，不重复任何计算。
+    for r in INVENTORY:check('源原件未变 '+r['包内路径'],sha(r['源路径'])==r['SHA256'])
+    state={'状态':'ZIP_STATIC_VERIFIED_WITH_ONE_ALE_REGISTRATION_EXCEPTION','版本':VERSION,'任务':10,'新TabICLv2上下文折':50,'原正式登记模型任务折':100,
+       '核心样本':30,'ALE计划曲线':20,'ALE登记需核对曲线':[x for x in drifts if x['新值与原注册箱归属冲突数']],
+       '清单文件数':len(manifest),'ZIP字节':archive.stat().st_size,'ZIP_SHA256':zh,'静态核验项':len(AUDIT),'本机模型加载或推理次数':0,'本机SHAP_ALE次数':0,
+       '目的端环境/模型数值验证':'尚未执行；必须在另一台机器安装后运行对应入口','ZIP':str(archive)}
+    (DEST/'最终迁移包验收.json').write_text(json.dumps(state,ensure_ascii=False,indent=2),encoding='utf-8')
+    pd.DataFrame(AUDIT).to_csv(DEST/'本机完整静态核验.csv',index=False,encoding='utf-8-sig')
+    print(json.dumps(state,ensure_ascii=False),flush=True)
+
+def reuse_engines():
+    source=ROOT/'脚本/05_诊断分析'
+    for name,target in [('99_compute_tabicl_all10_shap_v2.py','reused_shap_engine.py'),('100_compute_tabicl_all10_ale_1d_v2.py','reused_ale_engine.py')]:
+        p=source/name;text=p.read_text(encoding='utf-8-sig')
+        text=text.replace('ROOT = Path(__file__).resolve().parents[2]','ROOT = Path(__file__).resolve().parents[1]')
+        text=text.replace('OUT = ROOT / "runs/tabicl_v2_slim_explainability_v2_all10"','OUT = ROOT / "outputs"')
+        text=text.replace('V1 = ROOT / "runs/tabicl_v2_slim_explainability_v1"','V1 = ROOT / "07_reference/historical_reports"')
+        text=text.replace('ROOT / "脚本/05_诊断分析/88_run_tabicl_slim_explainability_v1.py"','ROOT / "05_scripts/portable_context.py"')
+        text=text.replace('ROOT / "脚本/05_诊断分析/79_run_all_tabicl_explanation_experiments.py"','ROOT / "05_scripts/reused_background_rule.py"')
+        text=text.replace('ROOT / "runs/multisource_ablation_v1/00_feature_source_taxonomy.csv"','ROOT / "04_explanation_config/feature_source_taxonomy.csv"')
+        tree=ast.parse(text)
+        for node in reversed(tree.body):
+            if isinstance(node,ast.If) and '__name__' in ast.unparse(node.test):
+                lines=text.splitlines();lines[node.lineno-1:node.end_lineno]=['if __name__ == "__main__":','    raise SystemExit("请使用run_shap.py或run_ale.py，以执行版本/预测预检")'];text='\n'.join(lines)+'\n'
+        if target=='reused_ale_engine.py':
+            # 仅搬运calculate；旧screen会重选变量/重拟合旧imputer，因此不进入活跃入口。
+            tree=ast.parse(text);node=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='screen');lines=text.splitlines();lines[node.lineno-1:node.end_lineno]=['def screen(task):','    raise RuntimeError("本包保留预登记20变量，禁止重新筛选或重选查询")'];text='\n'.join(lines)+'\n'
+        write('05_scripts/'+target,text)
+        copy(p,'07_reference/method_source/'+name+'.txt','原成熟SHAP/ALE实现逐字留档，活跃版仅改路径/上下文桥接','METHOD_REFERENCE')
+    p=source/'79_run_all_tabicl_explanation_experiments.py';text=p.read_text(encoding='utf-8-sig');node=next(n for n in ast.parse(text).body if isinstance(n,ast.FunctionDef) and n.name=='representatives')
+    code='\n'.join(text.splitlines()[node.lineno-1:node.end_lineno]);write('05_scripts/reused_background_rule.py','"""逐字复用79号脚本背景选择函数；仅迁移端按原规则执行。"""\nimport numpy as np\nimport pandas as pd\n'+code+'\n')
+    copy(source/'88_run_tabicl_slim_explainability_v1.py','07_reference/method_source/88_context_original.py.txt','原P1上下文代码仅对照；禁止使用旧输入/patch','METHOD_REFERENCE')
+
+def docs(cfg,drifts):
+    missing='''# 缺失资产及执行限制
+
+1. **不是缺失模型权重**：TabICLv2无每折微调权重；正式50折以已打包官方checkpoint+新NPZ训练上下文+新imputer恢复。未使用旧模型或旧imputer。
+2. **新版本尚无SHAP/ALE结果或P1数值审查**：这是待迁移执行的任务，不是漏打包。旧解释响应结果全部不作为新输入。
+3. **Secchi ssrd_sum_3d登记冲突**：修复值有2条不再符合原查询箱号/范围；原6箱、328查询ID完整保留。运行器会输出REGISTRATION_DATA_DRIFT并阻塞此曲线，其余19曲线继续。不能在未核对新登记前宣称20曲线均可计算；不自动删样本、重新选边界或插值。
+4. **修复版独立解释注册快照未发现**：用原30 CORE_3 ID、20变量/边界/查询ID及SHAP算法规则桥接新上下文；新值产生新P1审查，不沿用旧状态。原50样本计划含20 OPTIONAL_2，保存为历史依据；本轮主统计仅30核心，seed43另作审查，不算独立样本。
+5. **背景ID清单不全**：原10任务仅5份background_manifest.csv仍在主目录。迁移端统一沿用原16背景选择函数及原seed映射，在新训练上下文执行并落盘IDs；不复用旧背景值，不改变30个核心解释ID。若研究要求背景ID也严格保持旧清单，应先补齐缺失5份登记，不能将背景规则再执行冒充旧ID完全复现。
+6. **环境目的端尚未实测**：锁定源Python3.11.9、torch2.6.0+cu124、tabicl2.2.0、shap0.49.1等，不复制.venv，不声称跨GPU数值已通过。Linux仅提供同版本安装方案，尚未验证；联网安装版本不可获得时停止，不自动升级。
+
+本机执行次数：训练0，模型加载0，预测0，SHAP0，ALE0。当前包为静态资产核验通过且含一项ALE登记例外，不是20曲线计算资格全部通过。
+'''
+    write('08_reports/03_missing_assets.md',missing);write('08_reports/MISSING_ASSETS.md',missing)
+    audit='''# 修复版解释计算资产来源审计
+
+唯一活跃版本为WQ77_REPAIRED_20261115_V1。直接读取原100条新登记（XGBoost/TabICLv2各50条）及每个预测的嵌入版本/哈希对应关系，逐个检查50套TabICLv2 NPZ、50个新imputer、100份原预测和原manifest。没有仅凭完成报告认定资产齐全。
+
+TabICLv2是预训练上下文学习；每折的“模型”由官方checkpoint、77列float32训练矩阵、log1p目标、样本顺序和处理器共同定义。包中包含全部50折，解释默认第1折，不假造50个任务微调权重文件。不包含XGBoost模型、旧SHAP/ALE响应、82/111特征历史随机模型或二维ALE。
+
+修复基础表用于来源检查，实际推理直接消费保存的有效NPZ，不重算训练期气候态、不重新fit imputer。未填补有效训练/测试表和对应布尔缺失mask同时保留，True代表原缺失，不能当作真实观测；SST异常使用每折训练气候态。原始水质master保留原始观测表示、目标和检出限字段。旧model_table只在07_reference/original_input_only供追溯，任何活跃入口均不读取。
+
+原正式预测采用完整原测试批调用；P1逐行解释可能与完整批值不同。迁移端首先在原整批上核对固定核心样本对应值及全批误差，再审查同一核心样本三次P1重复。历史V2已规定数值资格是质量证据而非删除任务的禁令；文件/身份/依赖预检失败则禁止计算，批量或P1数值不等价分别记录，不能误称精确解释原批预测。
+
+算法复用：99号PermutationExplainer（155预算、16训练背景、seed42、原目标尺度、逐行P1缓存）；100号ALE局部上下界差、实际bin计数及加权中心化。仅改包内路径和新上下文桥接，禁止调用旧screen重选变量/查询。SQLite逐观测检查点和77维SHAP逐样本落盘可中断续跑。原方法以.txt存档，不执行历史脚本。
+
+特征数据来源按77定义清单打包直接来源，另附HKO雨量、QUB极值/小时、ERA5原NetCDF和归一化逐日输入、夜光真实月表；无需重新登录数据平台或使用本机凭据即可运行。全部活动配置是包根相对路径；原报告中的绝对路径只是来源证据。
+
+重要协议例外见03_missing_assets.md；尤其不能把旧Secchi6箱分配无条件套到修复值，不重新挑选更好看的解释样本。
+'''
+    write('08_reports/02_asset_provenance_audit.md',audit)
+    readme='''# 修复后77特征TabICLv2解释计算迁移包
+
+数据版本：WQ77_REPAIRED_20261115_V1。先阅读08_reports/MISSING_ASSETS.md。包复制到任意目录解压即可；勿只复制05_scripts。
+
+## 顺序
+
+1. 根据06_environment/INSTALL_WINDOWS.md安装源版本依赖。
+2. `python 05_scripts/run_preflight.py --static-only`：仅文件/哈希/语法。
+3. `python 05_scripts/run_preflight.py --dependencies`：版本与CUDA可用性，不预测。
+4. **以下仅在另一台计算机执行**：`python 05_scripts/run_prediction_audit.py`。每任务一次原完整第1折测试批，外加3核心各3次P1重复；原完整批是必要协议，不能改成仅3行批再声称复现。
+5. `python 05_scripts/run_shap.py`：十任务各3核心，共30个77维结果；可单任务`--task tp_middle`。
+6. `python 05_scripts/run_ale.py`：原20变量/分箱/查询ID逐曲线；Secchi ssrd_sum_3d登记冲突会被记录为阻塞，其余继续。数据问题未解决不能声称20/20。
+7. `python 05_scripts/run_quality_audit.py`：完整性、排名和支持汇总。需种子审查时显式运行`python 05_scripts/run_shap.py --sensitivity`，10次重复不计独立核心样本。
+
+串行总入口：`python 05_scripts/run_all.py`。它依次预检、预测审查、SHAP、ALE、质量审查；若部分任务失败继续其他任务并返回非零。不会执行二维ALE或可选20样本扩展。
+
+结果只写outputs/；shap按样本检查点，ALE按SQLite局部查询检查点续跑；输入哈希不同不覆盖。每次退出查看outputs/status、outputs/logs、summary/quality_audit.csv。请勿同时启动多个GPU入口。断电后重跑同一命令；活跃PID锁防并发，失效锁会清理。
+
+50折完整上下文已打包，但本轮原登记解释仅第1折。run_prediction_audit不重新训练权重，官方fit只恢复保存上下文；不重算正式预测实验指标，也不改写冻结预测。
+
+30核心汇总为每任务3样本的mean(abs(SHAP))，对全部77特征任务内排序；跨任务原SHAP绝对值不可直接比较。ALE真实分箱样本/站点数另列，空箱不填零，不插值，不将其解释为因果或总体稳定性通过。
+
+当前电脑构建包后立即停止；目的端安装/模型加载/数值资格仍待实际执行。
+'''
+    write('08_reports/README_RUN.md',readme);write('README_RUN.md',readme)
+    windows='''# Windows安装（源环境为Python venv，不是Conda）
+
+使用Python 3.11.9 x64，NVIDIA CUDA GPU。源机器8GB RTX2070 Max-Q，torch内置cu124运行时；目的端驱动需支持该运行时。没有在本轮运行nvidia-smi或模型加载。
+
+在解压包根目录PowerShell执行：
+
+```powershell
+py -3.11 -m venv .venv
+.\\.venv\\Scripts\\python.exe -m pip install torch==2.6.0+cu124 --index-url https://download.pytorch.org/whl/cu124
+.\\.venv\\Scripts\\python.exe -m pip install -r 06_environment/requirements-lock.txt
+.\\.venv\\Scripts\\python.exe -m pip check
+.\\.venv\\Scripts\\python.exe 05_scripts/run_preflight.py --dependencies
+```
+
+`py -3.11`实际选择版本必须是3.11.9，预检会核对。后续命令也使用该.venv的python，不要误用系统环境。checkpoint已打包，禁止自动下载新权重。未打包wheelhouse：CUDA轮子较大且Linux依赖与Windows不同，采用联网同版本安装。锁文件是源环境已安装依赖闭包，不表示已在一台干净机器上验证网络安装；若同版本不可获得，记录错误停止，不擅自升级。
+
+不需要Earth Engine、CMEMS、模型平台账号、令牌或本机临时目录。源Conda环境不存在，因此不虚构environment.yml。
+'''
+    linux='''# Linux安装方案（尚未跨平台实测）
+
+Python3.11.9及可用NVIDIA CUDA GPU，源实验在Windows完成；Linux运行仅可在同版本依赖和预测审查后评价，不预先保证数值等价。
+
+```bash
+python3.11 -m venv .venv
+.venv/bin/python -m pip install torch==2.6.0+cu124 --index-url https://download.pytorch.org/whl/cu124
+.venv/bin/python -m pip install -r 06_environment/requirements-lock.txt
+.venv/bin/python -m pip check
+.venv/bin/python 05_scripts/run_preflight.py --dependencies
+```
+
+torch的Linux NVIDIA运行库由cu124发行包按平台解析；源Windows锁表未虚构Linux专属包版本。不可安装不同torch/tabicl版本后绕过预检。所有入口使用pathlib包根路径，不依赖盘符、PowerShell、msvcrt或旧隔离patch。
+'''
+    write('06_environment/INSTALL_WINDOWS.md',windows);write('06_environment/INSTALL_LINUX.md',linux)
+    report='''# 迁移打包报告
+
+状态：静态资产检查通过；Secchi一条ALE存在登记与修复值冲突，不能宣称20条均具备完整执行资格。
+
+包含：唯一修复版本30719观测、77列顺序与定义、50套TabICLv2正式NPZ上下文、50个实际新imputer、逐折未填补输入与缺失mask、气候态、原manifest及站点折表、100个正式任务模型折的预测来源证据、官方预训练权重、30核心固定ID、20条曲线原计划、成熟方法与新桥接入口、源环境实际版本闭包、中文安装和运行说明。
+
+未包含：旧SHAP/ALE响应、旧处理器、历史82/111特征模型、二维ALE、账户凭据、.venv。原始历史输入仅作为非执行来源参考隔离保存。原始科学资产不改写。
+
+本机允许检查已执行：存在性、字节、SHA256、CSV/JSON/NPZ结构与引用、Python AST语法、ZIP CRC、解压后逐文件哈希和静态预检。没有执行模型加载、训练、正式预测、SHAP、ALE或GPU计算；迁移端运行与质量资格未冒充通过。最终ZIP字节和SHA256以交付根的旁路验收JSON及.sha256为准，避免压缩包自引用哈希循环。
+
+当前包支持独立迁移与目的端复核，但ALE冲突需按正式登记原则处理；不自动补造、删除变量或更换分箱。不以旧历史失败作为新计算失败，不把新数值质量问题改写成历史稳定通过。
+'''
+    write('08_reports/PACKAGING_REPORT.md',report)
+
+if __name__=='__main__':build()

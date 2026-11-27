@@ -1,0 +1,24 @@
+{
+  "revision": "secchi_boundary_v2",
+  "reason": "修复后原始特征值比原登记边界高2 J/m²",
+  "source_query_manifest_sha256": "d5dcc7e0d134c0a810ffc2526ae9b62b88d9b30176f9ba818ff6bbda9ee42ac1",
+  "source_bin_support_sha256": "dde9eeb2551f1398569dd9b1fd7e45d294ebb345408574e5da0972cdad0e7b5e",
+  "changed_rows": [
+    {
+      "obs_id": "NT1_20161107_surface",
+      "old_bin": 3,
+      "new_bin": 4,
+      "old_value": 50345940.0,
+      "new_value": 50345942.0
+    },
+    {
+      "obs_id": "NM6_20161107_surface",
+      "old_bin": 3,
+      "new_bin": 4,
+      "old_value": 50345940.0,
+      "new_value": 50345942.0
+    }
+  ],
+  "all_query_ids_preserved": true,
+  "edges_preserved": true
+}

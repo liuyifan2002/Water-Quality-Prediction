@@ -1,0 +1,82 @@
+[
+  {
+    "python": "3.11.9",
+    "python_executable": "E:\\研究生\\codex\\水质预测\\runs\\tabiclv2_pilot\\环境\\.venv\\Scripts\\python.exe",
+    "hashseed": "0",
+    "torch": "2.6.0+cu124",
+    "tabicl": "2.2.0",
+    "sklearn": "1.9.1",
+    "cuda": true,
+    "tabicl_module": "E:\\研究生\\codex\\水质预测\\runs\\tabiclv2_pilot\\环境\\.venv\\Lib\\site-packages\\tabicl\\__init__.py",
+    "view_order": [
+      "power",
+      "none"
+    ],
+    "context_hash": "aaa203b2766ec525ef589bc13477551ef8e24610c94a77f1d755bce051d2ebb6:f75258422570fb7d21413fd4ac36b042effb6e42759e16ee56bcf181d559fd36",
+    "feature_order_hash": "da3dc69e30b052cce1fd5cbb30351c1f5abebb82dd8162db616ae8883ada3e99",
+    "checkpoint_sha256": "0db9cb538f114e79026bf08f45f41ad8dd7ad2de2aaca9a5ca8cd3bd9748ae7a",
+    "portable_config_sha256": "155ace757d2aa523e223796ecfe3dd72a39abeb4f9e86f336ce9d6a16e8ce2ee",
+    "samples": [
+      {
+        "obs_id": "SM13_20150515_surface",
+        "p1_prediction": 11.522026146090186,
+        "shap_saved_prediction": 11.522026146090186,
+        "prior_independent_p1": 11.5077099853085,
+        "frozen_batch_prediction": 11.52202316060686,
+        "delta_vs_shap": 0.0,
+        "delta_vs_prior_p1": 0.014316160781685738,
+        "delta_vs_frozen_batch": 2.9854833254461255e-06
+      },
+      {
+        "obs_id": "VM7_20170406_surface",
+        "p1_prediction": 1.9688083223791808,
+        "shap_saved_prediction": 1.9688083223791808,
+        "prior_independent_p1": 1.967924034184445,
+        "frozen_batch_prediction": 1.9688083223791808,
+        "delta_vs_shap": 0.0,
+        "delta_vs_prior_p1": 0.0008842881947357384,
+        "delta_vs_frozen_batch": 0.0
+      }
+    ]
+  },
+  {
+    "python": "3.11.9",
+    "python_executable": "E:\\研究生\\codex\\水质预测\\runs\\tabiclv2_pilot\\环境\\.venv\\Scripts\\python.exe",
+    "hashseed": "1",
+    "torch": "2.6.0+cu124",
+    "tabicl": "2.2.0",
+    "sklearn": "1.9.1",
+    "cuda": true,
+    "tabicl_module": "E:\\研究生\\codex\\水质预测\\runs\\tabiclv2_pilot\\环境\\.venv\\Lib\\site-packages\\tabicl\\__init__.py",
+    "view_order": [
+      "none",
+      "power"
+    ],
+    "context_hash": "aaa203b2766ec525ef589bc13477551ef8e24610c94a77f1d755bce051d2ebb6:f75258422570fb7d21413fd4ac36b042effb6e42759e16ee56bcf181d559fd36",
+    "feature_order_hash": "da3dc69e30b052cce1fd5cbb30351c1f5abebb82dd8162db616ae8883ada3e99",
+    "checkpoint_sha256": "0db9cb538f114e79026bf08f45f41ad8dd7ad2de2aaca9a5ca8cd3bd9748ae7a",
+    "portable_config_sha256": "155ace757d2aa523e223796ecfe3dd72a39abeb4f9e86f336ce9d6a16e8ce2ee",
+    "samples": [
+      {
+        "obs_id": "SM13_20150515_surface",
+        "p1_prediction": 11.522026146090186,
+        "shap_saved_prediction": 11.522026146090186,
+        "prior_independent_p1": 11.5077099853085,
+        "frozen_batch_prediction": 11.52202316060686,
+        "delta_vs_shap": 0.0,
+        "delta_vs_prior_p1": 0.014316160781685738,
+        "delta_vs_frozen_batch": 2.9854833254461255e-06
+      },
+      {
+        "obs_id": "VM7_20170406_surface",
+        "p1_prediction": 1.9688083223791808,
+        "shap_saved_prediction": 1.9688083223791808,
+        "prior_independent_p1": 1.967924034184445,
+        "frozen_batch_prediction": 1.9688083223791808,
+        "delta_vs_shap": 0.0,
+        "delta_vs_prior_p1": 0.0008842881947357384,
+        "delta_vs_frozen_batch": 0.0
+      }
+    ]
+  }
+]

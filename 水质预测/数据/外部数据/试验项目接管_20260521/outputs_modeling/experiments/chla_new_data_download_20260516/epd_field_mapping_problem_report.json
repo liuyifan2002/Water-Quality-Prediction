@@ -1,0 +1,11 @@
+{
+  "label": "EPD 字段映射问题报告",
+  "error": "RuntimeError: EPD 长历史原始数据缺少关键列：['depth', 'chla']",
+  "raw_columns": [
+    "Water Control Zone",
+    "Station",
+    "Sampling Date (MM/YYYY)",
+    "Dissolved Oxygen (mg/L)",
+    "5-day Biochemical Oxygen Demand (mg/L)"
+  ]
+}

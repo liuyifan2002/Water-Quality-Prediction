@@ -1,0 +1,12 @@
+{
+  "task": "chla_surface",
+  "model": "lightgbm",
+  "n_train": 8692,
+  "n_test": 2174,
+  "R2": 0.5642311920230976,
+  "RMSE": 4.351026053416481,
+  "MAE": 1.9887048846342739,
+  "runtime_seconds": 0.8404856999986805,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

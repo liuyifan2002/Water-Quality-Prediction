@@ -1,0 +1,82 @@
+{
+  "task": "tp_surface",
+  "model": "random_forest",
+  "n_samples": 8268,
+  "inner_oof_R2": 0.6966771038763091,
+  "inner_oof_RMSE": 0.03721130848359802,
+  "inner_oof_MAE": 0.015394671517101917,
+  "fit_seconds": 53.70971240004292,
+  "infer_seconds": 0.35930219996953383,
+  "folds": [
+    {
+      "fold": 1,
+      "n_train": 6614,
+      "n_val": 1654,
+      "R2": 0.7087300038842503,
+      "RMSE": 0.03814798409913666,
+      "MAE": 0.01520359440282528,
+      "fit_seconds": 11.941447400022298,
+      "infer_seconds": 0.09055170000647195
+    },
+    {
+      "fold": 2,
+      "n_train": 6614,
+      "n_val": 1654,
+      "R2": 0.6923313634292971,
+      "RMSE": 0.032868818976848034,
+      "MAE": 0.01482678502893149,
+      "fit_seconds": 11.336379200016381,
+      "infer_seconds": 0.06829369999468327
+    },
+    {
+      "fold": 3,
+      "n_train": 6614,
+      "n_val": 1654,
+      "R2": 0.6571371315464289,
+      "RMSE": 0.04603358011568065,
+      "MAE": 0.016457273561758794,
+      "fit_seconds": 10.22858759999508,
+      "infer_seconds": 0.06761050000204705
+    },
+    {
+      "fold": 4,
+      "n_train": 6615,
+      "n_val": 1653,
+      "R2": 0.7245621021859647,
+      "RMSE": 0.03398174715485831,
+      "MAE": 0.014994301080402403,
+      "fit_seconds": 10.608616800018353,
+      "infer_seconds": 0.06655199997476302
+    },
+    {
+      "fold": 5,
+      "n_train": 6615,
+      "n_val": 1653,
+      "R2": 0.7163684001457526,
+      "RMSE": 0.03337104909188695,
+      "MAE": 0.015491219822273881,
+      "fit_seconds": 9.594681399990804,
+      "infer_seconds": 0.06629429999156855
+    }
+  ],
+  "config": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": null,
+    "max_features": 0.8,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 250,
+    "n_jobs": 4,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  }
+}

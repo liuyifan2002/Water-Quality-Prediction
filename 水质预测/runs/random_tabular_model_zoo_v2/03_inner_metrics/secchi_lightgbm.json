@@ -1,0 +1,84 @@
+{
+  "task": "secchi",
+  "model": "lightgbm",
+  "n_samples": 8692,
+  "inner_oof_R2": 0.6284191731641484,
+  "inner_oof_RMSE": 0.6737245479628857,
+  "inner_oof_MAE": 0.43239718013821776,
+  "fit_seconds": 4.677880700037349,
+  "infer_seconds": 0.11370710001210682,
+  "folds": [
+    {
+      "fold": 1,
+      "n_train": 6953,
+      "n_val": 1739,
+      "R2": 0.5505323264277318,
+      "RMSE": 0.8083383047293192,
+      "MAE": 0.45343272577396565,
+      "fit_seconds": 0.8439983999996912,
+      "infer_seconds": 0.016068700002506375
+    },
+    {
+      "fold": 2,
+      "n_train": 6953,
+      "n_val": 1739,
+      "R2": 0.6597523196744377,
+      "RMSE": 0.6272226941969586,
+      "MAE": 0.42613275967905356,
+      "fit_seconds": 0.8903174000151921,
+      "infer_seconds": 0.0189570999937132
+    },
+    {
+      "fold": 3,
+      "n_train": 6954,
+      "n_val": 1738,
+      "R2": 0.6406058341493113,
+      "RMSE": 0.6217454016391857,
+      "MAE": 0.4181688093384199,
+      "fit_seconds": 1.0167264000046998,
+      "infer_seconds": 0.01590949998353608
+    },
+    {
+      "fold": 4,
+      "n_train": 6954,
+      "n_val": 1738,
+      "R2": 0.6453536489445775,
+      "RMSE": 0.650505281491676,
+      "MAE": 0.4474452422246346,
+      "fit_seconds": 0.9035697000217624,
+      "infer_seconds": 0.016982500004814938
+    },
+    {
+      "fold": 5,
+      "n_train": 6954,
+      "n_val": 1738,
+      "R2": 0.6629189710289876,
+      "RMSE": 0.6425731564730397,
+      "MAE": 0.41679786475373987,
+      "fit_seconds": 1.0232687999960035,
+      "infer_seconds": 0.04578930002753623
+    }
+  ],
+  "config": {
+    "boosting_type": "gbdt",
+    "class_weight": null,
+    "colsample_bytree": 0.8,
+    "importance_type": "split",
+    "learning_rate": 0.05,
+    "max_depth": -1,
+    "min_child_samples": 20,
+    "min_child_weight": 0.001,
+    "min_split_gain": 0.0,
+    "n_estimators": 400,
+    "n_jobs": 4,
+    "num_leaves": 31,
+    "objective": null,
+    "random_state": 42,
+    "reg_alpha": 0.0,
+    "reg_lambda": 0.0,
+    "subsample": 0.8,
+    "subsample_for_bin": 200000,
+    "subsample_freq": 0,
+    "verbosity": -1
+  }
+}

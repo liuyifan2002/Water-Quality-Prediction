@@ -1,0 +1,18 @@
+[
+  {
+    "script": "run_prediction_audit.py",
+    "exit_code": 0
+  },
+  {
+    "script": "run_shap.py",
+    "exit_code": 0
+  },
+  {
+    "script": "run_ale.py",
+    "exit_code": 1
+  },
+  {
+    "script": "run_quality_audit.py",
+    "exit_code": 2
+  }
+]

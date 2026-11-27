@@ -1,0 +1,12 @@
+{
+  "task": "tp_surface",
+  "model": "mlp",
+  "n_train": 8268,
+  "n_test": 2068,
+  "R2": 0.23549539627470417,
+  "RMSE": 0.05678385359042239,
+  "MAE": 0.028405471054288495,
+  "runtime_seconds": 6.380833100003656,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

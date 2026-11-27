@@ -1,0 +1,32 @@
+{
+  "label": "Copernicus Marine 物理场下载与提取",
+  "dry_run": true,
+  "skip_download": false,
+  "dataset_id": "",
+  "start_date": "2014-01-01",
+  "end_date": "2024-12-31",
+  "bbox": {
+    "min_lon": 113.8,
+    "max_lon": 114.5,
+    "min_lat": 22.1,
+    "max_lat": 22.6
+  },
+  "variables": [
+    "thetao",
+    "so",
+    "uo",
+    "vo",
+    "zos",
+    "mlotst"
+  ],
+  "raw_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\data\\raw\\manual\\copernicus_physics",
+  "output_csv": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\data\\model_input\\new_sources\\copernicus_physics_features_2014_2024.csv",
+  "interpolation": "nearest",
+  "sample_rows": 10866,
+  "credentials_present": false,
+  "missing_credentials": [
+    "COPERNICUSMARINE_USERNAME",
+    "COPERNICUSMARINE_PASSWORD"
+  ],
+  "status": "dry_run_only"
+}

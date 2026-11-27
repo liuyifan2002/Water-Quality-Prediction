@@ -1,0 +1,98 @@
+{
+  "label": "Chl-a短期机制特征实验，对照 current_baseline_with_env_20260516",
+  "generated_at": "2026-05-16T02:49:40",
+  "baseline_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\current_baseline_with_env_20260516",
+  "source_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\env_feature_gain_20260516_real",
+  "output_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\chla_short_mechanism_20260516",
+  "dataset_path": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\chla_short_mechanism_20260516\\chla_short_mechanism_model_table.csv",
+  "new_feature_family": "chla_short_mechanism",
+  "new_feature_meanings": {
+    "chla_sst_ssrd_3d": "海表温度与短期辐射共同作用，表示藻类短期光热条件。",
+    "chla_sst_ssrd_7d": "一周尺度海温与辐射耦合，表示持续增殖背景。",
+    "chla_sst_anom_abs_7d": "一周海温异常绝对值，表示短期热扰动强度。",
+    "chla_ssrd_change_7_14": "7天与14天辐射均值差，表示近期光照变化。",
+    "chla_rain_pulse_3_14": "3天降雨相对14天背景的脉冲强度，表示短期冲刷事件。",
+    "chla_rain_pulse_7_30": "7天降雨相对30天背景的脉冲强度，表示周尺度降雨扰动。",
+    "chla_rain_recent_minus_month": "7天降雨相对月尺度累积的偏离，表示近期输入是否异常偏强。",
+    "chla_wind_tide_mix": "风速与潮差耦合，表示混合和再悬浮强度。",
+    "chla_wind_rain_mix": "风速与近7天降雨耦合，表示风雨共同扰动。",
+    "chla_tide_rain_mix": "潮差与近7天降雨耦合，表示河口交换与陆源输入共同作用。",
+    "chla_wet_rain_7d": "丰水期与近7天降雨交互，表示季节性雨脉冲效应。",
+    "chla_wet_ssrd_7d": "丰水期与近7天辐射交互，表示季节性光照响应。",
+    "chla_wet_sst_7d": "丰水期与近7天海温交互，表示季节性热环境响应。",
+    "chla_ndci_sst_7d": "遥感藻类光谱指数与海温交互，表示光谱状态在热背景下的响应。",
+    "chla_ndci_ssrd_7d": "遥感藻类光谱指数与辐射交互，表示光谱状态在光照背景下的响应。",
+    "chla_ndci_rain_7d": "遥感藻类光谱指数与降雨交互，表示光谱状态对陆源扰动的敏感性。"
+  },
+  "ndci_source_column": "s2_ndci_mean",
+  "skipped_features": [],
+  "formal_results_overwritten": false,
+  "same_scope_check": {
+    "max_train_rows_delta": 0,
+    "max_test_rows_delta": 0
+  },
+  "positive_r2_rows": 11,
+  "negative_r2_rows": 0,
+  "top_added_features": [
+    {
+      "feature": "chla_wet_rain_7d",
+      "used_combo_count": 6,
+      "mean_importance": 0.02270710685600837,
+      "max_importance": 0.02803780697286129
+    },
+    {
+      "feature": "chla_wet_sst_7d",
+      "used_combo_count": 6,
+      "mean_importance": 0.02027929574251175,
+      "max_importance": 0.02538391202688217
+    },
+    {
+      "feature": "chla_sst_ssrd_7d",
+      "used_combo_count": 6,
+      "mean_importance": 0.020056285119305056,
+      "max_importance": 0.032578714191913605
+    },
+    {
+      "feature": "chla_sst_ssrd_3d",
+      "used_combo_count": 6,
+      "mean_importance": 0.019238495267927647,
+      "max_importance": 0.026680899783968925
+    },
+    {
+      "feature": "chla_wet_ssrd_7d",
+      "used_combo_count": 6,
+      "mean_importance": 0.0164695472146074,
+      "max_importance": 0.023537734523415565
+    },
+    {
+      "feature": "chla_rain_pulse_7_30",
+      "used_combo_count": 6,
+      "mean_importance": 0.015821735685070355,
+      "max_importance": 0.019976641982793808
+    },
+    {
+      "feature": "chla_ssrd_change_7_14",
+      "used_combo_count": 6,
+      "mean_importance": 0.01534590544179082,
+      "max_importance": 0.022513657808303833
+    },
+    {
+      "feature": "chla_tide_rain_mix",
+      "used_combo_count": 6,
+      "mean_importance": 0.015099141591538986,
+      "max_importance": 0.021274356171488762
+    },
+    {
+      "feature": "chla_rain_pulse_3_14",
+      "used_combo_count": 6,
+      "mean_importance": 0.014849225214372078,
+      "max_importance": 0.01891678385436535
+    },
+    {
+      "feature": "chla_wind_rain_mix",
+      "used_combo_count": 6,
+      "mean_importance": 0.014002373597274223,
+      "max_importance": 0.02020196057856083
+    }
+  ]
+}

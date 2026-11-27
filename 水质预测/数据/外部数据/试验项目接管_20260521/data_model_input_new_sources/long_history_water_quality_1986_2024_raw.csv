@@ -1,0 +1,241 @@
+﻿Water Control Zone,Station,Sampling Date (MM/YYYY),Dissolved Oxygen (mg/L),5-day Biochemical Oxygen Demand (mg/L)
+Deep Bay,DM3,05/2024,5.3,0.2
+Deep Bay,DM3,06/2024,7.9,1.8
+Deep Bay,DM3,07/2024,4.2,<0.1
+Deep Bay,DM3,08/2024,8.0,0.6
+Deep Bay,DM3,09/2024,6.6,<0.1
+Deep Bay,DM3,10/2024,6.5,0.2
+Deep Bay,DM3,11/2024,6.6,<0.1
+Deep Bay,DM3,12/2024,8.2,1.9
+Deep Bay,DM3,01/2025,8.9,0.7
+Deep Bay,DM3,02/2025,9.0,5.2
+Deep Bay,DM3,03/2025,5.7,0.3
+Deep Bay,DM3,04/2025,8.3,0.2
+Deep Bay,DM3,05/2025,5.0,0.4
+Deep Bay,DM3,06/2025,5.3,0.4
+Deep Bay,DM3,07/2025,6.4,1
+Deep Bay,DM3,08/2025,4.5,0.2
+Deep Bay,DM3,09/2025,5.1,<0.1
+Deep Bay,DM3,10/2025,7.7,0.5
+Deep Bay,DM3,11/2025,6.4,0.6
+Deep Bay,DM3,12/2025,7.4,0.4
+Deep Bay,DM3,01/2026,6.6,0.5
+Deep Bay,DM3,02/2026,7.6,0.3
+Deep Bay,DM3,03/2026,5.2,<0.1
+Deep Bay,DM3,04/2026,6.9,0.6
+Eastern Buffer,EM2,05/2024,5.6,<0.1
+Eastern Buffer,EM2,06/2024,5.1,1.7
+Eastern Buffer,EM2,07/2024,5.0,1.1
+Eastern Buffer,EM2,08/2024,4.2,0.4
+Eastern Buffer,EM2,09/2024,4.6,1.3
+Eastern Buffer,EM2,10/2024,4.4,<0.1
+Eastern Buffer,EM2,11/2024,4.7,0.9
+Eastern Buffer,EM2,12/2024,6.7,0.5
+Eastern Buffer,EM2,01/2025,6.1,0.5
+Eastern Buffer,EM2,02/2025,6.8,0.9
+Eastern Buffer,EM2,03/2025,6.9,0.6
+Eastern Buffer,EM2,04/2025,4.9,0.9
+Eastern Buffer,EM2,05/2025,5.8,0.3
+Eastern Buffer,EM2,06/2025,4.6,0.4
+Eastern Buffer,EM2,07/2025,5.9,1.1
+Eastern Buffer,EM2,08/2025,5.3,0.1
+Eastern Buffer,EM2,09/2025,3.4,0.2
+Eastern Buffer,EM2,10/2025,5.3,0.6
+Eastern Buffer,EM2,11/2025,5.5,0.3
+Eastern Buffer,EM2,12/2025,6.7,0.7
+Eastern Buffer,EM2,01/2026,6.6,0.7
+Eastern Buffer,EM2,02/2026,6.7,0.1
+Eastern Buffer,EM2,03/2026,6.3,<0.1
+Eastern Buffer,EM2,04/2026,5.9,0.1
+Junk Bay,JM4,05/2024,5.8,<0.1
+Junk Bay,JM4,06/2024,4.9,1.9
+Junk Bay,JM4,07/2024,7.8,0.7
+Junk Bay,JM4,08/2024,4.1,0.4
+Junk Bay,JM4,09/2024,5.0,0.9
+Junk Bay,JM4,10/2024,4.7,1
+Junk Bay,JM4,11/2024,4.4,0.2
+Junk Bay,JM4,12/2024,6.5,0.3
+Junk Bay,JM4,01/2025,6.8,0.5
+Junk Bay,JM4,02/2025,7.0,0.8
+Junk Bay,JM4,03/2025,6.7,0.2
+Junk Bay,JM4,04/2025,8.6,0.8
+Junk Bay,JM4,05/2025,5.8,0.5
+Junk Bay,JM4,06/2025,4.1,0.4
+Junk Bay,JM4,07/2025,6.5,2.4
+Junk Bay,JM4,08/2025,5.4,<0.1
+Junk Bay,JM4,09/2025,3.4,1
+Junk Bay,JM4,10/2025,5.6,0.7
+Junk Bay,JM4,11/2025,5.6,0.5
+Junk Bay,JM4,12/2025,6.7,0.7
+Junk Bay,JM4,01/2026,6.8,0.6
+Junk Bay,JM4,02/2026,6.5,1
+Junk Bay,JM4,03/2026,6.2,<0.1
+Junk Bay,JM4,04/2026,6.0,0.2
+Mirs Bay,MM15,05/2024,5.2,0.8
+Mirs Bay,MM15,06/2024,5.3,0.2
+Mirs Bay,MM15,07/2024,5.2,0.5
+Mirs Bay,MM15,08/2024,5.0,0.2
+Mirs Bay,MM15,09/2024,5.2,0.8
+Mirs Bay,MM15,10/2024,5.0,<0.1
+Mirs Bay,MM15,11/2024,5.5,0.1
+Mirs Bay,MM15,12/2024,6.3,0.8
+Mirs Bay,MM15,01/2025,7.2,0.6
+Mirs Bay,MM15,02/2025,6.8,1.4
+Mirs Bay,MM15,03/2025,7.4,0.2
+Mirs Bay,MM15,04/2025,8.9,0.2
+Mirs Bay,MM15,05/2025,6.1,0.4
+Mirs Bay,MM15,06/2025,6.1,0.1
+Mirs Bay,MM15,07/2025,5.6,1.2
+Mirs Bay,MM15,08/2025,4.5,0.3
+Mirs Bay,MM15,09/2025,5.7,0.3
+Mirs Bay,MM15,10/2025,5.1,<0.1
+Mirs Bay,MM15,11/2025,6.2,0.4
+Mirs Bay,MM15,12/2025,7.2,1.1
+Mirs Bay,MM15,01/2026,6.9,0.4
+Mirs Bay,MM15,02/2026,6.9,0.3
+Mirs Bay,MM15,03/2026,6.8,0.2
+Mirs Bay,MM15,04/2026,5.6,0.5
+North Western,NM3,05/2024,7.0,3.6
+North Western,NM3,06/2024,4.8,0.8
+North Western,NM3,07/2024,6.1,1.1
+North Western,NM3,08/2024,5.1,0.7
+North Western,NM3,09/2024,5.1,0.2
+North Western,NM3,10/2024,5.1,0.7
+North Western,NM3,11/2024,4.8,<0.1
+North Western,NM3,12/2024,5.6,0.5
+North Western,NM3,01/2025,7.0,0.6
+North Western,NM3,02/2025,7.2,<0.1
+North Western,NM3,03/2025,6.6,0.9
+North Western,NM3,04/2025,8.9,0.3
+North Western,NM3,05/2025,5.8,0.8
+North Western,NM3,06/2025,5.3,0.3
+North Western,NM3,07/2025,3.1,<0.1
+North Western,NM3,08/2025,3.4,0.8
+North Western,NM3,09/2025,4.8,1
+North Western,NM3,10/2025,4.7,0.3
+North Western,NM3,11/2025,6.2,0.4
+North Western,NM3,12/2025,6.5,0.6
+North Western,NM3,01/2026,6.8,0.5
+North Western,NM3,02/2026,6.0,0.3
+North Western,NM3,03/2026,6.6,0.3
+North Western,NM3,04/2026,5.9,0.1
+Port Shelter,PM7,05/2024,5.7,<0.1
+Port Shelter,PM7,06/2024,5.1,0.3
+Port Shelter,PM7,07/2024,5.5,0.8
+Port Shelter,PM7,08/2024,5.7,0.7
+Port Shelter,PM7,09/2024,4.9,0.2
+Port Shelter,PM7,10/2024,5.0,0.6
+Port Shelter,PM7,11/2024,4.8,0.3
+Port Shelter,PM7,12/2024,6.2,0.5
+Port Shelter,PM7,01/2025,7.3,0.5
+Port Shelter,PM7,02/2025,6.9,1.4
+Port Shelter,PM7,03/2025,6.8,0.3
+Port Shelter,PM7,04/2025,9.0,0.7
+Port Shelter,PM7,05/2025,8.7,0.5
+Port Shelter,PM7,06/2025,5.4,0.1
+Port Shelter,PM7,07/2025,4.4,1.4
+Port Shelter,PM7,08/2025,2.9,0.5
+Port Shelter,PM7,09/2025,5.9,0.5
+Port Shelter,PM7,10/2025,5.3,0.5
+Port Shelter,PM7,11/2025,5.9,0.6
+Port Shelter,PM7,12/2025,6.8,0.2
+Port Shelter,PM7,01/2026,7.5,1.5
+Port Shelter,PM7,02/2026,6.5,<0.1
+Port Shelter,PM7,03/2026,6.4,<0.1
+Port Shelter,PM7,04/2026,6.0,0.2
+Southern,SM6,05/2024,5.6,<0.1
+Southern,SM6,06/2024,4.8,<0.1
+Southern,SM6,07/2024,7.2,1.7
+Southern,SM6,08/2024,4.6,1.2
+Southern,SM6,09/2024,4.7,0.5
+Southern,SM6,10/2024,4.8,0.1
+Southern,SM6,11/2024,5.4,0.5
+Southern,SM6,12/2024,7.9,1.4
+Southern,SM6,01/2025,7.7,0.2
+Southern,SM6,02/2025,7.4,0.3
+Southern,SM6,03/2025,11.2,0.5
+Southern,SM6,04/2025,11.0,0.5
+Southern,SM6,05/2025,6.1,0.8
+Southern,SM6,06/2025,5.5,0.4
+Southern,SM6,07/2025,5.6,0.4
+Southern,SM6,08/2025,4.1,2.1
+Southern,SM6,09/2025,7.1,0.9
+Southern,SM6,10/2025,4.9,1.1
+Southern,SM6,11/2025,6.6,<0.1
+Southern,SM6,12/2025,6.5,0.6
+Southern,SM6,01/2026,7.5,1.1
+Southern,SM6,02/2026,7.0,0.9
+Southern,SM6,03/2026,6.9,0.5
+Southern,SM6,04/2026,5.6,0.7
+Tolo Harbour and Channel,TM3,05/2024,5.7,2.1
+Tolo Harbour and Channel,TM3,06/2024,6.4,2.5
+Tolo Harbour and Channel,TM3,07/2024,6.0,1.5
+Tolo Harbour and Channel,TM3,08/2024,5.8,1.1
+Tolo Harbour and Channel,TM3,09/2024,5.9,1.6
+Tolo Harbour and Channel,TM3,10/2024,5.6,0.6
+Tolo Harbour and Channel,TM3,11/2024,6.3,1.1
+Tolo Harbour and Channel,TM3,12/2024,7.2,2.1
+Tolo Harbour and Channel,TM3,01/2025,8.8,0.8
+Tolo Harbour and Channel,TM3,02/2025,8.3,1.6
+Tolo Harbour and Channel,TM3,03/2025,7.0,0.6
+Tolo Harbour and Channel,TM3,04/2025,9.7,3.7
+Tolo Harbour and Channel,TM3,05/2025,8.1,2.8
+Tolo Harbour and Channel,TM3,06/2025,6.4,2
+Tolo Harbour and Channel,TM3,07/2025,5.7,2.4
+Tolo Harbour and Channel,TM3,08/2025,4.5,0.7
+Tolo Harbour and Channel,TM3,09/2025,7.2,1.5
+Tolo Harbour and Channel,TM3,10/2025,5.9,2.1
+Tolo Harbour and Channel,TM3,11/2025,5.8,1.7
+Tolo Harbour and Channel,TM3,12/2025,6.7,1.7
+Tolo Harbour and Channel,TM3,01/2026,8.1,1.3
+Tolo Harbour and Channel,TM3,02/2026,7.6,1.5
+Tolo Harbour and Channel,TM3,03/2026,7.4,1.8
+Tolo Harbour and Channel,TM3,04/2026,7.3,1.7
+Victoria Harbour,VM5,05/2024,7.7,<0.1
+Victoria Harbour,VM5,06/2024,5.2,<0.1
+Victoria Harbour,VM5,07/2024,6.3,1.1
+Victoria Harbour,VM5,08/2024,4.7,1
+Victoria Harbour,VM5,09/2024,4.7,0.4
+Victoria Harbour,VM5,10/2024,5.3,0.3
+Victoria Harbour,VM5,11/2024,4.9,0.7
+Victoria Harbour,VM5,12/2024,5.7,0.2
+Victoria Harbour,VM5,01/2025,5.8,0.9
+Victoria Harbour,VM5,02/2025,7.3,0.2
+Victoria Harbour,VM5,03/2025,6.3,<0.1
+Victoria Harbour,VM5,04/2025,11.4,1.7
+Victoria Harbour,VM5,05/2025,10.9,0.1
+Victoria Harbour,VM5,06/2025,5.2,0.3
+Victoria Harbour,VM5,07/2025,3.2,1.1
+Victoria Harbour,VM5,08/2025,4.4,1
+Victoria Harbour,VM5,09/2025,3.3,1.8
+Victoria Harbour,VM5,10/2025,4.7,0.6
+Victoria Harbour,VM5,11/2025,5.5,0.5
+Victoria Harbour,VM5,12/2025,6.5,0.5
+Victoria Harbour,VM5,01/2026,6.7,0.4
+Victoria Harbour,VM5,02/2026,5.7,0.1
+Victoria Harbour,VM5,03/2026,6.4,0.1
+Victoria Harbour,VM5,04/2026,5.6,0.2
+Western Buffer,WM2,05/2024,6.3,0.1
+Western Buffer,WM2,06/2024,4.9,0.4
+Western Buffer,WM2,07/2024,8.4,1
+Western Buffer,WM2,08/2024,3.0,0.6
+Western Buffer,WM2,09/2024,4.4,1.1
+Western Buffer,WM2,10/2024,4.9,<0.1
+Western Buffer,WM2,11/2024,5.0,0.2
+Western Buffer,WM2,12/2024,5.8,1.3
+Western Buffer,WM2,01/2025,6.9,0.5
+Western Buffer,WM2,02/2025,9.2,0.4
+Western Buffer,WM2,03/2025,6.5,0.5
+Western Buffer,WM2,04/2025,11.7,0.9
+Western Buffer,WM2,05/2025,8.5,<0.1
+Western Buffer,WM2,06/2025,5.1,0.6
+Western Buffer,WM2,07/2025,4.4,1.5
+Western Buffer,WM2,08/2025,3.6,1
+Western Buffer,WM2,09/2025,3.4,0.2
+Western Buffer,WM2,10/2025,5.1,0.3
+Western Buffer,WM2,11/2025,5.9,<0.1
+Western Buffer,WM2,12/2025,6.3,0.3
+Western Buffer,WM2,01/2026,6.2,0.3
+Western Buffer,WM2,02/2026,5.8,0.1
+Western Buffer,WM2,03/2026,6.1,0.1
+Western Buffer,WM2,04/2026,5.8,<0.1

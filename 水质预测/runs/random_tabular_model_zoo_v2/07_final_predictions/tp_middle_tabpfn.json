@@ -1,0 +1,12 @@
+{
+  "task": "tp_middle",
+  "model": "tabpfn",
+  "n_train": 7200,
+  "n_test": 1800,
+  "R2": 0.4644327323880548,
+  "RMSE": 0.033019413382368856,
+  "MAE": 0.012606227254984732,
+  "runtime_seconds": 68.9852644999919,
+  "gpu_peak_allocated_mb": 981.09033203125,
+  "source": "trained_on_full_outer_train"
+}

@@ -1,0 +1,16 @@
+﻿scope,metric,value
+model_table,row_count,30719
+model_table,sample_id_count,10866
+model_table,station_count,94
+chla_bottom,target_non_null_rows,10397
+chla_middle,target_non_null_rows,9456
+chla_surface,target_non_null_rows,10866
+secchi_bottom,target_non_null_rows,10397
+secchi_middle,target_non_null_rows,9456
+secchi_surface,target_non_null_rows,10866
+tn_bottom,target_non_null_rows,9889
+tn_middle,target_non_null_rows,9000
+tn_surface,target_non_null_rows,10336
+tp_bottom,target_non_null_rows,9889
+tp_middle,target_non_null_rows,9000
+tp_surface,target_non_null_rows,10336

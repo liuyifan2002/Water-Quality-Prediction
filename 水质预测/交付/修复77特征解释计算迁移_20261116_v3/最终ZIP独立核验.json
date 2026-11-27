@@ -1,0 +1,10 @@
+{
+  "ZIP_STATIC_FINAL": "PASS",
+  "manifest_files": 733,
+  "archive_files": 735,
+  "bytes": 355941865,
+  "sha256": "858e4a508a24a684dde42482ac691983cffc675167f1acc0ad78de8520a748b3",
+  "bytecode_files": 0,
+  "model_load_or_inference": 0,
+  "shap_ale": 0
+}

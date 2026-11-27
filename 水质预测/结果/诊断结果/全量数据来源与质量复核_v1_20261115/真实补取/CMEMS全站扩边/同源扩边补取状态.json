@@ -1,0 +1,58 @@
+[
+  {
+    "来源": "physics",
+    "请求": {
+      "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+      "variables": [
+        "thetao",
+        "so",
+        "uo",
+        "vo",
+        "zos",
+        "mlotst"
+      ],
+      "minimum_longitude": 113.77476700000004,
+      "maximum_longitude": 114.53866700000012,
+      "minimum_latitude": 22.063517000000026,
+      "maximum_latitude": 22.653617000000025,
+      "start_datetime": "2013-12-15",
+      "end_datetime": "2024-12-31",
+      "coordinates_selection_method": "outside",
+      "output_filename": "physics_94站扩边_20131215_20241231.nc",
+      "output_directory": "E:\\研究生\\codex\\水质预测\\结果\\诊断结果\\全量数据来源与质量复核_v1_20261115\\真实补取\\CMEMS全站扩边",
+      "disable_progress_bar": true,
+      "skip_existing": true
+    },
+    "状态": "已补取，待版本与重叠逐值验收",
+    "凭据已配置": true,
+    "字节": 161440559
+  },
+  {
+    "来源": "bgc",
+    "请求": {
+      "dataset_id": "cmems_mod_glo_bgc_my_0.25deg_P1D-m",
+      "variables": [
+        "chl",
+        "no3",
+        "po4",
+        "si",
+        "o2",
+        "nppv"
+      ],
+      "minimum_longitude": 113.60476700000004,
+      "maximum_longitude": 114.70866700000012,
+      "minimum_latitude": 21.893517000000024,
+      "maximum_latitude": 22.823617000000027,
+      "start_datetime": "2013-12-15",
+      "end_datetime": "2024-12-31",
+      "coordinates_selection_method": "outside",
+      "output_filename": "bgc_94站扩边_20131215_20241231.nc",
+      "output_directory": "E:\\研究生\\codex\\水质预测\\结果\\诊断结果\\全量数据来源与质量复核_v1_20261115\\真实补取\\CMEMS全站扩边",
+      "disable_progress_bar": true,
+      "skip_existing": true
+    },
+    "状态": "已补取，待版本与重叠逐值验收",
+    "凭据已配置": true,
+    "字节": 261524764
+  }
+]

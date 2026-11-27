@@ -1,0 +1,31 @@
+{
+  "experiment_name": "候选表格模型稳健性验证",
+  "experiment_scope": "扩展实验，不覆盖正式 full_station 主链结果",
+  "candidate_tasks": [
+    "chla_surface",
+    "chla_middle",
+    "chla_bottom",
+    "secchi_surface",
+    "secchi_middle",
+    "secchi_bottom",
+    "tn_bottom"
+  ],
+  "task_feature_sets": {
+    "chla_surface": "f3_history_remote",
+    "chla_middle": "f3_history_remote",
+    "chla_bottom": "f1_history",
+    "secchi_surface": "f3_history_remote",
+    "secchi_middle": "f1_history",
+    "secchi_bottom": "f3_history_remote",
+    "tn_bottom": "f3_history_remote"
+  },
+  "random_seeds": [7, 42, 123],
+  "random_test_size": 0.2,
+  "time_train_end_year": 2022,
+  "time_test_start_year": 2023,
+  "time_test_end_year": 2024,
+  "station_n_folds": 5,
+  "station_random_state": 42,
+  "same_day_water_quality_covariates": "excluded",
+  "target_history_in_strict_validation": "excluded"
+}

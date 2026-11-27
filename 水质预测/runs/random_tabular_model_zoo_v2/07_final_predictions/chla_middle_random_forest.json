@@ -1,0 +1,12 @@
+{
+  "task": "chla_middle",
+  "model": "random_forest",
+  "n_train": 7564,
+  "n_test": 1892,
+  "R2": 0.48901720391217607,
+  "RMSE": 3.3117241937080992,
+  "MAE": 1.4861308069480257,
+  "runtime_seconds": 7.447641600010684,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

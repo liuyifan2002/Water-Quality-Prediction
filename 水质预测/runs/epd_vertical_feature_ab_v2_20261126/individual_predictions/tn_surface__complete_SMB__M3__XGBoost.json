@@ -1,0 +1,15 @@
+{
+  "task": "tn_surface",
+  "cohort": "complete_SMB",
+  "feature_set": "M3",
+  "model": "XGBoost",
+  "n_features": 93,
+  "n_train": 7219,
+  "n_test": 1781,
+  "n_stations": 84,
+  "n_test_stations": 81,
+  "R2": 0.6232636810072945,
+  "RMSE": 0.2426690662250068,
+  "MAE": 0.12949757026306866,
+  "runtime_s": 1.0125677585601807
+}

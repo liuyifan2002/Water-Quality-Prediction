@@ -1,0 +1,15 @@
+{
+  "task": "chla_middle",
+  "cohort": "complete_SMB",
+  "feature_set": "M3",
+  "model": "XGBoost",
+  "n_features": 93,
+  "n_train": 7563,
+  "n_test": 1892,
+  "n_stations": 84,
+  "n_test_stations": 79,
+  "R2": 0.5310632447771158,
+  "RMSE": 3.1725476858842585,
+  "MAE": 1.5171754519744918,
+  "runtime_s": 1.1134254932403564
+}

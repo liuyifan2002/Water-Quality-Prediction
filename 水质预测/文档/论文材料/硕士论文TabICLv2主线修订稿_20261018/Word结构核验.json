@@ -1,0 +1,15 @@
+{
+  "source": "E:\\研究生\\codex\\水质预测\\文档\\论文材料\\硕士论文整合排版稿_20261018\\水质预测硕士学位论文_整合排版稿.docx",
+  "output": "E:\\研究生\\codex\\水质预测\\文档\\论文材料\\硕士论文TabICLv2主线修订稿_20261018\\水质预测硕士学位论文_TabICLv2主线修订稿.docx",
+  "before": {
+    "paragraphs": 285,
+    "tables": 9,
+    "figures": 27
+  },
+  "after": {
+    "paragraphs": 311,
+    "tables": 9,
+    "figures": 27
+  },
+  "xgb_explanation_figures_preserved": 17
+}

@@ -1,0 +1,36 @@
+{
+  "version": "TABICLV2_SLIM_EXPLAINABILITY_V2_ALL10",
+  "tasks": [
+    "chla_surface",
+    "chla_middle",
+    "chla_bottom",
+    "secchi",
+    "tn_surface",
+    "tn_middle",
+    "tn_bottom",
+    "tp_surface",
+    "tp_middle",
+    "tp_bottom"
+  ],
+  "fold": "fold_1",
+  "root_relative_paths": true,
+  "query_protocol": "P1_SINGLE_QUERY",
+  "query_shape": [
+    1,
+    77
+  ],
+  "dtype": "float32",
+  "shap": {
+    "algorithm": "shap.PermutationExplainer",
+    "max_evals": 155,
+    "background_n": 16,
+    "core_samples_per_task": 3
+  },
+  "ale": {
+    "max_features_per_task": 2,
+    "support_from_full_test_features": true
+  },
+  "historical_blocked_is_quality_evidence_not_compute_gate": true,
+  "gpu_workers": 1,
+  "pause_flag": "runs/tabicl_v2_slim_explainability_v2_all10/PAUSE_V2.flag"
+}

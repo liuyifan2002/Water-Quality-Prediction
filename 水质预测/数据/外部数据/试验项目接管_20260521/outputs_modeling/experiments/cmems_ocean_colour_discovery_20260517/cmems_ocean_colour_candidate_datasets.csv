@@ -1,0 +1,7 @@
+﻿product_family,keyword,dataset_id,temporal_resolution,spatial_resolution,target_start_year,target_end_year,variables,notes,covers_2014_2024,recommended_priority
+Ocean Colour L4 MY daily plankton,GlobColour,cmems_obs-oc_glo_bgc-plankton_my_l4-gapfree-multi-4km_P1D,P1D,4km,1997,2024,['CHL'],全球 L4 gapfree 日尺度 plankton 产品，适合提供 CHL 主变量。,True,1
+Ocean Colour L4 MY daily transparency,GlobColour,cmems_obs-oc_glo_bgc-transp_my_l4-gapfree-multi-4km_P1D,P1D,4km,1997,2024,"['KD490', 'SPM', 'ZSD']",全球 L4 gapfree 日尺度 transparency 产品，适合提供 KD490、SPM 和 ZSD。,True,1
+Ocean Colour L3 MY daily reflectance,GlobColour,cmems_obs-oc_glo_bgc-reflectance_my_l3-multi-4km_P1D,P1D,4km,1997,2024,"['RRS443', 'RRS490', 'RRS510', 'RRS560', 'RRS665', 'RRS709']",全球 L3 日尺度 reflectance 产品，适合补充 RRS 波段以构造 NDCI/MCI。,True,1
+Ocean Colour L4 MY monthly plankton fallback,GlobColour,cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,P1M,4km,1997,2024,['CHL'],月尺度 plankton fallback。,True,2
+Ocean Colour L4 MY monthly transparency fallback,GlobColour,cmems_obs-oc_glo_bgc-transp_my_l4-multi-4km_P1M,P1M,4km,1997,2024,"['KD490', 'ZSD', 'SPM']",月尺度 transparency fallback。,True,2
+Ocean Colour L4 MY monthly reflectance fallback,GlobColour,cmems_obs-oc_glo_bgc-reflectance_my_l4-multi-4km_P1M,P1M,4km,1997,2024,"['RRS443', 'RRS490', 'RRS510', 'RRS560', 'RRS665', 'RRS709']",月尺度 reflectance fallback。,True,2

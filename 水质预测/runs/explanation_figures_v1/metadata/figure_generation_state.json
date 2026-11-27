@@ -1,0 +1,8 @@
+{
+  "stage": "MAIN_01_TO_03_REDESIGNED",
+  "shap_groups": 40,
+  "ale_1d_curves": 20,
+  "model_calls": 0,
+  "v1_preserved": true,
+  "canonical_outputs": ["main_01_tabicl_v2_explanation_qc_workflow", "main_02_shap_global_importance_heatmap", "main_03_representative_shap_feature_importance_lollipop"]
+}

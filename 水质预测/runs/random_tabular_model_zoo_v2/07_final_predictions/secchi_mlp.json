@@ -1,0 +1,12 @@
+{
+  "task": "secchi",
+  "model": "mlp",
+  "n_train": 8692,
+  "n_test": 2174,
+  "R2": 0.5968518686272778,
+  "RMSE": 0.7140535635790215,
+  "MAE": 0.48529499933713055,
+  "runtime_seconds": 5.331445299991174,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

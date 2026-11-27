@@ -1,0 +1,31 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1",
+    "xgboost": "3.4.1",
+    "catboost": "1.2.10",
+    "torch": "2.6.0+cu124",
+    "tabpfn": "2.2.1",
+    "tabm": "0.0.3"
+  },
+  "torch_cuda_available": true,
+  "torch_cuda_version": "12.4",
+  "gpu": "NVIDIA GeForce RTX 4060",
+  "nvidia_smi": "NVIDIA GeForce RTX 4060, 8188 MiB, 610.47",
+  "validation_modes": [
+    "station_5fold"
+  ],
+  "candidate_tasks": [
+    "chla_surface",
+    "chla_middle",
+    "chla_bottom",
+    "secchi_surface",
+    "secchi_middle",
+    "secchi_bottom",
+    "tn_bottom"
+  ]
+}

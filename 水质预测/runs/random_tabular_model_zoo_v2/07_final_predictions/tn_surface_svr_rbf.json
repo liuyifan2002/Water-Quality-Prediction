@@ -1,0 +1,12 @@
+{
+  "task": "tn_surface",
+  "model": "svr_rbf",
+  "n_train": 8268,
+  "n_test": 2068,
+  "R2": 0.48657394386473707,
+  "RMSE": 0.419400304712644,
+  "MAE": 0.17474132691998503,
+  "runtime_seconds": 6.375757800007705,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

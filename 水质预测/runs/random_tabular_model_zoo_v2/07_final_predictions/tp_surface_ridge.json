@@ -1,0 +1,12 @@
+{
+  "task": "tp_surface",
+  "model": "ridge",
+  "n_train": 8268,
+  "n_test": 2068,
+  "R2": 0.14979846609332825,
+  "RMSE": 0.059881924838973005,
+  "MAE": 0.030185802798301412,
+  "runtime_seconds": 0.11940930000855587,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

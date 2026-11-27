@@ -1,0 +1,17 @@
+{
+  "task": "tn_middle",
+  "config_id": "Z4",
+  "fold": 1,
+  "n_train": 5760,
+  "n_val": 1440,
+  "n_features": 77,
+  "feature_sha256": "da3dc69e30b052cce1fd5cbb30351c1f5abebb82dd8162db616ae8883ada3e99",
+  "target_transform": "log1p",
+  "output_type": "mean",
+  "fit_seconds": 0.9228371999925002,
+  "predict_seconds": 8.03030869999202,
+  "gpu_peak_allocated_mb": 5880.65576171875,
+  "R2": 0.6289961279950604,
+  "RMSE": 0.17396935374878114,
+  "MAE": 0.11740560347359213
+}

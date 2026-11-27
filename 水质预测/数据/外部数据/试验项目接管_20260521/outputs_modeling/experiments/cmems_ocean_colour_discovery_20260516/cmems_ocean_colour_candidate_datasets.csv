@@ -1,0 +1,4 @@
+﻿product_family,keyword,dataset_id,temporal_resolution,spatial_resolution,target_start_year,target_end_year,variables,notes,covers_2014_2024,recommended_priority
+Ocean Colour L4 MY daily,OCEANCOLOUR_GLO_BGC_L4_MY,cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,P1D,4km,1997.0,2024.0,"['CHL', 'KD490', 'SPM', 'ZSD', 'RRS443', 'RRS490', 'RRS510', 'RRS560', 'RRS665', 'RRS681', 'RRS709', 'PP', 'PFT']",优先历史主产品候选，需要在真实联机环境中用 catalog/describe 再确认。,True,1
+Ocean Colour L4 MY monthly,OCEANCOLOUR_GLO_BGC_L4_MY,cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,P1M,4km,1997.0,2024.0,"['CHL', 'KD490', 'SPM', 'ZSD', 'RRS443', 'RRS490', 'RRS510', 'RRS560', 'RRS665', 'RRS681', 'RRS709', 'PP', 'PFT']",月尺度背景状态候选，适合作为日尺度不可用时的 fallback。,True,2
+Ocean Colour optics/transparency supplement,transparency,,unknown,unknown,,,"['ZSD', 'KD490', 'SPM', 'PP', 'PFT']",用于补充透明度、悬浮颗粒物和生态背景变量。,False,2

@@ -1,0 +1,18 @@
+{
+  "task": "tn_bottom",
+  "config_id": "F60",
+  "fold": 1,
+  "n_train": 6328,
+  "n_val": 1583,
+  "n_features": 60,
+  "feature_sha256": "c21d752a94e8a4631c4b43dfe295961d129c42f18707a4ab65c89058dc5a8fa0",
+  "target_transform": "log1p",
+  "output_type": "mean",
+  "nonnegative_clip": true,
+  "fit_seconds": 1.0700655000109691,
+  "predict_seconds": 4.538257700012764,
+  "gpu_peak_allocated_mb": 4523.5400390625,
+  "R2": 0.6065214711007537,
+  "RMSE": 0.19141514149125954,
+  "MAE": 0.1192206727449305
+}

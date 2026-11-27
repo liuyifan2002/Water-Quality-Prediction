@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "task_count": 10,
+  "feature_count": 77,
+  "v1_shap_reused": 3,
+  "manifest_files": 304,
+  "pause_marker_in_bundle": false,
+  "checked_at": "2026-10-25T02:06:29+08:00"
+}

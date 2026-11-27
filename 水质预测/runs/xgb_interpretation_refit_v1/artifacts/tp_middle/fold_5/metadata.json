@@ -1,0 +1,45 @@
+{
+  "asset_type": "CONTROLLED_REFIT_NOT_ORIGINAL_FROZEN_MODEL",
+  "task": "tp_middle",
+  "fold": "fold_5",
+  "parameters": {
+    "n_estimators": 400,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "n_jobs": 4,
+    "random_state": 42,
+    "objective": "reg:squarederror"
+  },
+  "random_seed": 42,
+  "feature_count": 77,
+  "feature_order_sha256": "da3dc69e30b052cce1fd5cbb30351c1f5abebb82dd8162db616ae8883ada3e99",
+  "train_obs_count": 7300,
+  "test_obs_count": 1700,
+  "train_obs_order_sha256": "09215baf724c4e4fd34c377d475e0b1066021baa4062f272ad3ec9683309dbd4",
+  "test_obs_order_sha256": "045a22fa189a3408a485bf2cbded711084c6a00dc18f391b46280989761c1a5c",
+  "imputer": "SimpleImputer(strategy=median, keep_empty_features=True); fit on fold train only",
+  "input_dtype": "float32",
+  "target_transform": "log1p/expm1",
+  "postprocess": "maximum(prediction,0)",
+  "environment": {
+    "python": "3.11.9",
+    "xgboost": "3.2.0",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.1"
+  },
+  "input_hashes": {
+    "main_table": "3f562fd8709641ddeaa55ffecba86c741eeaeafff7948c3b7a7d1660d2d89ea5",
+    "feature_manifest": "115cee492668ac4da82560279b9d5a8fb9c664a0cb740a2cbc46ddedd15a1573",
+    "split_manifest": "5bd2bf0f077da63fec6c6131ee4412e449b2bdad91d3494eea6a223377d4bdcf",
+    "config": "c514d5e8ad069bffeb4c4dbe1eebc53e37e1bdd5d21417560b04e15a62a77915"
+  },
+  "output_hashes": {
+    "model": "6172eafd6049e4030ae0c05946f96eb3c4c55582cd6167a70b2689544a08c169",
+    "imputer": "361d60de93828c4b5e9906fb1dd0abbee7d076e58dacedfd8a0a9c63a0dc2ac9",
+    "prediction": "a12d803ed4f801e9c1c1e19deda10a0733983f2a7a82fa4704c5840683c275eb"
+  },
+  "completed_at": "2026-10-18T02:07:19"
+}

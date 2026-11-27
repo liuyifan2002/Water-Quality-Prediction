@@ -1,0 +1,120 @@
+{
+  "date_tag": "20260518",
+  "current_best_models": [
+    {
+      "target": "chla",
+      "depth_layer": "bottom",
+      "best_model": "impute_knn_bottom",
+      "best_r2": 0.3317795164749872,
+      "source_path": "experiments/outputs/chla_ocean_colour_precision_maximize_20260518/comparison_to_previous_best.csv",
+      "note": "Chl-a Ocean Colour 优化后最佳结果"
+    },
+    {
+      "target": "chla",
+      "depth_layer": "middle",
+      "best_model": "ensemble_lgbm_rf_avg_middle",
+      "best_r2": 0.3645565409147751,
+      "source_path": "experiments/outputs/chla_ocean_colour_precision_maximize_20260518/comparison_to_previous_best.csv",
+      "note": "Chl-a Ocean Colour 优化后最佳结果"
+    },
+    {
+      "target": "chla",
+      "depth_layer": "surface",
+      "best_model": "ensemble_gated_high_aux_surface",
+      "best_r2": 0.320684531684824,
+      "source_path": "experiments/outputs/chla_ocean_colour_precision_maximize_20260518/comparison_to_previous_best.csv",
+      "note": "Chl-a Ocean Colour 优化后最佳结果"
+    },
+    {
+      "target": "secchi",
+      "depth_layer": "bottom",
+      "best_model": "f3_history_remote",
+      "best_r2": 0.3908251099299161,
+      "source_path": "outputs/modeling/full_station_best_by_target_depth.csv",
+      "note": "四指标全站点正式主线最佳结果"
+    },
+    {
+      "target": "secchi",
+      "depth_layer": "middle",
+      "best_model": "f3_history_remote",
+      "best_r2": 0.3702750050001576,
+      "source_path": "outputs/modeling/full_station_best_by_target_depth.csv",
+      "note": "四指标全站点正式主线最佳结果"
+    },
+    {
+      "target": "secchi",
+      "depth_layer": "surface",
+      "best_model": "f3_history_remote",
+      "best_r2": 0.4401326699645111,
+      "source_path": "outputs/modeling/full_station_best_by_target_depth.csv",
+      "note": "四指标全站点正式主线最佳结果"
+    },
+    {
+      "target": "tn",
+      "depth_layer": "bottom",
+      "best_model": "f3_history_remote",
+      "best_r2": 0.2289552991603733,
+      "source_path": "outputs/modeling/full_station_best_by_target_depth.csv",
+      "note": "四指标全站点正式主线最佳结果"
+    },
+    {
+      "target": "tn",
+      "depth_layer": "middle",
+      "best_model": "f3_history_remote",
+      "best_r2": 0.1739937798926721,
+      "source_path": "outputs/modeling/full_station_best_by_target_depth.csv",
+      "note": "四指标全站点正式主线最佳结果"
+    },
+    {
+      "target": "tn",
+      "depth_layer": "surface",
+      "best_model": "f3_history_remote",
+      "best_r2": 0.5427720791319852,
+      "source_path": "outputs/modeling/full_station_best_by_target_depth.csv",
+      "note": "四指标全站点正式主线最佳结果"
+    },
+    {
+      "target": "tp",
+      "depth_layer": "bottom",
+      "best_model": "f1_history",
+      "best_r2": -0.096535864896347,
+      "source_path": "outputs/modeling/full_station_best_by_target_depth.csv",
+      "note": "四指标全站点正式主线最佳结果"
+    },
+    {
+      "target": "tp",
+      "depth_layer": "middle",
+      "best_model": "f3_history_remote",
+      "best_r2": -0.1669259833096408,
+      "source_path": "outputs/modeling/full_station_best_by_target_depth.csv",
+      "note": "四指标全站点正式主线最佳结果"
+    },
+    {
+      "target": "tp",
+      "depth_layer": "surface",
+      "best_model": "f1_history",
+      "best_r2": 0.2862174559936893,
+      "source_path": "outputs/modeling/full_station_best_by_target_depth.csv",
+      "note": "四指标全站点正式主线最佳结果"
+    }
+  ],
+  "bottom_mechanism_validation": {
+    "rows": 10397,
+    "station_count": 91,
+    "date_range": "2014-01-02 to 2024-12-30",
+    "available_feature_count": 28,
+    "unavailable_key_features": [
+      "station_depth",
+      "bathymetry_depth",
+      "bottom_temp",
+      "surface_bottom_temp_diff",
+      "temp_gradient",
+      "thermocline_proxy",
+      "water_level",
+      "discharge_7d_mean",
+      "current_speed"
+    ],
+    "note": "本轮只做本地机制变量标准化与特征生成，不进行正式 A/B 建模。"
+  },
+  "manual_next_step": "用户在 GEE 手动导出 Sentinel-2 / Landsat highres patch CSV 并放回 data/external/gee_exports/"
+}

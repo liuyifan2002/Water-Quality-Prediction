@@ -1,0 +1,31 @@
+{
+  "label": "Chl-a分区建模可行性诊断",
+  "generated_at": "2026-05-16T03:13:32",
+  "output_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\chla_zone_diagnostics_20260516",
+  "small_zones_by_depth": {
+    "surface": [
+      2
+    ],
+    "middle": [
+      0,
+      2
+    ],
+    "bottom": [
+      0,
+      2
+    ]
+  },
+  "recommended_zone_groups": {
+    "0": "west_estuary",
+    "4": "west_estuary",
+    "9": "west_estuary",
+    "1": "urban_buffer",
+    "2": "urban_buffer",
+    "8": "urban_buffer",
+    "3": "east_open",
+    "5": "east_open",
+    "7": "east_open",
+    "6": "south_open"
+  },
+  "merge_rationale": "样本量不足分区与高误差相邻/相似海区合并：西部河口、城市缓冲区、东部开阔海湾、南部开阔海域。"
+}

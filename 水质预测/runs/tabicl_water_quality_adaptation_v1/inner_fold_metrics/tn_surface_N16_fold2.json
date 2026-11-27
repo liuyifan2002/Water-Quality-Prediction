@@ -1,0 +1,18 @@
+{
+  "task": "tn_surface",
+  "config_id": "N16",
+  "fold": 2,
+  "n_train": 6614,
+  "n_val": 1654,
+  "n_features": 77,
+  "feature_sha256": "da3dc69e30b052cce1fd5cbb30351c1f5abebb82dd8162db616ae8883ada3e99",
+  "target_transform": "log1p",
+  "output_type": "mean",
+  "nonnegative_clip": true,
+  "fit_seconds": 1.2936754999973346,
+  "predict_seconds": 10.96588070000871,
+  "gpu_peak_allocated_mb": 6108.93017578125,
+  "R2": 0.7957433048676116,
+  "RMSE": 0.23458291864723732,
+  "MAE": 0.1329974265820026
+}

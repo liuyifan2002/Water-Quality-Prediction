@@ -1,0 +1,63 @@
+"""仅迁移机执行：原20变量/边界/查询ID；数据归属改变时记录阻塞，绝不静默重选。"""
+import argparse,json,traceback
+from portable_context import *
+def prepare(task,feature,amend_secchi=False):
+    import numpy as np,pandas as pd
+    cfg=config();r=next(v for v in cfg['contexts'] if v['task']==task and v['fold']=='fold_1')
+    raw=pd.read_csv(ROOT/r['raw_test']).set_index('obs_id');a=np.load(ROOT/r['npz']);station=dict(zip(a['test_ids'],a['stations']))
+    p=ROOT/'04_explanation_config/ale';sup=pd.read_csv(p/f'{task}_{feature}_bin_support.csv',float_precision='round_trip').sort_values('bin');q=pd.read_csv(p/f'{task}_{feature}_query_manifest.csv')
+    edges=np.array(sup.lower.tolist()+[float(sup.upper.iloc[-1])]);vals=raw.loc[q.obs_id,feature].to_numpy();binidx=np.clip(np.digitize(vals,edges[1:-1],right=True),0,len(sup)-1)+1
+    invalid=~np.isfinite(vals)|(vals<edges[0])|(vals>edges[-1])|(binidx!=q.bin.to_numpy())
+    amendment=amend_secchi and task=='secchi' and feature=='ssrd_sum_3d'
+    if invalid.any() and amendment:
+        expected={'NT1_20161107_surface','NM6_20161107_surface'}
+        changed=q.loc[invalid,'obs_id'].astype(str)
+        if set(changed)!=expected or len(changed)!=2 or not np.all(q.loc[invalid,'bin'].to_numpy()==3) or not np.all(binidx[invalid]==4) or not np.all(vals[invalid]-q.loc[invalid,'feature_value'].to_numpy()==2):
+            raise RuntimeError('Secchi登记修订超出已核验的两条边界样本')
+        original=q.loc[invalid].copy()
+        q.loc[invalid,'bin']=binidx[invalid]
+        revision={'revision':'secchi_boundary_v2','reason':'修复后原始特征值比原登记边界高2 J/m²','source_query_manifest_sha256':file_sha(p/f'{task}_{feature}_query_manifest.csv'),'source_bin_support_sha256':file_sha(p/f'{task}_{feature}_bin_support.csv'),'changed_rows':[{'obs_id':str(row.obs_id),'old_bin':int(row.bin),'new_bin':4,'old_value':float(row.feature_value),'new_value':float(vals[q.index[q.obs_id.eq(row.obs_id)][0]])} for row in original.itertuples()],'all_query_ids_preserved':True,'edges_preserved':True}
+        atomic_json(OUT/'ale_1d'/f'{task}_{feature}_registration_revision.json',revision)
+        invalid=np.zeros(len(q),dtype=bool)
+    if invalid.any():
+        atomic_csv(OUT/'ale_1d'/f'{task}_{feature}_data_drift.csv',q.assign(repaired_raw_value=vals,repaired_bin=binidx,invalid=invalid))
+        raise RuntimeError(f'REGISTRATION_DATA_DRIFT：{int(invalid.sum())}条原登记查询的分箱归属改变；需核验新版本登记，不自动删样本或补点')
+    values=raw[feature].to_numpy();membership=np.clip(np.digitize(values,edges[1:-1],right=True),0,len(sup)-1)+1;valid=np.isfinite(values)&(values>=edges[0])&(values<=edges[-1])
+    sts=raw.index.map(station).to_numpy()
+    for ix,row in sup.iterrows():
+        b=int(row.bin);full=valid&(membership==b);sub=q.bin.eq(b)
+        sup.loc[ix,'full_query_n']=int(full.sum());sup.loc[ix,'full_query_stations']=len(set(sts[full]));sup.loc[ix,'selected_n']=int(sub.sum());sup.loc[ix,'selected_stations']=q.loc[sub,'station_id'].nunique()
+    sup['full_query_supported']=(sup.full_query_n>=30)&(sup.full_query_stations>=5);sup['selected_support']=(sup.selected_n>=30)&(sup.selected_stations>=5)
+    if not sup.full_query_supported.all() or not sup.selected_support.all():raise RuntimeError('INSUFFICIENT_SUPPORT：原分箱在新值中支持不足；保留NA，不生成连续ALE')
+    q['feature_value']=vals
+    for name,frame in [('bin_support',sup),('query_manifest',q)]:
+        out=OUT/'ale_1d'/f'{task}_{feature}_{name}.csv'
+        if out.exists():
+            old=pd.read_csv(out,float_precision='round_trip')
+            if old.shape!=frame.shape or old.columns.tolist()!=frame.columns.tolist():raise RuntimeError('已保存ALE登记与当前定义不一致，禁止覆盖')
+            same=old.to_json()==frame.to_json()
+            if name=='bin_support':same=same and np.array_equal(old[['lower','upper']].to_numpy(),frame[['lower','upper']].to_numpy())
+            if not same:
+                # The first local write used pandas' default float parser and rounded
+                # a few preregistered float64 edges by one ULP. Repair only that
+                # derived copy after all other fields and edge proximity are checked.
+                if name!='bin_support':raise RuntimeError('已保存ALE登记与当前定义不一致，禁止覆盖')
+                fields=[c for c in frame.columns if c not in ('lower','upper')]
+                if old[fields].to_json()!=frame[fields].to_json() or not np.allclose(old[['lower','upper']],frame[['lower','upper']],rtol=0,atol=1e-12):
+                    raise RuntimeError('已保存ALE登记与当前定义不一致，禁止覆盖')
+                atomic_csv(out,frame)
+        else:atomic_csv(out,frame)
+def main():
+    p=argparse.ArgumentParser();p.add_argument('--task',choices=TASKS);p.add_argument('--amend-secchi-boundary',action='store_true');a=p.parse_args();failed=[]
+    with gpu_lock():
+        for task in ([a.task] if a.task else TASKS):
+            for curve in [v for v in config()['ale_curves'] if v['task']==task]:
+                feature=curve['feature'];key=f'{task}_{feature}'
+                try:
+                    prerequisite(task);prepare(task,feature,amend_secchi=a.amend_secchi_boundary)
+                    module=load_module(ROOT/'05_scripts/reused_ale_engine.py','reused_wq77_ale');module.calculate(task,feature)
+                except Exception as e:
+                    failed.append(key);atomic_json(OUT/'status'/f'ale_{key}.json',{'status':'BLOCKED' if 'DRIFT' in str(e) or 'SUPPORT' in str(e) else 'FAILED','error':str(e),'traceback':traceback.format_exc()})
+                else:atomic_json(OUT/'status'/f'ale_{key}.json',{'status':'COMPUTED'})
+    if failed:raise SystemExit('未完成曲线（其余已继续）：'+','.join(failed))
+if __name__=='__main__':main()

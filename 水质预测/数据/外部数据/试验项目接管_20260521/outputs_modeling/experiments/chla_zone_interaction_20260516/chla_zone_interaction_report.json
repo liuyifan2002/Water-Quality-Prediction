@@ -1,0 +1,11 @@
+{
+  "label": "Chl-a全局模型 + 分区交互特征实验",
+  "generated_at": "2026-05-16T03:13:42",
+  "added_feature_count": 100,
+  "skipped_base_fields": [],
+  "same_scope_check": {
+    "max_train_rows_delta": 0,
+    "max_test_rows_delta": 0
+  },
+  "formal_results_overwritten": false
+}

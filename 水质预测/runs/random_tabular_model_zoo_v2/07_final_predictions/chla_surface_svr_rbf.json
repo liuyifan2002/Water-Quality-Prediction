@@ -1,0 +1,12 @@
+{
+  "task": "chla_surface",
+  "model": "svr_rbf",
+  "n_train": 8692,
+  "n_test": 2174,
+  "R2": 0.449893696899091,
+  "RMSE": 4.8886272480396835,
+  "MAE": 2.2522270807292455,
+  "runtime_seconds": 8.325652600004105,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

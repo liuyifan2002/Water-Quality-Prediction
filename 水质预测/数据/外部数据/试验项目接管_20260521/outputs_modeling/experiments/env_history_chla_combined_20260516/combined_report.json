@@ -1,0 +1,80 @@
+{
+  "label": "环境 + 历史衰减 + Chl-a短期机制综合实验，对照 current_baseline_with_env_20260516",
+  "generated_at": "2026-05-16T02:50:48",
+  "baseline_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\current_baseline_with_env_20260516",
+  "source_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\env_feature_gain_20260516_real",
+  "history_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\history_decay_features_20260516",
+  "chla_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\chla_short_mechanism_20260516",
+  "output_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\env_history_chla_combined_20260516",
+  "dataset_path": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\env_history_chla_combined_20260516\\combined_model_table.csv",
+  "skipped_chla_features": [],
+  "formal_results_overwritten": false,
+  "same_scope_check": {
+    "max_train_rows_delta": 0,
+    "max_test_rows_delta": 0
+  },
+  "positive_r2_rows": 34,
+  "negative_r2_rows": 9,
+  "top_added_features": [
+    {
+      "feature": "tp_mg_l_lag1_decay_30d",
+      "used_combo_count": 6,
+      "mean_importance": 0.02258317731320858,
+      "max_importance": 0.04768558591604233
+    },
+    {
+      "feature": "tn_mg_l_lag1_decay_30d",
+      "used_combo_count": 6,
+      "mean_importance": 0.022468930420776207,
+      "max_importance": 0.037874069064855576
+    },
+    {
+      "feature": "chla_wet_rain_7d",
+      "used_combo_count": 6,
+      "mean_importance": 0.02098189697911342,
+      "max_importance": 0.025775272399187088
+    },
+    {
+      "feature": "chla_wet_sst_7d",
+      "used_combo_count": 6,
+      "mean_importance": 0.018691394633303087,
+      "max_importance": 0.02454032376408577
+    },
+    {
+      "feature": "tp_mg_l_rate_lag1",
+      "used_combo_count": 6,
+      "mean_importance": 0.01864064810797572,
+      "max_importance": 0.02507437951862812
+    },
+    {
+      "feature": "chla_sst_ssrd_3d",
+      "used_combo_count": 6,
+      "mean_importance": 0.018317526051153738,
+      "max_importance": 0.030347352847456932
+    },
+    {
+      "feature": "secchi_depth_m_rate_lag1",
+      "used_combo_count": 6,
+      "mean_importance": 0.015987853053957224,
+      "max_importance": 0.019014041870832443
+    },
+    {
+      "feature": "chla_sst_ssrd_7d",
+      "used_combo_count": 6,
+      "mean_importance": 0.015497711331894001,
+      "max_importance": 0.024047618731856346
+    },
+    {
+      "feature": "chla_ssrd_change_7_14",
+      "used_combo_count": 6,
+      "mean_importance": 0.014884026100238165,
+      "max_importance": 0.0231286883354187
+    },
+    {
+      "feature": "chla_wet_ssrd_7d",
+      "used_combo_count": 6,
+      "mean_importance": 0.01425765718643864,
+      "max_importance": 0.01827823370695114
+    }
+  ]
+}

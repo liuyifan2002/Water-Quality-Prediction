@@ -1,0 +1,13 @@
+{
+  "task": "tp_middle",
+  "config_id": "Z0",
+  "n_train": 7200,
+  "n_test": 1800,
+  "fit_seconds": 0.0,
+  "predict_seconds": 0.0,
+  "gpu_peak_allocated_mb": null,
+  "source": "strict_reuse_original_random_test_prediction",
+  "R2": 0.5203640227914975,
+  "RMSE": 0.031247711492700912,
+  "MAE": 0.012466727571097513
+}

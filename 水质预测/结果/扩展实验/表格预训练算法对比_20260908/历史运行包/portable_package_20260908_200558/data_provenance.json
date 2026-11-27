@@ -1,0 +1,11 @@
+{
+  "source_dataset": "E:\\研究生\\codex\\水质预测\\数据\\处理后数据\\正式主表\\model_table_3depth_2014_2024.csv",
+  "source_dataset_sha256": "3f562fd8709641ddeaa55ffecba86c741eeaeafff7948c3b7a7d1660d2d89ea5",
+  "portable_dataset_rows": 30719,
+  "portable_dataset_columns": 108,
+  "portable_dataset_sha256": "c001b9bd8bb0e2790d08739c177a6db42bbaa47f8500dd08aaff92a0fa2fc33c",
+  "source_reference": "E:\\研究生\\codex\\水质预测\\结果\\正式结果\\full_station\\full_station_best_by_target_depth.csv",
+  "source_reference_sha256": "6fcf589b0adda7e76f58765da7a6ae0b1052b269f864ac9277da663269e253bd",
+  "excluded_same_day_covariates": true,
+  "missing_requested_fields": []
+}

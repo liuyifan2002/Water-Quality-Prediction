@@ -1,0 +1,46 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyc.*
+
+# IDE
+.idea/
+.codegraph/
+
+# Local environment / credentials
+.env
+.venv/
+venv/
+.venv-mmoe/
+.venv-gpboost/
+
+# Temporary outputs
+tmp/
+
+# Local cache moved out of scripts during project cleanup
+待确认_未归类/脚本缓存/
+
+# Credentials — never commit
+.cdsapirc
+*cdsapirc*
+
+# Model weights / local model caches (GitHub blocks >100 MB per file)
+*.ckpt
+*.body
+pip_cache/
+安装缓存/
+codex/worktrees/
+.playwright-cli/
+
+# Oversized historical trial-project tables kept local only (~1.1 GB)
+数据/外部数据/试验项目接管_20260521/data_interim_current/
+数据/外部数据/试验项目接管_20260521/data_processed_current/
+数据/外部数据/试验项目接管_20260521/processed_r2_0p6_breakthrough_20260518/
+
+# Portable bundle archives (rebuilt from requirement files, too large for git)
+*.zip
+
+# Thesis binaries stay local; text sources are tracked
+论文修订交付_20261121/**/*.docx
+论文修订交付_20261121/**/*.pdf

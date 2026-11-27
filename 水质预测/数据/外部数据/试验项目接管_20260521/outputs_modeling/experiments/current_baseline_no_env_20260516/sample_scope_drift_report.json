@@ -1,0 +1,9 @@
+{
+  "formal_metrics_rows": 48,
+  "baseline_metrics_rows": 48,
+  "current_model_table_rows": 30719,
+  "largest_train_row_delta": 3856,
+  "largest_test_row_delta": 924,
+  "largest_feature_count_delta": 0,
+  "note": "formal outputs do not preserve a standalone formal model_table snapshot; drift is diagnosed from training metrics and current model_table."
+}

@@ -1,0 +1,116 @@
+{
+  "python_executable": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Scripts\\python.exe",
+  "python_version": "3.11.9",
+  "implementation": "CPython",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "prefix": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv",
+  "base_prefix": "C:\\Users\\\u5218\u9038\u51e1\\AppData\\Local\\Programs\\Python\\Python311",
+  "packages": {
+    "torch": {
+      "distribution_version": "2.6.0+cu124",
+      "distribution_location": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages",
+      "direct_url": null,
+      "module_file": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\torch\\__init__.py",
+      "module_version": "2.6.0+cu124",
+      "module_root": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\torch"
+    },
+    "tabicl": {
+      "distribution_version": "2.2.0",
+      "distribution_location": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages",
+      "direct_url": null,
+      "module_file": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\tabicl\\__init__.py",
+      "module_version": null,
+      "module_root": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\tabicl"
+    },
+    "tabm": {
+      "distribution_version": "0.0.3",
+      "distribution_location": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages",
+      "direct_url": null,
+      "module_file": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\tabm.py",
+      "module_version": "0.0.3",
+      "module_root": null
+    },
+    "tabpfn": {
+      "distribution_version": "9.0.0",
+      "distribution_location": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages",
+      "direct_url": null,
+      "module_file": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\tabpfn\\__init__.py",
+      "module_version": "9.0.0",
+      "module_root": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\tabpfn"
+    },
+    "numpy": {
+      "distribution_version": "2.4.6",
+      "distribution_location": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages",
+      "direct_url": null,
+      "module_file": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\numpy\\__init__.py",
+      "module_version": "2.4.6",
+      "module_root": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\numpy"
+    },
+    "pandas": {
+      "distribution_version": "2.3.3",
+      "distribution_location": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages",
+      "direct_url": null,
+      "module_file": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\pandas\\__init__.py",
+      "module_version": "2.3.3",
+      "module_root": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\pandas"
+    },
+    "scikit-learn": {
+      "distribution_version": "1.9.1",
+      "distribution_location": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages",
+      "direct_url": null,
+      "module_file": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\sklearn\\__init__.py",
+      "module_version": "1.9.1",
+      "module_root": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\sklearn"
+    },
+    "xgboost": {
+      "distribution_version": "3.2.0",
+      "distribution_location": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages",
+      "direct_url": null,
+      "module_file": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\xgboost\\__init__.py",
+      "module_version": "3.2.0",
+      "module_root": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\xgboost"
+    },
+    "catboost": {
+      "distribution_version": null,
+      "distribution_location": null,
+      "direct_url": null,
+      "module_file": null,
+      "module_version": null,
+      "distribution_error": "PackageNotFoundError('catboost')",
+      "import_error": "ModuleNotFoundError(\"No module named 'catboost'\")"
+    },
+    "matplotlib": {
+      "distribution_version": "3.11.2",
+      "distribution_location": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages",
+      "direct_url": null,
+      "module_file": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\matplotlib\\__init__.py",
+      "module_version": "3.11.2",
+      "module_root": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\matplotlib"
+    },
+    "joblib": {
+      "distribution_version": "1.6.0",
+      "distribution_location": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages",
+      "direct_url": null,
+      "module_file": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\joblib\\__init__.py",
+      "module_version": "1.6.0",
+      "module_root": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\joblib"
+    },
+    "packaging": {
+      "distribution_version": "26.3",
+      "distribution_location": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages",
+      "direct_url": null,
+      "module_file": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\packaging\\__init__.py",
+      "module_version": "26.3",
+      "module_root": "E:\\\u7814\u7a76\u751f\\codex\\\u6c34\u8d28\u9884\u6d4b\\runs\\tabiclv2_pilot\\\u73af\u5883\\.venv\\Lib\\site-packages\\packaging"
+    }
+  },
+  "torch_runtime": {
+    "torch_version": "2.6.0+cu124",
+    "torch_cuda_build": "12.4",
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "cuda_device_names": [
+      "NVIDIA GeForce RTX 2070 with Max-Q Design"
+    ]
+  }
+}

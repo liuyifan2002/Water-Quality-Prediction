@@ -1,0 +1,13 @@
+{
+  "label": "Chl-a log1p目标变换显式复核实验",
+  "generated_at": "2026-05-16T03:04:20",
+  "baseline_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\current_chla_mechanism_baseline_20260516",
+  "source_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\chla_short_mechanism_20260516",
+  "output_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\chla_log_target_20260516",
+  "note": "当前Chl-a机制增强基线本身已经使用log1p训练，因此本实验是显式复核，不是新的建模设定。",
+  "same_scope_check": {
+    "max_train_rows_delta": 0,
+    "max_test_rows_delta": 0
+  },
+  "formal_results_overwritten": false
+}

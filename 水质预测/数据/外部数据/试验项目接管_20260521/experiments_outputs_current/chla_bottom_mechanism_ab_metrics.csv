@@ -1,0 +1,4 @@
+﻿target,depth_layer,split,scenario,candidate,model_type,n_samples,feature_count,r2,rmse,mae,bias,p90_rmse,p90_underestimation_rate
+chla,bottom,train,bottom_mechanism,chla_bottom_bottom_mechanism_impute_knn_lgbm,impute_knn_lightgbm,6577,180,0.7694637297799397,1.812664165963114,1.0822025833524216,-0.00029711457224193734,4.690335672071328,0.8802395209580839
+chla,bottom,validation,bottom_mechanism,chla_bottom_bottom_mechanism_impute_knn_lgbm,impute_knn_lightgbm,1852,180,0.0818890603648238,3.256574358628709,2.2135773618479284,0.2833919108713124,6.789607584697769,0.8938053097345132
+chla,bottom,test,bottom_mechanism,chla_bottom_bottom_mechanism_impute_knn_lgbm,impute_knn_lightgbm,1968,180,0.33447742292907323,3.5109252563100504,2.126680518491446,0.11316998284959691,8.725492763255058,0.9234234234234234

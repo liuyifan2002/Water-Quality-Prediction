@@ -1,0 +1,59 @@
+{
+  "status": "STABLE_32_QUERY_PILOT",
+  "strict_threshold_max": 1e-06,
+  "strict_threshold_mean": 1e-07,
+  "main_order_frozen_prediction_passes": 0,
+  "main_order_cross_process_prediction_seconds_median": 97.6432488001883,
+  "main_order_cross_process_prediction_seconds_min": 9.333430800121278,
+  "main_order_cross_process_prediction_seconds_max": 113.49385410011746,
+  "probe_query_n": 32,
+  "full_validation_launched": false,
+  "budget_gate": "OVER_6_HOURS_STOP_PENDING_APPROVAL",
+  "observed_rate_estimate_hours_median": 25.36181675867391,
+  "observed_rate_estimate_hours_best_case": 2.4242614270940006,
+  "observed_rate_estimate_hours_worst_case": 29.478846374858634,
+  "historical_recorded_estimate_hours_for_context_only": 2.148964359833238,
+  "full_fold_estimates": [
+    {
+      "task": "chla_surface",
+      "fold": "fold_1",
+      "n_test": 2039,
+      "estimate_seconds_median_rate_three_runs": 18665.117278460995,
+      "estimate_seconds_best_rate_three_runs": 1784.143631385683,
+      "estimate_seconds_worst_rate_three_runs": 21695.05954782558
+    },
+    {
+      "task": "chla_surface",
+      "fold": "fold_2",
+      "n_test": 2043,
+      "estimate_seconds_median_rate_three_runs": 18701.733496761066,
+      "estimate_seconds_best_rate_three_runs": 1787.6436679357284,
+      "estimate_seconds_worst_rate_three_runs": 21737.619743113122
+    },
+    {
+      "task": "chla_surface",
+      "fold": "fold_3",
+      "n_test": 1860,
+      "estimate_seconds_median_rate_three_runs": 17026.541509532835,
+      "estimate_seconds_best_rate_three_runs": 1627.5169957711478,
+      "estimate_seconds_worst_rate_three_runs": 19790.490808707982
+    },
+    {
+      "task": "chla_surface",
+      "fold": "fold_5",
+      "n_test": 1854,
+      "estimate_seconds_median_rate_three_runs": 16971.61718208273,
+      "estimate_seconds_best_rate_three_runs": 1622.2669409460796,
+      "estimate_seconds_worst_rate_three_runs": 19726.650515776666
+    },
+    {
+      "task": "secchi",
+      "fold": "fold_4",
+      "n_test": 2178,
+      "estimate_seconds_median_rate_three_runs": 19937.53086438845,
+      "estimate_seconds_best_rate_three_runs": 1905.7699014997634,
+      "estimate_seconds_worst_rate_three_runs": 23174.026334067734
+    }
+  ],
+  "one_successful_probe_is_not_full_validation": true
+}

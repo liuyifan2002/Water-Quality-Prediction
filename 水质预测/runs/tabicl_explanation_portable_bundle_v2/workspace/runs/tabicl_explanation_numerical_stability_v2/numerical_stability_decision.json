@@ -1,0 +1,86 @@
+{
+  "experiment": "TABICL_EXPLANATION_NUMERICAL_STABILITY_V2",
+  "final_conclusion": "NUMERICAL_JITTER_NONNEGLIGIBLE_FOR_SMALL_EFFECTS",
+  "v1_frozen_conclusion": "INFERENCE_NONDETERMINISM_CONFIRMED",
+  "v1_fold1_status": "FOLD1_NOT_COMPLETE_VALIDATION_FAILURE",
+  "v1_threshold": 1e-06,
+  "v1_threshold_modified": false,
+  "v1_historical_predictions": [
+    6.8550059382,
+    6.8565043045,
+    6.8565043045
+  ],
+  "v1_historical_max_delta": 0.0014983664,
+  "probe_count": 5,
+  "repeats_per_probe": [
+    10
+  ],
+  "actual_model_calls": 50,
+  "all_probe_input_context_checkpoint_feature_and_model_hashes_unique_counts_are_one": true,
+  "v2_probe_ranges": {
+    "chla_fold1_failed_ssrd_lower": 0.0,
+    "chla_surface_fold1_frozen_pred_low": 0.0,
+    "chla_surface_fold1_frozen_pred_high": 0.0,
+    "tn_surface_fold1_frozen_pred_low": 0.0,
+    "tn_surface_fold1_frozen_pred_high": 0.0
+  },
+  "v2_max_range": 0.0,
+  "v2_max_abs_deviation_from_mean": 0.0,
+  "v2_max_pairwise_abs_delta": 0.0,
+  "historical_jitter_over_task_scales": {
+    "target_iqr": 0.0003943069406575,
+    "target_sd": 0.0002295788594511,
+    "official_rmse": 0.0003581388974579,
+    "official_mae": 0.0008161677070388
+  },
+  "historical_jitter_vs_explanation_scale_ratio_ranges": {
+    "ALE:ale_curve_range": [
+      0.0011829151522239,
+      0.0015172300372888
+    ],
+    "ALE:bin_to_bin_abs_change": [
+      0.0030372993342804,
+      0.3424251670057759
+    ],
+    "ALE:median_abs_bin_to_bin_change": [
+      0.0156989357869909,
+      0.0159378817787793
+    ],
+    "ALE:median_abs_local_effect": [
+      0.0160472970620427,
+      0.0248899891654667
+    ],
+    "ALE:p90_abs_bin_to_bin_change": [
+      0.0052538931647821,
+      0.0054882298768971
+    ],
+    "ALE:p90_abs_local_effect": [
+      0.005524034231717,
+      0.0057812843525561
+    ],
+    "SHAP:median_abs_shap": [
+      0.0497188279793749,
+      0.0681122452246517
+    ],
+    "SHAP:p75_abs_shap": [
+      0.0277621797794331,
+      0.030094980999889
+    ],
+    "SHAP:p90_abs_shap": [
+      0.0131067811965632,
+      0.0132637209672334
+    ],
+    "SHAP:top10_feature_abs_shap": [
+      0.0021564575855465,
+      0.0162660160801472
+    ]
+  },
+  "interpretation": "The current 10-call immediate repetitions were bitwise stable for these five points, but the frozen V1 event remains real. Its 0.0014984 target-unit jitter is 34.2% of the smallest observed ALE bin-to-bin change, about 1.6-2.5% of median absolute ALE local-effect scales, 4.97-6.81% of the two-sample median absolute SHAP scales, and under 0.2% of the full ALE curve ranges. This is non-negligible for small effects, but evidence does not show that major rankings or curve shapes change.",
+  "shap_repeatability": "SHAP_REPEAT_NOT_AVAILABLE",
+  "ale_full_curve_repeatability": "ALE_CURVE_REPEAT_NOT_AVAILABLE; existing single curves were only read",
+  "execution_context_caveat": "The new V2 probes immediately repeated each query after rebuilding context. The V1 historical jitter occurred after an ALE workload; the V1 diagnostic probe launcher explicitly set CUBLAS_WORKSPACE_CONFIG=:4096:8, whereas this V2 launcher did not set it (the original full ALE process value was not preserved). No deterministic CUDA mode was enabled in V2. Therefore V2 zero-range observations do not replace or invalidate V1 evidence.",
+  "shap_ale_recomputed": false,
+  "other_folds_started": false,
+  "migration_bundle_created": false,
+  "split_features_checkpoint_or_prediction_function_changed": false
+}

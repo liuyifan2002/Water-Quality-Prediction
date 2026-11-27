@@ -1,0 +1,62 @@
+{
+  "task": "secchi",
+  "model": "tabpfn",
+  "n_samples": 8692,
+  "inner_oof_R2": 0.5998230356982941,
+  "inner_oof_RMSE": 0.6991683589940999,
+  "inner_oof_MAE": 0.43986334982739156,
+  "runtime_seconds": 342.2231958999764,
+  "folds": [
+    {
+      "fold": 1,
+      "n_train": 6953,
+      "n_val": 1739,
+      "R2": 0.525587937955267,
+      "RMSE": 0.8304658712899973,
+      "MAE": 0.4624642030824651,
+      "runtime_seconds": 72.51134659998934,
+      "gpu_peak_allocated_mb": 947.919921875
+    },
+    {
+      "fold": 2,
+      "n_train": 6953,
+      "n_val": 1739,
+      "R2": 0.6342843356989181,
+      "RMSE": 0.6502733537710512,
+      "MAE": 0.4305562860116927,
+      "runtime_seconds": 66.50747959999717,
+      "gpu_peak_allocated_mb": 947.919921875
+    },
+    {
+      "fold": 3,
+      "n_train": 6954,
+      "n_val": 1738,
+      "R2": 0.6295519452279134,
+      "RMSE": 0.6312345039912456,
+      "MAE": 0.4250964760407276,
+      "runtime_seconds": 66.33725229999982,
+      "gpu_peak_allocated_mb": 947.86279296875
+    },
+    {
+      "fold": 4,
+      "n_train": 6954,
+      "n_val": 1738,
+      "R2": 0.6055073420017998,
+      "RMSE": 0.6860764963909721,
+      "MAE": 0.454094006267696,
+      "runtime_seconds": 69.29807039999287,
+      "gpu_peak_allocated_mb": 947.86279296875
+    },
+    {
+      "fold": 5,
+      "n_train": 6954,
+      "n_val": 1738,
+      "R2": 0.6224944493311972,
+      "RMSE": 0.680012810471561,
+      "MAE": 0.42709812883366305,
+      "runtime_seconds": 67.56904699999723,
+      "gpu_peak_allocated_mb": 947.86279296875
+    }
+  ],
+  "model_identity": "tabpfn==9.0.0 pinned V2 checkpoint"
+}

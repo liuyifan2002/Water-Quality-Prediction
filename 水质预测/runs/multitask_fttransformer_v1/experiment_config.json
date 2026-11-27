@@ -1,0 +1,19 @@
+{
+  "experiment": "MULTITASK_FTTRANSFORMER_V1",
+  "data_version": "WQ77_REPAIRED_20261115_V1",
+  "input_sha256": "d2eec825011e2dd483e775791edd3951fa42ace483a9d3696bf9d9ec44bc844d",
+  "feature_manifest_sha256": "eb744f89ef598f2b4941df554fe1dd57b2fae26ede086bdea7a9b85fdfd2e510",
+  "seeds": [42, 43, 44],
+  "d_model": 64,
+  "layers": 2,
+  "heads": 4,
+  "ffn_dim": 128,
+  "dropout": 0.1,
+  "batch_size": 256,
+  "max_epochs": 25,
+  "patience": 5,
+  "learning_rate": 0.0005,
+  "weight_decay": 0.0001,
+  "validation_station_fraction": 0.15,
+  "device": "cuda"
+}

@@ -1,0 +1,15 @@
+{
+  "task": "tp_bottom",
+  "cohort": "complete_SMB",
+  "feature_set": "M2",
+  "model": "TabICLv2",
+  "n_features": 89,
+  "n_train": 7211,
+  "n_test": 1789,
+  "n_stations": 84,
+  "n_test_stations": 79,
+  "R2": 0.5476837852063369,
+  "RMSE": 0.030265886927473097,
+  "MAE": 0.011991578389732386,
+  "runtime_s": 8.638622760772705
+}

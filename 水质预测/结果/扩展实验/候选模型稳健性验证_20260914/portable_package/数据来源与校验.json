@@ -1,0 +1,20 @@
+{
+  "生成时间": "2026-09-14T13:11:12",
+  "实验范围": "Chl-a 三水层、透明度三水层、TN 底层的多随机种子、年份留出和五折留站点验证",
+  "正式主链影响": "无；本包只用于扩展实验",
+  "来源": {
+    "数据": "E:\\研究生\\codex\\水质预测\\结果\\扩展实验\\表格预训练算法对比_20260908\\portable_package\\data\\model_table.csv",
+    "模型配置": "E:\\研究生\\codex\\水质预测\\结果\\扩展实验\\表格预训练算法对比_20260908\\portable_package\\config.json",
+    "TabPFN权重": "E:\\研究生\\codex\\水质预测\\结果\\扩展实验\\表格预训练算法对比_20260908\\portable_package\\models\\tabpfn-v2-regressor.ckpt",
+    "基础运行器": "E:\\研究生\\codex\\水质预测\\脚本\\04_模型训练\\31_run_tabular_pretrained_ab.py",
+    "验证运行器": "E:\\研究生\\codex\\水质预测\\脚本\\04_模型训练\\32_validate_candidate_tabular_models.py",
+    "验证配置": "E:\\研究生\\codex\\水质预测\\配置\\候选模型稳健性验证配置.json"
+  },
+  "文件校验": {
+    "model_table.csv": "c001b9bd8bb0e2790d08739c177a6db42bbaa47f8500dd08aaff92a0fa2fc33c",
+    "config.json": "c514d5e8ad069bffeb4c4dbe1eebc53e37e1bdd5d21417560b04e15a62a77915",
+    "tabpfn-v2-regressor.ckpt": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+    "run_candidate_validation.py": "30f642b2bf9632a2b55fbafbd594e81c05e8118e3d19f4200dd4eea57fa3e3c9",
+    "validation_config.json": "e8d55270b66e465522950d7c5bf185b1c5cd6fe3c87f6f7ff33d94b85f39482c"
+  }
+}

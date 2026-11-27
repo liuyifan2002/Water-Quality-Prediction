@@ -1,0 +1,13 @@
+{
+  "task": "secchi",
+  "config_id": "Z3",
+  "n_train": 8692,
+  "n_test": 2174,
+  "fit_seconds": 1.576521099981619,
+  "predict_seconds": 8.049752599996282,
+  "gpu_peak_allocated_mb": 4813.01025390625,
+  "source": "new_locked_tabicl_single_model_evaluation",
+  "R2": 0.7010311160917329,
+  "RMSE": 0.6149098648875071,
+  "MAE": 0.4082770880472803
+}

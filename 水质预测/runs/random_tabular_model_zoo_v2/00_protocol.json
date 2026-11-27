@@ -1,0 +1,9 @@
+{
+  "experiment": "RANDOM_TABULAR_MODEL_ZOO_V2",
+  "parent_split": "runs\\random_10task_v1\\01_random_split_manifest.csv",
+  "parent_split_sha256": "bb9269039de23f8fb4412eb71bf8268a972ec40ca17c3d0b333a6e2fa791b359",
+  "inner_split": "KFold(n_splits=5, shuffle=True, random_state=42) on sorted external train obs_id",
+  "outer_test_policy": "held out for one final evaluation; never used for tuning, fusion weights, or model selection",
+  "feature_manifest": "runs/tabiclv2_pilot/01_strict_feature_manifest.csv",
+  "feature_manifest_sha256": "115cee492668ac4da82560279b9d5a8fb9c664a0cb740a2cbc46ddedd15a1573"
+}

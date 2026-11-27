@@ -1,0 +1,73 @@
+{
+  "label": "Copernicus Marine BGC 下载与提取",
+  "dry_run": false,
+  "skip_download": false,
+  "dataset_id": "cmems_mod_glo_bgc_my_0.25deg_P1D-m",
+  "start_date": "2014-01-01",
+  "end_date": "2024-12-31",
+  "bbox": {
+    "min_lon": 113.8,
+    "max_lon": 114.5,
+    "min_lat": 22.1,
+    "max_lat": 22.6
+  },
+  "variables": [
+    "chl",
+    "no3",
+    "po4",
+    "si",
+    "o2",
+    "nppv"
+  ],
+  "raw_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\data\\raw\\manual\\copernicus_bgc",
+  "output_csv": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\data\\model_input\\new_sources\\copernicus_bgc_features_2014_2024.csv",
+  "interpolation": "nearest",
+  "sample_rows": 10866,
+  "credentials_present": true,
+  "missing_credentials": [],
+  "selected_vars": {
+    "bgc_chl": "chl",
+    "bgc_no3": "no3",
+    "bgc_po4": "po4",
+    "bgc_si": "si",
+    "bgc_o2": "o2",
+    "bgc_npp": "nppv"
+  },
+  "coarse_proxy_note": "仅作为大尺度生态背景代理。",
+  "status": "completed",
+  "rows": 10866,
+  "missing_rate": {
+    "date": 0.0,
+    "station": 0.0,
+    "bgc_chl": 0.5614,
+    "bgc_no3": 0.5614,
+    "bgc_po4": 0.5614,
+    "bgc_si": 0.5614,
+    "bgc_o2": 0.5614,
+    "bgc_npp": 0.5614,
+    "bgc_phyto": 1.0,
+    "bgc_zoo": 1.0,
+    "bgc_no3_7d": 0.5614,
+    "bgc_po4_7d": 0.5614,
+    "bgc_npp_7d": 0.5614,
+    "bgc_chl_anom_7d": 0.5614,
+    "bgc_n_to_p_ratio": 0.5614
+  },
+  "valid_sample_count": {
+    "date": 10866,
+    "station": 10866,
+    "bgc_chl": 4766,
+    "bgc_no3": 4766,
+    "bgc_po4": 4766,
+    "bgc_si": 4766,
+    "bgc_o2": 4766,
+    "bgc_npp": 4766,
+    "bgc_phyto": 0,
+    "bgc_zoo": 0,
+    "bgc_no3_7d": 4766,
+    "bgc_po4_7d": 4766,
+    "bgc_npp_7d": 4766,
+    "bgc_chl_anom_7d": 4766,
+    "bgc_n_to_p_ratio": 4766
+  }
+}

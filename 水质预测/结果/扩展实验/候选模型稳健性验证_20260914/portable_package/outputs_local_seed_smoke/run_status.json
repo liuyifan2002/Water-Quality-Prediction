@@ -1,0 +1,12 @@
+{
+  "finished": true,
+  "successful_jobs": 3,
+  "failed_jobs": 0,
+  "expected_jobs": 3,
+  "modes": [
+    "random_seeds"
+  ],
+  "tasks": [
+    "chla_surface"
+  ]
+}

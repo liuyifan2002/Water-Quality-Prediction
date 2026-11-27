@@ -1,0 +1,28 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "E:\\研究生\\codex\\水质预测\\runs\\tabiclv2_pilot\\环境\\.venv\\Scripts\\python.exe",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.2.0",
+    "torch": "2.6.0+cu124",
+    "tabicl": "2.2.0",
+    "tabm": "0.0.3",
+    "tabpfn": "9.0.0"
+  },
+  "冻结预训练权重": [
+    {
+      "文件": "E:\\研究生\\codex\\水质预测\\models\\tabpfn-v2-regressor.ckpt",
+      "SHA256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+      "字节": 44390977,
+      "已微调权重": false
+    },
+    {
+      "文件": "C:\\Users\\刘逸凡\\.cache\\huggingface\\hub\\models--jingang--TabICL\\snapshots\\4dcd344ece2c00be9e831fdd35bed57b5ad83e19\\tabicl-regressor-v2-20260212.ckpt",
+      "SHA256": "0db9cb538f114e79026bf08f45f41ad8dd7ad2de2aaca9a5ca8cd3bd9748ae7a",
+      "字节": 114324594,
+      "已微调权重": false
+    }
+  ]
+}

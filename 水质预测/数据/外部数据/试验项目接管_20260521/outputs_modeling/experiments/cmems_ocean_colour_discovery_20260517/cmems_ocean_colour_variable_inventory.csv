@@ -1,0 +1,21 @@
+﻿dataset_id,product_family,variable,temporal_resolution,spatial_resolution
+cmems_obs-oc_glo_bgc-plankton_my_l4-gapfree-multi-4km_P1D,Ocean Colour L4 MY daily plankton,CHL,P1D,4km
+cmems_obs-oc_glo_bgc-transp_my_l4-gapfree-multi-4km_P1D,Ocean Colour L4 MY daily transparency,KD490,P1D,4km
+cmems_obs-oc_glo_bgc-transp_my_l4-gapfree-multi-4km_P1D,Ocean Colour L4 MY daily transparency,SPM,P1D,4km
+cmems_obs-oc_glo_bgc-transp_my_l4-gapfree-multi-4km_P1D,Ocean Colour L4 MY daily transparency,ZSD,P1D,4km
+cmems_obs-oc_glo_bgc-reflectance_my_l3-multi-4km_P1D,Ocean Colour L3 MY daily reflectance,RRS443,P1D,4km
+cmems_obs-oc_glo_bgc-reflectance_my_l3-multi-4km_P1D,Ocean Colour L3 MY daily reflectance,RRS490,P1D,4km
+cmems_obs-oc_glo_bgc-reflectance_my_l3-multi-4km_P1D,Ocean Colour L3 MY daily reflectance,RRS510,P1D,4km
+cmems_obs-oc_glo_bgc-reflectance_my_l3-multi-4km_P1D,Ocean Colour L3 MY daily reflectance,RRS560,P1D,4km
+cmems_obs-oc_glo_bgc-reflectance_my_l3-multi-4km_P1D,Ocean Colour L3 MY daily reflectance,RRS665,P1D,4km
+cmems_obs-oc_glo_bgc-reflectance_my_l3-multi-4km_P1D,Ocean Colour L3 MY daily reflectance,RRS709,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly plankton fallback,CHL,P1M,4km
+cmems_obs-oc_glo_bgc-transp_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly transparency fallback,KD490,P1M,4km
+cmems_obs-oc_glo_bgc-transp_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly transparency fallback,ZSD,P1M,4km
+cmems_obs-oc_glo_bgc-transp_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly transparency fallback,SPM,P1M,4km
+cmems_obs-oc_glo_bgc-reflectance_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly reflectance fallback,RRS443,P1M,4km
+cmems_obs-oc_glo_bgc-reflectance_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly reflectance fallback,RRS490,P1M,4km
+cmems_obs-oc_glo_bgc-reflectance_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly reflectance fallback,RRS510,P1M,4km
+cmems_obs-oc_glo_bgc-reflectance_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly reflectance fallback,RRS560,P1M,4km
+cmems_obs-oc_glo_bgc-reflectance_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly reflectance fallback,RRS665,P1M,4km
+cmems_obs-oc_glo_bgc-reflectance_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly reflectance fallback,RRS709,P1M,4km

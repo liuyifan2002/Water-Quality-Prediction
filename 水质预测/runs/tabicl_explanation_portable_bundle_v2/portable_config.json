@@ -1,0 +1,26 @@
+{
+  "bundle_root": ".",
+  "workspace_root": "workspace",
+  "input_dir": "workspace",
+  "model_dir": "model",
+  "checkpoint_dir": "workspace/runs/tabicl_v2_final_explanation_complete_v1/checkpoints",
+  "output_dir": "workspace/runs/tabicl_v2_final_explanation_complete_v1",
+  "log_dir": "workspace/runs/tabicl_v2_final_explanation_complete_v1/logs",
+  "RAM_CACHE_MODE": "ON",
+  "max_process_ram_gb": 24,
+  "gpu_workers": 1,
+  "query_protocol": "P1_SINGLE_QUERY",
+  "query_shape": [
+    1,
+    77
+  ],
+  "dtype": "float32",
+  "reference_jitter_abs": 0.0014983664,
+  "jitter_reference_kind": "observed numerical jitter reference, not a theoretical bound",
+  "cross_device_status_required_before_resume": "CROSS_DEVICE_NUMERICALLY_COMPATIBLE",
+  "frozen_v1_fold1_status": "FOLD1_NOT_COMPLETE_VALIDATION_FAILURE",
+  "v1_stability_status": "INFERENCE_NONDETERMINISM_CONFIRMED",
+  "v2_stability_status": "NUMERICAL_JITTER_NONNEGLIGIBLE_FOR_SMALL_EFFECTS",
+  "fold2_rep4_status": "OUTPUT_RECOVERED_AFTER_SCHEDULER_PAUSE",
+  "portable_paths_are_relative": true
+}

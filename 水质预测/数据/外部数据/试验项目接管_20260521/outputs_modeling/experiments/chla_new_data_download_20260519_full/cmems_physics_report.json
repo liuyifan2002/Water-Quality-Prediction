@@ -1,0 +1,63 @@
+{
+  "label": "Copernicus Marine 物理场下载与提取",
+  "dry_run": false,
+  "skip_download": false,
+  "dataset_id": "cmems_mod_glo_phy_my_0.083deg_P1D-m",
+  "start_date": "2014-01-01",
+  "end_date": "2024-12-31",
+  "bbox": {
+    "min_lon": 113.8,
+    "max_lon": 114.5,
+    "min_lat": 22.1,
+    "max_lat": 22.6
+  },
+  "variables": [
+    "thetao",
+    "so",
+    "uo",
+    "vo",
+    "zos",
+    "mlotst"
+  ],
+  "raw_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\data\\raw\\manual\\copernicus_physics",
+  "output_csv": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\data\\model_input\\new_sources\\copernicus_physics_features_2014_2024.csv",
+  "interpolation": "nearest",
+  "sample_rows": 10866,
+  "credentials_present": true,
+  "missing_credentials": [],
+  "available_vars": [
+    "thetao",
+    "so",
+    "uo",
+    "vo",
+    "zos",
+    "mlotst"
+  ],
+  "plume_index_generated": false,
+  "plume_index_note": "当前未定义稳定 plume_index 公式，暂不生成。",
+  "status": "completed",
+  "rows": 10866,
+  "missing_rate": {
+    "date": 0.0,
+    "station": 0.0,
+    "cmems_sst": 0.2763,
+    "cmems_bottom_temp": 1.0,
+    "cmems_sss": 0.2763,
+    "cmems_uo": 0.2763,
+    "cmems_vo": 0.2763,
+    "cmems_ssh": 0.2763,
+    "cmems_mld": 0.2763,
+    "cmems_current_speed": 0.2763,
+    "cmems_current_dir": 0.2763,
+    "cmems_sss_3d": 0.2763,
+    "cmems_sss_7d": 0.2763,
+    "cmems_sss_14d": 0.2763,
+    "cmems_mld_3d": 0.2763,
+    "cmems_mld_7d": 0.2763,
+    "cmems_mld_14d": 0.2763,
+    "cmems_current_speed_3d": 0.2763,
+    "cmems_current_speed_7d": 0.2763,
+    "cmems_current_speed_14d": 0.2763,
+    "cmems_plume_index": 1.0
+  }
+}

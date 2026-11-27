@@ -1,0 +1,95 @@
+{
+  "task": "chla_surface",
+  "fold": "fold_1",
+  "shap_expected": 2,
+  "shap_completed": 2,
+  "shap_checks": [
+    {
+      "obs_id": "MM5_20201119_surface",
+      "file_exists": true,
+      "shap_rows": 77,
+      "feature_count": 77,
+      "additivity_abs_error": 4.440892098500626e-16,
+      "actual_model_calls": 2297,
+      "elapsed_seconds": 15103.458340700015,
+      "file_sha256": "1dec42d10a7d41b64d0be507e2b37d819d8e274295587c6f33a6d9ae222da604",
+      "pass": true
+    },
+    {
+      "obs_id": "WM2_20211208_surface",
+      "file_exists": true,
+      "shap_rows": 77,
+      "feature_count": 77,
+      "additivity_abs_error": 0.0,
+      "actual_model_calls": 2201,
+      "elapsed_seconds": 15623.711997499922,
+      "file_sha256": "c392aeca213a697832b341d6655c4e43828258ca8a22ab2af35c913a0af12a53",
+      "pass": true
+    }
+  ],
+  "ale1_expected": 2,
+  "ale1_completed": 2,
+  "ale1_passed_validation": 1,
+  "ale1_checks": [
+    {
+      "feature": "ssrd_mean_14d",
+      "query_rows": 1566,
+      "curve_rows": 10,
+      "bin_count": 10,
+      "sqlite_rows": 1566,
+      "min_bin_n": 153.0,
+      "min_bin_stations": 13.0,
+      "repeat_count": 3,
+      "actual_model_calls": 6,
+      "max_local_ale_delta_range": 0.0014983663744985,
+      "repeatability_status": "VARIABILITY_GT_1E6",
+      "computed": true,
+      "pass": false
+    },
+    {
+      "feature": "wind_speed_x_rain14d",
+      "query_rows": 1566,
+      "curve_rows": 10,
+      "bin_count": 10,
+      "sqlite_rows": 1566,
+      "min_bin_n": 151.0,
+      "min_bin_stations": 13.0,
+      "repeat_count": 3,
+      "actual_model_calls": 6,
+      "max_local_ale_delta_range": 0.0,
+      "repeatability_status": "STABLE_LE_1E6",
+      "computed": true,
+      "pass": true
+    }
+  ],
+  "failed_units": [
+    {
+      "unit": "D_ALE1_PILOT:chla_surface:fold_1",
+      "attempt_status": "FAILED_RUNTIME_1",
+      "reason": "CUDA illegal instruction in torch.tensor allocation; bounded retry completed"
+    }
+  ],
+  "skipped_units": [],
+  "checkpoint_db": "runs\\tabicl_v2_final_explanation_complete_v1\\checkpoints\\local_effects.sqlite",
+  "checkpoint_db_rows": 3132,
+  "rows_by_feature": {
+    "ssrd_mean_14d": 1566,
+    "wind_speed_x_rain14d": 1566
+  },
+  "sqlite_integrity_check": "ok",
+  "sqlite_wal_checkpoint_truncate": [
+    0,
+    -1,
+    -1
+  ],
+  "sqlite_wal_file_exists_after_checkpoint": false,
+  "feature_order_hash": "da3dc69e30b052cce1fd5cbb30351c1f5abebb82dd8162db616ae8883ada3e99",
+  "model_checkpoint_hash": "0db9cb538f114e79026bf08f45f41ad8dd7ad2de2aaca9a5ca8cd3bd9748ae7a",
+  "train_context_hash": "bf980bcea72fe62c2e56b0f5a37e0308d7959ee32389b820a9825f139e39a662:af72699a0370b2ed52cb32c962ffe00f272a49df6b5781fd3a433c0e8c964aeb",
+  "environment_hash": "700ec6b05eb5b36f25e750df4148674f47775778e203403d79d14dc1077681ef",
+  "pause_flag_present": true,
+  "fold2_rep4_started_and_finished_before_pause": true,
+  "fold2_rep4_registry_recorded": true,
+  "final_status": "FOLD1_NOT_COMPLETE_VALIDATION_FAILURE",
+  "decision_reason": "ssrd_mean_14d repeatability range exceeds the predeclared 1e-6 threshold; no rerun or threshold change performed"
+}

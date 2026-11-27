@@ -1,0 +1,16 @@
+{
+  "raw_data_dir": "数据/原始数据",
+  "interim_data_dir": "数据/中间数据",
+  "processed_formal_dir": "数据/处理后数据/正式主表",
+  "processed_variant_dir": "数据/处理后数据/衍生版本",
+  "processed_diagnostic_dir": "数据/处理后数据/诊断数据",
+  "scripts_root": "脚本",
+  "formal_results_dir": "结果/正式结果/full_station",
+  "experiment_results_dir": "结果/扩展实验",
+  "diagnostic_results_dir": "结果/诊断结果",
+  "paper_figures_dir": "结果/论文图表",
+  "ppt_assets_dir": "结果/PPT材料",
+  "manuscript_docs_dir": "文档/论文材料",
+  "archive_dir": "归档_历史版本",
+  "pending_dir": "待确认_未归类"
+}
