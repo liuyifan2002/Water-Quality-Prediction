@@ -1,0 +1,12 @@
+{
+  "task": "tp_middle",
+  "model": "lightgbm",
+  "n_train": 7200,
+  "n_test": 1800,
+  "R2": 0.5995592552556706,
+  "RMSE": 0.02855166704498057,
+  "MAE": 0.012853154968411861,
+  "runtime_seconds": 0.7832718999998178,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

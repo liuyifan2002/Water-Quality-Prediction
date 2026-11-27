@@ -1,0 +1,18 @@
+{
+  "task": "chla_middle",
+  "config_id": "I4",
+  "fold": 1,
+  "n_train": 6051,
+  "n_val": 1513,
+  "n_features": 81,
+  "feature_sha256": "d3be703d2b61471b2ed7d98c6063fd39dc312908c7a159fdfb66804fe11a4e16",
+  "target_transform": "log1p",
+  "output_type": "mean",
+  "nonnegative_clip": true,
+  "fit_seconds": 1.2698394999897573,
+  "predict_seconds": 5.256485899997642,
+  "gpu_peak_allocated_mb": 4824.74365234375,
+  "R2": 0.4796429803374239,
+  "RMSE": 3.6049651954460122,
+  "MAE": 1.6821512081669563
+}

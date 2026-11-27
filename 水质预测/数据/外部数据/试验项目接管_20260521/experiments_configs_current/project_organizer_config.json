@@ -1,0 +1,86 @@
+{
+  "agent_name": "Project Organizer Agent",
+  "default_mode": "dry-run",
+  "scan_dirs": [
+    "data",
+    "experiments",
+    "scripts",
+    "configs",
+    "docs",
+    "notebooks",
+    "models",
+    "tmp"
+  ],
+  "current_dirs": [
+    "experiments/reports/current",
+    "experiments/outputs/current",
+    "experiments/configs/current",
+    "data/processed/current"
+  ],
+  "protected_dirs": [
+    "data/raw",
+    "data/external",
+    "experiments/outputs",
+    "experiments/configs"
+  ],
+  "credential_patterns": [
+    ".env",
+    ".netrc",
+    "credential",
+    "credentials",
+    "token",
+    "secret",
+    "earthengine",
+    "cdsapirc"
+  ],
+  "cache_dir_names": [
+    "__pycache__",
+    ".pytest_cache",
+    ".ipynb_checkpoints"
+  ],
+  "root_pollution_names": [
+    "test.py",
+    "final.py",
+    "new.py",
+    "tmp.py",
+    "v2.py",
+    "v3.py",
+    "untitled.ipynb"
+  ],
+  "root_pollution_extensions": [
+    ".csv",
+    ".json",
+    ".xlsx",
+    ".xls",
+    ".log",
+    ".ipynb"
+  ],
+  "required_current_md_files": [
+    "experiment_master_index.md",
+    "experiment_report.md",
+    "methods_tried_registry.md",
+    "failed_experiments.md",
+    "do_not_repeat_experiments.md",
+    "data_gap_inventory.md",
+    "model_input_alignment_documentation.md",
+    "model_parameter_and_feature_inventory.md",
+    "cleanup_log.md"
+  ],
+  "duplicate_file_names": [
+    "metrics.csv",
+    "predictions.csv",
+    "feature_importance.csv",
+    "permutation_importance.csv",
+    "comparison_to_previous_best.csv",
+    "current_best_scorecard.csv",
+    "methods_tried_registry.md",
+    "failed_experiments.md",
+    "data_gap_inventory.md"
+  ],
+  "safe_apply_actions": [
+    "create_current_dirs",
+    "create_missing_md_skeletons",
+    "clean_cache_dirs",
+    "write_reports"
+  ]
+}

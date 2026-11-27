@@ -1,0 +1,82 @@
+{
+  "task": "chla_middle",
+  "model": "random_forest",
+  "n_samples": 7564,
+  "inner_oof_R2": 0.4825550219471292,
+  "inner_oof_RMSE": 3.4870907543388765,
+  "inner_oof_MAE": 1.588129806130454,
+  "fit_seconds": 39.36296590001439,
+  "infer_seconds": 0.3315591999562457,
+  "folds": [
+    {
+      "fold": 1,
+      "n_train": 6051,
+      "n_val": 1513,
+      "R2": 0.4593346881392718,
+      "RMSE": 3.6746384987327483,
+      "MAE": 1.7248895792025403,
+      "fit_seconds": 7.976436500001,
+      "infer_seconds": 0.056446699978550896
+    },
+    {
+      "fold": 2,
+      "n_train": 6051,
+      "n_val": 1513,
+      "R2": 0.3823862772940403,
+      "RMSE": 4.001235777597228,
+      "MAE": 1.5999170155141376,
+      "fit_seconds": 7.020023299992317,
+      "infer_seconds": 0.05563139999867417
+    },
+    {
+      "fold": 3,
+      "n_train": 6051,
+      "n_val": 1513,
+      "R2": 0.5373160373453758,
+      "RMSE": 3.271621952249735,
+      "MAE": 1.475206464791511,
+      "fit_seconds": 6.741949600022053,
+      "infer_seconds": 0.056684099981794134
+    },
+    {
+      "fold": 4,
+      "n_train": 6051,
+      "n_val": 1513,
+      "R2": 0.5251259772524177,
+      "RMSE": 3.357340495527982,
+      "MAE": 1.5845543520561909,
+      "fit_seconds": 8.211195499985479,
+      "infer_seconds": 0.06741650000913069
+    },
+    {
+      "fold": 5,
+      "n_train": 6052,
+      "n_val": 1512,
+      "R2": 0.5269574175088768,
+      "RMSE": 3.051069355240652,
+      "MAE": 1.5560604231969903,
+      "fit_seconds": 9.413361000013538,
+      "infer_seconds": 0.09538049998809583
+    }
+  ],
+  "config": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": null,
+    "max_features": 0.8,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 250,
+    "n_jobs": 4,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  }
+}

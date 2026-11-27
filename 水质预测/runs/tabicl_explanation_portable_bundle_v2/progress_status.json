@@ -1,0 +1,21 @@
+{
+  "current_task": null,
+  "current_fold": null,
+  "current_method": null,
+  "current_atomic_unit": null,
+  "completed_units": 8,
+  "pending_units": 411,
+  "failed_units": 0,
+  "skipped_units": 0,
+  "elapsed_seconds": 0.0,
+  "recent_unit_seconds": [],
+  "moving_average_seconds": null,
+  "estimated_remaining_seconds": null,
+  "last_checkpoint_time": null,
+  "gpu_name": "to be detected on destination",
+  "gpu_utilization_pct": null,
+  "peak_vram_mb": null,
+  "process_ram_mb": null,
+  "source_reference_jitter_abs": 0.0014983664,
+  "note": "ETA will be populated only from actual destination-machine completed units."
+}

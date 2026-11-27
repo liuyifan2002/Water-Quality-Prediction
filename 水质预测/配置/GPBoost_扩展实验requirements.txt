@@ -1,0 +1,5 @@
+# 仅用于 GPBoost 扩展实验环境；不要与 TensorFlow/MMoE 环境混装。
+gpboost==1.7.4
+pandas>=2.0
+scikit-learn>=1.3
+xgboost>=3.0

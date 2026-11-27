@@ -1,0 +1,32 @@
+﻿dataset_id,product_family,variable,temporal_resolution,spatial_resolution
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,Ocean Colour L4 MY daily,CHL,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,Ocean Colour L4 MY daily,KD490,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,Ocean Colour L4 MY daily,SPM,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,Ocean Colour L4 MY daily,ZSD,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,Ocean Colour L4 MY daily,RRS443,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,Ocean Colour L4 MY daily,RRS490,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,Ocean Colour L4 MY daily,RRS510,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,Ocean Colour L4 MY daily,RRS560,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,Ocean Colour L4 MY daily,RRS665,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,Ocean Colour L4 MY daily,RRS681,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,Ocean Colour L4 MY daily,RRS709,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,Ocean Colour L4 MY daily,PP,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D,Ocean Colour L4 MY daily,PFT,P1D,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly,CHL,P1M,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly,KD490,P1M,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly,SPM,P1M,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly,ZSD,P1M,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly,RRS443,P1M,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly,RRS490,P1M,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly,RRS510,P1M,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly,RRS560,P1M,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly,RRS665,P1M,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly,RRS681,P1M,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly,RRS709,P1M,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly,PP,P1M,4km
+cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M,Ocean Colour L4 MY monthly,PFT,P1M,4km
+,Ocean Colour optics/transparency supplement,ZSD,unknown,unknown
+,Ocean Colour optics/transparency supplement,KD490,unknown,unknown
+,Ocean Colour optics/transparency supplement,SPM,unknown,unknown
+,Ocean Colour optics/transparency supplement,PP,unknown,unknown
+,Ocean Colour optics/transparency supplement,PFT,unknown,unknown

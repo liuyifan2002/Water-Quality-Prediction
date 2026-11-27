@@ -1,0 +1,31 @@
+﻿depth,water_zone_code,water_zone_name,train_rows,test_rows,train_p75_rows,train_p90_rows,test_p75_rows,test_p90_rows,too_small_for_zone_model
+surface,0,Deep Bay,517,120,162,62,18,5,False
+surface,1,Eastern Buffer,421,96,125,57,30,13,False
+surface,2,Junk Bay,210,48,62,34,18,7,True
+surface,3,Mirs Bay,1440,336,223,76,30,5,False
+surface,4,North Western,672,156,131,58,38,18,False
+surface,5,Port Shelter,1088,252,133,42,19,0,False
+surface,6,Southern,1748,408,612,339,137,75,False
+surface,7,Tolo Harbour and Channel,776,180,324,104,73,20,False
+surface,8,Victoria Harbour,1421,336,336,161,71,32,False
+surface,9,Western Buffer,521,120,120,54,38,20,False
+middle,0,Deep Bay,103,24,18,5,2,0,True
+middle,1,Eastern Buffer,421,96,108,33,25,6,False
+middle,2,Junk Bay,210,48,62,30,19,8,True
+middle,3,Mirs Bay,1440,336,238,53,49,4,False
+middle,4,North Western,619,144,129,50,34,17,False
+middle,5,Port Shelter,981,228,160,48,38,4,False
+middle,6,Southern,1645,384,575,308,137,80,False
+middle,7,Tolo Harbour and Channel,568,132,265,75,75,15,False
+middle,8,Victoria Harbour,1160,276,304,135,63,27,False
+middle,9,Western Buffer,521,120,105,42,36,18,False
+bottom,0,Deep Bay,205,48,40,14,6,2,True
+bottom,1,Eastern Buffer,421,96,85,27,19,3,False
+bottom,2,Junk Bay,210,48,56,17,15,7,True
+bottom,3,Mirs Bay,1440,336,212,41,60,9,False
+bottom,4,North Western,653,156,144,65,34,14,False
+bottom,5,Port Shelter,1036,240,201,52,46,11,False
+bottom,6,Southern,1748,408,588,315,137,86,False
+bottom,7,Tolo Harbour and Channel,774,180,384,139,106,31,False
+bottom,8,Victoria Harbour,1421,336,347,135,80,33,False
+bottom,9,Western Buffer,521,120,100,38,36,16,False

@@ -1,0 +1,14 @@
+{
+  "status": "FAIL",
+  "issues": [
+    "file_manifest_sha256.csv缺失",
+    "必要输入manifest缺失",
+    "运行输入缺失：数据/处理后数据/正式主表/model_table_3depth_2014_2024.csv",
+    "运行输入缺失：models/tabiclv2_adapter.py",
+    "运行输入缺失：脚本/05_诊断分析/101_resume_tabicl_all10_explanation_v2.py",
+    "运行输入缺失：脚本/05_诊断分析/实时进度看板/index.html"
+  ],
+  "task_count": 10,
+  "strict_feature_count": 77,
+  "checked_at": "2026-10-25T02:07:31"
+}

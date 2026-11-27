@@ -1,0 +1,18 @@
+{
+  "task": "chla_middle",
+  "fold": 3,
+  "scheme": "C0",
+  "temporal_set": "L0",
+  "config_id": "RAW",
+  "n_train": 6051,
+  "n_query": 1513,
+  "n_query_batches": 26,
+  "query_batch_size": 64,
+  "prep_seconds": 0.2392824999988079,
+  "fit_seconds": 1.536212200007867,
+  "predict_seconds": 116.82979479985079,
+  "gpu_peak_allocated_mb": 4623.14453125,
+  "R2": 0.5559196696113422,
+  "RMSE": 3.2051743539542876,
+  "MAE": 1.5209980803850232
+}

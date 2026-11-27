@@ -1,0 +1,13 @@
+{
+  "task": "chla_bottom",
+  "config_id": "MEDIAN",
+  "n_train": 8317,
+  "n_test": 2080,
+  "fit_seconds": 1.3565221999888308,
+  "predict_seconds": 7.410727699985728,
+  "gpu_peak_allocated_mb": 5189.3310546875,
+  "source": "new_locked_tabicl_single_model_evaluation",
+  "R2": 0.538111150935463,
+  "RMSE": 2.7123620411341407,
+  "MAE": 1.2387110475923577
+}

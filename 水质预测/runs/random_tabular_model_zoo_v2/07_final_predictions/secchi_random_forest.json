@@ -1,0 +1,12 @@
+{
+  "task": "secchi",
+  "model": "random_forest",
+  "n_train": 8692,
+  "n_test": 2174,
+  "R2": 0.6770240391422722,
+  "RMSE": 0.6391217021549626,
+  "MAE": 0.42467213669487913,
+  "runtime_seconds": 8.517384500009939,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

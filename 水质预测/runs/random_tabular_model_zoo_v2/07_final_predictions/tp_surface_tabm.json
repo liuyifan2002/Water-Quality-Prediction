@@ -1,0 +1,12 @@
+{
+  "task": "tp_surface",
+  "model": "tabm",
+  "n_train": 8268,
+  "n_test": 2068,
+  "R2": 0.7241506365056727,
+  "RMSE": 0.034109142609441756,
+  "MAE": 0.014454501722065636,
+  "runtime_seconds": 144.46315900000627,
+  "gpu_peak_allocated_mb": 342.94091796875,
+  "source": "trained_on_full_outer_train"
+}

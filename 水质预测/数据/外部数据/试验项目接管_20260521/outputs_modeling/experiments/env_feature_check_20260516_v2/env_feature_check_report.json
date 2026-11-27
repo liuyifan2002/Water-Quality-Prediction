@@ -1,0 +1,10 @@
+{
+  "experiment_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\env_feature_check_20260516_v2",
+  "formal_results_overwritten": false,
+  "raw_environment_files": {
+    "rainfall_features_2014_2024.csv": false,
+    "tide_features_2014_2024.csv": false,
+    "era5_features_2014_2024.csv": false
+  },
+  "message": "环境原始输入缺失，当前不能进行环境增益实验。"
+}

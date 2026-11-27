@@ -1,0 +1,16 @@
+{
+  "finished": true,
+  "successful_jobs": 27,
+  "failed_jobs": 0,
+  "expected_jobs": 27,
+  "modes": [
+    "random_seeds",
+    "time_holdout",
+    "station_5fold"
+  ],
+  "tasks": [
+    "chla_surface",
+    "secchi_surface",
+    "tn_bottom"
+  ]
+}

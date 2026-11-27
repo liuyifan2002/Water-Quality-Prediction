@@ -1,0 +1,18 @@
+{
+  "task": "secchi",
+  "fold": 1,
+  "scheme": "C3",
+  "temporal_set": "L0",
+  "config_id": "Z3",
+  "n_train": 6953,
+  "n_query": 1739,
+  "n_query_batches": 31,
+  "query_batch_size": 64,
+  "prep_seconds": 0.22362010000506416,
+  "fit_seconds": 32.184277299791574,
+  "predict_seconds": 25.985210499668028,
+  "gpu_peak_allocated_mb": 982.68017578125,
+  "R2": 0.39376909780355784,
+  "RMSE": 0.9387781295419009,
+  "MAE": 0.5418236993797352
+}

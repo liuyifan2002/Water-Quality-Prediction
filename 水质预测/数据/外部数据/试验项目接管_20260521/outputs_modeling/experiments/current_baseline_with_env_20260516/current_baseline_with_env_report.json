@@ -1,0 +1,8 @@
+{
+  "label": "当前环境增强基线，不是正式结果",
+  "generated_at": "2026-05-16T02:48:07",
+  "source_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\env_feature_gain_20260516_real",
+  "output_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\current_baseline_with_env_20260516",
+  "retrained": false,
+  "formal_results_overwritten": false
+}

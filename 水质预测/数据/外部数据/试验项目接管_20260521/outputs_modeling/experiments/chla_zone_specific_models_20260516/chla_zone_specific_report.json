@@ -1,0 +1,27 @@
+{
+  "label": "Chl-a分区模型实验",
+  "generated_at": "2026-05-16T03:14:36",
+  "strategies": [
+    "water_zone_code",
+    "zone_group"
+  ],
+  "zone_group_mapping": {
+    "0": "west_estuary",
+    "4": "west_estuary",
+    "9": "west_estuary",
+    "1": "urban_buffer",
+    "2": "urban_buffer",
+    "8": "urban_buffer",
+    "3": "east_open",
+    "5": "east_open",
+    "7": "east_open",
+    "6": "south_open"
+  },
+  "min_train_rows": 300,
+  "min_test_rows": 50,
+  "same_scope_check": {
+    "max_train_rows_delta": 0,
+    "max_test_rows_delta": 0
+  },
+  "formal_results_overwritten": false
+}

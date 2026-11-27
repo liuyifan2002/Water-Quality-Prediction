@@ -1,0 +1,65 @@
+# V3图题与图注目录
+
+图注统一说明：图件由已冻结结果直接整理，未重新计算模型解释；支持审查图不作为模型响应结果。
+
+- GLOBAL-01：Existing MAIN-02 global SHAP heatmap；类型：COMPUTED_RESULT_FIGURE；状态：PRESERVED_REFERENCE；数据源：Existing MAIN-02 V1/V2; not overwritten
+- DIST-02：SHAP Violin；类型：COMPUTED_RESULT_FIGURE；状态：NOT_GENERATED_THIS_ROUND；数据源：User production specification
+- GLOBAL-02：Chl-a surface top-10 SHAP importance；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 SHAP groups
+- GLOBAL-02：Chl-a middle top-10 SHAP importance；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 SHAP groups
+- GLOBAL-02：Chl-a bottom top-10 SHAP importance；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 SHAP groups
+- GLOBAL-02：Secchi top-10 SHAP importance；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 SHAP groups
+- GLOBAL-02：TN surface top-10 SHAP importance；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 SHAP groups
+- GLOBAL-02：TN middle top-10 SHAP importance；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 SHAP groups
+- GLOBAL-02：TN bottom top-10 SHAP importance；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 SHAP groups
+- GLOBAL-02：TP surface top-10 SHAP importance；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 SHAP groups
+- GLOBAL-02：TP middle top-10 SHAP importance；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 SHAP groups
+- GLOBAL-02：TP bottom top-10 SHAP importance；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 SHAP groups
+- GLOBAL-03：10-task feature rank change；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 SHAP groups; within-task ranks
+- GLOBAL-04：Feature source-group share of mean absolute SHAP；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 SHAP groups + frozen feature taxonomy
+- DIST-01：Chl-a surface SHAP beeswarm；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 per-sample SHAP files
+- DIST-01：Chl-a middle SHAP beeswarm；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 per-sample SHAP files
+- DIST-01：Chl-a bottom SHAP beeswarm；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 per-sample SHAP files
+- DIST-01：Secchi SHAP beeswarm；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 per-sample SHAP files
+- DIST-01：TN surface SHAP beeswarm；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 per-sample SHAP files
+- DIST-01：TN middle SHAP beeswarm；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 per-sample SHAP files
+- DIST-01：TN bottom SHAP beeswarm；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 per-sample SHAP files
+- DIST-01：TP surface SHAP beeswarm；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 per-sample SHAP files
+- DIST-01：TP middle SHAP beeswarm；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 per-sample SHAP files
+- DIST-01：TP bottom SHAP beeswarm；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：40 per-sample SHAP files
+- LOCAL-01：Chl-a surface median CORE_3 SHAP waterfall；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\shap\chla_surface\VM7_20170406_surface_seed42.csv.gz
+- LOCAL-01：Chl-a middle median CORE_3 SHAP waterfall；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\shap\chla_middle\SM19_20160118_middle_seed42.csv.gz
+- LOCAL-01：Chl-a bottom median CORE_3 SHAP waterfall；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\shap\chla_bottom\NM5_20150112_bottom_seed42.csv.gz
+- LOCAL-01：Secchi median CORE_3 SHAP waterfall；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\shap\secchi\VM4_20170303_surface_seed42.csv.gz
+- LOCAL-01：TN surface median CORE_3 SHAP waterfall；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\shap\tn_surface\SM19_20191206_surface_seed42.csv.gz
+- LOCAL-01：TN middle median CORE_3 SHAP waterfall；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\shap\tn_middle\TM6_20200826_middle_seed42.csv.gz
+- LOCAL-01：TN bottom median CORE_3 SHAP waterfall；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\shap\tn_bottom\SM13_20180321_bottom_seed42.csv.gz
+- LOCAL-01：TP surface median CORE_3 SHAP waterfall；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\shap\tp_surface\VM7_20220606_surface_seed42.csv.gz
+- LOCAL-01：TP middle median CORE_3 SHAP waterfall；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\shap\tp_middle\TM6_20230216_middle_seed42.csv.gz
+- LOCAL-01：TP bottom median CORE_3 SHAP waterfall；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\shap\tp_bottom\VM7_20140306_bottom_seed42.csv.gz
+- ALE-01：Chl-a bottom ALE 1D: t2m；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\chla_bottom_t2m_curve.csv
+- ALE-01：Chl-a bottom ALE 1D: t2m_lag1；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\chla_bottom_t2m_lag1_curve.csv
+- ALE-01：Chl-a middle ALE 1D: wind_speed；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\chla_middle_wind_speed_curve.csv
+- ALE-01：Chl-a middle ALE 1D: wind_speed_sq；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\chla_middle_wind_speed_sq_curve.csv
+- ALE-01：Chl-a surface ALE 1D: wind_speed；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\chla_surface_wind_speed_curve.csv
+- ALE-01：Chl-a surface ALE 1D: wind_speed_lag1；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\chla_surface_wind_speed_lag1_curve.csv
+- ALE-01：Secchi ALE 1D: ssrd_sum_3d；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\secchi_ssrd_sum_3d_curve.csv
+- ALE-01：Secchi ALE 1D: t2m_roll3；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\secchi_t2m_roll3_curve.csv
+- ALE-01：TN bottom ALE 1D: t2m_lag2；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\tn_bottom_t2m_lag2_curve.csv
+- ALE-01：TN bottom ALE 1D: t2m_roll3；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\tn_bottom_t2m_roll3_curve.csv
+- ALE-01：TN middle ALE 1D: t2m_delta1；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\tn_middle_t2m_delta1_curve.csv
+- ALE-01：TN middle ALE 1D: v10；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\tn_middle_v10_curve.csv
+- ALE-01：TN surface ALE 1D: t2m_delta1；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\tn_surface_t2m_delta1_curve.csv
+- ALE-01：TN surface ALE 1D: wind_speed_lag1；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\tn_surface_wind_speed_lag1_curve.csv
+- ALE-01：TP bottom ALE 1D: t2m_lag1；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\tp_bottom_t2m_lag1_curve.csv
+- ALE-01：TP bottom ALE 1D: wind_speed_lag1；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\tp_bottom_wind_speed_lag1_curve.csv
+- ALE-01：TP middle ALE 1D: t2m_lag1；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\tp_middle_t2m_lag1_curve.csv
+- ALE-01：TP middle ALE 1D: tcc；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\tp_middle_tcc_curve.csv
+- ALE-01：TP surface ALE 1D: t2m_lag2；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\tp_surface_t2m_lag2_curve.csv
+- ALE-01：TP surface ALE 1D: u10；类型：COMPUTED_RESULT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_1d\tp_surface_u10_curve.csv
+- SUPPORT-01：ALE Number of observations heatmap；类型：SUPPORT_AUDIT_FIGURE；状态：GENERATED；数据源：20 ALE curve files
+- SUPPORT-02：ALE Number of independent stations heatmap；类型：SUPPORT_AUDIT_FIGURE；状态：GENERATED；数据源：20 ALE curve files
+- STABILITY-01：P1 repeated-probe prediction range (9 tasks)；类型：NUMERICAL_STABILITY_FIGURE；状态：GENERATED；数据源：9 *_p1_probes.csv files
+- STABILITY-02：Numerical jitter relative to frozen explanation scales；类型：NUMERICAL_STABILITY_FIGURE；状态：GENERATED；数据源：historical jitter_vs_explanation_scale.csv
+- ALE2D-01：TN surface joint support matrix；类型：SUPPORT_AUDIT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_2d\tn_surface_wind_speed_lag1_t2m_delta1_joint_support.csv
+- ALE2D-02：TN bottom joint support matrix；类型：SUPPORT_AUDIT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_2d\tn_bottom_t2m_roll3_t2m_lag2_joint_support.csv
+- ALE2D-03：TP bottom joint support matrix；类型：SUPPORT_AUDIT_FIGURE；状态：GENERATED；数据源：runs\tabicl_v2_slim_explainability_v2_all10\ale_2d\tp_bottom_wind_speed_lag1_t2m_lag1_joint_support.csv

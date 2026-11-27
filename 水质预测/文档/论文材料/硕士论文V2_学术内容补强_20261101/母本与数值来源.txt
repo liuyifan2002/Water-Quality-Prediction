@@ -1,0 +1,4 @@
+唯一编辑母本：E:\研究生\codex\水质预测\文档\论文材料\硕士论文解释章节重构V1_20261101\水质预测硕士学位论文_解释章节重构V1.docx
+SHA256：969272271f946bb9fdd482d886e94ab5ba92a658132e64f09a873018a71bd838
+正式性能：runs/final_experiment_closure_audit_v1/final_core_results_table_v2.csv
+站点误差：runs/{chla,tn,tp}_family_v2/09_*_station_metrics.csv

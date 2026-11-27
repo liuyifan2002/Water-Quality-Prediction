@@ -1,0 +1,73 @@
+{
+  "task": "chla_surface",
+  "model": "catboost",
+  "n_samples": 8692,
+  "inner_oof_R2": 0.4174278701822499,
+  "inner_oof_RMSE": 5.176746985888681,
+  "inner_oof_MAE": 2.3607566529460082,
+  "fit_seconds": 24.404197700030636,
+  "infer_seconds": 0.014508399995975196,
+  "folds": [
+    {
+      "fold": 1,
+      "n_train": 6953,
+      "n_val": 1739,
+      "R2": 0.41586732389504333,
+      "RMSE": 5.230406937642993,
+      "MAE": 2.361823713546782,
+      "fit_seconds": 5.051188000012189,
+      "infer_seconds": 0.0030441000126302242
+    },
+    {
+      "fold": 2,
+      "n_train": 6953,
+      "n_val": 1739,
+      "R2": 0.4545498615236895,
+      "RMSE": 5.1247015079425084,
+      "MAE": 2.399908432240527,
+      "fit_seconds": 4.867088700004388,
+      "infer_seconds": 0.0027781999961007386
+    },
+    {
+      "fold": 3,
+      "n_train": 6954,
+      "n_val": 1738,
+      "R2": 0.3951374539192857,
+      "RMSE": 5.420101686174082,
+      "MAE": 2.4524433645150707,
+      "fit_seconds": 4.7928957999974955,
+      "infer_seconds": 0.0028981999785173684
+    },
+    {
+      "fold": 4,
+      "n_train": 6954,
+      "n_val": 1738,
+      "R2": 0.41367098637672217,
+      "RMSE": 5.161068972482532,
+      "MAE": 2.2547512236472347,
+      "fit_seconds": 4.955184200021904,
+      "infer_seconds": 0.0031248000159393996
+    },
+    {
+      "fold": 5,
+      "n_train": 6954,
+      "n_val": 1738,
+      "R2": 0.40558192328735476,
+      "RMSE": 4.935552293371443,
+      "MAE": 2.33483338990592,
+      "fit_seconds": 4.73784099999466,
+      "infer_seconds": 0.0026630999927874655
+    }
+  ],
+  "config": {
+    "iterations": 500,
+    "learning_rate": 0.05,
+    "depth": 6,
+    "l2_leaf_reg": 3,
+    "loss_function": "RMSE",
+    "thread_count": 4,
+    "random_seed": 42,
+    "verbose": false,
+    "allow_writing_files": false
+  }
+}

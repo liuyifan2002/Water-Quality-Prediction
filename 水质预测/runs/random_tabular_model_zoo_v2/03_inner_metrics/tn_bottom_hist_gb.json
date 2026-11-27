@@ -1,0 +1,85 @@
+{
+  "task": "tn_bottom",
+  "model": "hist_gb",
+  "n_samples": 7911,
+  "inner_oof_R2": 0.6342467248211878,
+  "inner_oof_RMSE": 0.18629871895003314,
+  "inner_oof_MAE": 0.12406879637441966,
+  "fit_seconds": 8.676514799997676,
+  "infer_seconds": 0.07000009997864254,
+  "folds": [
+    {
+      "fold": 1,
+      "n_train": 6328,
+      "n_val": 1583,
+      "R2": 0.6321268346844044,
+      "RMSE": 0.18508227273605282,
+      "MAE": 0.1240763458596229,
+      "fit_seconds": 2.006625600013649,
+      "infer_seconds": 0.013248999981442466
+    },
+    {
+      "fold": 2,
+      "n_train": 6329,
+      "n_val": 1582,
+      "R2": 0.6392711644151985,
+      "RMSE": 0.17441596727672037,
+      "MAE": 0.1213069733231736,
+      "fit_seconds": 1.8113379999995232,
+      "infer_seconds": 0.013716899993596599
+    },
+    {
+      "fold": 3,
+      "n_train": 6329,
+      "n_val": 1582,
+      "R2": 0.6414216496690979,
+      "RMSE": 0.18961571845540762,
+      "MAE": 0.12429922567416399,
+      "fit_seconds": 1.772606899990933,
+      "infer_seconds": 0.014139400009298697
+    },
+    {
+      "fold": 4,
+      "n_train": 6329,
+      "n_val": 1582,
+      "R2": 0.618582160204902,
+      "RMSE": 0.19695231262601887,
+      "MAE": 0.12689936440752025,
+      "fit_seconds": 1.5447126000071876,
+      "infer_seconds": 0.014735699980519712
+    },
+    {
+      "fold": 5,
+      "n_train": 6329,
+      "n_val": 1582,
+      "R2": 0.6400813914564387,
+      "RMSE": 0.18470418923658302,
+      "MAE": 0.123762067835503,
+      "fit_seconds": 1.5412316999863833,
+      "infer_seconds": 0.014159100013785064
+    }
+  ],
+  "config": {
+    "categorical_features": "from_dtype",
+    "early_stopping": "auto",
+    "interaction_cst": null,
+    "l2_regularization": 1,
+    "learning_rate": 0.05,
+    "loss": "squared_error",
+    "max_bins": 255,
+    "max_depth": null,
+    "max_features": 1.0,
+    "max_iter": 300,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 20,
+    "monotonic_cst": null,
+    "n_iter_no_change": 10,
+    "quantile": null,
+    "random_state": 42,
+    "scoring": "loss",
+    "tol": 1e-07,
+    "validation_fraction": 0.1,
+    "verbose": 0,
+    "warm_start": false
+  }
+}

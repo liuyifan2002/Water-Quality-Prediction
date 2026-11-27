@@ -1,0 +1,1406 @@
+[
+  {
+    "task": "chla_surface",
+    "selected_kind": "pair_equal",
+    "selected_models": [
+      "tabicl",
+      "lightgbm_tuned"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "meta_cv": {
+      "single": {
+        "R2": 0.5510375530555661,
+        "RMSE": 4.54451033466987,
+        "MAE": 1.933383569540025
+      },
+      "pair_equal": {
+        "R2": 0.5581820250152334,
+        "RMSE": 4.508206258809488,
+        "MAE": 1.9334036436302577
+      },
+      "pair_weighted": {
+        "R2": 0.5580526028477122,
+        "RMSE": 4.508866507075095,
+        "MAE": 1.9310136872104977
+      },
+      "triple_weighted": {
+        "R2": 0.5572386770415844,
+        "RMSE": 4.513016542460047,
+        "MAE": 1.930334887818096
+      }
+    },
+    "inner_oof_top3": [
+      "tabicl",
+      "lightgbm_tuned",
+      "tabm"
+    ],
+    "top3_selection_frequency": {
+      "tabicl": 5,
+      "lightgbm_tuned": 5,
+      "tabm": 4,
+      "tabpfn": 1,
+      "extra_trees_tuned": 0,
+      "random_forest": 0,
+      "hist_gb": 0,
+      "mlp": 0,
+      "xgboost": 0,
+      "catboost": 0,
+      "svr_rbf": 0,
+      "ridge": 0
+    },
+    "meta_fold_details": [
+      {
+        "fold": 1,
+        "top3": [
+          "tabicl",
+          "lightgbm_tuned",
+          "tabm"
+        ],
+        "pair_weights": [
+          0.5751946199851496,
+          0.4248053800148504
+        ],
+        "triple_weights": [
+          0.44716481222306126,
+          0.3461014851657339,
+          0.20673370261120483
+        ]
+      },
+      {
+        "fold": 2,
+        "top3": [
+          "tabicl",
+          "lightgbm_tuned",
+          "tabm"
+        ],
+        "pair_weights": [
+          0.5054699997600461,
+          0.4945300002399538
+        ],
+        "triple_weights": [
+          0.38643237319076806,
+          0.4113362720098909,
+          0.202231354799341
+        ]
+      },
+      {
+        "fold": 3,
+        "top3": [
+          "tabicl",
+          "lightgbm_tuned",
+          "tabm"
+        ],
+        "pair_weights": [
+          0.5759261243611556,
+          0.42407387563884447
+        ],
+        "triple_weights": [
+          0.37460919460527903,
+          0.31772413787017284,
+          0.30766666752454813
+        ]
+      },
+      {
+        "fold": 4,
+        "top3": [
+          "tabicl",
+          "lightgbm_tuned",
+          "tabm"
+        ],
+        "pair_weights": [
+          0.5642416740956169,
+          0.4357583259043832
+        ],
+        "triple_weights": [
+          0.4642344601440426,
+          0.37451088266375754,
+          0.16125465719219978
+        ]
+      },
+      {
+        "fold": 5,
+        "top3": [
+          "tabicl",
+          "lightgbm_tuned",
+          "tabpfn"
+        ],
+        "pair_weights": [
+          0.5426214740646025,
+          0.4573785259353975
+        ],
+        "triple_weights": [
+          0.5426215344263793,
+          0.4573784655736208,
+          3.026806423791877e-18
+        ]
+      }
+    ]
+  },
+  {
+    "task": "chla_middle",
+    "selected_kind": "single",
+    "selected_models": [
+      "lightgbm_tuned"
+    ],
+    "weights": [
+      1.0
+    ],
+    "meta_cv": {
+      "single": {
+        "R2": 0.5231398024230244,
+        "RMSE": 3.34754712427859,
+        "MAE": 1.5402929191561385
+      },
+      "pair_equal": {
+        "R2": 0.5199947304106828,
+        "RMSE": 3.3585681471599886,
+        "MAE": 1.5293410718836775
+      },
+      "pair_weighted": {
+        "R2": 0.5250510051358659,
+        "RMSE": 3.3408320906948523,
+        "MAE": 1.5262482376671442
+      },
+      "triple_weighted": {
+        "R2": 0.5249798904385253,
+        "RMSE": 3.341082194782721,
+        "MAE": 1.5256493770277646
+      }
+    },
+    "inner_oof_top3": [
+      "lightgbm_tuned",
+      "tabm",
+      "tabicl"
+    ],
+    "top3_selection_frequency": {
+      "lightgbm_tuned": 5,
+      "tabm": 4,
+      "tabicl": 2,
+      "random_forest_tuned": 3,
+      "tabpfn": 1,
+      "extra_trees": 0,
+      "hist_gb": 0,
+      "catboost": 0,
+      "xgboost": 0,
+      "mlp": 0,
+      "svr_rbf": 0,
+      "ridge": 0
+    },
+    "meta_fold_details": [
+      {
+        "fold": 1,
+        "top3": [
+          "lightgbm_tuned",
+          "tabm",
+          "random_forest_tuned"
+        ],
+        "pair_weights": [
+          0.722507651231434,
+          0.27749234876856593
+        ],
+        "triple_weights": [
+          0.7225076475419214,
+          0.2774923524580786,
+          1.517552790528392e-17
+        ]
+      },
+      {
+        "fold": 2,
+        "top3": [
+          "lightgbm_tuned",
+          "tabm",
+          "random_forest_tuned"
+        ],
+        "pair_weights": [
+          0.70270177988326,
+          0.29729822011673995
+        ],
+        "triple_weights": [
+          0.7027017173321307,
+          0.29729828266786934,
+          0.0
+        ]
+      },
+      {
+        "fold": 3,
+        "top3": [
+          "lightgbm_tuned",
+          "tabm",
+          "tabicl"
+        ],
+        "pair_weights": [
+          0.6603718035463573,
+          0.3396281964536428
+        ],
+        "triple_weights": [
+          0.6603718012382374,
+          0.33962819876176265,
+          0.0
+        ]
+      },
+      {
+        "fold": 4,
+        "top3": [
+          "lightgbm_tuned",
+          "tabicl",
+          "tabpfn"
+        ],
+        "pair_weights": [
+          0.7478012743057011,
+          0.25219872569429896
+        ],
+        "triple_weights": [
+          0.7211372458820511,
+          0.17605141647243544,
+          0.10281133764551353
+        ]
+      },
+      {
+        "fold": 5,
+        "top3": [
+          "lightgbm_tuned",
+          "tabm",
+          "random_forest_tuned"
+        ],
+        "pair_weights": [
+          0.6568909813895046,
+          0.34310901861049525
+        ],
+        "triple_weights": [
+          0.6568909703452965,
+          0.3431090296547035,
+          1.0034624937574493e-18
+        ]
+      }
+    ]
+  },
+  {
+    "task": "chla_bottom",
+    "selected_kind": "triple_weighted",
+    "selected_models": [
+      "lightgbm_tuned",
+      "tabicl",
+      "extra_trees_tuned"
+    ],
+    "weights": [
+      0.5135086448573399,
+      0.22055454615904252,
+      0.2659368089836175
+    ],
+    "meta_cv": {
+      "single": {
+        "R2": 0.5159454886085254,
+        "RMSE": 2.6276604405963617,
+        "MAE": 1.283412952631227
+      },
+      "pair_equal": {
+        "R2": 0.5240655036818633,
+        "RMSE": 2.605527725258947,
+        "MAE": 1.260628831810954
+      },
+      "pair_weighted": {
+        "R2": 0.5241207716576066,
+        "RMSE": 2.605376437187746,
+        "MAE": 1.261317037056498
+      },
+      "triple_weighted": {
+        "R2": 0.5258993268192177,
+        "RMSE": 2.600503201343237,
+        "MAE": 1.263482606459429
+      }
+    },
+    "inner_oof_top3": [
+      "lightgbm_tuned",
+      "tabicl",
+      "extra_trees_tuned"
+    ],
+    "top3_selection_frequency": {
+      "lightgbm_tuned": 5,
+      "tabicl": 5,
+      "extra_trees_tuned": 4,
+      "tabm": 1,
+      "tabpfn": 0,
+      "random_forest": 0,
+      "hist_gb": 0,
+      "xgboost": 0,
+      "catboost": 0,
+      "mlp": 0,
+      "svr_rbf": 0,
+      "ridge": 0
+    },
+    "meta_fold_details": [
+      {
+        "fold": 1,
+        "top3": [
+          "lightgbm_tuned",
+          "tabicl",
+          "extra_trees_tuned"
+        ],
+        "pair_weights": [
+          0.5808437420496538,
+          0.41915625795034617
+        ],
+        "triple_weights": [
+          0.5173271893381521,
+          0.19894259696447397,
+          0.2837302136973739
+        ]
+      },
+      {
+        "fold": 2,
+        "top3": [
+          "lightgbm_tuned",
+          "tabicl",
+          "tabm"
+        ],
+        "pair_weights": [
+          0.5758146239924379,
+          0.4241853760075621
+        ],
+        "triple_weights": [
+          0.516131703973357,
+          0.36032185731047295,
+          0.12354643871617016
+        ]
+      },
+      {
+        "fold": 3,
+        "top3": [
+          "lightgbm_tuned",
+          "tabicl",
+          "extra_trees_tuned"
+        ],
+        "pair_weights": [
+          0.5986547756672359,
+          0.40134522433276415
+        ],
+        "triple_weights": [
+          0.5490220928079681,
+          0.20430265102139056,
+          0.24667525617064137
+        ]
+      },
+      {
+        "fold": 4,
+        "top3": [
+          "lightgbm_tuned",
+          "tabicl",
+          "extra_trees_tuned"
+        ],
+        "pair_weights": [
+          0.5388295418565199,
+          0.4611704581434802
+        ],
+        "triple_weights": [
+          0.47783950656075397,
+          0.2420021231268332,
+          0.28015837031241286
+        ]
+      },
+      {
+        "fold": 5,
+        "top3": [
+          "lightgbm_tuned",
+          "tabicl",
+          "extra_trees_tuned"
+        ],
+        "pair_weights": [
+          0.558605169078638,
+          0.44139483092136206
+        ],
+        "triple_weights": [
+          0.49628129683754185,
+          0.17666944696904116,
+          0.32704925619341696
+        ]
+      }
+    ]
+  },
+  {
+    "task": "secchi",
+    "selected_kind": "pair_equal",
+    "selected_models": [
+      "tabicl",
+      "hist_gb_tuned"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "meta_cv": {
+      "single": {
+        "R2": 0.6410355617535388,
+        "RMSE": 0.6621881983249923,
+        "MAE": 0.4209623341273677
+      },
+      "pair_equal": {
+        "R2": 0.6515321255783384,
+        "RMSE": 0.6524347680795299,
+        "MAE": 0.41513881237670586
+      },
+      "pair_weighted": {
+        "R2": 0.6514755637437248,
+        "RMSE": 0.6524877161599664,
+        "MAE": 0.4151485259834578
+      },
+      "triple_weighted": {
+        "R2": 0.6513582753988483,
+        "RMSE": 0.652597497223849,
+        "MAE": 0.41507937394906513
+      }
+    },
+    "inner_oof_top3": [
+      "tabicl",
+      "hist_gb_tuned",
+      "lightgbm_tuned"
+    ],
+    "top3_selection_frequency": {
+      "tabicl": 5,
+      "hist_gb_tuned": 5,
+      "lightgbm_tuned": 5,
+      "tabm": 0,
+      "random_forest": 0,
+      "extra_trees": 0,
+      "tabpfn": 0,
+      "xgboost": 0,
+      "catboost": 0,
+      "svr_rbf": 0,
+      "mlp": 0,
+      "ridge": 0
+    },
+    "meta_fold_details": [
+      {
+        "fold": 1,
+        "top3": [
+          "tabicl",
+          "hist_gb_tuned",
+          "lightgbm_tuned"
+        ],
+        "pair_weights": [
+          0.5199119346120473,
+          0.48008806538795273
+        ],
+        "triple_weights": [
+          0.5180107241584876,
+          0.4691052171411151,
+          0.01288405870039741
+        ]
+      },
+      {
+        "fold": 2,
+        "top3": [
+          "tabicl",
+          "hist_gb_tuned",
+          "lightgbm_tuned"
+        ],
+        "pair_weights": [
+          0.5022245444219895,
+          0.4977754555780105
+        ],
+        "triple_weights": [
+          0.48836707878796265,
+          0.42532985774713505,
+          0.08630306346490228
+        ]
+      },
+      {
+        "fold": 3,
+        "top3": [
+          "hist_gb_tuned",
+          "tabicl",
+          "lightgbm_tuned"
+        ],
+        "pair_weights": [
+          0.5074371194251603,
+          0.49256288057483966
+        ],
+        "triple_weights": [
+          0.4469695949334035,
+          0.4813288473003567,
+          0.07170155776623983
+        ]
+      },
+      {
+        "fold": 4,
+        "top3": [
+          "hist_gb_tuned",
+          "tabicl",
+          "lightgbm_tuned"
+        ],
+        "pair_weights": [
+          0.5187077706452332,
+          0.48129222935476684
+        ],
+        "triple_weights": [
+          0.5187076436361888,
+          0.48129235636381124,
+          0.0
+        ]
+      },
+      {
+        "fold": 5,
+        "top3": [
+          "tabicl",
+          "hist_gb_tuned",
+          "lightgbm_tuned"
+        ],
+        "pair_weights": [
+          0.5091660965651427,
+          0.4908339034348573
+        ],
+        "triple_weights": [
+          0.4965824803326893,
+          0.41864650672711556,
+          0.08477101294019512
+        ]
+      }
+    ]
+  },
+  {
+    "task": "tn_surface",
+    "selected_kind": "triple_weighted",
+    "selected_models": [
+      "tabicl",
+      "hist_gb_tuned",
+      "lightgbm_tuned"
+    ],
+    "weights": [
+      0.48543688860507567,
+      0.36296753521302927,
+      0.15159557618189518
+    ],
+    "meta_cv": {
+      "single": {
+        "R2": 0.7714140081725199,
+        "RMSE": 0.2742222311563166,
+        "MAE": 0.13925831416185616
+      },
+      "pair_equal": {
+        "R2": 0.7819393415477359,
+        "RMSE": 0.2678344970712169,
+        "MAE": 0.137191576585008
+      },
+      "pair_weighted": {
+        "R2": 0.7790380812356772,
+        "RMSE": 0.2696103561360705,
+        "MAE": 0.13749489248429653
+      },
+      "triple_weighted": {
+        "R2": 0.7870203716591951,
+        "RMSE": 0.26469570001339315,
+        "MAE": 0.13571372584273522
+      }
+    },
+    "inner_oof_top3": [
+      "tabicl",
+      "hist_gb_tuned",
+      "lightgbm_tuned"
+    ],
+    "top3_selection_frequency": {
+      "tabicl": 5,
+      "hist_gb_tuned": 5,
+      "lightgbm_tuned": 5,
+      "random_forest": 0,
+      "extra_trees": 0,
+      "xgboost": 0,
+      "catboost": 0,
+      "tabpfn": 0,
+      "tabm": 0,
+      "svr_rbf": 0,
+      "mlp": 0,
+      "ridge": 0
+    },
+    "meta_fold_details": [
+      {
+        "fold": 1,
+        "top3": [
+          "lightgbm_tuned",
+          "hist_gb_tuned",
+          "tabicl"
+        ],
+        "pair_weights": [
+          0.5941771057379757,
+          0.4058228942620243
+        ],
+        "triple_weights": [
+          0.2788576903417707,
+          0.27108101445450195,
+          0.45006129520372734
+        ]
+      },
+      {
+        "fold": 2,
+        "top3": [
+          "tabicl",
+          "lightgbm_tuned",
+          "hist_gb_tuned"
+        ],
+        "pair_weights": [
+          0.5648002770613617,
+          0.4351997229386383
+        ],
+        "triple_weights": [
+          0.5497735832383328,
+          0.20913514408990388,
+          0.2410912726717633
+        ]
+      },
+      {
+        "fold": 3,
+        "top3": [
+          "tabicl",
+          "lightgbm_tuned",
+          "hist_gb_tuned"
+        ],
+        "pair_weights": [
+          0.5258965052241946,
+          0.4741034947758054
+        ],
+        "triple_weights": [
+          0.5106704249634136,
+          0.31216587578012667,
+          0.1771636992564597
+        ]
+      },
+      {
+        "fold": 4,
+        "top3": [
+          "tabicl",
+          "lightgbm_tuned",
+          "hist_gb_tuned"
+        ],
+        "pair_weights": [
+          0.525778892222113,
+          0.47422110777788695
+        ],
+        "triple_weights": [
+          0.5030021769833556,
+          0.21117578568237322,
+          0.2858220373342712
+        ]
+      },
+      {
+        "fold": 5,
+        "top3": [
+          "hist_gb_tuned",
+          "lightgbm_tuned",
+          "tabicl"
+        ],
+        "pair_weights": [
+          0.9668989806447792,
+          0.033101019355220807
+        ],
+        "triple_weights": [
+          0.6157102523124692,
+          0.0,
+          0.3842897476875309
+        ]
+      }
+    ]
+  },
+  {
+    "task": "tn_middle",
+    "selected_kind": "triple_weighted",
+    "selected_models": [
+      "hist_gb_tuned",
+      "lightgbm_tuned",
+      "random_forest"
+    ],
+    "weights": [
+      0.3540435368703924,
+      0.372487016699488,
+      0.27346944643011967
+    ],
+    "meta_cv": {
+      "single": {
+        "R2": 0.6142142327847624,
+        "RMSE": 0.19426226393697799,
+        "MAE": 0.1224410356497251
+      },
+      "pair_equal": {
+        "R2": 0.6184993088850659,
+        "RMSE": 0.19318037715991024,
+        "MAE": 0.12165028962535573
+      },
+      "pair_weighted": {
+        "R2": 0.6182474700046925,
+        "RMSE": 0.19324412842540942,
+        "MAE": 0.12167504481140833
+      },
+      "triple_weighted": {
+        "R2": 0.6212277086553528,
+        "RMSE": 0.19248834819535857,
+        "MAE": 0.12091827878558947
+      }
+    },
+    "inner_oof_top3": [
+      "hist_gb_tuned",
+      "lightgbm_tuned",
+      "random_forest"
+    ],
+    "top3_selection_frequency": {
+      "hist_gb_tuned": 5,
+      "lightgbm_tuned": 5,
+      "random_forest": 5,
+      "extra_trees": 0,
+      "tabicl": 0,
+      "xgboost": 0,
+      "tabpfn": 0,
+      "catboost": 0,
+      "tabm": 0,
+      "svr_rbf": 0,
+      "mlp": 0,
+      "ridge": 0
+    },
+    "meta_fold_details": [
+      {
+        "fold": 1,
+        "top3": [
+          "hist_gb_tuned",
+          "lightgbm_tuned",
+          "random_forest"
+        ],
+        "pair_weights": [
+          0.570651396128747,
+          0.42934860387125295
+        ],
+        "triple_weights": [
+          0.39635094766546675,
+          0.32845200138470776,
+          0.27519705094982555
+        ]
+      },
+      {
+        "fold": 2,
+        "top3": [
+          "lightgbm_tuned",
+          "hist_gb_tuned",
+          "random_forest"
+        ],
+        "pair_weights": [
+          0.5256481074626222,
+          0.4743518925373777
+        ],
+        "triple_weights": [
+          0.43031214444242083,
+          0.32207329614141983,
+          0.2476145594161592
+        ]
+      },
+      {
+        "fold": 3,
+        "top3": [
+          "hist_gb_tuned",
+          "lightgbm_tuned",
+          "random_forest"
+        ],
+        "pair_weights": [
+          0.5968165952084663,
+          0.40318340479153375
+        ],
+        "triple_weights": [
+          0.4175841959339999,
+          0.2966072946444735,
+          0.28580850942152664
+        ]
+      },
+      {
+        "fold": 4,
+        "top3": [
+          "lightgbm_tuned",
+          "hist_gb_tuned",
+          "random_forest"
+        ],
+        "pair_weights": [
+          0.5435817071328702,
+          0.45641829286712976
+        ],
+        "triple_weights": [
+          0.450014510706842,
+          0.3102726398709605,
+          0.2397128494221975
+        ]
+      },
+      {
+        "fold": 5,
+        "top3": [
+          "hist_gb_tuned",
+          "lightgbm_tuned",
+          "random_forest"
+        ],
+        "pair_weights": [
+          0.5255101233050637,
+          0.47448987669493625
+        ],
+        "triple_weights": [
+          0.32557451698186246,
+          0.3555829933673567,
+          0.31884248965078077
+        ]
+      }
+    ]
+  },
+  {
+    "task": "tn_bottom",
+    "selected_kind": "triple_weighted",
+    "selected_models": [
+      "hist_gb_tuned",
+      "lightgbm_tuned",
+      "tabpfn"
+    ],
+    "weights": [
+      0.551222424407004,
+      0.19509008632152802,
+      0.253687489271468
+    ],
+    "meta_cv": {
+      "single": {
+        "R2": 0.64705638285055,
+        "RMSE": 0.1830073038376854,
+        "MAE": 0.12115890920264183
+      },
+      "pair_equal": {
+        "R2": 0.648199024409513,
+        "RMSE": 0.18271082408404982,
+        "MAE": 0.12057653968480996
+      },
+      "pair_weighted": {
+        "R2": 0.6480742205555325,
+        "RMSE": 0.18274323018091723,
+        "MAE": 0.12063010456438693
+      },
+      "triple_weighted": {
+        "R2": 0.6504500440801411,
+        "RMSE": 0.1821253429314657,
+        "MAE": 0.1187884392541662
+      }
+    },
+    "inner_oof_top3": [
+      "hist_gb_tuned",
+      "lightgbm_tuned",
+      "tabpfn"
+    ],
+    "top3_selection_frequency": {
+      "hist_gb_tuned": 5,
+      "lightgbm_tuned": 5,
+      "tabpfn": 3,
+      "tabicl": 2,
+      "extra_trees": 0,
+      "random_forest": 0,
+      "xgboost": 0,
+      "catboost": 0,
+      "tabm": 0,
+      "svr_rbf": 0,
+      "mlp": 0,
+      "ridge": 0
+    },
+    "meta_fold_details": [
+      {
+        "fold": 1,
+        "top3": [
+          "hist_gb_tuned",
+          "lightgbm_tuned",
+          "tabicl"
+        ],
+        "pair_weights": [
+          0.7121957582859915,
+          0.2878042417140086
+        ],
+        "triple_weights": [
+          0.615650448177864,
+          0.06741225425868733,
+          0.3169372975634488
+        ]
+      },
+      {
+        "fold": 2,
+        "top3": [
+          "hist_gb_tuned",
+          "lightgbm_tuned",
+          "tabpfn"
+        ],
+        "pair_weights": [
+          0.6678097810821261,
+          0.3321902189178739
+        ],
+        "triple_weights": [
+          0.5720553713219579,
+          0.1806842058367366,
+          0.24726042284130548
+        ]
+      },
+      {
+        "fold": 3,
+        "top3": [
+          "hist_gb_tuned",
+          "lightgbm_tuned",
+          "tabpfn"
+        ],
+        "pair_weights": [
+          0.6795290471777377,
+          0.32047095282226234
+        ],
+        "triple_weights": [
+          0.6037222227516605,
+          0.17658243658379819,
+          0.2196953406645413
+        ]
+      },
+      {
+        "fold": 4,
+        "top3": [
+          "hist_gb_tuned",
+          "lightgbm_tuned",
+          "tabpfn"
+        ],
+        "pair_weights": [
+          0.5827450183300529,
+          0.4172549816699471
+        ],
+        "triple_weights": [
+          0.4948180244678118,
+          0.24227528541272406,
+          0.2629066901194641
+        ]
+      },
+      {
+        "fold": 5,
+        "top3": [
+          "hist_gb_tuned",
+          "lightgbm_tuned",
+          "tabicl"
+        ],
+        "pair_weights": [
+          0.5576036376866599,
+          0.4423963623133402
+        ],
+        "triple_weights": [
+          0.4654891158526403,
+          0.24017575319018156,
+          0.2943351309571781
+        ]
+      }
+    ]
+  },
+  {
+    "task": "tp_surface",
+    "selected_kind": "single",
+    "selected_models": [
+      "xgboost_tuned"
+    ],
+    "weights": [
+      1.0
+    ],
+    "meta_cv": {
+      "single": {
+        "R2": 0.7377978005080605,
+        "RMSE": 0.03459716476828773,
+        "MAE": 0.015071188430860543
+      },
+      "pair_equal": {
+        "R2": 0.7378371624303458,
+        "RMSE": 0.03459456779918087,
+        "MAE": 0.01493038411316023
+      },
+      "pair_weighted": {
+        "R2": 0.7384799931251076,
+        "RMSE": 0.03455212833803169,
+        "MAE": 0.014965221799615364
+      },
+      "triple_weighted": {
+        "R2": 0.7384799926818133,
+        "RMSE": 0.034552128367315804,
+        "MAE": 0.01496522195841455
+      }
+    },
+    "inner_oof_top3": [
+      "xgboost_tuned",
+      "lightgbm_tuned",
+      "hist_gb"
+    ],
+    "top3_selection_frequency": {
+      "xgboost_tuned": 5,
+      "lightgbm_tuned": 5,
+      "hist_gb": 5,
+      "catboost": 0,
+      "random_forest": 0,
+      "tabicl": 0,
+      "tabm": 0,
+      "tabpfn": 0,
+      "extra_trees": 0,
+      "svr_rbf": 0,
+      "mlp": 0,
+      "ridge": 0
+    },
+    "meta_fold_details": [
+      {
+        "fold": 1,
+        "top3": [
+          "xgboost_tuned",
+          "lightgbm_tuned",
+          "hist_gb"
+        ],
+        "pair_weights": [
+          0.7365070906017805,
+          0.26349290939821945
+        ],
+        "triple_weights": [
+          0.7365082939559158,
+          0.2634917060440841,
+          0.0
+        ]
+      },
+      {
+        "fold": 2,
+        "top3": [
+          "xgboost_tuned",
+          "lightgbm_tuned",
+          "hist_gb"
+        ],
+        "pair_weights": [
+          0.7045358605486826,
+          0.2954641394513175
+        ],
+        "triple_weights": [
+          0.7045347706800119,
+          0.29546522931998825,
+          0.0
+        ]
+      },
+      {
+        "fold": 3,
+        "top3": [
+          "xgboost_tuned",
+          "lightgbm_tuned",
+          "hist_gb"
+        ],
+        "pair_weights": [
+          0.810057713632311,
+          0.18994228636768898
+        ],
+        "triple_weights": [
+          0.8100581525515642,
+          0.18994184744843573,
+          3.6246161172115773e-17
+        ]
+      },
+      {
+        "fold": 4,
+        "top3": [
+          "xgboost_tuned",
+          "lightgbm_tuned",
+          "hist_gb"
+        ],
+        "pair_weights": [
+          0.6876654127354436,
+          0.31233458726455643
+        ],
+        "triple_weights": [
+          0.6876656774187264,
+          0.31233432258127364,
+          0.0
+        ]
+      },
+      {
+        "fold": 5,
+        "top3": [
+          "xgboost_tuned",
+          "lightgbm_tuned",
+          "hist_gb"
+        ],
+        "pair_weights": [
+          0.8032426538613975,
+          0.19675734613860263
+        ],
+        "triple_weights": [
+          0.8032420819801912,
+          0.19675791801980894,
+          0.0
+        ]
+      }
+    ]
+  },
+  {
+    "task": "tp_middle",
+    "selected_kind": "triple_weighted",
+    "selected_models": [
+      "lightgbm_tuned",
+      "hist_gb_tuned",
+      "catboost"
+    ],
+    "weights": [
+      0.503846476816471,
+      0.25588013504427964,
+      0.24027338813924942
+    ],
+    "meta_cv": {
+      "single": {
+        "R2": 0.5723029461700613,
+        "RMSE": 0.028690752753128282,
+        "MAE": 0.012943151539927577
+      },
+      "pair_equal": {
+        "R2": 0.5753129013844559,
+        "RMSE": 0.02858961766831214,
+        "MAE": 0.012863008310881422
+      },
+      "pair_weighted": {
+        "R2": 0.5745802114072237,
+        "RMSE": 0.028614269110922543,
+        "MAE": 0.012878012347568782
+      },
+      "triple_weighted": {
+        "R2": 0.5761927591392036,
+        "RMSE": 0.02855998663030702,
+        "MAE": 0.012837183065685534
+      }
+    },
+    "inner_oof_top3": [
+      "lightgbm_tuned",
+      "hist_gb_tuned",
+      "catboost"
+    ],
+    "top3_selection_frequency": {
+      "lightgbm_tuned": 5,
+      "hist_gb_tuned": 5,
+      "catboost": 5,
+      "xgboost": 0,
+      "random_forest": 0,
+      "tabicl": 0,
+      "tabpfn": 0,
+      "extra_trees": 0,
+      "tabm": 0,
+      "ridge": 0,
+      "svr_rbf": 0,
+      "mlp": 0
+    },
+    "meta_fold_details": [
+      {
+        "fold": 1,
+        "top3": [
+          "lightgbm_tuned",
+          "hist_gb_tuned",
+          "catboost"
+        ],
+        "pair_weights": [
+          0.7318837434726473,
+          0.26811625652735266
+        ],
+        "triple_weights": [
+          0.5403376528198938,
+          0.16427273242931778,
+          0.29538961475078845
+        ]
+      },
+      {
+        "fold": 2,
+        "top3": [
+          "lightgbm_tuned",
+          "hist_gb_tuned",
+          "catboost"
+        ],
+        "pair_weights": [
+          0.5559002218542808,
+          0.44409977814571916
+        ],
+        "triple_weights": [
+          0.37905562507066487,
+          0.37583038026547766,
+          0.24511399466385747
+        ]
+      },
+      {
+        "fold": 3,
+        "top3": [
+          "hist_gb_tuned",
+          "lightgbm_tuned",
+          "catboost"
+        ],
+        "pair_weights": [
+          0.5,
+          0.5
+        ],
+        "triple_weights": [
+          0.4219890044986807,
+          0.40567160514514644,
+          0.17233939035617282
+        ]
+      },
+      {
+        "fold": 4,
+        "top3": [
+          "lightgbm_tuned",
+          "hist_gb_tuned",
+          "catboost"
+        ],
+        "pair_weights": [
+          0.6787593654544543,
+          0.32124063454554574
+        ],
+        "triple_weights": [
+          0.5320704631706803,
+          0.23346178291814285,
+          0.23446775391117686
+        ]
+      },
+      {
+        "fold": 5,
+        "top3": [
+          "lightgbm_tuned",
+          "hist_gb_tuned",
+          "catboost"
+        ],
+        "pair_weights": [
+          0.8256148715507958,
+          0.17438512844920412
+        ],
+        "triple_weights": [
+          0.6763291088160905,
+          0.06926764550250802,
+          0.25440324568140144
+        ]
+      }
+    ]
+  },
+  {
+    "task": "tp_bottom",
+    "selected_kind": "single",
+    "selected_models": [
+      "lightgbm_tuned"
+    ],
+    "weights": [
+      1.0
+    ],
+    "meta_cv": {
+      "single": {
+        "R2": 0.5995249832012861,
+        "RMSE": 0.025266222099453877,
+        "MAE": 0.01235423822356668
+      },
+      "pair_equal": {
+        "R2": 0.6014501497196063,
+        "RMSE": 0.02520541895145638,
+        "MAE": 0.012164557565765568
+      },
+      "pair_weighted": {
+        "R2": 0.6000067996871392,
+        "RMSE": 0.025251018471744918,
+        "MAE": 0.012202769653724315
+      },
+      "triple_weighted": {
+        "R2": 0.5986189108660867,
+        "RMSE": 0.025294788289221267,
+        "MAE": 0.012173605999262819
+      }
+    },
+    "inner_oof_top3": [
+      "lightgbm_tuned",
+      "hist_gb_tuned",
+      "random_forest"
+    ],
+    "top3_selection_frequency": {
+      "lightgbm_tuned": 5,
+      "hist_gb_tuned": 5,
+      "random_forest": 3,
+      "catboost": 2,
+      "xgboost": 0,
+      "tabicl": 0,
+      "tabpfn": 0,
+      "extra_trees": 0,
+      "tabm": 0,
+      "ridge": 0,
+      "svr_rbf": 0,
+      "mlp": 0
+    },
+    "meta_fold_details": [
+      {
+        "fold": 1,
+        "top3": [
+          "lightgbm_tuned",
+          "hist_gb_tuned",
+          "random_forest"
+        ],
+        "pair_weights": [
+          0.6055201622704174,
+          0.3944798377295826
+        ],
+        "triple_weights": [
+          0.5509615266157614,
+          0.35272944426464803,
+          0.0963090291195907
+        ]
+      },
+      {
+        "fold": 2,
+        "top3": [
+          "lightgbm_tuned",
+          "hist_gb_tuned",
+          "random_forest"
+        ],
+        "pair_weights": [
+          0.7797626095405319,
+          0.22023739045946805
+        ],
+        "triple_weights": [
+          0.7797625393922453,
+          0.2202374606077548,
+          0.0
+        ]
+      },
+      {
+        "fold": 3,
+        "top3": [
+          "lightgbm_tuned",
+          "hist_gb_tuned",
+          "catboost"
+        ],
+        "pair_weights": [
+          0.5408747139499799,
+          0.4591252860500202
+        ],
+        "triple_weights": [
+          0.5493943660235158,
+          0.2739613723184562,
+          0.17664426165802818
+        ]
+      },
+      {
+        "fold": 4,
+        "top3": [
+          "lightgbm_tuned",
+          "hist_gb_tuned",
+          "random_forest"
+        ],
+        "pair_weights": [
+          0.7896884610816275,
+          0.2103115389183725
+        ],
+        "triple_weights": [
+          0.7896882156134286,
+          0.21031178438657133,
+          4.68251176539868e-18
+        ]
+      },
+      {
+        "fold": 5,
+        "top3": [
+          "lightgbm_tuned",
+          "hist_gb_tuned",
+          "catboost"
+        ],
+        "pair_weights": [
+          0.6133963982823706,
+          0.38660360171762936
+        ],
+        "triple_weights": [
+          0.6145250437919831,
+          0.16559517288391723,
+          0.21987978332409963
+        ]
+      }
+    ]
+  }
+]

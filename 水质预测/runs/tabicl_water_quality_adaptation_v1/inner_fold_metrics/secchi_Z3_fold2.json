@@ -1,0 +1,18 @@
+{
+  "task": "secchi",
+  "config_id": "Z3",
+  "fold": 2,
+  "n_train": 6953,
+  "n_val": 1739,
+  "n_features": 77,
+  "feature_sha256": "da3dc69e30b052cce1fd5cbb30351c1f5abebb82dd8162db616ae8883ada3e99",
+  "target_transform": "log1p",
+  "output_type": "mean",
+  "nonnegative_clip": true,
+  "fit_seconds": 1.4637027999851853,
+  "predict_seconds": 6.529930799995782,
+  "gpu_peak_allocated_mb": 4610.0302734375,
+  "R2": 0.6917423021780886,
+  "RMSE": 0.5970093631584493,
+  "MAE": 0.4077111365536014
+}

@@ -1,0 +1,13 @@
+{
+  "task": "tn_middle",
+  "config_id": "F60",
+  "n_train": 7200,
+  "n_test": 1800,
+  "fit_seconds": 1.1431474999990314,
+  "predict_seconds": 5.379490199993597,
+  "gpu_peak_allocated_mb": 4674.97265625,
+  "source": "new_locked_tabicl_single_model_evaluation",
+  "R2": 0.5056150307215175,
+  "RMSE": 0.2515148915241084,
+  "MAE": 0.12595834682699708
+}

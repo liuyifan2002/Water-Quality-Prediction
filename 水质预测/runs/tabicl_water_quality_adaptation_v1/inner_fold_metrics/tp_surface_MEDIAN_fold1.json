@@ -1,0 +1,18 @@
+{
+  "task": "tp_surface",
+  "config_id": "MEDIAN",
+  "fold": 1,
+  "n_train": 6614,
+  "n_val": 1654,
+  "n_features": 77,
+  "feature_sha256": "da3dc69e30b052cce1fd5cbb30351c1f5abebb82dd8162db616ae8883ada3e99",
+  "target_transform": "log1p",
+  "output_type": "median",
+  "nonnegative_clip": true,
+  "fit_seconds": 1.3216034999932162,
+  "predict_seconds": 5.625343699997757,
+  "gpu_peak_allocated_mb": 4881.81103515625,
+  "R2": 0.6238508201331742,
+  "RMSE": 0.043351464914305075,
+  "MAE": 0.014335648173955072
+}

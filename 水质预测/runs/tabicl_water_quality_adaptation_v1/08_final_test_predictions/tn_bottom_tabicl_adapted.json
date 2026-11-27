@@ -1,0 +1,13 @@
+{
+  "task": "tn_bottom",
+  "config_id": "Z2",
+  "n_train": 7911,
+  "n_test": 1978,
+  "fit_seconds": 1.4474646000016946,
+  "predict_seconds": 7.220913400000427,
+  "gpu_peak_allocated_mb": 4760.08935546875,
+  "source": "new_locked_tabicl_single_model_evaluation",
+  "R2": 0.5832695598910981,
+  "RMSE": 0.21824177087544808,
+  "MAE": 0.12552373248853987
+}

@@ -1,0 +1,18 @@
+{
+  "task": "tn_surface",
+  "config_id": "I4",
+  "fold": 1,
+  "n_train": 6614,
+  "n_val": 1654,
+  "n_features": 81,
+  "feature_sha256": "d3be703d2b61471b2ed7d98c6063fd39dc312908c7a159fdfb66804fe11a4e16",
+  "target_transform": "log1p",
+  "output_type": "mean",
+  "nonnegative_clip": true,
+  "fit_seconds": 1.3540116999938618,
+  "predict_seconds": 5.7973832999996375,
+  "gpu_peak_allocated_mb": 4948.505859375,
+  "R2": 0.7855878525788066,
+  "RMSE": 0.2600755850245583,
+  "MAE": 0.13954839493966736
+}

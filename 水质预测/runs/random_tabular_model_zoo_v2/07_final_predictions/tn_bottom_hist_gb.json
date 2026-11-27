@@ -1,0 +1,12 @@
+{
+  "task": "tn_bottom",
+  "model": "hist_gb",
+  "n_train": 7911,
+  "n_test": 1978,
+  "R2": 0.6368384645288285,
+  "RMSE": 0.20373243996204626,
+  "MAE": 0.12611331914356555,
+  "runtime_seconds": 1.7835109999869019,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

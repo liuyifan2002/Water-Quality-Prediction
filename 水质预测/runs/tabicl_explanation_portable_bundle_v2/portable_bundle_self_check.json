@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "warnings": [],
+  "bundle_created_status": "PORTABLE_BUNDLE_CREATED_WITH_KNOWN_NUMERICAL_NONDETERMINISM",
+  "fold1_status_preserved": "FOLD1_NOT_COMPLETE_VALIDATION_FAILURE",
+  "v1_stability_status_preserved": "INFERENCE_NONDETERMINISM_CONFIRMED",
+  "v2_stability_status_preserved": "NUMERICAL_JITTER_NONNEGLIGIBLE_FOR_SMALL_EFFECTS",
+  "fold2_rep4_preserved": true,
+  "golden_queries": 5,
+  "golden_hashes_verified": true,
+  "checkpoint_sha256": "0db9cb538f114e79026bf08f45f41ad8dd7ad2de2aaca9a5ca8cd3bd9748ae7a",
+  "sqlite_files_checked": 1,
+  "checkpoint_parsed_config_and_state_dict": true,
+  "python_scripts_syntax_checked": 109,
+  "feature_order_hash": "da3dc69e30b052cce1fd5cbb30351c1f5abebb82dd8162db616ae8883ada3e99",
+  "split_manifest_hashes": {
+    "workspace/runs/chla_family_v2/03_chla_surface_manifest.csv": "58f048a085b7b0efa264850a64621d491c24c29aa2033af14f63d7b5bd5ff5c7",
+    "workspace/runs/modern_baseline_gate_v1/01_secchi_manifest.csv": "e6e6823804abce9b4c189a6b05dd6d8b1a9434657ced110e91fbb12ebefae735",
+    "workspace/runs/tn_family_v2/03_tn_surface_manifest.csv": "4d3529b9f83dd47d5698b1bfd79a524da4276d32ba4a9ce9eb2430833be6ddc4",
+    "workspace/runs/tp_family_v2/04_tp_middle_manifest.csv": "5bd2bf0f077da63fec6c6131ee4412e449b2bdad91d3494eea6a223377d4bdcf"
+  },
+  "atomic_units": 419,
+  "completed_units": 8,
+  "pending_units": 411,
+  "skipped_units": 0,
+  "source_v1_strict_threshold": 1e-06,
+  "source_v1_threshold_changed": false,
+  "no_model_prediction_called_during_bundle_build": true
+}

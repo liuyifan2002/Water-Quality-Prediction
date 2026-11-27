@@ -1,0 +1,12 @@
+{
+  "task": "chla_bottom",
+  "model": "extra_trees",
+  "n_train": 8317,
+  "n_test": 2080,
+  "R2": 0.5136838624361442,
+  "RMSE": 2.783160548635903,
+  "MAE": 1.3192446620370233,
+  "runtime_seconds": 4.095836699998472,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

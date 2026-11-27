@@ -1,0 +1,12 @@
+{
+  "task": "chla_bottom",
+  "model": "tabm",
+  "n_train": 8317,
+  "n_test": 2080,
+  "R2": 0.5057450376864905,
+  "RMSE": 2.805785317442791,
+  "MAE": 1.3232191328374812,
+  "runtime_seconds": 81.76866239999072,
+  "gpu_peak_allocated_mb": 342.96337890625,
+  "source": "trained_on_full_outer_train"
+}

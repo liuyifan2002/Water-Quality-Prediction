@@ -1,0 +1,15 @@
+{
+  "task": "tn_middle",
+  "config_id": "FT1_CHUNK2048",
+  "fold": 1,
+  "n_fit": 5184,
+  "n_early_stop": 576,
+  "n_eval": 1440,
+  "fit_seconds": 217.23627500000293,
+  "predict_seconds": 4.441379500000039,
+  "gpu_peak_allocated_mb": 9551.65673828125,
+  "nonnegative_clip": false,
+  "R2": 0.626310221046819,
+  "RMSE": 0.17459794940350434,
+  "MAE": 0.11638639291562139
+}

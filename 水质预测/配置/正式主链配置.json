@@ -1,0 +1,29 @@
+{
+  "pipeline_name": "full_station_mainline",
+  "scope": {
+    "stations": "all_94",
+    "years": "2014-2024",
+    "depths": [
+      "surface",
+      "middle",
+      "bottom"
+    ]
+  },
+  "targets": [
+    "chla_ug_l",
+    "secchi_m",
+    "tn_mg_l",
+    "tp_mg_l"
+  ],
+  "canonical_inputs": {
+    "water_quality_master": "数据/处理后数据/正式主表/water_quality_master_2014_2024.csv",
+    "satellite_features": "数据/处理后数据/正式主表/station_date_satellite_features_2014_2024.csv",
+    "model_table": "数据/处理后数据/正式主表/model_table_3depth_2014_2024.csv"
+  },
+  "canonical_outputs": {
+    "result_dir": "结果/正式结果/full_station",
+    "figure_dir": "结果/论文图表/full_station_figures",
+    "shap_dir": "结果/论文图表/full_station_shap"
+  },
+  "notes": "本配置文件用于说明正式主链边界，不自动替代现有脚本内部参数。"
+}

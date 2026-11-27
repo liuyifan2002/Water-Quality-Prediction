@@ -1,0 +1,6 @@
+# 此文件只用于独立的 MMoE 虚拟环境，不可安装到当前 GPBoost 环境。
+numpy>=1.26,<2.1
+tensorflow-intel==2.18.0
+pandas>=2.0
+scikit-learn>=1.3
+xgboost>=3.0

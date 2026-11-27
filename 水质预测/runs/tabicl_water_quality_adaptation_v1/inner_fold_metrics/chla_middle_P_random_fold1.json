@@ -1,0 +1,18 @@
+{
+  "task": "chla_middle",
+  "config_id": "P_random",
+  "fold": 1,
+  "n_train": 6051,
+  "n_val": 1513,
+  "n_features": 77,
+  "feature_sha256": "da3dc69e30b052cce1fd5cbb30351c1f5abebb82dd8162db616ae8883ada3e99",
+  "target_transform": "log1p",
+  "output_type": "mean",
+  "nonnegative_clip": true,
+  "fit_seconds": 1.218112700007623,
+  "predict_seconds": 5.068787199998042,
+  "gpu_peak_allocated_mb": 4762.2197265625,
+  "R2": 0.47540372221177873,
+  "RMSE": 3.619619920806048,
+  "MAE": 1.691304104096119
+}

@@ -1,0 +1,11 @@
+{
+  "experiment": "TABICLV2_SLIM_EXPLAINABILITY_V2_ALL10",
+  "stage": "ALE_2D_BLOCKED_BY_SUPPORT",
+  "task": "",
+  "unit": "ALE_2D",
+  "detail": "联合支持审查无合格组合；未启动ALE 2D模型计算",
+  "updated_at": "2026-10-30T00:54:12+08:00",
+  "pid": 32840,
+  "v2_ale2d": true,
+  "v1_gate_is_quality_evidence_not_compute_gate": true
+}

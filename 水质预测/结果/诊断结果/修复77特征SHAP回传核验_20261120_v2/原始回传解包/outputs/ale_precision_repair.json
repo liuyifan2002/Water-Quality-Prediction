@@ -1,0 +1,10 @@
+{
+  "reason": "ALE derived bin_support CSV lost float64 precision on first read/write",
+  "original_script_sha256": "c8276968c870e2e9c4ee77fabde6997506e6769b98cdd604a1e8c95fe4818e1c",
+  "patched_script_sha256": "834cacf2eaa950780826df4ac0b20efa15c0aa34bedbd0781b2452ef2b049c53",
+  "original_script_bytes": 3511,
+  "patched_script_bytes": 4534,
+  "original_source_edges_unchanged": true,
+  "verified_curves": 19,
+  "registration_data_drift_curve": "secchi_ssrd_sum_3d"
+}

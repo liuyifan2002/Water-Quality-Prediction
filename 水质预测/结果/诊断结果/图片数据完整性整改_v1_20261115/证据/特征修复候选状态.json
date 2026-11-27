@@ -1,0 +1,22 @@
+{
+  "候选记录数": 30719,
+  "正式特征数": 77,
+  "源主表SHA256未变": true,
+  "源主表SHA256": "3f562fd8709641ddeaa55ffecba86c741eeaeafff7948c3b7a7d1660d2d89ea5",
+  "新增真实月度记录": 11370,
+  "零覆盖原始月记录数": 119,
+  "候选改变观测数": 27969,
+  "改变特征": [
+    "ntl_avg_rad",
+    "ntl_avg_rad_delta1",
+    "ntl_avg_rad_lag1",
+    "ntl_avg_rad_lag2",
+    "ntl_avg_rad_roll3",
+    "viirs_count"
+  ],
+  "目标/站点/日期/观测顺序保留": true,
+  "77顺序与定义保留": true,
+  "状态": "同源补齐候选；未替换主表，须完整重算受影响实验",
+  "进行了插值或复制独立样本": false,
+  "运行了训练/预测/SHAP/ALE": false
+}

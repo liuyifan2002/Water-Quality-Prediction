@@ -1,0 +1,12 @@
+{
+  "task": "tn_bottom",
+  "model": "extra_trees",
+  "n_train": 7911,
+  "n_test": 1978,
+  "R2": 0.6052192404772934,
+  "RMSE": 0.21241650249143437,
+  "MAE": 0.1263314371802219,
+  "runtime_seconds": 4.141591200022958,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

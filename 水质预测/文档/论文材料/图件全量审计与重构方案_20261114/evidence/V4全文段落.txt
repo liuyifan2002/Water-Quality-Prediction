@@ -1,0 +1,769 @@
+0 [Normal] 分类号：__________
+学校代码：10386
+密级：__________
+学号：__________
+1 [Normal] 
+2 [Normal] 
+3 [Normal] 福 州 大 学
+4 [Normal] 硕 士 学 位 论 文
+5 [Normal] 
+6 [Normal] 
+7 [Normal] 
+8 [Normal] 基于多源环境数据与表格模型的
+近岸水质预测研究
+9 [Normal] 
+10 [Normal] 
+11 [Normal] 
+12 [Normal] 学位类别：________________
+13 [Normal] 学科专业：________________
+14 [Normal] 研究方向：________________
+15 [Normal] 作者姓名：________________
+16 [Normal] 指导教师：________________
+17 [Normal] 完成日期：________________
+18 [Normal] 
+19 [Heading 1] 遵守学术行为规范承诺
+20 [Normal] 学校正式承诺文本及本人签名页待按研究生院模板插入。
+21 [Normal] 本人签名：__________    日期：__________
+22 [Normal] 
+23 [Heading 1] 独创性声明
+24 [Normal] 学校正式独创性声明文本待按研究生院模板插入。
+25 [Normal] 作者签名：__________    导师签名：__________    日期：__________
+26 [Normal] 
+27 [Heading 1] 关于论文使用授权的说明
+28 [Normal] 学校正式授权说明文本、保密选项及解密年份待本人确认后插入。
+29 [Normal] 作者签名：__________    导师签名：__________    日期：__________
+30 [Normal] 
+31 [Heading 1] 摘 要
+32 [Normal] 香港近岸水质具有空间、水层与时间差异，模型在未见站点的预测能力需要与同站点插值能力区分。本文以2014—2024年香港近岸监测和多源环境数据构建叶绿素a、透明度、总氮与总磷共10项任务，在统一77项严格特征及冻结站点划分下比较XGBoost与TabICLv2，并在四项代表任务中纳入TabPFN、TabM。TabICLv2在十项正式任务的pooled R²均高于XGBoost；叶绿素a表层、透明度、总氮表层和总磷中层分别由0.457、0.535、0.259、0.304提高至0.589、0.602、0.402、0.472。叶绿素a三水层、透明度和总氮表层的站点改善及配对站点bootstrap证据较强，部分TN、TP任务虽有总体增益，却未获得同等强度的稳定性支持。解释分析以TabICLv2为主线：历史四任务五折结果与十任务第1折P1单查询结果分层报告，后者包含20条一维ALE曲线。数值重复性与分箱样本、站点覆盖分别审查；数值等价受控复现XGBoost模型的TreeSHAP/ALE作为独立基准解释列于附录。来源级消融显示，空间静态信息对叶绿素a表层和透明度预测较重要，气象信息在透明度、总氮表层及总磷中层具有任务依赖性。结果表明，表格基础模型的优势随指标、水层与站点而变，解释曲线提供的是模型响应而非环境因果效应。
+33 [Normal] 关键词：近岸水质；多源环境数据；表格基础模型；空间泛化；SHAP；累积局部效应
+34 [Heading 1] Abstract
+35 [Normal] Coastal water quality varies across locations, depths, and time; performance at unseen stations therefore needs to be distinguished from within-station interpolation. Using Hong Kong monitoring and multi-source environmental data from 2014–2024, this thesis defines ten prediction tasks for chlorophyll-a, Secchi depth, total nitrogen, and total phosphorus. XGBoost and TabICLv2 are compared using the same 77 strict features and frozen station-held-out splits; TabPFN and TabM are included for four representative tasks. TabICLv2 yields higher pooled R-squared than XGBoost in all ten registered tasks. For surface chlorophyll-a, Secchi depth, surface total nitrogen, and middle-layer total phosphorus, pooled R-squared increases from 0.457, 0.535, 0.259, and 0.304 to 0.589, 0.602, 0.402, and 0.472, respectively. Station-level gains and paired station bootstrap intervals provide stronger support for the chlorophyll-a depths, Secchi depth, and surface total nitrogen than for several other nutrient tasks. TabICLv2 is the primary explanation target: historical five-fold results for four tasks are reported separately from the first-fold P1 single-query analysis across ten tasks, including 20 one-dimensional ALE curves. Numerical repeatability and observation/station support are audited separately.  TreeSHAP and ALE from numerically equivalent, controlled XGBoost refits are retained as an independent baseline explanation in the appendix. Source-group ablation indicates task-specific roles of spatial-static and meteorological information. The observed gains vary by target, depth, and station, while SHAP and ALE describe model responses rather than environmental causation.
+36 [Normal] Key words: coastal water quality; multi-source environmental data; tabular foundation model; spatial generalization; SHAP; accumulated local effects
+37 [Heading 1] 目 录
+38 [toc 1] 遵守学术行为规范承诺	2
+39 [toc 1] 独创性声明	3
+40 [toc 1] 关于论文使用授权的说明	4
+41 [toc 1] 摘 要	5
+42 [toc 1] Abstract	6
+43 [toc 1] 目 录	7
+44 [toc 1] 图目录	11
+45 [toc 1] 表目录	13
+46 [toc 1] 主要符号表	14
+47 [toc 1] 第1章 绪论	15
+48 [toc 2] 1.1 研究背景与意义	15
+49 [toc 2] 1.2 国内外研究现状	15
+50 [toc 3] 1.2.1 近岸水质预测研究进展	15
+51 [toc 3] 1.2.2 多源环境特征在水质预测中的应用	16
+52 [toc 3] 1.2.3 机器学习、深度学习与表格基础模型研究进展	16
+53 [toc 3] 1.2.4 水质预测的空间泛化与时间外推	16
+54 [toc 3] 1.2.5 可解释机器学习在环境预测中的应用	17
+55 [toc 2] 1.3 现有研究的不足	17
+56 [toc 2] 1.4 研究目标与研究内容	17
+57 [toc 2] 1.5 技术路线	17
+58 [toc 2] 1.6 研究创新点	18
+59 [toc 2] 1.7 论文结构	19
+60 [toc 2] 1.8 本章小结	19
+61 [toc 1] 第2章 研究区、监测数据与多源特征构建	20
+62 [toc 2] 2.1 研究区概况	20
+63 [toc 2] 2.2 水质监测数据	21
+64 [toc 2] 2.3 预测指标与任务定义	21
+65 [toc 2] 2.4 多源环境数据及时间空间匹配	22
+66 [toc 2] 2.5 数据清洗与质量控制	22
+67 [toc 2] 2.6 严格特征集的组成与构建	22
+68 [toc 2] 2.7 候选环境数据的探索与筛选	26
+69 [toc 2] 2.8 水质预测实验设计与模型配置	29
+70 [toc 3] 2.8.1 预测任务与验证方案	29
+71 [toc 3] 2.8.2 站点留出与统一五折划分	29
+72 [toc 3] 2.8.3 模型配置与推理环境	29
+73 [toc 3] 2.8.4 复现性控制与数据泄漏防范	29
+74 [toc 3] 2.8.5 分海区与来源消融实验设计	30
+75 [toc 2] 2.9 样本分布及数据特征	30
+76 [toc 2] 2.10 本章小结	31
+77 [toc 1] 第3章 预测模型与解释方法	32
+78 [toc 2] 3.1 预测模型及基本原理	32
+79 [toc 3] 3.1.1 传统机器学习模型	32
+80 [toc 3] 3.1.2 深度学习模型	32
+81 [toc 3] 3.1.3 新型表格学习模型	32
+82 [toc 3] 3.1.4 本文模型选择与比较依据	33
+83 [toc 2] 3.2 模型性能与空间泛化评价指标	33
+84 [toc 2] 3.3 TabICLv2模型的SHAP解释	34
+85 [toc 3] 3.3.1 模型无关SHAP方法与两种预测协议	34
+86 [toc 3] 3.3.2 历史四项代表任务的五折SHAP结果	34
+87 [toc 3] 3.3.3 历史五折特征排名稳定性	35
+88 [toc 3] 3.3.4 十项水质任务第1折P1单查询SHAP解释	35
+89 [toc 2] 3.4 TabICLv2模型的一维ALE响应分析	39
+90 [toc 3] 3.4.1 历史五折响应稳定性分析	39
+91 [toc 3] 3.4.2 十项水质任务的一维ALE响应	42
+92 [toc 2] 3.5 解释结果的可靠性分析	44
+93 [toc 3] 3.5.1 ALE样本与站点覆盖	44
+94 [toc 3] 3.5.2 数值稳定性	46
+95 [toc 2] 3.6 本章小结	48
+96 [toc 1] 第4章 新型表格模型的预测效果与空间泛化能力	49
+97 [toc 2] 4.1 新型表格模型与基准模型的比较框架	49
+98 [toc 3] 4.1.1 十项水质任务的基础预测精度	49
+99 [toc 3] 4.1.2 不同水质指标预测难度的差异	49
+100 [toc 2] 4.2 TabICLv2在十项水质任务中的预测表现	49
+101 [toc 3] 4.2.1 十项水质任务整体预测精度	49
+102 [toc 3] 4.2.2 RMSE和MAE改善情况	50
+103 [toc 3] 4.2.3 逐站点预测改善情况	51
+104 [toc 3] 4.2.4 不同水层及指标的模型差异	51
+105 [toc 2] 4.3 不同验证口径与证据边界	51
+106 [toc 3] 4.3.1 随机划分的评价对象	51
+107 [toc 3] 4.3.2 年份留出的评价对象	52
+108 [toc 3] 4.3.3 正式站点留出结果	52
+109 [toc 2] 4.4 空间泛化稳定性与高误差站点分析	52
+110 [toc 2] 4.5 新型表格模型的适用范围与局限	54
+111 [toc 2] 4.6 本章小结	54
+112 [toc 1] 第5章 空间分区建模与多源特征贡献分析	55
+113 [toc 2] 5.1 分海区建模思路与实验设置	55
+114 [toc 2] 5.2 全域模型与分区模型比较	55
+115 [toc 3] 5.2.1 Chl-a与Secchi的分区效果	55
+116 [toc 3] 5.2.2 TN与TP的分区效果	55
+117 [toc 3] 5.2.3 分区建模的适用边界	55
+118 [toc 2] 5.3 多源特征来源级消融	55
+119 [toc 3] 5.3.1 特征来源分组与消融方法	55
+120 [toc 3] 5.3.2 不同任务的来源贡献	55
+121 [toc 3] 5.3.3 来源贡献的稳定性	57
+122 [toc 3] 5.3.4 遥感输入的实际范围与研究限制	57
+123 [toc 2] 5.4 空间异质性与模型适用边界讨论	57
+124 [toc 2] 5.5 工程应用价值与局限性	58
+125 [toc 2] 5.6 不同任务环境依赖差异	58
+126 [toc 2] 5.7 解释结果与高误差站点的对应关系	58
+127 [toc 2] 5.8 环境解释、空间分区与泛化表现的综合讨论	58
+128 [toc 2] 5.9 本章小结	59
+129 [toc 1] 第6章 结论与展望	60
+130 [toc 2] 6.1 主要研究结论	60
+131 [toc 2] 6.2 研究创新与实际意义	60
+132 [toc 2] 6.3 研究不足与展望	60
+133 [toc 1] 参考文献	62
+134 [toc 1] 致 谢	64
+135 [toc 1] 附 录	65
+136 [toc 2] 附录A 解释分析覆盖范围	65
+137 [toc 2] 附录B 复现与结果路径	65
+138 [toc 2] 附录C TabICLv2局部SHAP解释结果	66
+139 [toc 2] 附录D XGBoost基准模型解释对照	78
+140 [toc 3] D.1 TreeSHAP特征归因	78
+141 [toc 3] D.2 一维ALE响应与稳定性	81
+142 [toc 3] D.3 二维ALE交互与联合覆盖	83
+143 [toc 3] D.4 TreeSHAP与来源消融对照	85
+144 [toc 2] 附录E 十项任务一维ALE完整曲线	87
+145 [toc 2] 附录F 十项任务SHAP独立特征重要性图	97
+146 [toc 2] 附录G 77项严格输入特征清单	102
+147 [toc 1] 个人简历	105
+148 [toc 1] 在学期间的研究成果及发表的学术论文	106
+149 [Normal] 
+150 [Heading 1] 图目录
+151 [Normal] 图1-1 多源环境数据与表格模型的近岸水质预测技术路线	18
+152 [Normal] 图2-1 研究区地理位置与香港近岸水质监测站点分布	20
+153 [Normal] 图2-2 水质监测记录的时间覆盖	21
+154 [Normal] 图2-3 多源环境数据接入与样本主键关系	22
+155 [Normal] 图2-4 叶绿素a、透明度、总氮与总磷的观测分布	30
+156 [Normal] 图3-1 TabICLv2历史五折四项任务SHAP平均绝对贡献	34
+157 [Normal] 图3-2 TabICLv2历史五折SHAP特征排名稳定性	35
+158 [Normal] 图3-3 TabICLv2十项任务第1折SHAP特征贡献（第1组）	36
+159 [Normal] 图3-4 TabICLv2十项任务第1折SHAP特征贡献（第2组）	37
+160 [Normal] 图3-5 TabICLv2十项任务第1折特征重要性排名变化	38
+161 [Normal] 图3-6 TabICLv2叶绿素a表层历史五折一维ALE响应	39
+162 [Normal] 图3-7 TabICLv2透明度历史五折一维ALE响应	40
+163 [Normal] 图3-8 TabICLv2TN表层历史五折一维ALE响应	41
+164 [Normal] 图3-9 TabICLv2TP中层历史五折一维ALE响应	42
+165 [Normal] 图3-10 TabICLv2叶绿素a表层第1折P1一维ALE响应	43
+166 [Normal] 图3-11 TabICLv2透明度第1折P1一维ALE响应	43
+167 [Normal] 图3-12 TabICLv2TN表层第1折P1一维ALE响应	44
+168 [Normal] 图3-13 TabICLv2TP中层第1折P1一维ALE响应	44
+169 [Normal] 图3-14 TabICLv2十项任务一维ALE各分箱样本数	45
+170 [Normal] 图3-15 TabICLv2十项任务一维ALE各分箱独立站点数	46
+171 [Normal] 图3-16 TabICLv2九项任务P1单查询重复预测范围	47
+172 [Normal] 图3-17 TabICLv2历史数值波动与解释效应尺度对照	48
+173 [Normal] 图4-1 十项任务总体提升与站点改善覆盖	50
+174 [Normal] 图4-2 不同指标与水层的模型提升差异	51
+175 [Normal] 图4-3 不同验证口径下的模型比较范围	52
+176 [Normal] 图4-4 四个代表任务中XGBoost、TabICLv2、TabPFN和TabM的比较	53
+177 [Normal] 图5-1 四个代表任务的多源环境信息消融比较	57
+178 [Normal] 图C-1 叶绿素a表层典型样本SHAP局部贡献	66
+179 [Normal] 图C-2 叶绿素a中层典型样本SHAP局部贡献	67
+180 [Normal] 图C-3 叶绿素a底层典型样本SHAP局部贡献	67
+181 [Normal] 图C-4 透明度典型样本SHAP局部贡献	68
+182 [Normal] 图C-5 TN表层典型样本SHAP局部贡献	68
+183 [Normal] 图C-6 TN中层典型样本SHAP局部贡献	69
+184 [Normal] 图C-7 TN底层典型样本SHAP局部贡献	70
+185 [Normal] 图C-8 TP表层典型样本SHAP局部贡献	71
+186 [Normal] 图C-9 TP中层典型样本SHAP局部贡献	71
+187 [Normal] 图C-10 TP底层典型样本SHAP局部贡献	72
+188 [Normal] 图C-11 叶绿素a表层SHAP分布（3个独立样本及1次种子重复）	72
+189 [Normal] 图C-12 叶绿素a中层SHAP分布（3个独立样本及1次种子重复）	73
+190 [Normal] 图C-13 叶绿素a底层SHAP分布（3个独立样本及1次种子重复）	73
+191 [Normal] 图C-14 透明度SHAP分布（3个独立样本及1次种子重复）	74
+192 [Normal] 图C-15 TN表层SHAP分布（3个独立样本及1次种子重复）	74
+193 [Normal] 图C-16 TN中层SHAP分布（3个独立样本及1次种子重复）	75
+194 [Normal] 图C-17 TN底层SHAP分布（3个独立样本及1次种子重复）	75
+195 [Normal] 图C-18 TP表层SHAP分布（3个独立样本及1次种子重复）	76
+196 [Normal] 图C-19 TP中层SHAP分布（3个独立样本及1次种子重复）	76
+197 [Normal] 图C-20 TP底层SHAP分布（3个独立样本及1次种子重复）	77
+198 [Normal] 图D-1 数值等价受控复现XGBoost模型的四项任务TreeSHAP主要特征重要性	78
+199 [Normal] 图D-2 数值等价受控复现XGBoost模型的叶绿素a表层TreeSHAP总体解释	79
+200 [Normal] 图D-3 数值等价受控复现XGBoost模型的透明度TreeSHAP总体解释	79
+201 [Normal] 图D-4 数值等价受控复现XGBoost模型的TN表层TreeSHAP总体解释	80
+202 [Normal] 图D-5 数值等价受控复现XGBoost模型的TP中层TreeSHAP总体解释	80
+203 [Normal] 图D-6 数值等价受控复现XGBoost模型的叶绿素a表层一维ALE响应	81
+204 [Normal] 图D-7 数值等价受控复现XGBoost模型的透明度一维ALE响应	81
+205 [Normal] 图D-8 数值等价受控复现XGBoost模型的TN表层一维ALE响应	82
+206 [Normal] 图D-9 数值等价受控复现XGBoost模型的TP中层一维ALE响应	82
+207 [Normal] 图D-10 数值等价受控复现XGBoost模型的四项任务一维ALE稳定性	83
+208 [Normal] 图D-11 数值等价受控复现XGBoost模型的叶绿素a表层二维ALE交互	83
+209 [Normal] 图D-12 数值等价受控复现XGBoost模型的透明度二维ALE交互	83
+210 [Normal] 图D-13 数值等价受控复现XGBoost模型的TN表层二维ALE交互	84
+211 [Normal] 图D-14 数值等价受控复现XGBoost模型的TP中层二维ALE交互	84
+212 [Normal] 图D-15 数值等价受控复现XGBoost模型的二维ALE联合覆盖	84
+213 [Normal] 图D-16 数值等价受控复现XGBoost模型的TreeSHAP贡献与来源消融对照	85
+214 [Normal] 图D-17 数值等价受控复现XGBoost模型的四项任务主要特征重要性比较	86
+215 [Normal] 图E-1 TabICLv2叶绿素a表层第1折风速一维ALE响应（P1单查询）	87
+216 [Normal] 图E-2 TabICLv2叶绿素a表层第1折前1日风速一维ALE响应（P1单查询）	87
+217 [Normal] 图E-3 TabICLv2叶绿素a中层第1折风速一维ALE响应（P1单查询）	88
+218 [Normal] 图E-4 TabICLv2叶绿素a中层第1折风速平方一维ALE响应（P1单查询）	88
+219 [Normal] 图E-5 TabICLv2叶绿素a底层第1折2 m气温一维ALE响应（P1单查询）	89
+220 [Normal] 图E-6 TabICLv2叶绿素a底层第1折前1日2 m气温一维ALE响应（P1单查询）	89
+221 [Normal] 图E-7 TabICLv2透明度第1折3日太阳辐射总量一维ALE响应（P1单查询）	90
+222 [Normal] 图E-8 TabICLv2透明度第1折3日平均2 m气温一维ALE响应（P1单查询）	90
+223 [Normal] 图E-9 TabICLv2TN表层第1折2 m气温日变化一维ALE响应（P1单查询）	91
+224 [Normal] 图E-10 TabICLv2TN表层第1折前1日风速一维ALE响应（P1单查询）	91
+225 [Normal] 图E-11 TabICLv2TN中层第1折2 m气温日变化一维ALE响应（P1单查询）	92
+226 [Normal] 图E-12 TabICLv2TN中层第1折10 m经向风一维ALE响应（P1单查询）	92
+227 [Normal] 图E-13 TabICLv2TN底层第1折前2日2 m气温一维ALE响应（P1单查询）	93
+228 [Normal] 图E-14 TabICLv2TN底层第1折3日平均2 m气温一维ALE响应（P1单查询）	93
+229 [Normal] 图E-15 TabICLv2TP表层第1折前2日2 m气温一维ALE响应（P1单查询）	94
+230 [Normal] 图E-16 TabICLv2TP表层第1折10 m纬向风一维ALE响应（P1单查询）	94
+231 [Normal] 图E-17 TabICLv2TP中层第1折前1日2 m气温一维ALE响应（P1单查询）	95
+232 [Normal] 图E-18 TabICLv2TP中层第1折总云量一维ALE响应（P1单查询）	95
+233 [Normal] 图E-19 TabICLv2TP底层第1折前1日2 m气温一维ALE响应（P1单查询）	96
+234 [Normal] 图E-20 TabICLv2TP底层第1折前1日风速一维ALE响应（P1单查询）	96
+235 [Normal] 图F-1 TabICLv2叶绿素a表层第1折主要特征平均绝对SHAP贡献	97
+236 [Normal] 图F-2 TabICLv2叶绿素a中层第1折主要特征平均绝对SHAP贡献	97
+237 [Normal] 图F-3 TabICLv2叶绿素a底层第1折主要特征平均绝对SHAP贡献	98
+238 [Normal] 图F-4 TabICLv2透明度第1折主要特征平均绝对SHAP贡献	98
+239 [Normal] 图F-5 TabICLv2TN表层第1折主要特征平均绝对SHAP贡献	99
+240 [Normal] 图F-6 TabICLv2TN中层第1折主要特征平均绝对SHAP贡献	99
+241 [Normal] 图F-7 TabICLv2TN底层第1折主要特征平均绝对SHAP贡献	100
+242 [Normal] 图F-8 TabICLv2TP表层第1折主要特征平均绝对SHAP贡献	100
+243 [Normal] 图F-9 TabICLv2TP中层第1折主要特征平均绝对SHAP贡献	101
+244 [Normal] 图F-10 TabICLv2TP底层第1折主要特征平均绝对SHAP贡献	101
+245 [Heading 1] 表目录
+246 [Normal] 表0-1 主要符号与含义	14
+247 [Normal] 表2-1 十项正式预测任务及样本规模	21
+248 [Normal] 表2-2 严格特征集的来源分组	23
+249 [Normal] 表2-3 77项严格输入特征的名称、来源与构造	23
+250 [Normal] 表2-4 历史候选环境数据的来源、覆盖与筛选结果	27
+251 [Normal] 表2-5 XGBoost解释模型资产核验	29
+252 [Normal] 表3-1 主要评价指标及解释	33
+253 [Normal] 表3-2 十项水质任务第1折P1单查询SHAP主要变量与证据覆盖	38
+254 [Normal] 表4-1 十项任务的XGBoost站点留出基准结果	49
+255 [Normal] 表4-2 TabICLv2相对XGBoost的十任务比较	49
+256 [Normal] 表4-3 四个代表任务的现代模型比较	53
+257 [Normal] 表5-1 四个代表任务的来源级消融结果	55
+258 [Heading 1] 主要符号表
+259 [表题] 表0-1 主要符号与含义
+260 [Heading 1] 第1章 绪论
+261 [Heading 2] 1.1 研究背景与意义
+262 [Normal] 近岸海域连接陆源输入与外海交换，水质同时受径流、潮汐、季风、辐射、海温和城市活动影响。香港海岸线曲折，港湾、半封闭水域与外海水域并存，使相同指标在不同站点和水层呈现不同的变化范围。常规监测能够提供可靠的站点观测，但在连续覆盖和空间外推方面仍存在限制。
+263 [Normal] 水质预测的实际价值不仅在于提高已见样本上的拟合精度，还在于判断模型能否迁移到训练阶段未出现的站点。随机划分常把同一站点的不同时期同时放入训练集和测试集，得到的结果更接近同分布插值；站点留出则要求模型面对新的空间位置，难度更高，也更接近监测网络扩展时的应用情形。
+264 [Normal] 多源环境特征能够补充单次采样难以表达的背景过程。气象变量描述热力与风场条件，降雨和潮汐变量提供陆源输入与水动力代理，海洋物理信息反映海气状态，夜间灯光可作为人类活动强度代理，时间和空间变量则刻画长期趋势、季节周期及地理位置。将这些信息纳入统一验证框架，有助于区分模型提升来自何种信息，而不是仅比较一个汇总分数。
+265 [Heading 2] 1.2 国内外研究现状
+266 [Heading 3] 1.2.1 近岸水质预测研究进展
+267 [Normal] 近岸水质预测同时面临监测站点分布不均与环境信息异质性。已有海岸带水质机器学习研究将环境特征与时空验证结合，说明随机划分、留站验证和解释方法回答的问题并不相同[15]。本文据此把未见站点误差作为主要评价对象，而将解释结果限定为模型在给定训练数据和特征体系下的统计响应。
+268 [Normal] 水质预测经历了从经验统计模型、时间序列模型到集成学习和深度学习的发展。线性与广义加性模型便于解释，但面对变量间非线性和交互时表达能力有限；随机森林、梯度提升树等方法能够处理混合尺度变量、缺失和复杂交互，已成为环境表格数据的重要基准。近岸场景还要求研究者处理站点依赖、空间异质性和极端值样本不足等问题，因此模型评价必须与数据划分方式共同报告。 随机森林[8]与梯度提升框架[9]提供了传统树集成的两条方法线索，本文选择XGBoost作为统一树模型基准。
+269 [Heading 3] 1.2.2 多源环境特征在水质预测中的应用
+270 [Normal] 现有研究常融合气象、降雨、海温、遥感反射率、地形和土地利用等信息。不同数据源的时空分辨率与缺失机制并不一致，直接拼接可能引入错配或信息泄漏。对于中、底层水质，表面遥感变量的代表性尤其需要谨慎；经纬度和月份即使具有较高预测贡献，也主要反映空间或季节定位，不能直接解释为物理作用。
+271 [Heading 3] 1.2.3 机器学习、深度学习与表格基础模型研究进展
+272 [Normal] 传统机器学习为水质预测提供了从线性基准到非线性集成的多层方法。线性回归（LR）便于识别总体线性关系，支持向量回归（SVR）利用核函数处理非线性且对核及参数选择敏感；随机森林（RF）、梯度提升决策树（GBDT）与XGBoost则适于处理多源监测变量的非线性关系。已有珠江流域与近岸海域研究分别比较了SVR、RF、XGBoost等方法，提示模型表现取决于预测指标、特征可用性和验证方式，而非某一算法的普遍优势[15,18,20]。
+273 [Normal] 深度学习将特征表示与预测函数结合。人工神经网络及多层感知机（ANN/MLP）适合固定长度的多变量输入；卷积网络（CNN）可提取局部空间或时间模式，循环网络（RNN）及其LSTM、GRU变体主要用于连续监测序列中的时序依赖，Transformer则借助注意力机制处理较长序列。在实际水质研究中，CNN-LSTM被用于溶解氧预测，Transformer式方法也用于长序列水质预测[19,21]。这些研究的预测时间步长和输入粒度与本文的站点—日期结构化样本并不相同，不能把其报告精度直接与本文留站结果比较。
+274 [Normal] 面向表格数据的新型模型进一步探索了预训练与高效神经网络的适用边界。TabPFN和TabICLv2通过预训练形成跨任务的上下文预测能力[2,13]；TabM则是参数共享的表格神经网络集成方法，并非预训练表格基础模型[4]。目前仍需在统一特征、站点隔离和相同评价尺度下检验这些方法在近岸多水层水质任务中的表现；本文据此设置传统树模型基准、表格神经网络及预训练表格模型的对照，而不将未运行的其他算法列为本文实证结果。
+275 [Heading 3] 1.2.4 水质预测的空间泛化与时间外推
+276 [Normal] 当同一站点的观测在训练与测试两侧重复出现时，随机验证可能高估面向新地点的外推表现。具有空间或时间依赖的数据需要与研究目标匹配的阻断验证策略[14]。本文以站点留出为正式主结果，年份留出与随机划分则用于界定不同预测场景，不把三类验证的分数视为可直接配对的同一指标。
+277 [Normal] 随机划分、年份留出与站点留出回答不同问题。随机划分衡量同一总体分布内的插值能力；年份留出强调时间外推；站点留出强调空间迁移。三者的样本依赖结构、难度和误差来源不同，R²差值不能脱离划分方式直接比较。本文以正式站点留出结果为主，并用其他验证场景说明模型结论的边界。
+278 [Heading 3] 1.2.5 可解释机器学习在环境预测中的应用
+279 [Normal] SHAP基于合作博弈中的Shapley值，将单个预测分解为各特征贡献；TreeSHAP为树模型提供高效且一致的计算方法[5-6]。ALE通过比较局部区间内特征变化导致的预测差异并累积中心化，能够在相关特征存在时减少对数据分布之外区域的外推[7]。二者解释的是已训练模型在给定数据分布下的统计响应，不能单独证明环境变量之间的因果关系。 对解释对象、特征相关性和数值稳定性的区分亦符合可解释机器学习的通用方法讨论[10]。
+280 [Heading 2] 1.3 现有研究的不足
+281 [Normal] 现有研究的关键挑战是验证对象与应用目标不匹配：同站点随机划分容易掩盖新站点误差，跨指标统一分数又会忽略量纲和样本量差异。本文通过统一77特征、冻结站点划分、逐站点误差、来源级消融和覆盖约束下的SHAP/ALE分析，把性能、解释和证据范围连接起来。
+282 [Heading 2] 1.4 研究目标与研究内容
+283 [Normal] 本文旨在构建面向香港近岸多指标、多水层任务的可复现预测与解释框架。工作包括：建立2014—2024年多源环境特征表；在十项正式站点留出任务比较XGBoost与TabICLv2；在四项代表任务纳入TabPFN和TabM；结合逐站点误差与站点bootstrap讨论空间泛化；利用冻结来源消融和分区结果分析任务差异；以TabICLv2为主要对象开展模型无关SHAP和一维ALE解释，并对二维候选只做联合支持审查。XGBoost受控复现模型的TreeSHAP/ALE作为独立基准解释置于附录D。
+284 [Heading 2] 1.5 技术路线
+285 [Normal] 研究流程包括数据整理与特征匹配、冻结任务与空间划分、模型比较、稳健性检验、可解释性分析以及分区和消融对照。图1-1仅展示已完成工作，不包含尚未开展的实时部署或因果识别。
+286 [Normal] 
+287 [图题] 图1-1 多源环境数据与表格模型的近岸水质预测技术路线
+288 [Heading 2] 1.6 研究创新点
+289 [Normal] 本文的贡献集中在应用验证：将TabICLv2用于香港近岸多指标、多水层预测，并在同一77特征和严格留站划分下与XGBoost比较；通过pooled OOF、逐站点误差和站点bootstrap同时评价总体精度与空间覆盖；结合分区建模、来源消融及TabICLv2解释结果，识别不同水质任务对环境输入的统计依赖。
+290 [Heading 2] 1.7 论文结构
+291 [Normal] 全文共六章。第1章提出近岸水质预测的空间泛化问题；第2章介绍研究区、监测数据和77项严格特征；第3章介绍四种候选模型的基本原理、统一实验设计、评价指标及模型解释方法；第4章分析十任务预测精度与站点异质性；第5章讨论区域建模、来源消融与任务环境依赖；第6章总结主要结论、限制和后续工作。
+292 [Heading 2] 1.8 本章小结
+293 [Normal] 本章明确了本文关注的核心不是单一模型分数，而是统一条件下的性能比较、未见站点泛化和解释边界。后续章节据此依次给出数据、方法、结果与讨论。
+294 [Heading 1] 第2章 研究区、监测数据与多源特征构建
+295 [Heading 2] 2.1 研究区概况
+296 [Normal] 研究区位于香港近岸及其邻近海域，涵盖河口、港湾和外海交换环境。本文采用香港环境保护署的海水水质监测数据，原始观测网络覆盖 94 个监测站点。根据指标的有效记录及实验任务设置，叶绿素 a、总氮和总磷的正式预测任务使用其中 84 个站点，透明度任务使用 94 个站点。图 2-1 给出研究区域的位置、地理位置、海岸线和监测站点分布。不同海区的空间位置和监测密度差异为后文的留站验证、站点误差比较及分区建模提供地理背景。
+297 [Normal] 
+298 [图题] 图2-1 研究区地理位置与香港近岸水质监测站点分布
+299 [Normal] 注：深蓝点为Chl-a、TN和TP共同正式任务的84个站点，灰点为原始监测网络中的其余10站；Secchi任务覆盖全部94站。站点坐标来自香港环境保护署监测网络，陆地与道路底图采用Natural Earth 10m数据。
+300 [Heading 2] 2.2 水质监测数据
+301 [Normal] 水质观测时间范围为2014—2024年，主要研究指标为Chl-a、Secchi、TN和TP。Chl-a、TN与TP按表层、中层和底层建立任务；Secchi为站点—日期尺度的塞氏盘透明度观测，正式闭环中作为单任务处理，避免把重复的水层记录当作三项独立证据。 监测网络与官方水质数据来源见香港环境保护署资料[11]。
+302 [Normal] 
+303 [图题] 图2-2 水质监测记录的时间覆盖
+304 [Heading 2] 2.3 预测指标与任务定义
+305 [表题] 表2-1 十项正式预测任务及样本规模
+306 [Normal] 注：C、T、P分别表示Chl-a、TN、TP Family V2统一站点五折划分；S表示Secchi冻结站点留出划分。
+307 [Normal] 最终闭环登记包含10项核心任务，而非早期方案中的12个候选任务。样本数以最终主登记表为准：Chl-a三水层分别为9783、9456和9783；TN与TP表、中、底层分别为9307、9000和9307；Secchi为10866。
+308 [Heading 2] 2.4 多源环境数据及时间空间匹配
+309 [Normal] 模型输入由气象、降雨—水文—潮汐、海洋物理、人类活动代理、时间过程和空间静态六类信息组成。外部变量依据站点、日期或相应时间窗口与观测匹配；滞后和滚动特征只使用预测时点之前的信息。无法从冻结清单确认的字段来源不在正文中补造。 气象再分析输入的来源记录为ERA5单层小时数据[12]。
+310 [Normal] 
+311 [图题] 图2-3 多源环境数据接入与样本主键关系
+312 [Heading 2] 2.5 数据清洗与质量控制
+313 [Normal] 数据处理保留观测标识并核对站点、日期、水层和目标变量。模型缺失值处理在每一折内独立完成：仅使用该折训练样本拟合中位数填补器，再应用于训练集和测试集，从而避免测试分布进入预处理。受控复现进一步固定float32输入、原样本顺序、目标变换与非负截断规则。
+314 [Heading 2] 2.6 严格特征集的组成与构建
+315 [Normal] 为比较不同预测模型在相同信息条件下的表现，本研究统一采用 77 项输入变量构成严格特征集 X_strict。该特征集在正式模型比较前确定，包含气象、降雨—水文—潮汐、海洋物理、人类活动代理、时间过程和空间静态六类信息。各类别的变量数分别为 29、22、11、6、7 和 2 项，合计 77 项。所谓“严格”，是指变量来自已确认的多源数据及其预先构造的历史统计量，且在不同模型中保持统一名称、顺序和划分条件，并不意味着这 77 项变量在每个任务中均具有相同的预测贡献。
+316 [Normal] 气象类变量用于描述风场、气温、云量及辐射条件，包括原始环境量和按观测日期匹配的滞后、滚动与交互统计量。例如，ssrd_sum_3d 表示三日太阳辐射总量，wind_speed_lag1 表示同站上一采样时次风速，wind_speed_x_rain14d 为风速与十四日降雨统计量的组合特征。降雨—水文—潮汐类变量提供与陆源输入和水位变化相关的背景信息；海洋物理类变量包括 sst_mean_3d 等海温统计量。人类活动代理类包含 ntl_avg_rad 等夜间灯光指标。时间过程类包括 year_offset、month_sin 等长期变化与季节周期编码，空间静态类包括监测站经度 lon 和纬度 lat。表 2-2 对六类变量的数量、代表特征与信息作用进行归纳，完整 77 项字段及其定义列于附录 G。
+317 [表题] 表2-2 严格特征集的来源分组
+318 [Normal] 注：组别缩写 MET、RHT、OCN、HUM、TMP、SPA 与附录 G 一致。
+319 [Normal] 所有外部变量均以站点和观测日期为匹配基础。带有 lag、3d 或 14d 等标识的历史特征按冻结生成程序构建：3d和14d窗使用采样日前的自然日，lag表示同站前序采样记录，并非前一自然日。rain_month为采样所在日历月的整月累计降雨量，其观测当日可得性仍须核查。对于空间坐标等静态变量，同一站点不同时次记录共享其地理属性；时间编码则由观测日期生成。为避免预处理过程使用测试信息，每折仅在训练样本上拟合缺失值中位数填补器，并将相同统计量应用于该折测试样本。四类模型使用相同的 77 项输入定义；具体变量在不同指标或水层中的重要程度通过后续 SHAP 和消融结果进行评价，而不预先设定。
+320 [Normal] 正式77项变量的精确字段名、中文含义、数据来源和时间尺度见表2-3。为保持训练输入的冻结顺序，下表按manifest逐项排列，以类别列标明六个来源组，而不按组别重新排序；序号即模型输入列序号。附录G在相同顺序下另保留单位和更完整的构造说明。
+321 [表题] 表2-3 77项严格输入特征的名称、来源与构造
+322 [Normal] 注：MET为气象，RHT为降雨—水文—潮汐，OCN为海洋物理，HUM为人类活动代理，TMP为时间过程，SPA为空间静态。表内“前1次采样”等滞后量基于同站前序采样记录；rain_month为整月累计，潮差的业务时点可得性仍需核查。
+323 [Heading 2] 2.7 候选环境数据的探索与筛选
+324 [Normal] 在确定统一的严格特征集之前，研究曾探索海洋再分析与生物地球化学场、光学卫星观测、近岸空间结构及额外水文气象代理。扩充的目的在于检验不同来源能否为近岸水质任务提供超出已有气象、降雨、海温、夜间灯光与站点位置的信息。候选数据首先接受站点—日期匹配和缺失审查；只有完成预测对照的来源才讨论性能变化。空间格网或月产品与站点观测存在尺度差异，近岸光学产品亦可能受有效像元与复杂水色条件限制，这些是解释负迁移的可能因素而非本研究已证实的原因[16-17]。
+325 [Normal] 历史年份留出A/B与本文正式五折留站评价的样本和验证口径不同，表2-4中的历史指标仅用于说明当时的候选筛选过程，不能与第四章正式预测结果直接并列。以Chl-a中层为例，CMEMS BGC候选在历史测试集上使R²由0.3646升至0.3928、RMSE由3.8751降至3.7879、MAE由2.4261降至2.2885（训练5,988、测试1,788），但验证R²由0.2467降至0.2161；CMEMS Physics候选的测试R²由0.3646升至0.3772、RMSE由3.8751降至3.8363、MAE由2.4261降至2.3739，验证R²则由0.2467降至0.2156。两者具有局部正信号，却不构成跨任务稳定增益。
+326 [Normal] 与此相对，NASA OceanColor月尺度候选在Chl-a表层历史测试集（训练6,882、测试2,052）中的R²由0.3298降至0.2232，RMSE由5.1970升至5.5952，MAE由3.0433升至3.3046；Sentinel-2 patch同任务测试R²由0.3298降至0.2821。岸线距离在TN表层测试集使R²由0.5201小幅升至0.5245，RMSE由0.3411降至0.3396，MAE由0.2473降至0.2440（训练6,882、测试2,052），但这一局部变化不足以支持统一入模。以上仅描述原历史A/B的结果，不将月尺度光学或静态地理代理概括为对所有任务“无效”。
+327 [Normal] 另有数据源只达到获取、字段构造或覆盖验证阶段。例如，Sentinel-3 OLCI候选表可定位部分光学字段，但本次未找到可独立归属的正式预测A/B；GEBCO未形成稳定的研究区数值特征；GPM IMERG完成产品发现而样本下载受账户条款阻断；CHIRPS和ERA5-Land主要停留在可行性调查。这些来源不应写成“预测无效”。正式模型最终仍采用预先冻结的77项统一输入，其中VIIRS夜间灯光六项相关字段明确保留。对于未进入正式输入的候选，仅在表2-4与核验报告中保留其探索证据。
+328 [Normal] 
+329 [表题] 表2-4 历史候选环境数据的来源、覆盖与筛选结果
+330 [Normal] 注：表内历史A/B均非第四章正式站点五折结果；E01—E17的完整文件路径、覆盖与状态见随文核验表。“未定位到A/B”表示证据不足，不能据此判断预测无效；VIIRS为正式77项之一。
+331 [Normal] 
+332 [Heading 2] 2.8 水质预测实验设计与模型配置
+333 [Heading 3] 2.8.1 预测任务与验证方案
+334 [Normal] 预测任务按2.3节的指标与水层定义，包括Chl-a、TN和TP各三水层及Secchi单任务，共十项。所有正式模型采用X_strict_77。预处理在折内完成，测试标签不参与特征筛选、缺失值统计或解释变量筛选。不同模型的输出均转换回原始水质尺度后评价。
+335 [Normal] 本文区分随机划分、年份留出和站点留出三种泛化问题。随机划分与年份留出仅在协议和数据版本可追溯时作为补充验证方案，不与正式站点留出结果混作同口径配对比较。
+336 [Heading 3] 2.8.2 站点留出与统一五折划分
+337 [Normal] 正式主结果采用冻结五折站点留出：同一站点在任一折只属于训练集或测试集的一侧，使OOF预测面向未见监测站点，而非同站点跨日期插值[14]。
+338 [Normal] Chl-a、TN和TP使用各自Family V2统一站点划分；Secchi沿用冻结的历史站点留出方案。每折产生逐样本预测、折指标与站点指标，随后汇总pooled OOF R²、RMSE、MAE、折均值、站点胜率和配对bootstrap区间。
+339 [Heading 3] 2.8.3 模型配置与推理环境
+340 [Normal] 正式预测沿用各Family V2及Secchi冻结配置。解释运行使用官方TabICL回归器适配器、随机种子42、float32输入和预训练权重；日志记录模型文件哈希及训练上下文哈希。另行受控复现的20个XGBoost折模型在事前容差下逐样本预测达到20/20折数值等价，但它们不是找回的原始冻结二进制，仅供附录D的基准模型解释。
+341 [表题] 表2-5 XGBoost解释模型资产核验
+342 [Heading 3] 2.8.4 复现性控制与数据泄漏防范
+343 [Normal] 站点折由冻结station-fold map及逐样本manifest指定，先按obs_id取出训练和测试记录，再核验两侧站点集合不相交。每折中位数填补器仅在训练样本拟合，所得统计量原样用于测试样本；统一77特征在建模前冻结，解释候选变量只从该清单与训练样本覆盖中选择，不使用测试标签作筛选依据。对非负目标，目标变换参数和上下文标签只从训练折获得；模型预测经expm1逆变换及既定非负约束回到原始单位后，才与测试目标比较。随机种子、预训练权重哈希、特征顺序哈希、训练obs_id顺序哈希和上下文哈希共同约束复现；历史批查询与P1单查询的预测协议分别留痕。
+344 [Heading 3] 2.8.5 分海区与来源消融实验设计
+345 [Normal] 分海区建模在留站验证下比较全域与区域模型，来源消融按冻结77特征分组逐次删除一个来源组；两者均沿用原实验的训练与评价口径。二者与TabICLv2解释图件不是同一模型上的同一种统计量，因此后文只讨论证据是否相互呼应，不把XGBoost消融差值表述为TabICLv2内部贡献。
+346 [Heading 2] 2.9 样本分布及数据特征
+347 [Normal] 四类水质指标量纲与分布范围不同，Chl-a高值样本具有明显偏态，TN和TP在空间与水层间也存在差异。本文因此分别报告R²、RMSE和MAE，不跨指标直接比较RMSE绝对值，并在图表中保留各目标的实际单位。
+348 [Normal] 
+349 [图题] 图2-4 叶绿素a、透明度、总氮与总磷的观测分布
+350 [Normal] 注：Chl-a、TN和TP按三水层绘制；透明度按唯一站点—日期记录绘制一次，不重复计入水层。箱线图不显示离群点，纵轴为对数刻度。
+351 [Heading 2] 2.10 本章小结
+352 [Normal] 本章界定了研究对象、10项正式任务和77项严格输入，完整列示各字段及其构造依据；同时梳理了历史环境数据扩充的来源、覆盖和验证边界。统一的观测标识、冻结站点划分、折内预处理、模型配置及来源分类为后续模型比较、消融与解释提供可追溯基础，候选数据的探索性结果不替代正式站点留出结论。
+353 [Heading 1] 第3章 预测模型与解释方法
+354 [Heading 2] 3.1 预测模型及基本原理
+355 [Normal] 本节按传统机器学习、深度学习和新型表格学习三个层次说明模型思想。未在本文正式实验中运行的算法仅用于界定方法发展脉络，不赋予本文实验配置或性能结论。
+356 [Heading 3] 3.1.1 传统机器学习模型
+357 [Normal] 线性回归（LR）以固定系数表达输入与目标的平均线性关系；支持向量回归（SVR）通过间隔约束与核函数表达非线性；随机森林（RF）利用自助采样与树集成降低单树方差；梯度提升决策树（GBDT）顺序拟合前序模型的残差。XGBoost在提升树目标函数中引入正则化和高效分裂搜索，适合处理异质的结构化环境变量[1,8-9]。水质预测文献已在近岸海域和流域数据上应用这些方法[15,18,20]，但不同研究的目标、样本与划分不能直接横比。本文实际运行的传统机器学习基准为XGBoost；LR、SVR、RF和一般GBDT仅作方法背景。
+358 [Heading 3] 3.1.2 深度学习模型
+359 [Normal] ANN/MLP通过多层非线性变换学习固定长度特征表示；CNN适于从局部网格或短窗口提取模式；RNN及LSTM、GRU适于有明确时间顺序的连续监测序列；Transformer利用自注意力建模较长序列关系。已有水质研究在溶解氧、营养盐等时序预测中使用CNN-LSTM与Transformer式方法[19,21]。这些序列模型通常依赖时间窗与时序预测目标，而本文正式任务以站点—日期表格记录和留站测试为核心，故本研究不报告ANN、CNN、RNN、LSTM、GRU或普通Transformer的实测结果。
+360 [Heading 3] 3.1.3 新型表格学习模型
+361 [Normal] TabM是基于MLP与参数共享集成思想的表格神经网络，在每项任务内拟合参数；它不是预训练表格基础模型[4]。TabPFN与TabICLv2则利用预训练权重，将当前任务带标签训练样本与待测样本共同构成条件预测上下文[2,13]。本文的TabICLv2推理固定训练上下文、77项特征顺序与预训练权重，并在各项任务的冻结站点划分下评估；非负目标按既定log1p协议处理，预测经expm1恢复原始单位。四模型的具体配置、划分和折内预处理见2.8节，解释分析仅针对所登记预测协议。
+362 [Heading 3] 3.1.4 本文模型选择与比较依据
+363 [Normal] 四项代表任务的同口径pooled OOF结果见表4-3。TabICLv2在Chl-a表层、Secchi和TP中层的pooled R²分别为0.589、0.602和0.472，位于四模型之首；TN表层则由TabPFN取得0.417，略高于TabICLv2的0.402。TabM在Chl-a表层与Secchi具有竞争力，但在TN表层和TP中层相对较弱。误差指标也提示不能只看R²：例如Secchi的TabM MAE为0.4407 m，低于TabICLv2的0.4486 m；TN表层的TabPFN RMSE/MAE为0.3220/0.1382 mg/L，均低于TabICLv2的0.3261/0.1420 mg/L。
+364 [Normal] 据此，本文以TabICLv2为十项水质任务的重点研究与正文解释对象，使用XGBoost作为传统树模型基准，并将TabPFN和TabM用于四项代表任务的扩展比较。模型优势随指标而异，不将TabICLv2写为所有任务的绝对最优。完整的四模型性能、单位与空间泛化结果均在第四章报告；附录D的XGBoost TreeSHAP/ALE为独立基准解释，不与TabICLv2归因混用。
+365 [Heading 2] 3.2 模型性能与空间泛化评价指标
+366 [Normal] 设测试样本真实值为yᵢ、预测值为ŷᵢ、测试均值为ȳ、样本数为n。决定系数R²=1−Σ(yᵢ−ŷᵢ)²/Σ(yᵢ−ȳ)²；均方根误差RMSE=√[Σ(yᵢ−ŷᵢ)²/n]；平均绝对误差MAE=Σ|yᵢ−ŷᵢ|/n。R²越高、误差指标越低表示同任务内预测更好。本文不另设与R²定义相同而未独立用于正式结果的NSE小节。
+367 [Normal] pooled OOF指标将各折互斥测试预测合并后计算一次，fold_R2_mean则先逐折计算R²再求平均。两者分母、样本权重不同，不相互替代。逐站点RMSE胜率定义为TabICLv2站点RMSE低于XGBoost的站点占比；MAE胜率同理，使用同一任务、同一站点集合上的配对比较。
+368 [Normal] 不确定性描述采用冻结脚本中的1000次站点聚类bootstrap：每次有放回抽取站点，并连同该站全部观测及两模型的成对预测一起重采样，再计算ΔRMSE与ΔMAE分布的2.5%和97.5%分位数。该做法尊重同站点观测相关性，但区间仍只概括既定站点总体内的重采样波动，不应外推为独立海域的泛化保证。
+369 [表题] 表3-1 主要评价指标及解释
+370 [Heading 2] 3.3 TabICLv2模型的SHAP解释
+371 [Heading 3] 3.3.1 模型无关SHAP方法与两种预测协议
+372 [Normal] TabICLv2历史四任务五折SHAP使用固定批查询条件下的模型无关解释；后续十任务扩展采用P1单查询预测函数。历史20折SHAP已完成计算，但其中部分折未达到预登记的严格逐样本预测复现门槛，不能写作全部稳定通过。SHAP贡献仅反映模型预测中的特征归因，不代表环境因果效应。
+373 [Heading 3] 3.3.2 历史四项代表任务的五折SHAP结果
+374 [Normal] 
+375 [图题] 图3-1 TabICLv2历史五折四项任务SHAP平均绝对贡献
+376 [Normal] 图3-1展示四项代表任务的历史五折平均绝对SHAP贡献。经纬度在多个任务中排名靠前，说明模型利用了空间定位信息；不同任务的其他重要变量见图。该结果基于历史固定批查询条件，不与后续P1单查询SHAP原始绝对值直接比较。
+377 [Normal] 历史模型无关SHAP覆盖四项代表任务全部20折，共175个任务—折—样本文件，每个样本保留77项特征归因。计算覆盖不等于质量门槛全部通过；历史解释最终状态为部分完成，折间排名的支持程度亦因任务而异。
+378 [Heading 3] 3.3.3 历史五折特征排名稳定性
+379 [Normal] 图3-2展示历史四项任务五折间的特征排名稳定性；计算覆盖和排名支持程度应分别评价。
+380 [Normal] 
+381 [图题] 图3-2 TabICLv2历史五折SHAP特征排名稳定性
+382 [Heading 3] 3.3.4 十项水质任务第1折P1单查询SHAP解释
+383 [Normal] 图3-3与图3-4压缩呈现十项任务第1折P1单查询SHAP贡献，各任务独立排序；图3-5只展示任务内排名变化，不能当作跨任务贡献大小。逐任务完整Top10图见附录F。两组解释产物与历史四任务固定批查询的五折结果分开报告。
+384 [Normal] ALE候选变量综合考虑SHAP贡献、连续性、物理意义、有效观测与站点覆盖；空间坐标虽可用于定位预测，但不直接作为环境过程的因果解释变量。
+385 [Normal] 
+386 [图题] 图3-3 TabICLv2十项任务第1折SHAP特征贡献（第1组）
+387 [Normal] 前五项任务的P1解释呈现明显差异：Chl-a三水层均有三日太阳辐射总量居前，但表层还显示风速—降雨代理与海表温度贡献；Secchi以纬度、月份正弦和经度靠前，TN表层则以经度与年份偏移靠前。这里的平均绝对SHAP表示各任务当前查询样本中的模型归因，不应把Chl-a与营养盐任务的原始数值放在同一尺度比较。
+388 [Normal] 
+389 [图题] 图3-4 TabICLv2十项任务第1折SHAP特征贡献（第2组）
+390 [Normal] TN中、底层与TP三水层的前列特征更集中于经纬度、年份编码及少量气象或人类活动代理。TP表层和中层的平均绝对SHAP量级较小，与目标自身量纲和模型输出尺度有关；其排序只说明同任务内部相对重要性。三核心样本的覆盖范围有限，因此图3-3、图3-4作为第1折P1证据，不能代替历史五折的折间一致性检验。
+391 [Normal] 
+392 [图题] 图3-5 TabICLv2十项任务第1折特征重要性排名变化
+393 [Normal] 图注：纵轴仅为任务内排名，不代表贡献大小。
+394 [表题] 表3-2 十项水质任务第1折P1单查询SHAP主要变量与证据覆盖
+395 [Normal] 注：任务后缀S/M/B分别表示表/中/底层；前3变量按冻结核心样本的平均绝对SHAP值排序。来源组：M=气象，R=降雨/水文/潮汐，O=海洋物理，H=人类活动代理，T=时间过程，S=空间静态。P1为第1折单查询协议，每任务3个预登记核心样本；不同任务的原始贡献数值不直接比较。
+396 [Heading 2] 3.4 TabICLv2模型的一维ALE响应分析
+397 [Heading 3] 3.4.1 历史五折响应稳定性分析
+398 [Normal] 一维ALE按训练样本分位区间计算局部预测差异并累积、中心化；历史四任务五折曲线按各折训练分布分箱。它们反映历史固定批查询条件下的模型响应，不是十任务P1单查询结果，也不直接揭示环境因果机制。
+399 [Normal] 
+400 [图题] 图3-6 TabICLv2叶绿素a表层历史五折一维ALE响应
+401 [Normal] 
+402 [图题] 图3-7 TabICLv2透明度历史五折一维ALE响应
+403 [Normal] 
+404 [图题] 图3-8 TabICLv2TN表层历史五折一维ALE响应
+405 [Normal] 
+406 [图题] 图3-9 TabICLv2TP中层历史五折一维ALE响应
+407 [Normal] 图3-6至图3-9呈现历史四任务的五折一维ALE响应；每项任务有4项候选连续特征，共形成80条逐折曲线。部分折未达到严格逐样本预测复现门槛，故这些图只用于呈现历史五折响应差异，不作为十任务第1折P1结果的直接统计依据。
+408 [Heading 3] 3.4.2 十项水质任务的一维ALE响应
+409 [Normal] 图3-10至图3-13集中展示四项代表任务的第1折P1一维ALE，每项两条冻结曲线；另六项任务与全部20条完整曲线、实际分箱及分箱计数见附录E。透明度三日太阳辐射总量仅有6个实际分箱，未补点。虚线为中心化零参考线，不以某个零交点推断环境过程没有作用。
+410 [Normal] 
+411 [图题] 图3-10 TabICLv2叶绿素a表层第1折P1一维ALE响应
+412 [Normal] Chl-a表层：风速约1.05—5.94 m/s范围内，两条ALE曲线的方向并不相同。当前风速曲线由低端−0.434 µg/L升至高端0.185 µg/L，前1日风速则由0.770降至−0.500 µg/L；各实际分箱至少60个样本、17个站点。P1 SHAP中风速—降雨代理有一定贡献，但3日太阳辐射贡献更高，故不能把这两条风速曲线概括为唯一主导关系。
+413 [Normal] 
+414 [图题] 图3-11 TabICLv2透明度第1折P1一维ALE响应
+415 [Normal] 透明度：三日太阳辐射总量的6个实际分箱上ALE幅度较小（−0.018—0.017 m），每箱至少44个样本和11个站点；3日平均气温曲线从低温端0.081 m降至高温端−0.075 m，每箱至少60个样本、19个站点。SHAP全局排名更突出空间位置和季节编码，说明局部气象响应与全局贡献排序回答不同问题。
+416 [Normal] 
+417 [图题] 图3-12 TabICLv2TN表层第1折P1一维ALE响应
+418 [Normal] TN表层：气温日变化与前1日风速的曲线在各自观测区间内总体由负值转正值，首末分箱分别为−0.013/0.017 mg/L和−0.014/0.024 mg/L；每箱至少60个样本和17个站点。SHAP中经度、年份偏移居前，因此气象曲线应解释为已选择变量上的条件响应，而非该任务全部重要性排序。
+419 [Normal] 
+420 [图题] 图3-13 TabICLv2TP中层第1折P1一维ALE响应
+421 [Normal] TP中层：前1日气温与总云量曲线的幅度很小，分别约为−0.0021—0.0037 mg/L与−0.0012—0.0012 mg/L，每箱至少60个样本、17个站点。P1 SHAP排名以时间与空间变量为主；这些小效应尤其需要对照历史数值抖动尺度，不能仅凭曲线形状作强机制判断。
+422 [Heading 2] 3.5 解释结果的可靠性分析
+423 [Heading 3] 3.5.1 ALE样本与站点覆盖
+424 [Normal] 图3-14和图3-15分别审查20条一维ALE曲线各分箱的样本数与独立站点数。覆盖图只反映观测支持程度，不代表模型响应，也不对缺失分箱补零。
+425 [Normal] 
+426 [图题] 图3-14 TabICLv2十项任务一维ALE各分箱样本数
+427 [Normal] 图注：仅反映样本支持度，不是ALE模型响应图；不存在的分箱留白，不作零值。
+428 [Normal] 
+429 [图题] 图3-15 TabICLv2十项任务一维ALE各分箱独立站点数
+430 [Normal] 图注：仅反映站点支持度，不是ALE模型响应图；不存在的分箱留白，不作零值。
+431 [Heading 3] 3.5.2 数值稳定性
+432 [Normal] 图3-16的P1重复预测探针仅覆盖九项任务，缺少叶绿素a表层；三次重复的观测范围不是预测置信区间。图3-17保留历史数值波动的尺度证据，不能因后续探针重复而改写为严格稳定通过。
+433 [Normal] 
+434 [图题] 图3-16 TabICLv2九项任务P1单查询重复预测范围
+435 [Normal] 图注：仅9项任务有三次重复探针，缺少叶绿素a表层；该范围不是预测置信区间。
+436 [Normal] 
+437 [图题] 图3-17 TabICLv2历史数值波动与解释效应尺度对照
+438 [Normal] 图注：引用历史冻结数值稳定性报告；不将既有失败改写为通过。
+439 [Heading 2] 3.6 本章小结
+440 [Normal] 本章在统一特征与站点划分下介绍XGBoost、TabPFN、TabM和TabICLv2，并区分十任务正式比较与四任务扩展比较。模型性能将在第四章依据实际结果判断。解释分析以TabICLv2为对象，历史四任务五折与十任务第1折P1单查询结果分层报告；XGBoost的TreeSHAP/ALE作为独立基准模型解释置于附录D。
+441 [Normal] 两类模型的SHAP输出尺度与预测函数条件不同，故不将XGBoost归因当作TabICLv2内部解释，也不把ALE统计响应解释为环境因果机制。
+442 [Heading 1] 第4章 新型表格模型的预测效果与空间泛化能力
+443 [Heading 2] 4.1 新型表格模型与基准模型的比较框架
+444 [Heading 3] 4.1.1 十项水质任务的基础预测精度
+445 [表题] 表4-1 十项任务的XGBoost站点留出基准结果
+446 [Normal] XGBoost在不同指标和水层上的难度差异明显。Secchi的pooled R²为0.535，Chl-a三水层为0.353—0.457，TN三水层为0.259—0.508，TP中层和底层为0.304和0.383，而TP表层为-0.127，说明该任务在未见站点上尚未超过以总体均值预测的基准。
+447 [Heading 3] 4.1.2 不同水质指标预测难度的差异
+448 [Normal] 任务差异与目标分布、空间异质性、可用环境代理及极端样本有关。R²低并不意味着RMSE绝对值必然更大，因为各指标量纲不同；因此后续比较均在同一任务内进行。
+449 [Heading 2] 4.2 TabICLv2在十项水质任务中的预测表现
+450 [Heading 3] 4.2.1 十项水质任务整体预测精度
+451 [表题] 表4-2 TabICLv2相对XGBoost的十任务比较
+452 [Normal] TabICLv2在十项任务的pooled R²均高于XGBoost，但增益分布不均。Chl-a表、中、底层分别提高0.132、0.106、0.136，Secchi提高0.067，TN表层提高0.143；这些任务的站点RMSE胜率为75.0%—88.1%，配对站点bootstrap的RMSE差值区间上限均低于零。TN中、底层及TP三水层虽有pooled R²增益，其RMSE区间上限接近或跨越零，故总体提升与跨站点稳健性应分开陈述。TP表层从−0.127升至0.247，但不能据此称为稳定通过。
+453 [Normal] 
+454 [图题] 图4-1 十项任务总体提升与站点改善覆盖
+455 [Heading 3] 4.2.2 RMSE和MAE改善情况
+456 [Normal] Chl-a表层RMSE由4.807降至4.184，MAE由2.262降至1.836；Secchi分别由0.756降至0.700、由0.496降至0.449；TN表层由0.363降至0.326、由0.170降至0.142；TP中层由0.0368降至0.0321、由0.0161降至0.0132。误差改善在不同量纲任务间不直接比较绝对值。
+457 [Normal] 
+458 [图题] 图4-2 不同指标与水层的模型提升差异
+459 [Heading 3] 4.2.3 逐站点预测改善情况
+460 [Normal] 十任务站点RMSE胜率为70.2%—88.1%，说明改善覆盖多数站点；但余下站点仍可能退化。站点级评价把总体误差改善拆解为空间上的受益与损失：例如Chl-a中层南部海区SM18站点126条记录的RMSE差值为+1.785，而TN表层维多利亚港VT11站点67条记录的差值为+0.174（正值表示TabICLv2误差更大）。二者不改变总体优势，却提示局地模型失配需要单独检查。
+461 [Heading 3] 4.2.4 不同水层及指标的模型差异
+462 [Normal] Chl-a三水层均达到ROBUST；Secchi同样为ROBUST。TN表层为ROBUST，中、底层为MODERATE；TP三水层均为MODERATE。结果表明模型优势具有任务依赖性，不能由四个代表任务外推为所有指标和水层的普遍规律。
+463 [Heading 2] 4.3 不同验证口径与证据边界
+464 [Heading 3] 4.3.1 随机划分的评价对象
+465 [Normal] 随机留出允许同站点不同时段记录分别进入训练和测试，回答监测网络内部插值问题；它与冻结站点留出的测试对象不同。项目中有历史随机实验文件，但尚未核实与十任务Family V2完全一致的特征、样本和模型协议，因此本节不把那些数值作为正式站点留出结果的配对比较。
+466 [Heading 3] 4.3.2 年份留出的评价对象
+467 [Normal] 年份留出评价模型对未参与训练时段的外推，时间漂移与空间新站点是不同误差来源。现有主登记表未提供可与十任务站点留出逐项对齐的正式年份留出结果，故这里保留验证目标与适用边界，而不填入缺乏同口径核验的数字。
+468 [Heading 3] 4.3.3 正式站点留出结果
+469 [Normal] 站点留出是本文正式主口径，十任务均有可追溯的冻结预测、pooled OOF指标和逐站点误差。它回答未见站点的预测问题；随机与年份留出若要作定量横向比较，还需统一样本、目标变换和模型配置，不能仅凭文件名相近拼接指标。
+470 [Normal] 
+471 [图题] 图4-3 不同验证口径下的模型比较范围
+472 [Normal] 注：本图保留历史代表任务的不同划分实验，协议与十任务Family V2及Secchi正式站点留出并不完全一致；图中差值用于说明验证口径的差异，不纳入正式十任务配对提升判定。
+473 [Heading 2] 4.4 空间泛化稳定性与高误差站点分析
+474 [Normal] 逐站点OOF误差显示局地退化与总体改善并存：Chl-a中层南部海区SM18站点（n=126）的RMSE由XGBoost的2.462增至TabICLv2的4.247 µg/L；Chl-a表层Port Shelter海区PT3站点（n=65）由4.143增至4.961 µg/L。营养盐任务中，维多利亚港VT11站点的TN表层RMSE由0.345增至0.519 mg/L，TP表层由0.062增至0.134 mg/L，均为67条OOF记录。相对地，TN表层南部海区SM19站点（n=120）的RMSE由1.197降至0.186 mg/L。各站点的样本量和海区均不相同，不能用单一总体平均掩盖这些方向相反的变化。
+475 [表题] 表4-3 四个代表任务的现代模型比较
+476 [Normal] 在Chl-a表层和Secchi任务上，TabICLv2的pooled R²最高；TN表层中TabPFN为0.417，略高于TabICLv2的0.402；TP中层中TabICLv2为0.472，TabPFN为0.468，二者接近。TabM在Chl-a表层和Secchi具有竞争力，但在TN表层和TP中层的总体表现较弱。四任务结果用于识别适用性，不替代十任务主比较。
+477 [Normal] 
+478 [图题] 图4-4 四个代表任务中XGBoost、TabICLv2、TabPFN和TabM的比较
+479 [Heading 2] 4.5 新型表格模型的适用范围与局限
+480 [Heading 2] 4.6 本章小结
+481 [Normal] 本章围绕新型表格模型的十任务预测效果、不同验证场景和未见站点误差展开，不将四个代表任务外推为全部任务的统一结论。
+482 [Normal] TabICLv2在十项正式站点留出任务上均提高pooled R²，多数站点的RMSE和MAE也得到改善，但稳健性随指标和水层变化。现代模型对比进一步表明，TabPFN在TN表层具有竞争力，不能把单一模型描述为所有任务上的绝对最优。
+483 [Heading 1] 第5章 空间分区建模与多源特征贡献分析
+484 [Heading 2] 5.1 分海区建模思路与实验设置
+485 [Normal] 分海区建模用于检验空间异质性是否足以抵消区域样本量减少带来的代价。全域模型和分区模型使用既有冻结结果与相同评价口径；本章不重新训练，也不根据结果图形选择更有利的区域方案。
+486 [Heading 2] 5.2 全域模型与分区模型比较
+487 [Heading 3] 5.2.1 Chl-a与Secchi的分区效果
+488 [Normal] 既有分区验证表明，Chl-a与Secchi在部分海区和留站折次中可从局地模型获益，提示两类指标的空间背景差异较明显。但改善并非覆盖所有站点，仍应结合区域样本规模和折间稳定性判断。
+489 [Heading 3] 5.2.2 TN与TP的分区效果
+490 [Normal] TN与TP的分区效果不具普遍稳定性。营养盐可能受跨区输运、局地输入和时间过程共同影响，简单按海区拆分会减少训练样本，未必优于保留全域数据的模型。
+491 [Heading 3] 5.2.3 分区建模的适用边界
+492 [Normal] 分区模型适用于空间过程差异强、区域样本充足且跨折改善一致的任务。对于样本不足或边界站点，区域划分可能放大方差。论文中的分区结果因此作为空间异质性证据，而非默认的生产部署方案。
+493 [Heading 2] 5.3 多源特征来源级消融
+494 [Heading 3] 5.3.1 特征来源分组与消融方法
+495 [Normal] 来源消融按冻结分类逐次删除METEOROLOGY、RAINFALL_HYDRO_TIDE、OCEAN_PHYSICS、HUMAN_ACTIVITY、TEMPORAL_PROCESS或SPATIAL_STATIC，其余特征保持不变。pooled ΔR²为消融模型减去完整模型；负值表示删除该组后性能下降。
+496 [Heading 3] 5.3.2 不同任务的来源贡献
+497 [表题] 表5-1 四个代表任务的来源级消融结果
+498 [Normal] 注：MET=气象，RHT=降雨/水文/潮汐，OCN=海洋物理，HUM=人类活动代理，TMP=时间过程，SPA=空间静态。ΔR²为删除来源组后相对完整模型的变化；负值表示删除后性能下降。
+499 [Normal] Chl-a表层删除空间静态信息后R²下降0.087，Secchi下降0.171，两者均被判定为IMPORTANT；气象信息在Secchi、TN表层和TP中层中也表现为IMPORTANT。人类活动代理在Chl-a、Secchi和TP中层为NEUTRAL，说明现有代理变量的额外预测信息有限，但不能据此断言人类活动对真实水质过程无作用。
+500 [Normal] 
+501 [图题] 图5-1 四个代表任务的多源环境信息消融比较
+502 [Heading 3] 5.3.3 来源贡献的稳定性
+503 [Normal] 来源判断综合pooled变化、站点胜率和bootstrap区间。部分来源删除后总体指标变化很小，但站点方向不一致，说明信息可能被相关变量替代；因此SHAP高贡献与消融显著下降并非一一对应。
+504 [Heading 3] 5.3.4 遥感输入的实际范围与研究限制
+505 [Normal] 本研究的77特征包括海洋物理和多源环境代理，但不能把所有环境变量统称为遥感波段。对中、底层任务，表面观测的代表性有限；云覆盖、时间匹配和可用像元也会限制光学信息。正文仅依据冻结分类讨论实际进入模型的字段。
+506 [Heading 2] 5.4 空间异质性与模型适用边界讨论
+507 [Normal] 四任务SHAP均把经纬度排在前列，来源消融也显示空间静态信息对Chl-a和Secchi重要。这一一致性支持模型显著利用空间结构，但经纬度可能同时代理水团、岸距、污染源和监测网络布局。模型在新站点上的性能取决于新站点是否仍处于训练网络覆盖的环境范围，不能据此推断任意海域的空间外推能力。
+508 [Heading 2] 5.5 工程应用价值与局限性
+509 [Normal] 研究结果可用于监测网络内的风险筛查、模型选择与信息源优先级判断，但尚不足以替代法定监测或直接部署为实时预警系统。主要限制包括月度观测频率、极端样本稀少、未显式纳入完整水动力过程、分区样本量不均，以及原始Git commit和逐折环境锁文件缺失。解释模型虽与正式预测数值等价，仍不是原始冻结二进制。
+510 [Heading 2] 5.6 不同任务环境依赖差异
+511 [Normal] 不同任务对输入信息的使用并不相同。十任务P1单查询SHAP中，Chl-a表层较高的贡献来自3日太阳辐射总量、风速—降雨交互代理、3日海表温度及经度；Secchi的纬度、月份正弦、经度和年内日序位居前列。TN表层以经度与年份偏移为主，TP中层则以年份偏移、经纬度和月份编码居前。上述排名只在各自任务内成立，不能跨目标直接比较SHAP绝对值。
+512 [Heading 2] 5.7 解释结果与高误差站点的对应关系
+513 [Normal] 站点误差与原始特征覆盖存在值得进一步检验的对应。VT11表层主表仅71个站点—日期记录，77项严格特征的平均缺失比例为62.7%，明显高于94站点中位数8.8%；该站TN、TP表层的OOF RMSE均退化。SM18的纬度位于站点分布约第2百分位，Chl-a中层RMSE退化，但纬度相近的SM19在TN表层却明显改善。这说明稀疏输入和空间边缘可作为诊断线索，不能被直接定为误差成因；任务级SHAP也不足以替代该站点的局部归因检验。
+514 [Heading 2] 5.8 环境解释、空间分区与泛化表现的综合讨论
+515 [Normal] 预测精度、特征贡献和空间分区结果共同反映不同任务对环境信息的依赖差异。XGBoost来源消融中，删除空间静态特征使Chl-a表层和Secchi的pooled R²分别下降0.087和0.171；TabICLv2的SHAP也识别出空间坐标贡献，但两项分析属于不同模型，因而只能作为跨模型现象的对照。气象来源删除使Secchi、TN表层和TP中层的R²分别下降0.032、0.033和0.083。历史分海区五折验证中，Chl-a表层区域模型相对全域模型的pooled R²提高0.098，4/5折改善；这一补充结果与正式Family V2主比较不属于同一注册实验，不能替代十任务站点留出性能。TN与TP分区收益并不普遍，区域针对性与训练样本量存在权衡。由此，模型选择应综合总体精度、站点退化范围、来源组消融和区域样本覆盖，而不只看单一总体R²。
+516 [Heading 2] 5.9 本章小结
+517 [Normal] 本章将来源消融、分区验证与TabICLv2解释结果并列讨论：空间定位与气象信息的重要性具有任务差异，站点级误差进一步表明总体优势并不均匀分布。
+518 [Normal] 分区建模的收益主要集中于部分Chl-a和Secchi场景，TN与TP未表现出普遍优势。来源消融与SHAP共同说明空间静态和气象信息在代表任务中较重要，但相关性、代理变量和样本覆盖限制了物理机制层面的解释。
+519 [Heading 1] 第6章 结论与展望
+520 [Heading 2] 6.1 主要研究结论
+521 [Normal] （1）在统一的77个严格特征和冻结站点留出条件下，TabICLv2在10项正式任务上的pooled R²均高于XGBoost。改善幅度和稳健性具有明显任务差异，Chl-a三水层、Secchi及TN表层证据最稳定。
+522 [Normal] （2）总体指标改善并不等于所有站点均改善。TabICLv2的RMSE站点胜率为70.2%—88.1%，说明多数站点受益，但仍存在局地退化；bootstrap区间进一步区分ROBUST与MODERATE结果。
+523 [Normal] （3）四个代表任务的现代模型比较显示，TabICLv2在Chl-a表层和Secchi领先，TabPFN在TN表层略优，在TP中层与TabICLv2接近，表明模型适用性依赖任务。
+524 [Normal] （4）TabICLv2历史四项代表任务完成五折模型无关SHAP与一维ALE，后续十任务扩展完成第1折P1单查询解释；两者的预测协议与证据范围不同。P1重复探针仅覆盖九任务，历史部分折未通过严格逐样本复现检验。二维候选只完成联合支持审查，未计算ALE响应曲面。
+525 [Normal] （5）来源消融显示空间静态信息对Chl-a表层和Secchi重要，气象信息对Secchi、TN表层和TP中层重要。分区建模对部分Chl-a和Secchi任务有帮助，但不适合作为TN和TP的普遍策略。
+526 [Heading 2] 6.2 研究创新与实际意义
+527 [Normal] 本文在应用层面将表格基础模型引入香港近岸多指标、多水层水质预测，并以严格空间验证而非单一随机划分评价模型；同时将逐站点改善、bootstrap、来源消融和覆盖约束下的SHAP/ALE纳入同一证据链。该框架有助于识别模型何时有效、何时证据不足。
+528 [Heading 2] 6.3 研究不足与展望
+529 [Normal] 后续工作可从四方面推进：增加河流径流、采样时刻和垂向水动力信息；扩大极端水质和稀疏海区样本；在独立年份和外部海域开展预注册验证；探索能够显式表达空间邻接与不确定性的模型。任何进一步解释都应继续区分模型关联与环境因果，并保留特征覆盖和跨折稳定性检查。
+530 [Heading 1] 
+531 [Normal] 本文完成了香港近岸10项水质任务的统一空间验证和四个代表任务的现代模型、来源消融与可解释性对照。结果支持表格基础模型在若干任务中的预测优势，也表明这种优势受指标、水层、空间位置与样本覆盖约束。论文的核心结论不是某一模型在所有场景中绝对最优，而是严格划分、逐站点评价和解释边界对于近岸水质预测不可或缺。
+532 [Heading 1] 参考文献
+533 [参考文献] [1] CHEN T, GUESTRIN C. XGBoost: A scalable tree boosting system[C]//Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. New York: ACM, 2016: 785-794. DOI: 10.1145/2939672.2939785.
+534 [参考文献] [2] HOLLMANN N, MÜLLER S, PURUCKER L, et al. Accurate predictions on small data with a tabular foundation model[J]. Nature, 2025, 637: 319-326. DOI: 10.1038/s41586-024-08328-6.
+535 [参考文献] [3] MÜLLER S, HOLLMANN N, PINEDA S, GRABOCKA J, HUTTER F. Transformers can do Bayesian inference[C]//International Conference on Learning Representations. 2022. https://openreview.net/forum?id=KSugKcbNf9.
+536 [参考文献] [4] GORISHNIY Y, KOTELNIKOV A, BABENKO A. TabM: Advancing tabular deep learning with parameter-efficient ensembling[C]//International Conference on Learning Representations. 2025.
+537 [参考文献] [5] LUNDBERG S M, LEE S I. A unified approach to interpreting model predictions[C]//Advances in Neural Information Processing Systems. 2017, 30: 4765-4774.
+538 [参考文献] [6] LUNDBERG S M, ERION G, CHEN H, et al. From local explanations to global understanding with explainable AI for trees[J]. Nature Machine Intelligence, 2020, 2: 56-67. DOI: 10.1038/s42256-019-0138-9.
+539 [参考文献] [7] APLEY D W, ZHU J. Visualizing the effects of predictor variables in black box supervised learning models[J]. Journal of the Royal Statistical Society: Series B, 2020, 82(4): 1059-1086. DOI: 10.1111/rssb.12377.
+540 [参考文献] [8] BREIMAN L. Random forests[J]. Machine Learning, 2001, 45: 5-32. DOI: 10.1023/A:1010933404324.
+541 [参考文献] [9] FRIEDMAN J H. Greedy function approximation: A gradient boosting machine[J]. The Annals of Statistics, 2001, 29(5): 1189-1232. DOI: 10.1214/aos/1013203451.
+542 [参考文献] [10] MOLNAR C. Interpretable Machine Learning: A Guide for Making Black Box Models Explainable[M]. 2nd ed. 2022.
+543 [参考文献] [11] HONG KONG ENVIRONMENTAL PROTECTION DEPARTMENT. Marine water quality in Hong Kong[EB/OL]. [2026-10-18]. https://www.epd.gov.hk/epd/english/environmentinhk/water/hkwqrc/waterquality/marine.html.
+544 [参考文献] [12] EUROPEAN CENTRE FOR MEDIUM-RANGE WEATHER FORECASTS. ERA5 hourly data on single levels from 1940 to present[DB/OL]. Copernicus Climate Change Service Climate Data Store, 2018. DOI: 10.24381/cds.adbb2d47. https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels.
+545 [Normal] [13] QU J, HOLZMÜLLER D, VAROQUAUX G, LE MORVAN M. TabICLv2: A Better, Faster, Scalable, and Open Tabular Foundation Model[C]//Proceedings of the 43rd International Conference on Machine Learning. PMLR, 2026, 306: 102477-102555. https://proceedings.mlr.press/v306/qu26a.html.
+546 [Normal] [14] ROBERTS D R, BAHN V, CIUTI S, et al. Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure[J]. Ecography, 2017, 40(8): 913-929. DOI: 10.1111/ecog.02881.
+547 [Normal] [15] GRBČIĆ L, DRUŽETA S, MAUŠA G, et al. Coastal water quality prediction based on machine learning with feature interpretation and spatio-temporal analysis[J]. Environmental Modelling & Software, 2022, 155: 105458. DOI: 10.1016/j.envsoft.2022.105458.
+548 [Normal] [16] LANG S E, LUIS K M A, DONEY S C, et al. Modeling Coastal Water Clarity Using Landsat-8 and Sentinel-2[J]. Earth and Space Science, 2023, 10(7): e2022EA002579. DOI: 10.1029/2022EA002579.
+549 [Normal] [17] WOŹNIAK S B, MELER J. Modelling Water Colour Characteristics in an Optically Complex Nearshore Environment in the Baltic Sea; Quantitative Interpretation of the Forel-Ule Scale and Algorithms for the Remote Estimation of Seawater Composition[J]. Remote Sensing, 2020, 12(17): 2852. DOI: 10.3390/rs12172852.
+550 [Normal] [18] WANG X, LI Y, QIAO Q, et al. Water Quality Prediction Based on Machine Learning and Comprehensive Weighting Methods[J]. Entropy, 2023, 25(8): 1186. DOI: 10.3390/e25081186.
+551 [Normal] [19] TAN W, ZHANG J, WU J, et al. Application of CNN and Long Short-Term Memory Network in Water Quality Predicting[J]. Intelligent Automation & Soft Computing, 2022, 34(3): 1943-1958. DOI: 10.32604/iasc.2022.029660.
+552 [Normal] [20] DENG T, CHAU K W, DUAN H F. Machine learning based marine water quality prediction for coastal hydro-environment management[J]. Journal of Environmental Management, 2021, 284: 112051. DOI: 10.1016/j.jenvman.2021.112051.
+553 [Normal] [21] SUN M, XU C, JIA Q, et al. Aquaformer: Multi-source transfer learning model based on Transformer and phase space reconstruction for long sequence water quality forecasting[J]. Journal of Hydrology, 2026, 664: 134372. DOI: 10.1016/j.jhydrol.2025.134372.
+554 [Heading 1] 致 谢
+555 [Normal] 本部分涉及导师、课题组、数据支持与个人经历，应由作者根据真实情况补充。为避免虚构人名和贡献，本整合稿不自动生成具体致谢内容。
+556 [Heading 1] 附 录
+557 [Heading 2] 附录A 解释分析覆盖范围
+558 [Normal] 本论文的TabICLv2解释包含历史四任务五折与后续十任务第1折P1单查询两类协议；XGBoost受控复现解释结果独立置于附录D。计算覆盖、支持度和数值稳定性分别评价。
+559 [Heading 2] 附录B 复现与结果路径
+560 [Normal] 正式闭环：runs/final_experiment_closure_audit_v1；解释模型复现：runs/xgb_interpretation_refit_v1；SHAP/ALE：runs/xgb_shap_ale_v2；现代基线：runs/modern_baseline_gate_v1；来源消融：runs/multisource_ablation_v1。
+561 [Heading 2] 附录C TabICLv2局部SHAP解释结果
+562 [Normal] 图C-1至图C-10为按预先登记规则确定的典型样本局部SHAP；图C-11至图C-20为每项任务仅3个独立样本及一次种子重复的分布展示。两类图均解释TabICLv2第1折P1单查询预测函数，不代表全测试集分布。
+563 [Normal] 
+564 [图题] 图C-1 叶绿素a表层典型样本SHAP局部贡献
+565 [Normal] 图注：代表样本按预先登记的选择规则确定；77项特征的SHAP贡献加和已经核验。本图解释TabICLv2第1折P1单查询预测函数。
+566 [Normal] 
+567 [图题] 图C-2 叶绿素a中层典型样本SHAP局部贡献
+568 [Normal] 图注：代表样本按预先登记的选择规则确定；77项特征的SHAP贡献加和已经核验。本图解释TabICLv2第1折P1单查询预测函数。
+569 [Normal] 
+570 [图题] 图C-3 叶绿素a底层典型样本SHAP局部贡献
+571 [Normal] 图注：代表样本按预先登记的选择规则确定；77项特征的SHAP贡献加和已经核验。本图解释TabICLv2第1折P1单查询预测函数。
+572 [Normal] 
+573 [图题] 图C-4 透明度典型样本SHAP局部贡献
+574 [Normal] 图注：代表样本按预先登记的选择规则确定；77项特征的SHAP贡献加和已经核验。本图解释TabICLv2第1折P1单查询预测函数。
+575 [Normal] 
+576 [图题] 图C-5 TN表层典型样本SHAP局部贡献
+577 [Normal] 图注：代表样本按预先登记的选择规则确定；77项特征的SHAP贡献加和已经核验。本图解释TabICLv2第1折P1单查询预测函数。
+578 [Normal] 
+579 [图题] 图C-6 TN中层典型样本SHAP局部贡献
+580 [Normal] 图注：代表样本按预先登记的选择规则确定；77项特征的SHAP贡献加和已经核验。本图解释TabICLv2第1折P1单查询预测函数。
+581 [Normal] 
+582 [图题] 图C-7 TN底层典型样本SHAP局部贡献
+583 [Normal] 图注：代表样本按预先登记的选择规则确定；77项特征的SHAP贡献加和已经核验。本图解释TabICLv2第1折P1单查询预测函数。
+584 [Normal] 
+585 [图题] 图C-8 TP表层典型样本SHAP局部贡献
+586 [Normal] 图注：代表样本按预先登记的选择规则确定；77项特征的SHAP贡献加和已经核验。本图解释TabICLv2第1折P1单查询预测函数。
+587 [Normal] 
+588 [图题] 图C-9 TP中层典型样本SHAP局部贡献
+589 [Normal] 图注：代表样本按预先登记的选择规则确定；77项特征的SHAP贡献加和已经核验。本图解释TabICLv2第1折P1单查询预测函数。
+590 [Normal] 
+591 [图题] 图C-10 TP底层典型样本SHAP局部贡献
+592 [Normal] 图注：代表样本按预先登记的选择规则确定；77项特征的SHAP贡献加和已经核验。本图解释TabICLv2第1折P1单查询预测函数。
+593 [Normal] 
+594 [图题] 图C-11 叶绿素a表层SHAP分布（3个独立样本及1次种子重复）
+595 [Normal] 图注：仅3个独立样本，另有同一样本的一次随机种子重复；不代表测试总体的SHAP分布。本图解释TabICLv2第1折P1单查询预测函数。
+596 [Normal] 
+597 [图题] 图C-12 叶绿素a中层SHAP分布（3个独立样本及1次种子重复）
+598 [Normal] 图注：仅3个独立样本，另有同一样本的一次随机种子重复；不代表测试总体的SHAP分布。本图解释TabICLv2第1折P1单查询预测函数。
+599 [Normal] 
+600 [图题] 图C-13 叶绿素a底层SHAP分布（3个独立样本及1次种子重复）
+601 [Normal] 图注：仅3个独立样本，另有同一样本的一次随机种子重复；不代表测试总体的SHAP分布。本图解释TabICLv2第1折P1单查询预测函数。
+602 [Normal] 
+603 [图题] 图C-14 透明度SHAP分布（3个独立样本及1次种子重复）
+604 [Normal] 图注：仅3个独立样本，另有同一样本的一次随机种子重复；不代表测试总体的SHAP分布。本图解释TabICLv2第1折P1单查询预测函数。
+605 [Normal] 
+606 [图题] 图C-15 TN表层SHAP分布（3个独立样本及1次种子重复）
+607 [Normal] 图注：仅3个独立样本，另有同一样本的一次随机种子重复；不代表测试总体的SHAP分布。本图解释TabICLv2第1折P1单查询预测函数。
+608 [Normal] 
+609 [图题] 图C-16 TN中层SHAP分布（3个独立样本及1次种子重复）
+610 [Normal] 图注：仅3个独立样本，另有同一样本的一次随机种子重复；不代表测试总体的SHAP分布。本图解释TabICLv2第1折P1单查询预测函数。
+611 [Normal] 
+612 [图题] 图C-17 TN底层SHAP分布（3个独立样本及1次种子重复）
+613 [Normal] 图注：仅3个独立样本，另有同一样本的一次随机种子重复；不代表测试总体的SHAP分布。本图解释TabICLv2第1折P1单查询预测函数。
+614 [Normal] 
+615 [图题] 图C-18 TP表层SHAP分布（3个独立样本及1次种子重复）
+616 [Normal] 图注：仅3个独立样本，另有同一样本的一次随机种子重复；不代表测试总体的SHAP分布。本图解释TabICLv2第1折P1单查询预测函数。
+617 [Normal] 
+618 [图题] 图C-19 TP中层SHAP分布（3个独立样本及1次种子重复）
+619 [Normal] 图注：仅3个独立样本，另有同一样本的一次随机种子重复；不代表测试总体的SHAP分布。本图解释TabICLv2第1折P1单查询预测函数。
+620 [Normal] 
+621 [图题] 图C-20 TP底层SHAP分布（3个独立样本及1次种子重复）
+622 [Normal] 图注：仅3个独立样本，另有同一样本的一次随机种子重复；不代表测试总体的SHAP分布。本图解释TabICLv2第1折P1单查询预测函数。
+623 [Heading 2] 附录D XGBoost基准模型解释对照
+624 [Normal] 为对照传统树模型的特征归因与响应特征，图D-1至图D-17保留基于数值等价受控复现XGBoost模型的TreeSHAP和ALE结果。该部分仅用于基准模型解释对照，不作为TabICLv2内部预测机制的解释依据。XGBoost TreeSHAP定义于log1p目标尺度，而TabICLv2 SHAP采用原始目标尺度，两类原始SHAP绝对值不直接比较。受控复现模型与冻结测试预测数值一致，但不是原始冻结二进制模型。
+625 [Heading 3] D.1 TreeSHAP特征归因
+626 [Normal] 
+627 [图题] 图D-1 数值等价受控复现XGBoost模型的四项任务TreeSHAP主要特征重要性
+628 [Normal] 
+629 [图题] 图D-2 数值等价受控复现XGBoost模型的叶绿素a表层TreeSHAP总体解释
+630 [Normal] 
+631 [图题] 图D-3 数值等价受控复现XGBoost模型的透明度TreeSHAP总体解释
+632 [Normal] 
+633 [图题] 图D-4 数值等价受控复现XGBoost模型的TN表层TreeSHAP总体解释
+634 [Normal] 
+635 [图题] 图D-5 数值等价受控复现XGBoost模型的TP中层TreeSHAP总体解释
+636 [Heading 3] D.2 一维ALE响应与稳定性
+637 [Normal] 
+638 [图题] 图D-6 数值等价受控复现XGBoost模型的叶绿素a表层一维ALE响应
+639 [Normal] 
+640 [图题] 图D-7 数值等价受控复现XGBoost模型的透明度一维ALE响应
+641 [Normal] 
+642 [图题] 图D-8 数值等价受控复现XGBoost模型的TN表层一维ALE响应
+643 [Normal] 
+644 [图题] 图D-9 数值等价受控复现XGBoost模型的TP中层一维ALE响应
+645 [Normal] 
+646 [图题] 图D-10 数值等价受控复现XGBoost模型的四项任务一维ALE稳定性
+647 [Heading 3] D.3 二维ALE交互与联合覆盖
+648 [Normal] 
+649 [图题] 图D-11 数值等价受控复现XGBoost模型的叶绿素a表层二维ALE交互
+650 [Normal] 
+651 [图题] 图D-12 数值等价受控复现XGBoost模型的透明度二维ALE交互
+652 [Normal] 
+653 [图题] 图D-13 数值等价受控复现XGBoost模型的TN表层二维ALE交互
+654 [Normal] 
+655 [图题] 图D-14 数值等价受控复现XGBoost模型的TP中层二维ALE交互
+656 [Normal] 
+657 [图题] 图D-15 数值等价受控复现XGBoost模型的二维ALE联合覆盖
+658 [Heading 3] D.4 TreeSHAP与来源消融对照
+659 [Normal] 个体特征的TreeSHAP归因与删除整个特征来源组造成的预测性能变化回答不同问题，不能互作因果验证。两类证据在附录D中分别标准化后对照，不比较不同单位的原始数值。
+660 [Normal] 
+661 [图题] 图D-16 数值等价受控复现XGBoost模型的TreeSHAP贡献与来源消融对照
+662 [Normal] 
+663 [图题] 图D-17 数值等价受控复现XGBoost模型的四项任务主要特征重要性比较
+664 [Heading 2] 附录E 十项任务一维ALE完整曲线
+665 [Normal] 
+666 [图题] 图E-1 TabICLv2叶绿素a表层第1折风速一维ALE响应（P1单查询）
+667 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+668 [Normal] 
+669 [图题] 图E-2 TabICLv2叶绿素a表层第1折前1日风速一维ALE响应（P1单查询）
+670 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+671 [Normal] 
+672 [图题] 图E-3 TabICLv2叶绿素a中层第1折风速一维ALE响应（P1单查询）
+673 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。 本任务含数值敏感的小效应，需结合原始重复性审查谨慎解释。
+674 [Normal] 
+675 [图题] 图E-4 TabICLv2叶绿素a中层第1折风速平方一维ALE响应（P1单查询）
+676 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。 本任务含数值敏感的小效应，需结合原始重复性审查谨慎解释。
+677 [Normal] 
+678 [图题] 图E-5 TabICLv2叶绿素a底层第1折2 m气温一维ALE响应（P1单查询）
+679 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+680 [Normal] 
+681 [图题] 图E-6 TabICLv2叶绿素a底层第1折前1日2 m气温一维ALE响应（P1单查询）
+682 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+683 [Normal] 
+684 [图题] 图E-7 TabICLv2透明度第1折3日太阳辐射总量一维ALE响应（P1单查询）
+685 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。 本曲线保留6个实际分箱，未插值补点。
+686 [Normal] 
+687 [图题] 图E-8 TabICLv2透明度第1折3日平均2 m气温一维ALE响应（P1单查询）
+688 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+689 [Normal] 
+690 [图题] 图E-9 TabICLv2TN表层第1折2 m气温日变化一维ALE响应（P1单查询）
+691 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+692 [Normal] 
+693 [图题] 图E-10 TabICLv2TN表层第1折前1日风速一维ALE响应（P1单查询）
+694 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+695 [Normal] 
+696 [图题] 图E-11 TabICLv2TN中层第1折2 m气温日变化一维ALE响应（P1单查询）
+697 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+698 [Normal] 
+699 [图题] 图E-12 TabICLv2TN中层第1折10 m经向风一维ALE响应（P1单查询）
+700 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+701 [Normal] 
+702 [图题] 图E-13 TabICLv2TN底层第1折前2日2 m气温一维ALE响应（P1单查询）
+703 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+704 [Normal] 
+705 [图题] 图E-14 TabICLv2TN底层第1折3日平均2 m气温一维ALE响应（P1单查询）
+706 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+707 [Normal] 
+708 [图题] 图E-15 TabICLv2TP表层第1折前2日2 m气温一维ALE响应（P1单查询）
+709 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+710 [Normal] 
+711 [图题] 图E-16 TabICLv2TP表层第1折10 m纬向风一维ALE响应（P1单查询）
+712 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+713 [Normal] 
+714 [图题] 图E-17 TabICLv2TP中层第1折前1日2 m气温一维ALE响应（P1单查询）
+715 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+716 [Normal] 
+717 [图题] 图E-18 TabICLv2TP中层第1折总云量一维ALE响应（P1单查询）
+718 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+719 [Normal] 
+720 [图题] 图E-19 TabICLv2TP底层第1折前1日2 m气温一维ALE响应（P1单查询）
+721 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+722 [Normal] 
+723 [图题] 图E-20 TabICLv2TP底层第1折前1日风速一维ALE响应（P1单查询）
+724 [Normal] 图注：基于冻结ALE结果绘制；虚线为中心化零参考线，数字为各分箱样本数。
+725 [Heading 2] 附录F 十项任务SHAP独立特征重要性图
+726 [Normal] 
+727 [图题] 图F-1 TabICLv2叶绿素a表层第1折主要特征平均绝对SHAP贡献
+728 [Normal] 图注：按本任务逐样本已冻结SHAP值汇总；不跨任务比较原始贡献量纲。
+729 [Normal] 
+730 [图题] 图F-2 TabICLv2叶绿素a中层第1折主要特征平均绝对SHAP贡献
+731 [Normal] 图注：按本任务逐样本已冻结SHAP值汇总；不跨任务比较原始贡献量纲。
+732 [Normal] 
+733 [图题] 图F-3 TabICLv2叶绿素a底层第1折主要特征平均绝对SHAP贡献
+734 [Normal] 图注：按本任务逐样本已冻结SHAP值汇总；不跨任务比较原始贡献量纲。
+735 [Normal] 
+736 [图题] 图F-4 TabICLv2透明度第1折主要特征平均绝对SHAP贡献
+737 [Normal] 图注：按本任务逐样本已冻结SHAP值汇总；不跨任务比较原始贡献量纲。
+738 [Normal] 
+739 [图题] 图F-5 TabICLv2TN表层第1折主要特征平均绝对SHAP贡献
+740 [Normal] 图注：按本任务逐样本已冻结SHAP值汇总；不跨任务比较原始贡献量纲。
+741 [Normal] 
+742 [图题] 图F-6 TabICLv2TN中层第1折主要特征平均绝对SHAP贡献
+743 [Normal] 图注：按本任务逐样本已冻结SHAP值汇总；不跨任务比较原始贡献量纲。
+744 [Normal] 
+745 [图题] 图F-7 TabICLv2TN底层第1折主要特征平均绝对SHAP贡献
+746 [Normal] 图注：按本任务逐样本已冻结SHAP值汇总；不跨任务比较原始贡献量纲。
+747 [Normal] 
+748 [图题] 图F-8 TabICLv2TP表层第1折主要特征平均绝对SHAP贡献
+749 [Normal] 图注：按本任务逐样本已冻结SHAP值汇总；不跨任务比较原始贡献量纲。
+750 [Normal] 
+751 [图题] 图F-9 TabICLv2TP中层第1折主要特征平均绝对SHAP贡献
+752 [Normal] 图注：按本任务逐样本已冻结SHAP值汇总；不跨任务比较原始贡献量纲。
+753 [Normal] 
+754 [图题] 图F-10 TabICLv2TP底层第1折主要特征平均绝对SHAP贡献
+755 [Normal] 图注：按本任务逐样本已冻结SHAP值汇总；不跨任务比较原始贡献量纲。
+756 [Normal] 
+757 [Heading 2] 附录G 77项严格输入特征清单
+758 [Normal] 下表按正式入模顺序列出77项字段。来源组代码：MET=气象，RHT=降雨—水文—潮汐，OCN=海洋物理，HUM=人类活动代理，TMP=时间过程，SPA=空间静态。待核项目不补造单位。
+759 [Normal] 注：ssrd与sst日窗均截至采样日前一日；lag/roll基于前序采样记录而非固定自然日。rain_month整月累计及部分VIIRS变量单位仍需依原始数据字典核查。
+760 [Normal] 
+761 [Heading 1] 个人简历
+762 [Normal] 待作者填写真实教育经历与个人信息。
+763 [Heading 1] 在学期间的研究成果及发表的学术论文
+764 [Normal] 待作者依据已发表、已录用或正式登记的成果填写；本稿不自动生成未核实成果。

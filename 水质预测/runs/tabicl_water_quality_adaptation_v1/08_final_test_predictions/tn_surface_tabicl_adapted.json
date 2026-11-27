@@ -1,0 +1,13 @@
+{
+  "task": "tn_surface",
+  "config_id": "N16",
+  "n_train": 8268,
+  "n_test": 2068,
+  "fit_seconds": 1.404102000000421,
+  "predict_seconds": 19.31524750002427,
+  "gpu_peak_allocated_mb": 6824.083984375,
+  "source": "new_locked_tabicl_single_model_evaluation",
+  "R2": 0.8081291307769616,
+  "RMSE": 0.2563860022622946,
+  "MAE": 0.12852052740565353
+}

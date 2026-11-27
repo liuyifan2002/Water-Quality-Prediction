@@ -1,0 +1,12 @@
+{
+  "task": "chla_middle",
+  "model": "xgboost",
+  "n_train": 7564,
+  "n_test": 1892,
+  "R2": 0.41854071402254034,
+  "RMSE": 3.5327318751984884,
+  "MAE": 1.6751497594517584,
+  "runtime_seconds": 0.9329169999982696,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

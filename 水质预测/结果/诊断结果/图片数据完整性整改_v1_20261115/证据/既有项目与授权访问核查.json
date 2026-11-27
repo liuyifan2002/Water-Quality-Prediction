@@ -1,0 +1,14 @@
+{
+  "已有项目号": "798288935020",
+  "来源": "本机Earth Engine官方凭据配置的project字段，未复制凭据内容",
+  "旧凭据更新时间": "2026-05-18T12:24:45",
+  "旧凭据刷新结果": "invalid_grant",
+  "用户表示已授权后重试": "当前Python仍读取旧凭据，初始化失败",
+  "后续动作": "官方localhost授权回调成功；随后Initialize及94站132月同源提取成功；旧失败仅保留为历史过程",
+  "官方替代下载": "EOG tiled/non-tiled monthly入口均转向官方登录页，未下载无认证数据",
+  "提供者说明URL": [
+    "https://developers.google.com/earth-engine/datasets/catalog/NOAA_VIIRS_DNB_MONTHLY_V1_VCMSLCFG",
+    "https://eogdata.mines.edu/products/vnl/"
+  ],
+  "当前状态": "已授权并完成12408条同源提取；项目中未保存密码或令牌"
+}

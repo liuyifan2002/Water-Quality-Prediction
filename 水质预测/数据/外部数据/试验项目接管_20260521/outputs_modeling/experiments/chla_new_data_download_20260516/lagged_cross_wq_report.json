@@ -1,0 +1,14 @@
+{
+  "label": "滞后交叉水质特征制备",
+  "dry_run": true,
+  "output_path": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\data\\model_input\\new_sources\\lagged_cross_water_quality_features_2014_2024.csv",
+  "source_file": "data/model_input/water_quality_master_2014_2024.csv",
+  "variables": {
+    "tn": "tn_mg_l",
+    "tp": "tp_mg_l",
+    "secchi": "secchi_depth_m",
+    "do": "do_mg_l",
+    "salinity": "salinity_psu",
+    "turbidity": "turbidity_ntu"
+  }
+}

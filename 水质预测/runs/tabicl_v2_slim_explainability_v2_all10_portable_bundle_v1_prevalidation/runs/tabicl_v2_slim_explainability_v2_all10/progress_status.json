@@ -1,0 +1,10 @@
+{
+  "experiment": "TABICLV2_SLIM_EXPLAINABILITY_V2_ALL10",
+  "stage": "READY_ON_DESTINATION",
+  "task": "",
+  "unit": "",
+  "detail": "目标机启动后读取检查点并续跑十任务",
+  "updated_at": "2026-10-25T02:06:18+08:00",
+  "pid": null,
+  "v1_gate_is_quality_evidence_not_compute_gate": true
+}

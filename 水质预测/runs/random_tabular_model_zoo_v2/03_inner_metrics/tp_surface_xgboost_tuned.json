@@ -1,0 +1,131 @@
+{
+  "task": "tp_surface",
+  "model": "xgboost_tuned",
+  "base_model": "xgboost",
+  "chosen_candidate": 5,
+  "chosen_params": {
+    "max_depth": 5,
+    "n_estimators": 550,
+    "learning_rate": 0.04,
+    "min_child_weight": 3
+  },
+  "inner_oof_R2": 0.7377978005080605,
+  "inner_oof_RMSE": 0.03459716476828773,
+  "inner_oof_MAE": 0.01507118843086055,
+  "fit_seconds": 9.483902699983446,
+  "infer_seconds": 0.03234879995579831,
+  "search": [
+    {
+      "candidate": 0,
+      "params": {
+        "max_depth": 3,
+        "n_estimators": 500,
+        "learning_rate": 0.04,
+        "min_child_weight": 1
+      },
+      "R2": 0.6913176106850114,
+      "RMSE": 0.037538617257539375,
+      "MAE": 0.017092935912603722,
+      "fit_seconds": 4.652645799971651,
+      "infer_seconds": 0.023271799960639328
+    },
+    {
+      "candidate": 1,
+      "params": {
+        "max_depth": 4,
+        "n_estimators": 500,
+        "learning_rate": 0.04,
+        "min_child_weight": 1
+      },
+      "R2": 0.7177524535742967,
+      "RMSE": 0.03589528718468472,
+      "MAE": 0.01589684648256752,
+      "fit_seconds": 5.272904000012204,
+      "infer_seconds": 0.02462429995648563
+    },
+    {
+      "candidate": 2,
+      "params": {
+        "max_depth": 5,
+        "n_estimators": 400,
+        "learning_rate": 0.05,
+        "min_child_weight": 1
+      },
+      "R2": 0.7343060712863401,
+      "RMSE": 0.03482676696616505,
+      "MAE": 0.015173491505685434,
+      "fit_seconds": 6.92808850001893,
+      "infer_seconds": 0.02626290000625886
+    },
+    {
+      "candidate": 3,
+      "params": {
+        "max_depth": 3,
+        "n_estimators": 700,
+        "learning_rate": 0.03,
+        "min_child_weight": 3
+      },
+      "R2": 0.6913918949637737,
+      "RMSE": 0.03753410016004693,
+      "MAE": 0.017074447992511725,
+      "fit_seconds": 6.986859799944796,
+      "infer_seconds": 0.03571570001076907
+    },
+    {
+      "candidate": 4,
+      "params": {
+        "max_depth": 4,
+        "n_estimators": 650,
+        "learning_rate": 0.035,
+        "min_child_weight": 3
+      },
+      "R2": 0.725085969547657,
+      "RMSE": 0.03542589223218109,
+      "MAE": 0.015658014941852212,
+      "fit_seconds": 8.993364199995995,
+      "infer_seconds": 0.0425900999980513
+    },
+    {
+      "candidate": 5,
+      "params": {
+        "max_depth": 5,
+        "n_estimators": 550,
+        "learning_rate": 0.04,
+        "min_child_weight": 3
+      },
+      "R2": 0.7377978005080605,
+      "RMSE": 0.03459716476828773,
+      "MAE": 0.01507118843086055,
+      "fit_seconds": 9.483902699983446,
+      "infer_seconds": 0.03234879995579831
+    },
+    {
+      "candidate": 6,
+      "params": {
+        "max_depth": 3,
+        "n_estimators": 450,
+        "learning_rate": 0.06,
+        "min_child_weight": 5
+      },
+      "R2": 0.6999127200093955,
+      "RMSE": 0.037012305501262964,
+      "MAE": 0.016693827798021785,
+      "fit_seconds": 3.8256607999792323,
+      "infer_seconds": 0.021603900007903576
+    },
+    {
+      "candidate": 7,
+      "params": {
+        "max_depth": 4,
+        "n_estimators": 450,
+        "learning_rate": 0.06,
+        "min_child_weight": 5
+      },
+      "R2": 0.7239222750643276,
+      "RMSE": 0.035500790886379606,
+      "MAE": 0.015692065853734404,
+      "fit_seconds": 5.430370599991875,
+      "infer_seconds": 0.02416349994018674
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "task": "tn_middle",
+  "model": "tabicl",
+  "n_samples": 7200,
+  "inner_oof_R2": 0.5824253841159921,
+  "inner_oof_RMSE": 0.2021074814901733,
+  "inner_oof_MAE": 0.12010065909153651,
+  "runtime_seconds": 35.01263729998027,
+  "folds": [
+    {
+      "fold": 1,
+      "n_train": 5760,
+      "n_val": 1440,
+      "R2": 0.6431924618435538,
+      "RMSE": 0.17060845087236243,
+      "MAE": 0.11281185996737686,
+      "runtime_seconds": 9.42573870002525,
+      "gpu_peak_allocated_mb": 4721.85107421875
+    },
+    {
+      "fold": 2,
+      "n_train": 5760,
+      "n_val": 1440,
+      "R2": 0.6136416785529695,
+      "RMSE": 0.1818548637725048,
+      "MAE": 0.11614798065010477,
+      "runtime_seconds": 6.351002599985804,
+      "gpu_peak_allocated_mb": 4721.72607421875
+    },
+    {
+      "fold": 3,
+      "n_train": 5760,
+      "n_val": 1440,
+      "R2": 0.5974657199246343,
+      "RMSE": 0.20290362912088017,
+      "MAE": 0.12363120418901878,
+      "runtime_seconds": 6.327788700000383,
+      "gpu_peak_allocated_mb": 4721.72607421875
+    },
+    {
+      "fold": 4,
+      "n_train": 5760,
+      "n_val": 1440,
+      "R2": 0.5730891087442777,
+      "RMSE": 0.2162119240117842,
+      "MAE": 0.12763624081614047,
+      "runtime_seconds": 6.257528199988883,
+      "gpu_peak_allocated_mb": 4721.72607421875
+    },
+    {
+      "fold": 5,
+      "n_train": 5760,
+      "n_val": 1440,
+      "R2": 0.5046807414474268,
+      "RMSE": 0.23268273805639061,
+      "MAE": 0.12027600983504168,
+      "runtime_seconds": 6.65057909997995,
+      "gpu_peak_allocated_mb": 4721.72607421875
+    }
+  ],
+  "model_identity": "tabicl==2.2.0 default TabICLv2Regressor"
+}

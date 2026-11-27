@@ -1,0 +1,24 @@
+{
+  "verified_source_environment": {
+    "python": "3.11.9",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.9.1",
+    "shap": "0.49.1",
+    "torch": "2.6.0+cu124",
+    "cuda_runtime": "12.4",
+    "tabicl": "2.2.0",
+    "psutil": "7.2.2"
+  },
+  "python_executable_kind": "Python 3.11 x64; the source .venv is not copied",
+  "torch_cuda_runtime": "12.4",
+  "cudnn_version": "9.1.0 (reported by source environment)",
+  "source_gpu": "NVIDIA GeForce RTX 2070 with Max-Q Design (from V1/V2 run manifests)",
+  "source_gpu_driver_query": "NVIDIA GeForce RTX 2070 with Max-Q Design, 592.82, 8192 MiB",
+  "target_gpu_expected_by_user": "NVIDIA GeForce RTX 4060 8GB; must be detected and compatibility-gated on destination",
+  "source_os": "Windows-10-10.0.26200-SP0",
+  "source_checkpoint_sha256": "0db9cb538f114e79026bf08f45f41ad8dd7ad2de2aaca9a5ca8cd3bd9748ae7a",
+  "portable_adapter_checkpoint_path": "../model/tabicl-regressor-v2-20260212.ckpt via TABICL_PRETRAINED_CHECKPOINT",
+  "historical_python_executable_paths_are_provenance_only": true
+}

@@ -1,6 +1,0 @@
-﻿feature_group,feature_count,purpose
-season,2,用 sin/cos 表达季节周期，避免月份 12 到 1 的断点。
-wind,3,把 U/V 风转换为风速和方向，表达混合与输运过程。
-spectral_ratios,5,补充 Landsat 水色比例特征，增强透明度、浊度和叶绿素代理信息。
-lag_roll,33,表达环境过程和遥感响应的滞后/平滑效应。
-station_static,3,训练阶段加入 lon/lat 和 station one-hot，显式表达空间差异。

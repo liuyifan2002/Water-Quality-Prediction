@@ -1,0 +1,35 @@
+{
+  "label": "Copernicus Marine Ocean Colour 数据集推荐",
+  "credentials_required": true,
+  "credentials_present": false,
+  "missing_credentials": [
+    "COPERNICUSMARINE_USERNAME",
+    "COPERNICUSMARINE_PASSWORD"
+  ],
+  "recommended_daily_dataset_id": "cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D",
+  "recommended_monthly_dataset_id": "cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M",
+  "recommended_variables": [
+    "CHL",
+    "KD490",
+    "SPM",
+    "ZSD",
+    "RRS400",
+    "RRS412",
+    "RRS443",
+    "RRS490",
+    "RRS510",
+    "RRS560",
+    "RRS620",
+    "RRS665",
+    "RRS681",
+    "RRS709",
+    "PP",
+    "PFT"
+  ],
+  "recommended_reason": "优先选择覆盖 2014-2024 的历史 MY 产品；若日尺度可用，则优先 P1D，否则 fallback 到 P1M。",
+  "covers_2014_2024_candidates": [
+    "cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1D",
+    "cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M"
+  ],
+  "status": "dry_run_only"
+}

@@ -1,0 +1,48 @@
+{
+  "label": "Copernicus Marine Ocean Colour 数据集推荐",
+  "credentials_required": true,
+  "credentials_present": true,
+  "missing_credentials": [],
+  "recommended_daily_dataset_id": "cmems_obs-oc_glo_bgc-plankton_my_l4-gapfree-multi-4km_P1D",
+  "recommended_monthly_dataset_id": "cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M",
+  "recommended_daily_dataset_bundle": [
+    "cmems_obs-oc_glo_bgc-plankton_my_l4-gapfree-multi-4km_P1D",
+    "cmems_obs-oc_glo_bgc-transp_my_l4-gapfree-multi-4km_P1D",
+    "cmems_obs-oc_glo_bgc-reflectance_my_l3-multi-4km_P1D"
+  ],
+  "recommended_monthly_dataset_bundle": [
+    "cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M",
+    "cmems_obs-oc_glo_bgc-transp_my_l4-multi-4km_P1M",
+    "cmems_obs-oc_glo_bgc-reflectance_my_l4-multi-4km_P1M"
+  ],
+  "recommended_variables": [
+    "CHL",
+    "KD490",
+    "SPM",
+    "ZSD",
+    "RRS400",
+    "RRS412",
+    "RRS443",
+    "RRS490",
+    "RRS510",
+    "RRS560",
+    "RRS620",
+    "RRS665",
+    "RRS681",
+    "RRS709",
+    "PP",
+    "PFT"
+  ],
+  "recommended_reason": "优先选择覆盖 2014-2024 的全球历史 MY 产品；CHL、transparency 和 reflectance 需要由多个数据集联合提供，若日尺度可用则优先 P1D，否则 fallback 到 P1M。",
+  "covers_2014_2024_candidates": [
+    "cmems_obs-oc_glo_bgc-plankton_my_l4-gapfree-multi-4km_P1D",
+    "cmems_obs-oc_glo_bgc-transp_my_l4-gapfree-multi-4km_P1D",
+    "cmems_obs-oc_glo_bgc-reflectance_my_l3-multi-4km_P1D",
+    "cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M",
+    "cmems_obs-oc_glo_bgc-transp_my_l4-multi-4km_P1M",
+    "cmems_obs-oc_glo_bgc-reflectance_my_l4-multi-4km_P1M"
+  ],
+  "copernicusmarine_probe_ok": true,
+  "copernicusmarine_probe_detail": "CoordinatesOutOfDatasetBounds, CopernicusMarineCatalogue, CopernicusMarineCoordinate, CopernicusMarineDataset, CopernicusMarinePart, CopernicusMarineProduct, CopernicusMarineService, CopernicusMarineServiceFormat, CopernicusMarineServiceNames, CopernicusMarineVariable, CopernicusMarineVersion, CoperniusMarineServiceShortNames, CouldNotConnectToAuthenticationSystem, CredentialsCannotBeNone, DatasetNotFound, DatasetUpdating, DatasetVersionNotFound, DatasetVersionPartNotFound, FileGet, FileStatus, FormatNotSupported, GeographicalExtent, InvalidUsernameOrPassword, NetCDFCompressionNotAvailable, NoServiceAvailable, NotEnoughPlatformMetadata, OtherOptionsPassedWithCreateTemplate, PlatformsSubsettingNotAvailable, ProductNotFound, ResponseGet, ResponseSubset, ServiceDoesNotExistForCommand, ServiceNotAvailable, ServiceNotHandled, ServiceNotSupported, StatusCode, StatusMessage, TimeExtent, VariableDoesNotExistInTheDataset, WrongDatetimeFormat, WrongFieldsError, WrongFormatRequested, WrongPlatformID, catalogue_parser, command_line_interface, core_functions, describe, download_functions, get, logger, login, open_dataset, python_interface, read_dataframe, subset, subset_split_on, versioner",
+  "status": "catalog_probe_only"
+}

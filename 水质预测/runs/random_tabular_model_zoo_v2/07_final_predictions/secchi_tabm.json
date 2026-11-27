@@ -1,0 +1,12 @@
+{
+  "task": "secchi",
+  "model": "tabm",
+  "n_train": 8692,
+  "n_test": 2174,
+  "R2": 0.6825577712329396,
+  "RMSE": 0.6336228274896464,
+  "MAE": 0.4167525751610469,
+  "runtime_seconds": 114.96804400000838,
+  "gpu_peak_allocated_mb": 356.98291015625,
+  "source": "trained_on_full_outer_train"
+}

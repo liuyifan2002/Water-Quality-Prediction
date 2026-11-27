@@ -1,0 +1,91 @@
+{
+  "task": "tn_surface",
+  "model": "mlp",
+  "n_samples": 8268,
+  "inner_oof_R2": 0.43491012930372885,
+  "inner_oof_RMSE": 0.4311581652023387,
+  "inner_oof_MAE": 0.2095958366726392,
+  "fit_seconds": 25.99589429999469,
+  "infer_seconds": 0.008705399959580973,
+  "folds": [
+    {
+      "fold": 1,
+      "n_train": 6614,
+      "n_val": 1654,
+      "R2": 0.47707044175849855,
+      "RMSE": 0.4061593788398639,
+      "MAE": 0.20129646166842774,
+      "fit_seconds": 6.03312979999464,
+      "infer_seconds": 0.0016947999829426408
+    },
+    {
+      "fold": 2,
+      "n_train": 6614,
+      "n_val": 1654,
+      "R2": 0.5151921795746869,
+      "RMSE": 0.3614040735966701,
+      "MAE": 0.1978065161735547,
+      "fit_seconds": 5.269253300008131,
+      "infer_seconds": 0.0015039999852888286
+    },
+    {
+      "fold": 3,
+      "n_train": 6614,
+      "n_val": 1654,
+      "R2": 0.3285213016000923,
+      "RMSE": 0.5070340161551039,
+      "MAE": 0.2237785792022385,
+      "fit_seconds": 7.323549400025513,
+      "infer_seconds": 0.001546700019389391
+    },
+    {
+      "fold": 4,
+      "n_train": 6615,
+      "n_val": 1653,
+      "R2": 0.44218075862469675,
+      "RMSE": 0.450434119459377,
+      "MAE": 0.2139223396401324,
+      "fit_seconds": 4.217494099983014,
+      "infer_seconds": 0.002313899982254952
+    },
+    {
+      "fold": 5,
+      "n_train": 6615,
+      "n_val": 1653,
+      "R2": 0.4436181311038826,
+      "RMSE": 0.4170577001616152,
+      "MAE": 0.21117885954815532,
+      "fit_seconds": 3.15246769998339,
+      "infer_seconds": 0.0016459999897051603
+    }
+  ],
+  "config": {
+    "activation": "relu",
+    "alpha": 0.001,
+    "batch_size": "auto",
+    "beta_1": 0.9,
+    "beta_2": 0.999,
+    "early_stopping": true,
+    "epsilon": 1e-08,
+    "hidden_layer_sizes": [
+      128,
+      64
+    ],
+    "learning_rate": "constant",
+    "learning_rate_init": 0.001,
+    "loss": "squared_error",
+    "max_fun": 15000,
+    "max_iter": 200,
+    "momentum": 0.9,
+    "n_iter_no_change": 15,
+    "nesterovs_momentum": true,
+    "power_t": 0.5,
+    "random_state": 42,
+    "shuffle": true,
+    "solver": "adam",
+    "tol": 0.0001,
+    "validation_fraction": 0.1,
+    "verbose": false,
+    "warm_start": false
+  }
+}

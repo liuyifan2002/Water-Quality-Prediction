@@ -1,0 +1,18 @@
+{
+  "task": "tp_middle",
+  "config_id": "P_shift",
+  "fold": 2,
+  "n_train": 5760,
+  "n_val": 1440,
+  "n_features": 77,
+  "feature_sha256": "da3dc69e30b052cce1fd5cbb30351c1f5abebb82dd8162db616ae8883ada3e99",
+  "target_transform": "log1p",
+  "output_type": "mean",
+  "nonnegative_clip": true,
+  "fit_seconds": 1.3564517000049818,
+  "predict_seconds": 5.218722499994328,
+  "gpu_peak_allocated_mb": 4721.85107421875,
+  "R2": 0.6022871523486466,
+  "RMSE": 0.025353567221136263,
+  "MAE": 0.011796828845722808
+}

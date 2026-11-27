@@ -1,0 +1,12 @@
+{
+  "task": "tn_surface",
+  "model": "xgboost",
+  "n_train": 8268,
+  "n_test": 2068,
+  "R2": 0.7880462377737092,
+  "RMSE": 0.2694699575774965,
+  "MAE": 0.14602600133035698,
+  "runtime_seconds": 0.9794906999741215,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

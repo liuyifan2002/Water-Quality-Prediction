@@ -1,0 +1,18 @@
+{
+  "task": "chla_middle",
+  "config_id": "F60",
+  "fold": 1,
+  "n_train": 6051,
+  "n_val": 1513,
+  "n_features": 60,
+  "feature_sha256": "c8ec3fafbe742e400b98f8c136858113d314d7c69652f7002a78d8bf48032330",
+  "target_transform": "log1p",
+  "output_type": "mean",
+  "nonnegative_clip": true,
+  "fit_seconds": 1.0833831999916583,
+  "predict_seconds": 4.410567799990531,
+  "gpu_peak_allocated_mb": 4518.70556640625,
+  "R2": 0.4835142723095519,
+  "RMSE": 3.5915302593143505,
+  "MAE": 1.6860592180068967
+}

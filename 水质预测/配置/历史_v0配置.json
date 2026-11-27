@@ -1,0 +1,22 @@
+{
+  "year_start": 2014,
+  "year_end": 2024,
+  "layer": "Surface Water",
+  "representative_stations": [
+    "DM1",
+    "NM3",
+    "VM5",
+    "WM2",
+    "SM6",
+    "TM4",
+    "PM7",
+    "MM8"
+  ],
+  "epd_water_dir": "C:/Users/刘逸凡/Desktop/开题/水质数据",
+  "station_shp": "C:/Users/刘逸凡/Desktop/开题/水质数据/站点位置/download_20251010_1507_converted.shp",
+  "outputs": {
+    "water_quality": "数据/处理后数据/衍生版本/water_quality_surface_2014_2024.csv",
+    "station_months": "数据/处理后数据/衍生版本/gee_station_months_surface_2014_2024.csv",
+    "model_dataset": "数据/处理后数据/衍生版本/model_dataset_surface_2014_2024.csv"
+  }
+}

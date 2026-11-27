@@ -1,0 +1,72 @@
+study_bbox:
+  min_lon: 113.8
+  max_lon: 114.5
+  min_lat: 22.1
+  max_lat: 22.6
+
+study_period:
+  start_date: 2014-01-01
+  end_date: 2024-12-31
+
+long_history_period:
+  start_date: 1986-01-01
+  end_date: 2024-12-31
+
+station_file: data/model_input/station_meta.csv
+sample_file: data/model_input/gee_station_date_samples.csv
+water_quality_master_file: data/model_input/water_quality_master_2014_2024.csv
+
+outputs:
+  ocean_color_raw_dir: data/raw/manual/ocean_color
+  ocean_color_cmems_raw_dir: data/raw/manual/ocean_color/cmems
+  copernicus_physics_raw_dir: data/raw/manual/copernicus_physics
+  copernicus_bgc_raw_dir: data/raw/manual/copernicus_bgc
+  long_history_raw_dir: data/raw/manual/long_history_water_quality
+  model_input_new_sources_dir: data/model_input/new_sources
+
+source_switches:
+  download_epd_long_history: true
+  extract_gee_olci: true
+  download_cmems_ocean_colour: true
+  download_cmems_physics: true
+  download_cmems_bgc: true
+  download_nasa_oceancolor: false
+
+gee:
+  project_env_var: EARTHENGINE_PROJECT
+  station_asset_id: ""
+  export_description_prefix: hk_chla_new_sources
+
+copernicus_marine:
+  service: copernicusmarine
+  username_env_var: COPERNICUSMARINE_USERNAME
+  password_env_var: COPERNICUSMARINE_PASSWORD
+
+cmems_ocean_colour:
+  preferred_keywords:
+    - OCEANCOLOUR_GLO_BGC_L4_MY
+    - OCEANCOLOUR_GLO_BGC_L4_NRT
+    - plankton
+    - optics
+    - transparency
+    - multi
+    - 4km
+    - P1D
+    - P1M
+  preferred_variables:
+    - CHL
+    - KD490
+    - SPM
+    - ZSD
+    - RRS400
+    - RRS412
+    - RRS443
+    - RRS490
+    - RRS510
+    - RRS560
+    - RRS620
+    - RRS665
+    - RRS681
+    - RRS709
+    - PP
+    - PFT

@@ -1,0 +1,12 @@
+{
+  "task": "secchi",
+  "model": "svr_rbf",
+  "n_train": 8692,
+  "n_test": 2174,
+  "R2": 0.6181147089735202,
+  "RMSE": 0.6949681968834698,
+  "MAE": 0.46226950538551653,
+  "runtime_seconds": 7.764587499987101,
+  "gpu_peak_allocated_mb": null,
+  "source": "trained_on_full_outer_train"
+}

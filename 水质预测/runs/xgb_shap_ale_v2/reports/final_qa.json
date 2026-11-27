@@ -1,0 +1,11 @@
+{
+  "models_checked": 20,
+  "additivity_pass": 20,
+  "shap_features": 77,
+  "shap_fold_rows": 1540,
+  "ale_1d_selected": 16,
+  "ale_2d_pairs": 8,
+  "figures": 17,
+  "figure_files_present": 34,
+  "required_final_files_present": 5
+}

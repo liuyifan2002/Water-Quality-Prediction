@@ -1,0 +1,12 @@
+{
+  "task": "tn_bottom",
+  "model": "tabicl",
+  "n_train": 7911,
+  "n_test": 1978,
+  "R2": 0.5806561072727223,
+  "RMSE": 0.21892503399984461,
+  "MAE": 0.1253400037365812,
+  "runtime_seconds": 10.270607699989341,
+  "gpu_peak_allocated_mb": 5190.56201171875,
+  "source": "trained_on_full_outer_train"
+}

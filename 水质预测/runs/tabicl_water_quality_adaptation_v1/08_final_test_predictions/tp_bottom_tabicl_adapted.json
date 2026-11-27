@@ -1,0 +1,13 @@
+{
+  "task": "tp_bottom",
+  "config_id": "RAW",
+  "n_train": 7911,
+  "n_test": 1978,
+  "fit_seconds": 1.4112982999940868,
+  "predict_seconds": 6.976826699974481,
+  "gpu_peak_allocated_mb": 5190.56201171875,
+  "source": "new_locked_tabicl_single_model_evaluation",
+  "R2": 0.4950294089532743,
+  "RMSE": 0.031642156945779154,
+  "MAE": 0.013131436258479123
+}

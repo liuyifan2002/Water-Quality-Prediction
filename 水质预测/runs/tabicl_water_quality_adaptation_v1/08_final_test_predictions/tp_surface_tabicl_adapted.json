@@ -1,0 +1,13 @@
+{
+  "task": "tp_surface",
+  "config_id": "Z2",
+  "n_train": 8268,
+  "n_test": 2068,
+  "fit_seconds": 1.4331800000218209,
+  "predict_seconds": 7.595179399999324,
+  "gpu_peak_allocated_mb": 4776.0390625,
+  "source": "new_locked_tabicl_single_model_evaluation",
+  "R2": 0.7331857774148628,
+  "RMSE": 0.03354588839213319,
+  "MAE": 0.0133645430768568
+}

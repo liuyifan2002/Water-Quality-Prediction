@@ -1,0 +1,12 @@
+{
+  "task": "chla_surface",
+  "model": "tabicl",
+  "n_train": 8692,
+  "n_test": 2174,
+  "R2": 0.640987493582627,
+  "RMSE": 3.949284333458841,
+  "MAE": 1.7683913672797569,
+  "runtime_seconds": 16.264097500010394,
+  "gpu_peak_allocated_mb": 5281.3876953125,
+  "source": "trained_on_full_outer_train"
+}

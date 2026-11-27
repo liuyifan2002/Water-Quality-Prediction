@@ -1,0 +1,27 @@
+{
+  "状态": "ZIP_STATIC_VERIFIED_WITH_ONE_ALE_REGISTRATION_EXCEPTION",
+  "版本": "WQ77_REPAIRED_20261115_V1",
+  "任务": 10,
+  "新TabICLv2上下文折": 50,
+  "原正式登记模型任务折": 100,
+  "核心样本": 30,
+  "ALE计划曲线": 20,
+  "ALE登记需核对曲线": [
+    {
+      "task": "secchi",
+      "feature": "ssrd_sum_3d",
+      "bins": 6,
+      "queries": 328,
+      "新值与原注册箱归属冲突数": 2,
+      "计划状态": "REQUIRES_REGISTRATION_RECONCILIATION"
+    }
+  ],
+  "清单文件数": 724,
+  "ZIP字节": 355923615,
+  "ZIP_SHA256": "e39e0b405845401bbb6cb74d8f0e18e17767cf1d786289a9acb60be7cf0acbd5",
+  "静态核验项": 1660,
+  "本机模型加载或推理次数": 0,
+  "本机SHAP_ALE次数": 0,
+  "目的端环境/模型数值验证": "尚未执行；必须在另一台机器安装后运行对应入口",
+  "ZIP": "E:\\研究生\\codex\\水质预测\\交付\\修复77特征解释计算迁移_20261116_v1\\TabICLv2_SHAP_ALE_PORTABLE_WQ77_REPAIRED_20261115_V1.zip"
+}

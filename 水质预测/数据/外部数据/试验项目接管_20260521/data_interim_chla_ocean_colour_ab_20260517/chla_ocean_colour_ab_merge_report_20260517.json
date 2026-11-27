@@ -1,0 +1,52 @@
+{
+  "date_tag": "20260517",
+  "model_table_path": "data\\model_input\\model_table_3depth_2014_2024.csv",
+  "ocean_colour_path": "data\\model_input\\new_sources\\ocean_color_kd490_tss_features_2014_2024.csv",
+  "output_dataset_path": "data\\interim\\chla_ocean_colour_ab_20260517\\chla_ocean_colour_ab_dataset_20260517.csv",
+  "merge_key": [
+    "station",
+    "date"
+  ],
+  "rows_before_merge": 30719,
+  "rows_after_merge": 30719,
+  "duplicate_station_date_in_ocean_colour": 0,
+  "ocean_colour_row_count": 10866,
+  "ocean_colour_date_range": [
+    "2014-01-02",
+    "2024-12-30"
+  ],
+  "merged_date_range": [
+    "2014-01-02",
+    "2024-12-30"
+  ],
+  "ocean_colour_columns": [
+    "oc_chl",
+    "oc_chl_14d",
+    "oc_chl_3d",
+    "oc_chl_7d",
+    "oc_day_diff",
+    "oc_fai",
+    "oc_kd490",
+    "oc_kd490_14d",
+    "oc_kd490_3d",
+    "oc_kd490_7d",
+    "oc_mci",
+    "oc_missing_reason",
+    "oc_ndci",
+    "oc_pixel_distance_km",
+    "oc_rrs_412",
+    "oc_rrs_443",
+    "oc_rrs_490",
+    "oc_rrs_560",
+    "oc_rrs_665",
+    "oc_source_dataset_id",
+    "oc_temporal_resolution",
+    "oc_valid",
+    "oc_zsd",
+    "oc_zsd_14d",
+    "oc_zsd_3d",
+    "oc_zsd_7d",
+    "valid_count_7d"
+  ],
+  "note": "当前数据集仅完成样本级合并与缺失统计，未进行任何建模。"
+}

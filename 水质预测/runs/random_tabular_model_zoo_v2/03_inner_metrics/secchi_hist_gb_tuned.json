@@ -1,0 +1,70 @@
+{
+  "task": "secchi",
+  "model": "hist_gb_tuned",
+  "base_model": "hist_gb",
+  "chosen_candidate": 3,
+  "chosen_params": {
+    "max_iter": 500,
+    "max_leaf_nodes": 63,
+    "learning_rate": 0.04
+  },
+  "inner_oof_R2": 0.6425881018287495,
+  "inner_oof_RMSE": 0.6607546472065268,
+  "inner_oof_MAE": 0.4237672708486471,
+  "fit_seconds": 19.112528800033033,
+  "infer_seconds": 0.12643900004331954,
+  "search": [
+    {
+      "candidate": 0,
+      "params": {
+        "max_iter": 400,
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.05
+      },
+      "R2": 0.5880307590714001,
+      "RMSE": 0.7093949931578253,
+      "MAE": 0.45790245585735023,
+      "fit_seconds": 5.388410499959718,
+      "infer_seconds": 0.07486019999487326
+    },
+    {
+      "candidate": 1,
+      "params": {
+        "max_iter": 400,
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.05
+      },
+      "R2": 0.6278537907419137,
+      "RMSE": 0.6742369092102634,
+      "MAE": 0.4330640025041487,
+      "fit_seconds": 9.527965099987341,
+      "infer_seconds": 0.10041449998971075
+    },
+    {
+      "candidate": 2,
+      "params": {
+        "max_iter": 600,
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.035
+      },
+      "R2": 0.6290063563482793,
+      "RMSE": 0.6731920176155625,
+      "MAE": 0.4319248263945512,
+      "fit_seconds": 13.709348799980944,
+      "infer_seconds": 0.13083429998368956
+    },
+    {
+      "candidate": 3,
+      "params": {
+        "max_iter": 500,
+        "max_leaf_nodes": 63,
+        "learning_rate": 0.04
+      },
+      "R2": 0.6425881018287495,
+      "RMSE": 0.6607546472065268,
+      "MAE": 0.4237672708486471,
+      "fit_seconds": 19.112528800033033,
+      "infer_seconds": 0.12643900004331954
+    }
+  ]
+}

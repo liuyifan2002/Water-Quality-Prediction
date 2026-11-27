@@ -1,0 +1,977 @@
+{
+  "label": "Chl-a 新增历史水质滞后特征单源 A/B 实验",
+  "generated_at": "2026-05-17T00:34:24",
+  "formal_results_overwritten": false,
+  "model_changed": false,
+  "train_test_split": {
+    "train_end_year": 2022,
+    "test_start_year": 2023,
+    "test_end_year": 2024
+  },
+  "weighting_strategy": {
+    "scheme": "C",
+    "quantile": 0.9,
+    "weight_factor": 5.0
+  },
+  "merge_report": {
+    "merge_key_used": "obs_id",
+    "duplicate_match_detected": false
+  },
+  "base_rows_before_merge": 30719,
+  "base_rows_after_merge": 30719,
+  "lagged_feature_count": 22,
+  "highest_missing_features": [
+    {
+      "feature": "tn_lag2_for_chla",
+      "missing_rate": 0.06601777401608125,
+      "non_null_rows": 28691
+    },
+    {
+      "feature": "tn_roll3_std_for_chla",
+      "missing_rate": 0.06601777401608125,
+      "non_null_rows": 28691
+    },
+    {
+      "feature": "tp_lag2_for_chla",
+      "missing_rate": 0.06601777401608125,
+      "non_null_rows": 28691
+    },
+    {
+      "feature": "tp_roll3_std_for_chla",
+      "missing_rate": 0.06601777401608125,
+      "non_null_rows": 28691
+    },
+    {
+      "feature": "nutrient_proxy_lag1",
+      "missing_rate": 0.05739119111950259,
+      "non_null_rows": 28956
+    },
+    {
+      "feature": "tn_lag1_for_chla",
+      "missing_rate": 0.05739119111950259,
+      "non_null_rows": 28956
+    },
+    {
+      "feature": "tp_lag1_for_chla",
+      "missing_rate": 0.05739119111950259,
+      "non_null_rows": 28956
+    },
+    {
+      "feature": "tn_roll3_for_chla",
+      "missing_rate": 0.040268237898369086,
+      "non_null_rows": 29482
+    },
+    {
+      "feature": "tp_roll3_for_chla",
+      "missing_rate": 0.040268237898369086,
+      "non_null_rows": 29482
+    },
+    {
+      "feature": "turbidity_lag2_for_chla",
+      "missing_rate": 0.01748103779419903,
+      "non_null_rows": 30182
+    }
+  ],
+  "month_zone_error_summary": {
+    "surface": {
+      "month_error_summary": [
+        {
+          "month": 1,
+          "rows": 188,
+          "rmse": 2.17298328469468,
+          "mae": 1.4195642569914775,
+          "r2": 0.21420080161840582,
+          "mean_error": -0.32345519138777523,
+          "underestimation_rate": 0.35106382978723405,
+          "p90_rmse": 10.192385868879832,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.9383057706474517
+        },
+        {
+          "month": 2,
+          "rows": 154,
+          "rmse": 4.028747699530974,
+          "mae": 2.528785815331843,
+          "r2": -0.38317435483784434,
+          "mean_error": 0.08482256663310057,
+          "underestimation_rate": 0.24675324675324675,
+          "p90_rmse": 13.61479798051282,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.618502247068617
+        },
+        {
+          "month": 3,
+          "rows": 188,
+          "rmse": 1.8644714073895792,
+          "mae": 1.3486766474995209,
+          "r2": -0.1728539510321363,
+          "mean_error": 0.6858439871922453,
+          "underestimation_rate": 0.19680851063829788,
+          "p90_rmse": 6.053381443023682,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.194882189279253
+        },
+        {
+          "month": 4,
+          "rows": 154,
+          "rmse": 3.8273400610339627,
+          "mae": 2.0324575806205925,
+          "r2": -0.15510268709228692,
+          "mean_error": -0.5328861761015732,
+          "underestimation_rate": 0.42857142857142855,
+          "p90_rmse": 17.00870741388777,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.1980344255913549
+        },
+        {
+          "month": 5,
+          "rows": 188,
+          "rmse": 5.629888969833128,
+          "mae": 2.9727105465341124,
+          "r2": -0.0386904164325097,
+          "mean_error": -0.9939537451622333,
+          "underestimation_rate": 0.3670212765957447,
+          "p90_rmse": 17.63660761692887,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.4518322582368728
+        },
+        {
+          "month": 6,
+          "rows": 154,
+          "rmse": 7.74539850725142,
+          "mae": 5.181397319459296,
+          "r2": 0.09713699386455454,
+          "mean_error": 0.20754114900316517,
+          "underestimation_rate": 0.4155844155844156,
+          "p90_rmse": 14.43704835224756,
+          "p90_underestimation_rate": 0.9285714285714286,
+          "low_mae": 4.02885185938615
+        },
+        {
+          "month": 7,
+          "rows": 188,
+          "rmse": 10.822687951328339,
+          "mae": 7.215766075950987,
+          "r2": 0.1613567719967478,
+          "mean_error": -1.7760815931127432,
+          "underestimation_rate": 0.5106382978723404,
+          "p90_rmse": 17.014825966598206,
+          "p90_underestimation_rate": 0.9655172413793104,
+          "low_mae": 4.61066833610336
+        },
+        {
+          "month": 8,
+          "rows": 154,
+          "rmse": 5.497316348669123,
+          "mae": 3.903161796656522,
+          "r2": -0.19974775748633888,
+          "mean_error": 1.8817354440689087,
+          "underestimation_rate": 0.2727272727272727,
+          "p90_rmse": 7.43770300340072,
+          "p90_underestimation_rate": 0.8095238095238095,
+          "low_mae": 3.7473363423347474
+        },
+        {
+          "month": 9,
+          "rows": 188,
+          "rmse": 8.944970106839815,
+          "mae": 5.049129180071202,
+          "r2": -0.09937676230671588,
+          "mean_error": -3.588744788854681,
+          "underestimation_rate": 0.5425531914893617,
+          "p90_rmse": 19.250199430085633,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.4264840684439004
+        },
+        {
+          "month": 10,
+          "rows": 154,
+          "rmse": 1.6614837758439684,
+          "mae": 1.1754085173467537,
+          "r2": 0.16401387545605728,
+          "mean_error": -0.1087785443315258,
+          "underestimation_rate": 0.43506493506493504,
+          "p90_rmse": 6.603112401126388,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.9696621713486125
+        },
+        {
+          "month": 11,
+          "rows": 188,
+          "rmse": 2.9613185272279354,
+          "mae": 2.064016117789644,
+          "r2": 0.1401958857743567,
+          "mean_error": 0.051006262511649005,
+          "underestimation_rate": 0.30319148936170215,
+          "p90_rmse": 8.440017232079134,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.4915888772268964
+        },
+        {
+          "month": 12,
+          "rows": 154,
+          "rmse": 3.927142489620798,
+          "mae": 2.3681720533928314,
+          "r2": 0.07299504110291755,
+          "mean_error": -1.5705273933224864,
+          "underestimation_rate": 0.6233766233766234,
+          "p90_rmse": 12.589962158575245,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.070439542443664
+        }
+      ],
+      "zone_error_summary": [
+        {
+          "water_zone_code": 0,
+          "rows": 120,
+          "rmse": 4.359677878869165,
+          "mae": 2.914895836114884,
+          "r2": -0.1375174671351278,
+          "mean_error": 1.0788383026917776,
+          "underestimation_rate": 0.25833333333333336,
+          "p90_rmse": 15.356675560924723,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 2.430835646274043
+        },
+        {
+          "water_zone_code": 1,
+          "rows": 96,
+          "rmse": 7.224536123114303,
+          "mae": 3.92391661653916,
+          "r2": 0.3502170905086974,
+          "mean_error": -1.5209733580549558,
+          "underestimation_rate": 0.3645833333333333,
+          "p90_rmse": 18.600176708704232,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.5347034627741032
+        },
+        {
+          "water_zone_code": 2,
+          "rows": 48,
+          "rmse": 7.591559539253294,
+          "mae": 4.096468255420525,
+          "r2": 0.33353761762384293,
+          "mean_error": -2.0265441720684367,
+          "underestimation_rate": 0.3958333333333333,
+          "p90_rmse": 18.80068113953814,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.3868454003334045
+        },
+        {
+          "water_zone_code": 3,
+          "rows": 336,
+          "rmse": 2.11317686779172,
+          "mae": 1.373575177292029,
+          "r2": 0.18338618465651213,
+          "mean_error": -0.11829885322423211,
+          "underestimation_rate": 0.37202380952380953,
+          "p90_rmse": 8.480018335463772,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.040915232935762
+        },
+        {
+          "water_zone_code": 4,
+          "rows": 156,
+          "rmse": 6.9700677809968195,
+          "mae": 3.6966010601092605,
+          "r2": 0.08344659860907888,
+          "mean_error": -1.5221678159175773,
+          "underestimation_rate": 0.3525641025641026,
+          "p90_rmse": 19.30625495805814,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.5840878009796142
+        },
+        {
+          "water_zone_code": 5,
+          "rows": 252,
+          "rmse": 1.761698171154748,
+          "mae": 1.2995862510705751,
+          "r2": 0.0013433026907722079,
+          "mean_error": -0.23388085159517474,
+          "underestimation_rate": 0.46825396825396826,
+          "p90_rmse": NaN,
+          "p90_underestimation_rate": NaN,
+          "low_mae": 1.063898145103659
+        },
+        {
+          "water_zone_code": 6,
+          "rows": 408,
+          "rmse": 6.479304306339466,
+          "mae": 4.099860548154981,
+          "r2": 0.23433775594048356,
+          "mean_error": -0.584703750703849,
+          "underestimation_rate": 0.3897058823529412,
+          "p90_rmse": 12.149398682219337,
+          "p90_underestimation_rate": 0.9066666666666666,
+          "low_mae": 2.387738982865731
+        },
+        {
+          "water_zone_code": 7,
+          "rows": 180,
+          "rmse": 5.989992414823029,
+          "mae": 3.0736821301778163,
+          "r2": 0.05369539614594043,
+          "mean_error": -0.6363474125332302,
+          "underestimation_rate": 0.42777777777777776,
+          "p90_rmse": 16.24136738455594,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 2.0490376708663516
+        },
+        {
+          "water_zone_code": 8,
+          "rows": 336,
+          "rmse": 6.886993038067965,
+          "mae": 3.96373409291818,
+          "r2": 0.022950342571265603,
+          "mean_error": -0.17680874626551354,
+          "underestimation_rate": 0.3869047619047619,
+          "p90_rmse": 17.061500442389818,
+          "p90_underestimation_rate": 0.96875,
+          "low_mae": 2.5803188987722936
+        },
+        {
+          "water_zone_code": 9,
+          "rows": 120,
+          "rmse": 8.275070438939691,
+          "mae": 4.780649429361024,
+          "r2": -0.0028210821718555046,
+          "mean_error": -2.175981414119403,
+          "underestimation_rate": 0.425,
+          "p90_rmse": 18.759717193250076,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.8925539182453623
+        }
+      ]
+    },
+    "middle": {
+      "month_error_summary": [
+        {
+          "month": 1,
+          "rows": 158,
+          "rmse": 2.4188451536639737,
+          "mae": 1.4360901613401462,
+          "r2": 0.08291726585466563,
+          "mean_error": -0.20977467777608327,
+          "underestimation_rate": 0.35443037974683544,
+          "p90_rmse": 12.033150129313965,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.8635478677730712
+        },
+        {
+          "month": 2,
+          "rows": 140,
+          "rmse": 4.121496238772663,
+          "mae": 2.24637475337301,
+          "r2": -0.12023819156311544,
+          "mean_error": -0.487271980047226,
+          "underestimation_rate": 0.2642857142857143,
+          "p90_rmse": 13.365261211420119,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.0930903543686044
+        },
+        {
+          "month": 3,
+          "rows": 158,
+          "rmse": 1.4477498023132893,
+          "mae": 1.1399063989708695,
+          "r2": -0.040322761327364676,
+          "mean_error": 0.5768368457314336,
+          "underestimation_rate": 0.20253164556962025,
+          "p90_rmse": 6.670396566390991,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.0349207268065255
+        },
+        {
+          "month": 4,
+          "rows": 140,
+          "rmse": 2.7520422057272147,
+          "mae": 1.3179983929225376,
+          "r2": 0.0077123413651611905,
+          "mean_error": -0.5941629385948181,
+          "underestimation_rate": 0.42142857142857143,
+          "p90_rmse": 12.67231566646764,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.6687714568639206
+        },
+        {
+          "month": 5,
+          "rows": 158,
+          "rmse": 3.9786090695232583,
+          "mae": 2.166804532008835,
+          "r2": 0.05571558186198322,
+          "mean_error": -0.7920009732246398,
+          "underestimation_rate": 0.4177215189873418,
+          "p90_rmse": 12.053526199273506,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.0542681715011597
+        },
+        {
+          "month": 6,
+          "rows": 140,
+          "rmse": 5.43516965593474,
+          "mae": 3.5819434498037612,
+          "r2": 0.14866910315725246,
+          "mean_error": -0.5985063135623933,
+          "underestimation_rate": 0.40714285714285714,
+          "p90_rmse": 11.582715105009717,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 2.3672704225058085
+        },
+        {
+          "month": 7,
+          "rows": 158,
+          "rmse": 8.543151426063282,
+          "mae": 5.576500480989866,
+          "r2": 0.1324063240135176,
+          "mean_error": -2.39341078046002,
+          "underestimation_rate": 0.5506329113924051,
+          "p90_rmse": 13.998158540530039,
+          "p90_underestimation_rate": 0.96,
+          "low_mae": 3.1576312407203346
+        },
+        {
+          "month": 8,
+          "rows": 140,
+          "rmse": 4.283047796029045,
+          "mae": 3.1013352111407686,
+          "r2": -0.10036144487789334,
+          "mean_error": 0.3934262231418064,
+          "underestimation_rate": 0.45714285714285713,
+          "p90_rmse": 7.370440544260772,
+          "p90_underestimation_rate": 0.95,
+          "low_mae": 2.8329432346881966
+        },
+        {
+          "month": 9,
+          "rows": 158,
+          "rmse": 5.925710602790982,
+          "mae": 3.6913112219375903,
+          "r2": -0.02521557422002907,
+          "mean_error": -2.02877881874012,
+          "underestimation_rate": 0.5,
+          "p90_rmse": 12.58903224543181,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.5035445583363376
+        },
+        {
+          "month": 10,
+          "rows": 140,
+          "rmse": 1.2932033104934142,
+          "mae": 0.943538054398128,
+          "r2": 0.010971339088518328,
+          "mean_error": -0.05016454662595476,
+          "underestimation_rate": 0.5071428571428571,
+          "p90_rmse": 6.685753631591798,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.8225620590150357
+        },
+        {
+          "month": 11,
+          "rows": 158,
+          "rmse": 3.046577381708186,
+          "mae": 1.9821254273004167,
+          "r2": 0.1004027658119957,
+          "mean_error": 0.08822220594068106,
+          "underestimation_rate": 0.22151898734177214,
+          "p90_rmse": 9.591885695682253,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.2728734908625483
+        },
+        {
+          "month": 12,
+          "rows": 140,
+          "rmse": 3.024671835210022,
+          "mae": 2.0654913025242942,
+          "r2": -0.18250582325939324,
+          "mean_error": -1.3950148090294425,
+          "underestimation_rate": 0.6428571428571429,
+          "p90_rmse": 8.725880954940086,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.9085686683654783
+        }
+      ],
+      "zone_error_summary": [
+        {
+          "water_zone_code": 0,
+          "rows": 24,
+          "rmse": 1.7280418725728963,
+          "mae": 1.2266343424717585,
+          "r2": -0.22957111018063103,
+          "mean_error": 0.2058699717124303,
+          "underestimation_rate": 0.2916666666666667,
+          "p90_rmse": NaN,
+          "p90_underestimation_rate": NaN,
+          "low_mae": 0.940032940561121
+        },
+        {
+          "water_zone_code": 1,
+          "rows": 96,
+          "rmse": 4.0413312327950015,
+          "mae": 2.301720247666041,
+          "r2": 0.0547682109955393,
+          "mean_error": -0.27009670436382294,
+          "underestimation_rate": 0.3645833333333333,
+          "p90_rmse": 13.557028797971798,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.4177415182892705
+        },
+        {
+          "water_zone_code": 2,
+          "rows": 48,
+          "rmse": 4.737897626275589,
+          "mae": 2.827569758395354,
+          "r2": 0.29695387283883556,
+          "mean_error": -1.005127267539501,
+          "underestimation_rate": 0.3541666666666667,
+          "p90_rmse": 10.611218662606353,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.354554981198804
+        },
+        {
+          "water_zone_code": 3,
+          "rows": 336,
+          "rmse": 1.744047532302885,
+          "mae": 1.2009321944522005,
+          "r2": 0.07237653483610484,
+          "mean_error": -0.13787911060665334,
+          "underestimation_rate": 0.37202380952380953,
+          "p90_rmse": 7.764454459394966,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.865402307680675
+        },
+        {
+          "water_zone_code": 4,
+          "rows": 144,
+          "rmse": 4.788119010468461,
+          "mae": 2.5945166847772065,
+          "r2": 0.06367218395715935,
+          "mean_error": -1.1652997336453863,
+          "underestimation_rate": 0.4375,
+          "p90_rmse": 12.881301151436551,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.1441497748548333
+        },
+        {
+          "water_zone_code": 5,
+          "rows": 228,
+          "rmse": 1.7853633723105466,
+          "mae": 1.3099217534065246,
+          "r2": 0.09466775708642206,
+          "mean_error": -0.24588783979415887,
+          "underestimation_rate": 0.5,
+          "p90_rmse": 6.846893045834082,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.9794102225805584
+        },
+        {
+          "water_zone_code": 6,
+          "rows": 384,
+          "rmse": 6.1670528938423725,
+          "mae": 3.7867148506455126,
+          "r2": 0.18339908974968833,
+          "mean_error": -1.3859032852264743,
+          "underestimation_rate": 0.4088541666666667,
+          "p90_rmse": 12.36846682227898,
+          "p90_underestimation_rate": 0.9875,
+          "low_mae": 1.7916956067085266
+        },
+        {
+          "water_zone_code": 7,
+          "rows": 132,
+          "rmse": 3.7330425586325444,
+          "mae": 2.634446434902422,
+          "r2": -0.24051821812623086,
+          "mean_error": 0.17753538254535559,
+          "underestimation_rate": 0.3712121212121212,
+          "p90_rmse": 8.37016335188887,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 2.065626618736669
+        },
+        {
+          "water_zone_code": 8,
+          "rows": 276,
+          "rmse": 5.212867783774935,
+          "mae": 2.856896625718345,
+          "r2": 0.20781253255503673,
+          "mean_error": -0.5621308279858119,
+          "underestimation_rate": 0.39855072463768115,
+          "p90_rmse": 14.453472147218331,
+          "p90_underestimation_rate": 0.9259259259259259,
+          "low_mae": 1.6471844135595601
+        },
+        {
+          "water_zone_code": 9,
+          "rows": 120,
+          "rmse": 4.32919196243015,
+          "mae": 2.754380043943723,
+          "r2": 0.014759101142912234,
+          "mean_error": -1.0918050620953241,
+          "underestimation_rate": 0.4666666666666667,
+          "p90_rmse": 9.783124311794607,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.3498900586650484
+        }
+      ]
+    },
+    "bottom": {
+      "month_error_summary": [
+        {
+          "month": 1,
+          "rows": 180,
+          "rmse": 2.0115708180641323,
+          "mae": 1.2091485415730212,
+          "r2": 0.27775510372677537,
+          "mean_error": -0.5026134409010411,
+          "underestimation_rate": 0.4722222222222222,
+          "p90_rmse": 5.719467556251803,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.6015023381842507
+        },
+        {
+          "month": 2,
+          "rows": 148,
+          "rmse": 4.117641915837181,
+          "mae": 2.1779573793346816,
+          "r2": -0.13049368817921558,
+          "mean_error": -0.7023878704857182,
+          "underestimation_rate": 0.33783783783783783,
+          "p90_rmse": 11.736460332448127,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.9874141622992122
+        },
+        {
+          "month": 3,
+          "rows": 180,
+          "rmse": 1.3825978879222294,
+          "mae": 0.9939857160382802,
+          "r2": 0.1177682897342468,
+          "mean_error": 0.3802483820252948,
+          "underestimation_rate": 0.25,
+          "p90_rmse": 5.564091530357875,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.82047499217093
+        },
+        {
+          "month": 4,
+          "rows": 148,
+          "rmse": 1.6786827665181026,
+          "mae": 1.1184290357135436,
+          "r2": 0.04777082373925978,
+          "mean_error": -0.5391937065366152,
+          "underestimation_rate": 0.5675675675675675,
+          "p90_rmse": 7.788988828659058,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.6334108669373949
+        },
+        {
+          "month": 5,
+          "rows": 180,
+          "rmse": 3.609411457546747,
+          "mae": 2.1365673534737697,
+          "r2": 0.08961418975767299,
+          "mean_error": -0.883701296183798,
+          "underestimation_rate": 0.5111111111111111,
+          "p90_rmse": 9.318669924068494,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.0149810508219865
+        },
+        {
+          "month": 6,
+          "rows": 148,
+          "rmse": 4.4542865349995955,
+          "mae": 2.610282339759775,
+          "r2": 0.10621994814498936,
+          "mean_error": -0.5337187407790004,
+          "underestimation_rate": 0.39864864864864863,
+          "p90_rmse": 10.527272467258612,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.509890480339527
+        },
+        {
+          "month": 7,
+          "rows": 180,
+          "rmse": 7.77185397235407,
+          "mae": 4.723491343524721,
+          "r2": 0.1321936675818446,
+          "mean_error": -1.203811262316174,
+          "underestimation_rate": 0.39444444444444443,
+          "p90_rmse": 15.500320908839083,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 2.6820032756283596
+        },
+        {
+          "month": 8,
+          "rows": 148,
+          "rmse": 3.5086479351199826,
+          "mae": 2.3544008446706304,
+          "r2": -0.027095735019436296,
+          "mean_error": 0.004689835696607042,
+          "underestimation_rate": 0.43243243243243246,
+          "p90_rmse": 8.084389396770398,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 2.013784498740465
+        },
+        {
+          "month": 9,
+          "rows": 180,
+          "rmse": 5.844912227376306,
+          "mae": 3.3567093494865627,
+          "r2": -0.0274537031979758,
+          "mean_error": -1.7558820714553198,
+          "underestimation_rate": 0.45,
+          "p90_rmse": 12.284657571343235,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.319960213329481
+        },
+        {
+          "month": 10,
+          "rows": 148,
+          "rmse": 1.6501399581942093,
+          "mae": 1.032200576767728,
+          "r2": 0.04033621104055962,
+          "mean_error": 0.1058868031646754,
+          "underestimation_rate": 0.41216216216216217,
+          "p90_rmse": 6.3913972566266475,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.7744246511082901
+        },
+        {
+          "month": 11,
+          "rows": 180,
+          "rmse": 2.653604022679616,
+          "mae": 1.8128902345233493,
+          "r2": 0.07049405302245004,
+          "mean_error": -0.014158556196424697,
+          "underestimation_rate": 0.29444444444444445,
+          "p90_rmse": 6.892386279597404,
+          "p90_underestimation_rate": 0.9375,
+          "low_mae": 1.2051777159466464
+        },
+        {
+          "month": 12,
+          "rows": 148,
+          "rmse": 3.21185050266299,
+          "mae": 2.0931668644015855,
+          "r2": -0.11304743000628314,
+          "mean_error": -1.5124855355636493,
+          "underestimation_rate": 0.6554054054054054,
+          "p90_rmse": 6.998260687759726,
+          "p90_underestimation_rate": 0.9545454545454546,
+          "low_mae": 0.7153604742884636
+        }
+      ],
+      "zone_error_summary": [
+        {
+          "water_zone_code": 0,
+          "rows": 48,
+          "rmse": 1.9543627150772087,
+          "mae": 1.3487387791275978,
+          "r2": -0.45575605163205357,
+          "mean_error": 0.1196904207269351,
+          "underestimation_rate": 0.3333333333333333,
+          "p90_rmse": 6.17004063559063,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.9745206747736249
+        },
+        {
+          "water_zone_code": 1,
+          "rows": 96,
+          "rmse": 4.920347029492619,
+          "mae": 1.8377626900250714,
+          "r2": 0.03434343131912254,
+          "mean_error": -0.48922102494786185,
+          "underestimation_rate": 0.3645833333333333,
+          "p90_rmse": 26.401784547700924,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.9892386163209939
+        },
+        {
+          "water_zone_code": 2,
+          "rows": 48,
+          "rmse": 3.66255986086934,
+          "mae": 2.485230314731598,
+          "r2": -0.04569800609607699,
+          "mean_error": -0.8492550939321518,
+          "underestimation_rate": 0.3958333333333333,
+          "p90_rmse": 8.427177524958449,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.1910102316827484
+        },
+        {
+          "water_zone_code": 3,
+          "rows": 336,
+          "rmse": 1.5746533213495435,
+          "mae": 1.0264488985673303,
+          "r2": 0.16943965733938238,
+          "mean_error": -0.254773627061929,
+          "underestimation_rate": 0.4642857142857143,
+          "p90_rmse": 5.351749776090132,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.6552999554120976
+        },
+        {
+          "water_zone_code": 4,
+          "rows": 156,
+          "rmse": 3.824343492166912,
+          "mae": 2.0307964042211193,
+          "r2": 0.09413424443600826,
+          "mean_error": -0.5036143338068937,
+          "underestimation_rate": 0.391025641025641,
+          "p90_rmse": 11.65440421385843,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.0931599681494664
+        },
+        {
+          "water_zone_code": 5,
+          "rows": 240,
+          "rmse": 1.7476332598430766,
+          "mae": 1.2176322262982529,
+          "r2": 0.1298956500645323,
+          "mean_error": -0.3119245733320713,
+          "underestimation_rate": 0.5291666666666667,
+          "p90_rmse": 5.441308765892431,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 0.8532261830629762
+        },
+        {
+          "water_zone_code": 6,
+          "rows": 408,
+          "rmse": 5.772569547538841,
+          "mae": 3.3979340794258843,
+          "r2": 0.20163080663029176,
+          "mean_error": -1.4881634779055328,
+          "underestimation_rate": 0.4215686274509804,
+          "p90_rmse": 11.949342731822373,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.4468484885028365
+        },
+        {
+          "water_zone_code": 7,
+          "rows": 180,
+          "rmse": 3.125755451564984,
+          "mae": 2.366121465232637,
+          "r2": 0.0033023796753233192,
+          "mean_error": 0.0783341059419844,
+          "underestimation_rate": 0.35555555555555557,
+          "p90_rmse": 5.572836537481812,
+          "p90_underestimation_rate": 0.9354838709677419,
+          "low_mae": 1.856231656267836
+        },
+        {
+          "water_zone_code": 8,
+          "rows": 336,
+          "rmse": 4.731845851965529,
+          "mae": 2.55434426159731,
+          "r2": -0.11769827614658923,
+          "mean_error": -0.5015050275517361,
+          "underestimation_rate": 0.4226190476190476,
+          "p90_rmse": 13.22562256335584,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.4735482355812566
+        },
+        {
+          "water_zone_code": 9,
+          "rows": 120,
+          "rmse": 3.4696454926830405,
+          "mae": 2.184984674056371,
+          "r2": -0.03727051353745736,
+          "mean_error": -0.8668500300248464,
+          "underestimation_rate": 0.4166666666666667,
+          "p90_rmse": 8.391862498354493,
+          "p90_underestimation_rate": 1.0,
+          "low_mae": 1.0396901704016186
+        }
+      ]
+    }
+  },
+  "key_added_feature_mean_importance": [
+    {
+      "feature": "salinity_lag1_for_chla",
+      "importance": 0.03153093531727791
+    },
+    {
+      "feature": "salinity_roll3_std_for_chla",
+      "importance": 0.013864385895431042
+    },
+    {
+      "feature": "tp_lag2_for_chla",
+      "importance": 0.013352635316550732
+    },
+    {
+      "feature": "salinity_lag2_for_chla",
+      "importance": 0.012663044035434723
+    },
+    {
+      "feature": "tp_roll3_for_chla",
+      "importance": 0.012575704604387283
+    },
+    {
+      "feature": "secchi_roll3_for_chla",
+      "importance": 0.012435573153197765
+    },
+    {
+      "feature": "nutrient_proxy_lag1",
+      "importance": 0.011599943973124027
+    },
+    {
+      "feature": "tn_roll3_for_chla",
+      "importance": 0.011336654424667358
+    },
+    {
+      "feature": "tp_roll3_std_for_chla",
+      "importance": 0.011316407471895218
+    },
+    {
+      "feature": "tn_lag2_for_chla",
+      "importance": 0.010707643814384937
+    },
+    {
+      "feature": "tn_lag1_for_chla",
+      "importance": 0.010470994748175144
+    },
+    {
+      "feature": "do_lag1_for_chla",
+      "importance": 0.010454791598021984
+    },
+    {
+      "feature": "turbidity_roll3_std_for_chla",
+      "importance": 0.010419715195894241
+    },
+    {
+      "feature": "tp_lag1_for_chla",
+      "importance": 0.010369124822318554
+    },
+    {
+      "feature": "do_lag2_for_chla",
+      "importance": 0.010087634436786175
+    },
+    {
+      "feature": "secchi_lag1_for_chla",
+      "importance": 0.009355823509395123
+    },
+    {
+      "feature": "turbidity_lag2_for_chla",
+      "importance": 0.009251520968973637
+    },
+    {
+      "feature": "secchi_lag2_for_chla",
+      "importance": 0.009198296815156937
+    },
+    {
+      "feature": "do_roll3_std_for_chla",
+      "importance": 0.009186455979943275
+    },
+    {
+      "feature": "turbidity_lag1_for_chla",
+      "importance": 0.008836199529469013
+    },
+    {
+      "feature": "tn_roll3_std_for_chla",
+      "importance": 0.008114054799079895
+    },
+    {
+      "feature": "secchi_roll3_std_for_chla",
+      "importance": 0.007339203264564276
+    }
+  ]
+}

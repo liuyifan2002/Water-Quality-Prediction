@@ -1,0 +1,38 @@
+{
+  "script_path": "scripts/data/run_nasa_oceancolor_fullrun.py",
+  "input_files": [
+    "data/processed/current/nasa_oceancolor_validation_report.json",
+    "data/processed/current/nasa_oceancolor_validation_sample_201401.csv",
+    "data/processed/current/free_data_source_inventory.csv",
+    "experiments/reports/current/nasa_oceancolor_bathymetry_followup.md",
+    "data/processed/current/current_best_scorecard_updated.csv",
+    "data/processed/current/r2_0p6_progress_scorecard_updated.csv",
+    "experiments/reports/current/precision_improvement_stage_report.md",
+    "experiments/outputs/current/new_source_ab_metrics.csv",
+    "experiments/outputs/current/precision_improvement_ab_metrics.csv",
+    "experiments/reports/current/data_request_checklist.md"
+  ],
+  "output_files": [
+    "data/processed/current/nasa_oceancolor_features_2014_2024_long.csv",
+    "data/processed/current/nasa_oceancolor_features_2014_2024_wide.csv",
+    "experiments/outputs/current/nasa_oceancolor_ab_metrics.csv",
+    "experiments/outputs/current/nasa_oceancolor_comparison_to_current_best.csv",
+    "experiments/reports/current/nasa_oceancolor_fullrun_report.md"
+  ],
+  "products": [
+    "VIIRSN_L3m_CHL",
+    "VIIRSN_L3m_KD",
+    "VIIRSN_L3m_RRS",
+    "MODISA_L3m_CHL"
+  ],
+  "rrs_included": false,
+  "random_seed": 42,
+  "useful_sets": [],
+  "promoted_any": false,
+  "rejected_or_deferred": [
+    "VIIRSN_L3m_RRS: RRS 当前按波段拆分，复杂度和文件数过高，本轮暂缓。",
+    "MODISA_L3m_CHL: 作为传感器对照暂缓，不阻塞 VIIRS CHL/KD 主线。",
+    "VIIRSN_L3m_RRS: 未检测到稳定可用的目标 RRS 变量，暂缓入模。",
+    "MODISA_L3m_CHL: no_files"
+  ]
+}

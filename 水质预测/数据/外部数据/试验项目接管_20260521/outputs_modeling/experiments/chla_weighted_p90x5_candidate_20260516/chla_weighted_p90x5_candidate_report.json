@@ -1,0 +1,12 @@
+{
+  "label": "Chl-a机制增强 + P90x5高值加权候选基线",
+  "generated_at": "2026-05-16T03:13:32",
+  "source_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\chla_high_value_weighted_20260516",
+  "output_dir": "C:\\Users\\刘逸凡\\.codex\\worktrees\\9ff7\\codex\\水质预测\\outputs\\modeling\\experiments\\chla_weighted_p90x5_candidate_20260516",
+  "feature_set": "f3_history_remote",
+  "scheme": "C",
+  "scheme_quantile": 0.9,
+  "scheme_weight_factor": 5.0,
+  "retrained": false,
+  "formal_results_overwritten": false
+}

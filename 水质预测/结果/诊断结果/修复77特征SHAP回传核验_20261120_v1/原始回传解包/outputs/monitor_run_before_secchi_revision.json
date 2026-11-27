@@ -1,0 +1,8 @@
+{
+  "pid": 43332,
+  "started_at": "2026-11-19T10:47:05.300689+00:00",
+  "status": "COMPLETED_WITH_ISSUES",
+  "command": "ALE精度修复续跑",
+  "exit_code": 1,
+  "ended_at": "2026-11-20T11:10:19.598961+00:00"
+}

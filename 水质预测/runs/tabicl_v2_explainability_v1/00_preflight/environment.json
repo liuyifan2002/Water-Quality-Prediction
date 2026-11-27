@@ -1,0 +1,12 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "executable": "E:\\研究生\\codex\\水质预测\\runs\\tabiclv2_pilot\\环境\\.venv\\Scripts\\python.exe",
+  "seed": 42,
+  "pid": 44204,
+  "tolerances": {
+    "max_abs": 1e-06,
+    "mean_abs": 1e-07,
+    "metric_abs": 1e-06
+  }
+}
